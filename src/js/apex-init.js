@@ -1,0 +1,6 @@
+/************
+APEX Initialization
+************/
+$(function() {
+
+});

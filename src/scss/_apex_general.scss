@@ -1,0 +1,16 @@
+body.ab-navbar-fixed-top {
+    margin-top: 3rem;
+}
+
+.main-container .ab-region {
+    padding-top: 4rem;
+}
+
+.ab-region.ab-region-title-hidden .ab-region-title {
+    @extend .hidden-xs-up;
+}
+
+body.ab-container-fluid .main-container>.container{
+    max-width: initial;
+    @extend .container-fluid;
+}

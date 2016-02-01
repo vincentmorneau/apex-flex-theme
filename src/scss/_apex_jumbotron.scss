@@ -1,0 +1,35 @@
+.jumbotron .ab-region-title {
+    margin-top: 0;
+}
+
+// master-jumbotron
+@include media-breakpoint-up(sm) {
+    .jumbotron.master-jumbotron {
+        padding-bottom: 6rem;
+        padding-top: 10rem;
+        margin-bottom: 0;
+
+        & .ab-region-title {
+            font-size: 3rem;
+        }
+
+        & .region-body, & .region-body p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .jumbotron.master-jumbotron {
+        padding-bottom: 10rem;
+        padding-top: 15rem;
+
+        & .ab-region-title {
+            font-size: 5rem;
+        }
+
+        & .region-body, & .region-body p {
+            font-size: 2rem;
+        }
+    }
+}

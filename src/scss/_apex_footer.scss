@@ -1,0 +1,29 @@
+footer {
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 0;
+
+    ul {
+        padding-left: 0;
+        margin-bottom: 1rem;
+        list-style: none;
+    }
+
+    a {
+        font-size: 1rem;
+        font-weight: 500;
+
+        i {
+            padding-right: 1rem;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .ab-region {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,5 @@
+/************
+Bootstrap Initialization
+************/
+$(function() {
+});

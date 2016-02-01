@@ -1,0 +1,17 @@
+.card {
+    &.bg-primary {
+      @include card-variant($brand-primary, $brand-primary);
+    }
+    &.bg-success {
+      @include card-variant($brand-success, $brand-success);
+    }
+    &.bg-info {
+      @include card-variant($brand-info, $brand-info);
+    }
+    &.bg-warning {
+      @include card-variant($brand-warning, $brand-warning);
+    }
+    &.bg-danger {
+      @include card-variant($brand-danger, $brand-danger);
+    }
+}

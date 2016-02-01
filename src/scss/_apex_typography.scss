@@ -1,0 +1,31 @@
+.title-h1>.ab-region-title {
+    @extend .h1;
+}
+
+.title-h2>.ab-region-title {
+    @extend .h2;
+}
+
+.title-h3>.ab-region-title {
+    @extend .h3;
+}
+
+.title-h4>.ab-region-title {
+    @extend .h4;
+}
+
+.title-h5>.ab-region-title {
+    @extend .h5;
+}
+
+.title-h6>.ab-region-title {
+    @extend .h6;
+}
+
+.region-lead p {
+    @extend .lead;
+}
+
+.blockquote.hide-blockquote-footer .blockquote-footer {
+    display: none!important;
+}

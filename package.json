@@ -1,0 +1,17 @@
+{
+  "name": "apex-bootstrap4",
+  "author": "Vincent Morneau",
+  "version": "0.0.1",
+  "description": "APEX 5 Theme for Oracle APEX",
+  "license":"MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vincentmorneau/bootstrap4-apex-theme.git"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "bootstrap": "4.0.0-alpha.2"
+  }
+}
