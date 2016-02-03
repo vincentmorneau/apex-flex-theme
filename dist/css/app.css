@@ -400,7 +400,7 @@ output {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
-.title-h1 > .ab-region-title, .h2, .title-h2 > .ab-region-title, .h3, .title-h3 > .ab-region-title, .h4, .title-h4 > .ab-region-title, .h5, .title-h5 > .ab-region-title, .h6, .title-h6 > .ab-region-title {
+.title-h1 .ab-region-title, .h2, .title-h2 .ab-region-title, .h3, .title-h3 .ab-region-title, .h4, .title-h4 .ab-region-title, .h5, .title-h5 .ab-region-title, .h6, .title-h6 .ab-region-title {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
@@ -425,22 +425,22 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-.h1, .title-h1 > .ab-region-title {
+.h1, .title-h1 .ab-region-title {
   font-size: 2.5rem; }
 
-.h2, .title-h2 > .ab-region-title {
+.h2, .title-h2 .ab-region-title {
   font-size: 2rem; }
 
-.h3, .title-h3 > .ab-region-title {
+.h3, .title-h3 .ab-region-title {
   font-size: 1.75rem; }
 
-.h4, .title-h4 > .ab-region-title {
+.h4, .title-h4 .ab-region-title {
   font-size: 1.5rem; }
 
-.h5, .title-h5 > .ab-region-title {
+.h5, .title-h5 .ab-region-title {
   font-size: 1.25rem; }
 
-.h6, .title-h6 > .ab-region-title {
+.h6, .title-h6 .ab-region-title {
   font-size: 1rem; }
 
 .lead, .region-lead p {
@@ -4628,7 +4628,6 @@ body.ab-container-fluid .main-container > .container {
   max-width: initial; }
 
 .btn {
-  margin-right: 0.25rem;
   margin-bottom: 0.25rem; }
 
 .card.bg-primary {
@@ -4712,6 +4711,8 @@ footer {
   margin-bottom: 0; }
 
 .blockquote.hide-blockquote-footer .blockquote-footer {
-  display: none !important; }
+  display: none !important;
+  visibility: hidden !important; }
+
 
 /*# sourceMappingURL=app.css.map */

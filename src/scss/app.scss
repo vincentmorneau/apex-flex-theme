@@ -1,7 +1,10 @@
 // Custom APEX variables
 @import "apex_variables";
 
-// Original bootstrap CSS files
+// Custom mixins
+@import "mixins/utilities";
+
+// Bootstrap
 @import "bootstrap";
 
 // Additional SCSS

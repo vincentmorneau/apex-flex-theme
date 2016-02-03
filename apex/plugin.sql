@@ -116,6 +116,49 @@ as
     and     apr.page_id               = :APP_PAGE_ID
     and     ltrim(apr.static_id, '#') = ltrim(l_component_id, '#');
 
+    -- c_list_all_template_options
+    cursor  c_list_all_template_options is
+    select  atog.display_name group_name
+            , ato.display_name
+            , ato.help_text
+    from    apex_application_page_regions apr
+    join    apex_application_temp_list atl
+    on      atl.application_id         = apr.application_id
+    and     atl.list_template_id       = apr.list_template_override_id
+    join    apex_appl_template_options ato
+    on      ato.application_id         = apr.application_id
+    and     ato.list_template_id       = apr.template_id
+    left join apex_appl_template_opt_groups atog
+    on      atog.application_id        = ato.application_id
+    and     atog.theme_number          = ato.theme_number
+    and     atog.template_opt_group_id = ato.group_id
+    where   apr.application_id         = :APP_ID
+    and     apr.page_id                = :APP_PAGE_ID
+    and     ltrim(apr.static_id, '#')  = ltrim(l_component_id, '#')
+    union
+    select  atog.display_name group_name
+            , ato.display_name
+            , ato.help_text
+    from    apex_appl_template_options ato
+    left join apex_appl_template_opt_groups atog
+    on      atog.application_id        = ato.application_id
+    and     atog.theme_number          = ato.theme_number
+    and     atog.template_opt_group_id = ato.group_id
+    where   ato.application_id         = :APP_ID
+    and     ato.virtual_template_type  = l_component_type
+    and     l_include_globals          = 'Y';
+
+    -- c_list_attributes
+    cursor  c_list_attributes is
+    select  atl.*
+    from    apex_application_page_regions apr
+    join    apex_application_temp_list atl
+    on      atl.application_id         = apr.application_id
+    and     atl.list_template_id       = apr.list_template_override_id
+    where   apr.application_id        = :APP_ID
+    and     apr.page_id               = :APP_PAGE_ID
+    and     ltrim(apr.static_id, '#') = ltrim(l_component_id, '#');
+
     -- helper functions
     function open_table (
         p_th1 in varchar2
@@ -134,14 +177,14 @@ as
             || '<tbody>';
     end open_table;
 
-    function set_table_content (
+    function print_row (
         p_td1 in varchar2
         , p_td2 in varchar2
         , p_td3 in varchar2 default '-1'
-        , p_value_required in boolean default false
+        , p_td2_required in boolean default true
     ) return varchar2 is
     begin
-        if p_value_required and p_td2 is null then
+        if p_td2_required and p_td2 is null then
             return null;
         else
             return '<tr>'
@@ -150,7 +193,7 @@ as
                 || case when p_td3 = '-1' then null else '<td>' || p_td3 || '</td>' end
                 || '</tr>';
         end if;
-    end set_table_content;
+    end print_row;
 
     function close_table
     return varchar2 is
@@ -158,6 +201,41 @@ as
         return '</tbody>'
             || '</table>';
     end close_table;
+
+    function print_grid_attributes (
+        p_new_grid in varchar2
+        , p_new_grid_row in varchar2
+        , p_new_grid_column in varchar2
+        , p_grid_column in varchar2
+        , p_grid_column_span in varchar2
+        , p_grid_column_css_classes in varchar2
+        , p_grid_column_attributes in varchar2
+    )
+    return varchar2 is
+    begin
+        return print_row (
+            p_td1 => 'New Grid'
+            , p_td2 => p_new_grid
+        ) || print_row (
+            p_td1 => 'New Grid Row'
+            , p_td2 => p_new_grid_row
+        ) || print_row (
+            p_td1 => 'New Grid Column'
+            , p_td2 => p_new_grid_column
+        ) || print_row (
+            p_td1 => 'Grid Column'
+            , p_td2 => p_grid_column
+        ) || print_row (
+            p_td1 => 'Grid Column Span'
+            , p_td2 => p_grid_column_span
+        ) || print_row (
+            p_td1 => 'Grid Column CSS Classes'
+            , p_td2 => p_grid_column_css_classes
+        ) || print_row (
+            p_td1 => 'Grid Column Attributes'
+            , p_td2 => p_grid_column_attributes
+        );
+    end;
 begin
     -- debug information will be included
     if apex_application.g_debug then
@@ -175,9 +253,10 @@ begin
             );
 
             for i in c_template_option_groups loop
-                l_html := l_html || set_table_content (
+                l_html := l_html || print_row (
                     p_td1 => i.display_name
                     , p_td2 => i.help_text
+                    , p_td2_required => false
                 );
             end loop;
 
@@ -189,9 +268,10 @@ begin
             );
 
             for i in c_template_option_single loop
-                l_html := l_html || set_table_content (
+                l_html := l_html || print_row (
                     p_td1 => i.display_name
                     , p_td2 => i.help_text
+                    , p_td2_required => false
                 );
             end loop;
 
@@ -208,10 +288,11 @@ begin
                             );
 
                             for i in c_button_all_template_options loop
-                                l_html := l_html || set_table_content (
+                                l_html := l_html || print_row (
                                     p_td1 => i.group_name
                                     , p_td2 => i.display_name
                                     , p_td3 => i.help_text
+                                    , p_td2_required => false
                                 );
                             end loop;
 
@@ -223,46 +304,14 @@ begin
                             );
 
                             for i in c_button_attributes loop
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid'
-                                    , p_td2 => i.new_grid
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid Row'
-                                    , p_td2 => i.new_grid_row
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid Column'
-                                    , p_td2 => i.new_grid_column
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column'
-                                    , p_td2 => i.grid_column
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column Span'
-                                    , p_td2 => i.grid_column_span
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column CSS Classes'
-                                    , p_td2 => i.grid_column_css_classes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column Attributes'
-                                    , p_td2 => i.grid_column_attributes
-                                    , p_value_required => true
+                                l_html := l_html || print_grid_attributes (
+                                    p_new_grid                  => i.new_grid
+                                    , p_new_grid_row            => i.new_grid_row
+                                    , p_new_grid_column         => i.new_grid_column
+                                    , p_grid_column             => i.grid_column
+                                    , p_grid_column_span        => i.grid_column_span
+                                    , p_grid_column_css_classes => i.grid_column_css_classes
+                                    , p_grid_column_attributes  => i.grid_column_attributes
                                 );
                             end loop;
 
@@ -274,58 +323,33 @@ begin
                             );
 
                             for i in c_button_attributes loop
-                                l_html := l_html || set_table_content (
+                                l_html := l_html || print_row (
                                     p_td1 => 'Template'
                                     , p_td2 => i.button_template
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Image Name'
                                     , p_td2 => i.image_name
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Alignment'
                                     , p_td2 => i.alignment
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Image Attributes'
                                     , p_td2 => i.image_attributes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Button CSS Classes'
                                     , p_td2 => i.button_css_classes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Icon CSS Classses'
                                     , p_td2 => i.icon_css_classes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Button Attributes'
                                     , p_td2 => i.button_attributes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Pre Element Text'
                                     , p_td2 => i.pre_element_text
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Post Element Text'
                                     , p_td2 => i.post_element_text
-                                    , p_value_required => true
                                 );
                             end loop;
 
@@ -336,7 +360,85 @@ begin
                 when 'LABEL' then
                     null;
                 when 'LIST' then
-                    null;
+                    case
+                        when l_displayed_info like '%ALL_TEMPLATE_OPTIONS%' then
+                            l_html := l_html || open_table (
+                                p_th1 => 'Group'
+                                , p_th2 => 'Template Option'
+                                , p_th3 => 'Comment'
+                            );
+
+                            for i in c_list_all_template_options loop
+                                l_html := l_html || print_row (
+                                    p_td1 => i.group_name
+                                    , p_td2 => i.display_name
+                                    , p_td3 => i.help_text
+                                    , p_td2_required => false
+                                );
+                            end loop;
+
+                            l_html := l_html || close_table;
+                        when l_displayed_info like '%GRID_ATTRIBUTES%' then
+                            l_html := l_html || open_table (
+                                p_th1 => 'Grid Attribute'
+                                , p_th2 => 'Value'
+                            );
+
+                            for i in c_region_attributes loop
+                                l_html := l_html || print_grid_attributes (
+                                    p_new_grid                  => i.new_grid
+                                    , p_new_grid_row            => i.new_grid_row
+                                    , p_new_grid_column         => i.new_grid_column
+                                    , p_grid_column             => i.grid_column
+                                    , p_grid_column_span        => i.grid_column_span
+                                    , p_grid_column_css_classes => i.grid_column_css_classes
+                                    , p_grid_column_attributes  => i.grid_column_attributes
+                                );
+                            end loop;
+
+                            l_html := l_html || close_table;
+                        when l_displayed_info like '%CUSTOM_ATTRIBUTES%' then
+                            l_html := l_html || open_table (
+                                p_th1 => 'Custom Attribute'
+                                , p_th2 => 'Value'
+                            );
+
+                            for i in c_list_attributes loop
+                                l_html := l_html || print_row (
+                                    p_td1 => 'A01 Label'
+                                    , p_td2 => i.a01_label
+                                ) || print_row (
+                                    p_td1 => 'A02 Label'
+                                    , p_td2 => i.a02_label
+                                ) || print_row (
+                                    p_td1 => 'A03 Label'
+                                    , p_td2 => i.a03_label
+                                ) || print_row (
+                                    p_td1 => 'A04 Label'
+                                    , p_td2 => i.a04_label
+                                ) || print_row (
+                                    p_td1 => 'A05 Label'
+                                    , p_td2 => i.a05_label
+                                ) || print_row (
+                                    p_td1 => 'A06 Label'
+                                    , p_td2 => i.a06_label
+                                ) || print_row (
+                                    p_td1 => 'A07 Label'
+                                    , p_td2 => i.a07_label
+                                ) || print_row (
+                                    p_td1 => 'A08 Label'
+                                    , p_td2 => i.a08_label
+                                ) || print_row (
+                                    p_td1 => 'A09 Label'
+                                    , p_td2 => i.a09_label
+                                ) || print_row (
+                                    p_td1 => 'A10 Label'
+                                    , p_td2 => i.a10_label
+                                );
+                            end loop;
+
+                            l_html := l_html || close_table;
+                    end case;
                 when 'PAGE' then
                     null;
                 when 'REGION' then
@@ -349,10 +451,11 @@ begin
                             );
 
                             for i in c_region_all_template_options loop
-                                l_html := l_html || set_table_content (
+                                l_html := l_html || print_row (
                                     p_td1 => i.group_name
                                     , p_td2 => i.display_name
                                     , p_td3 => i.help_text
+                                    , p_td2_required => false
                                 );
                             end loop;
 
@@ -364,46 +467,14 @@ begin
                             );
 
                             for i in c_region_attributes loop
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid'
-                                    , p_td2 => i.new_grid
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid Row'
-                                    , p_td2 => i.new_grid_row
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid Column'
-                                    , p_td2 => i.new_grid_column
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column'
-                                    , p_td2 => i.grid_column
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column Span'
-                                    , p_td2 => i.grid_column_span
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column CSS Classes'
-                                    , p_td2 => i.grid_column_css_classes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column Attributes'
-                                    , p_td2 => i.grid_column_attributes
-                                    , p_value_required => true
+                                l_html := l_html || print_grid_attributes (
+                                    p_new_grid                  => i.new_grid
+                                    , p_new_grid_row            => i.new_grid_row
+                                    , p_new_grid_column         => i.new_grid_column
+                                    , p_grid_column             => i.grid_column
+                                    , p_grid_column_span        => i.grid_column_span
+                                    , p_grid_column_css_classes => i.grid_column_css_classes
+                                    , p_grid_column_attributes  => i.grid_column_attributes
                                 );
                             end loop;
 
@@ -415,35 +486,24 @@ begin
                             );
 
                             for i in c_region_attributes loop
-                                l_html := l_html || set_table_content (
+                                l_html := l_html || print_row (
                                     p_td1 => 'Template'
                                     , p_td2 => i.template
-                                    , p_value_required => true
-                                );
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Display Region Selector'
                                     , p_td2 => i.display_region_selector
-                                    , p_value_required => true
-                                );
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Region CSS Classes'
                                     , p_td2 => i.region_css_classes
-                                    , p_value_required => true
-                                );
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Icon CSS Classes'
                                     , p_td2 => i.icon_css_classes
-                                    , p_value_required => true
-                                );
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Region Sub CSS Classes'
                                     , p_td2 => i.region_sub_css_classes
-                                    , p_value_required => true
-                                );
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Region Attributes Substitution'
                                     , p_td2 => i.region_attributes_substitution
-                                    , p_value_required => true
                                 );
                             end loop;
 
@@ -459,10 +519,11 @@ begin
                             );
 
                             for i in c_region_all_template_options loop
-                                l_html := l_html || set_table_content (
+                                l_html := l_html || print_row (
                                     p_td1 => i.group_name
                                     , p_td2 => i.display_name
                                     , p_td3 => i.help_text
+                                    , p_td2_required => false
                                 );
                             end loop;
 
@@ -474,46 +535,14 @@ begin
                             );
 
                             for i in c_region_attributes loop
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid'
-                                    , p_td2 => i.new_grid
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid Row'
-                                    , p_td2 => i.new_grid_row
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'New Grid Column'
-                                    , p_td2 => i.new_grid_column
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column'
-                                    , p_td2 => i.grid_column
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column Span'
-                                    , p_td2 => i.grid_column_span
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column CSS Classes'
-                                    , p_td2 => i.grid_column_css_classes
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
-                                    p_td1 => 'Grid Column Attributes'
-                                    , p_td2 => i.grid_column_attributes
-                                    , p_value_required => true
+                                l_html := l_html || print_grid_attributes (
+                                    p_new_grid                  => i.new_grid
+                                    , p_new_grid_row            => i.new_grid_row
+                                    , p_new_grid_column         => i.new_grid_column
+                                    , p_grid_column             => i.grid_column
+                                    , p_grid_column_span        => i.grid_column_span
+                                    , p_grid_column_css_classes => i.grid_column_css_classes
+                                    , p_grid_column_attributes  => i.grid_column_attributes
                                 );
                             end loop;
 
@@ -525,94 +554,51 @@ begin
                             );
 
                             for i in c_region_attributes loop
-                                l_html := l_html || set_table_content (
+                                l_html := l_html || print_row (
                                     p_td1 => 'Template'
                                     , p_td2 => i.report_template
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Report column headings'
                                     , p_td2 => i.report_column_headings
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Maximum rows to query'
                                     , p_td2 => i.maximum_rows_to_query
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Pagination scheme'
                                     , p_td2 => i.pagination_scheme
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Pagination display position'
                                     , p_td2 => i.pagination_display_position
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Number of rows item'
                                     , p_td2 => i.number_of_rows_item
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Maximum row count'
                                     , p_td2 => i.maximum_row_count
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Report null values as'
                                     , p_td2 => i.report_null_values_as
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Breaks'
                                     , p_td2 => i.breaks
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Strip HTML'
                                     , p_td2 => i.strip_html
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Max dynamic report cols'
                                     , p_td2 => i.max_dynamic_report_cols
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Fixed header'
                                     , p_td2 => i.fixed_header
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Fixed header max height'
                                     , p_td2 => i.fixed_header_max_height
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Enable csv output'
                                     , p_td2 => i.enable_csv_output
-                                    , p_value_required => true
-                                );
-
-                                l_html := l_html || set_table_content (
+                                ) || print_row (
                                     p_td1 => 'Repeat heading break format'
                                     , p_td2 => i.repeat_heading_break_format
-                                    , p_value_required => true
                                 );
                             end loop;
 
