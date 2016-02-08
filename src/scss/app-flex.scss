@@ -3,6 +3,9 @@
 // Custom APEX mixins
 @import "apex_mixins";
 
+// turn on flexbox
+$enable-flex: true;
+
 // Bootstrap
 @import "bootstrap";
 

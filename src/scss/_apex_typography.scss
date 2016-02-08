@@ -1,25 +1,41 @@
-.title-h1 .ab-region-title {
+.ab-h1>.ab-region-title, .ab-h1>.container>.ab-region-title {
     @extend .h1;
 }
 
-.title-h2 .ab-region-title {
+.ab-h2>.ab-region-title, .ab-h2>.container>.ab-region-title {
     @extend .h2;
 }
 
-.title-h3 .ab-region-title {
+.ab-h3>.ab-region-title, .ab-h3>.container>.ab-region-title {
     @extend .h3;
 }
 
-.title-h4 .ab-region-title {
+.ab-h4>.ab-region-title, .ab-h4>.container>.ab-region-title {
     @extend .h4;
 }
 
-.title-h5 .ab-region-title {
+.ab-h5>.ab-region-title, .ab-h5>.container>.ab-region-title {
     @extend .h5;
 }
 
-.title-h6 .ab-region-title {
+.ab-h6>.ab-region-title, .ab-h6>.container>.ab-region-title {
     @extend .h6;
+}
+
+.ab-display-1>.ab-region-title, .ab-display-1>.container>.ab-region-title {
+    @extend .display-1;
+}
+
+.ab-display-2>.ab-region-title, .ab-display-2>.container>.ab-region-title {
+    @extend .display-2;
+}
+
+.ab-display-3>.ab-region-title, .ab-display-3>.container>.ab-region-title {
+    @extend .display-3;
+}
+
+.ab-display-4>.ab-region-title, .ab-display-4>.container>.ab-region-title {
+    @extend .display-4;
 }
 
 .region-lead p {
