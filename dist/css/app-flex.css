@@ -69,6 +69,7 @@ aside,
 details,
 figcaption,
 figure,
+.ab-image.ab-figure,
 footer,
 header,
 hgroup,
@@ -143,7 +144,7 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-figure {
+figure, .ab-image.ab-figure {
   margin: 1em 40px; }
 
 hr {
@@ -277,8 +278,8 @@ th {
     .table td,
     .table th {
       background-color: #fff !important; }
-  .table-bordered th,
-  .table-bordered td {
+  .table-bordered th, .ab-table-bordered .table th,
+  .table-bordered td, .ab-table-bordered .table td {
     border: 1px solid #ddd !important; } }
 
 html {
@@ -373,7 +374,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem; }
 
-figure {
+figure, .ab-image.ab-figure {
   margin: 0 0 1rem; }
 
 img {
@@ -590,10 +591,10 @@ mark,
   max-width: 100%;
   height: auto; }
 
-.img-rounded {
+.img-rounded, .ab-img-rounded img {
   border-radius: 0.3rem; }
 
-.img-thumbnail {
+.img-thumbnail, .ab-img-thumbnail img {
   padding: 0.25rem;
   line-height: 1.5;
   background-color: #fff;
@@ -605,10 +606,10 @@ mark,
   max-width: 100%;
   height: auto; }
 
-.img-circle {
+.img-circle, .ab-img-circle img {
   border-radius: 50%; }
 
-.figure {
+.figure, .ab-image.ab-figure {
   display: inline-block; }
 
 .figure-img {
@@ -1686,23 +1687,23 @@ pre {
   .table .table {
     background-color: #fff; }
 
-.table-sm th,
-.table-sm td {
+.table-sm th, .ab-table-sm .table th,
+.table-sm td, .ab-table-sm .table td {
   padding: 0.3rem; }
 
-.table-bordered {
+.table-bordered, .ab-table-bordered .table {
   border: 1px solid #eceeef; }
-  .table-bordered th,
-  .table-bordered td {
+  .table-bordered th, .ab-table-bordered .table th,
+  .table-bordered td, .ab-table-bordered .table td {
     border: 1px solid #eceeef; }
-  .table-bordered thead th,
-  .table-bordered thead td {
+  .table-bordered thead th, .ab-table-bordered .table thead th,
+  .table-bordered thead td, .ab-table-bordered .table thead td {
     border-bottom-width: 2px; }
 
-.table-striped tbody tr:nth-of-type(odd) {
+.table-striped tbody tr:nth-of-type(odd), .ab-table-striped .table tbody tr:nth-of-type(odd) {
   background-color: #f9f9f9; }
 
-.table-hover tbody tr:hover {
+.table-hover tbody tr:hover, .ab-table-hover .table tbody tr:hover {
   background-color: #f5f5f5; }
 
 .table-active,
@@ -1710,10 +1711,10 @@ pre {
 .table-active > td {
   background-color: #f5f5f5; }
 
-.table-hover .table-active:hover {
+.table-hover .table-active:hover, .ab-table-hover .table .table-active:hover {
   background-color: #e8e8e8; }
-  .table-hover .table-active:hover > td,
-  .table-hover .table-active:hover > th {
+  .table-hover .table-active:hover > td, .ab-table-hover .table .table-active:hover > td,
+  .table-hover .table-active:hover > th, .ab-table-hover .table .table-active:hover > th {
     background-color: #e8e8e8; }
 
 .table-success,
@@ -1721,10 +1722,10 @@ pre {
 .table-success > td {
   background-color: #dff0d8; }
 
-.table-hover .table-success:hover {
+.table-hover .table-success:hover, .ab-table-hover .table .table-success:hover {
   background-color: #d0e9c6; }
-  .table-hover .table-success:hover > td,
-  .table-hover .table-success:hover > th {
+  .table-hover .table-success:hover > td, .ab-table-hover .table .table-success:hover > td,
+  .table-hover .table-success:hover > th, .ab-table-hover .table .table-success:hover > th {
     background-color: #d0e9c6; }
 
 .table-info,
@@ -1732,10 +1733,10 @@ pre {
 .table-info > td {
   background-color: #d9edf7; }
 
-.table-hover .table-info:hover {
+.table-hover .table-info:hover, .ab-table-hover .table .table-info:hover {
   background-color: #c4e3f3; }
-  .table-hover .table-info:hover > td,
-  .table-hover .table-info:hover > th {
+  .table-hover .table-info:hover > td, .ab-table-hover .table .table-info:hover > td,
+  .table-hover .table-info:hover > th, .ab-table-hover .table .table-info:hover > th {
     background-color: #c4e3f3; }
 
 .table-warning,
@@ -1743,10 +1744,10 @@ pre {
 .table-warning > td {
   background-color: #fcf8e3; }
 
-.table-hover .table-warning:hover {
+.table-hover .table-warning:hover, .ab-table-hover .table .table-warning:hover {
   background-color: #faf2cc; }
-  .table-hover .table-warning:hover > td,
-  .table-hover .table-warning:hover > th {
+  .table-hover .table-warning:hover > td, .ab-table-hover .table .table-warning:hover > td,
+  .table-hover .table-warning:hover > th, .ab-table-hover .table .table-warning:hover > th {
     background-color: #faf2cc; }
 
 .table-danger,
@@ -1754,10 +1755,10 @@ pre {
 .table-danger > td {
   background-color: #f2dede; }
 
-.table-hover .table-danger:hover {
+.table-hover .table-danger:hover, .ab-table-hover .table .table-danger:hover {
   background-color: #ebcccc; }
-  .table-hover .table-danger:hover > td,
-  .table-hover .table-danger:hover > th {
+  .table-hover .table-danger:hover > td, .ab-table-hover .table .table-danger:hover > td,
+  .table-hover .table-danger:hover > th, .ab-table-hover .table .table-danger:hover > th {
     background-color: #ebcccc; }
 
 .table-responsive {
@@ -1766,51 +1767,51 @@ pre {
   min-height: 0.01%;
   overflow-x: auto; }
 
-.thead-inverse th {
+.thead-inverse th, .ab-thead-inverse thead th {
   color: #fff;
   background-color: #373a3c; }
 
-.thead-default th {
+.thead-default th, .ab-thead-default thead th {
   color: #55595c;
   background-color: #eceeef; }
 
-.table-inverse {
+.table-inverse, .ab-table-inverse .table {
   color: #eceeef;
   background-color: #373a3c; }
-  .table-inverse.table-bordered {
+  .table-inverse.table-bordered, .ab-table-bordered .table-inverse.table, .ab-table-bordered .ab-table-inverse .table, .ab-table-inverse .ab-table-bordered .table, .ab-table-inverse .table-bordered.table {
     border: 0; }
-  .table-inverse th,
-  .table-inverse td,
-  .table-inverse thead th {
+  .table-inverse th, .ab-table-inverse .table th,
+  .table-inverse td, .ab-table-inverse .table td,
+  .table-inverse thead th, .ab-table-inverse .table thead th {
     border-color: #55595c; }
 
-.table-reflow thead {
+.table-reflow thead, .ab-table-reflow .table thead {
   float: left; }
 
-.table-reflow tbody {
+.table-reflow tbody, .ab-table-reflow .table tbody {
   display: block;
   white-space: nowrap; }
 
-.table-reflow th,
-.table-reflow td {
+.table-reflow th, .ab-table-reflow .table th,
+.table-reflow td, .ab-table-reflow .table td {
   border-top: 1px solid #eceeef;
   border-left: 1px solid #eceeef; }
-  .table-reflow th:last-child,
-  .table-reflow td:last-child {
+  .table-reflow th:last-child, .ab-table-reflow .table th:last-child,
+  .table-reflow td:last-child, .ab-table-reflow .table td:last-child {
     border-right: 1px solid #eceeef; }
 
-.table-reflow thead:last-child tr:last-child th,
-.table-reflow thead:last-child tr:last-child td,
-.table-reflow tbody:last-child tr:last-child th,
-.table-reflow tbody:last-child tr:last-child td,
-.table-reflow tfoot:last-child tr:last-child th,
-.table-reflow tfoot:last-child tr:last-child td {
+.table-reflow thead:last-child tr:last-child th, .ab-table-reflow .table thead:last-child tr:last-child th,
+.table-reflow thead:last-child tr:last-child td, .ab-table-reflow .table thead:last-child tr:last-child td,
+.table-reflow tbody:last-child tr:last-child th, .ab-table-reflow .table tbody:last-child tr:last-child th,
+.table-reflow tbody:last-child tr:last-child td, .ab-table-reflow .table tbody:last-child tr:last-child td,
+.table-reflow tfoot:last-child tr:last-child th, .ab-table-reflow .table tfoot:last-child tr:last-child th,
+.table-reflow tfoot:last-child tr:last-child td, .ab-table-reflow .table tfoot:last-child tr:last-child td {
   border-bottom: 1px solid #eceeef; }
 
-.table-reflow tr {
+.table-reflow tr, .ab-table-reflow .table tr {
   float: left; }
-  .table-reflow tr th,
-  .table-reflow tr td {
+  .table-reflow tr th, .ab-table-reflow .table tr th,
+  .table-reflow tr td, .ab-table-reflow .table tr td {
     display: block !important;
     border: 1px solid #eceeef; }
 
@@ -3880,7 +3881,7 @@ a.label:focus, a.label:hover {
 
 .media-object {
   display: block; }
-  .media-object.img-thumbnail {
+  .media-object.img-thumbnail, .ab-img-thumbnail img.media-object {
     max-width: none; }
 
 .media-right {
@@ -5070,6 +5071,10 @@ body.ab-navbar-fixed-top {
 body.ab-container-fluid .main-container > .container {
   max-width: initial; }
 
+.container {
+  padding-left: 0;
+  padding-right: 0; }
+
 .btn {
   margin-bottom: 0.25rem; }
 
@@ -5092,6 +5097,11 @@ body.ab-container-fluid .main-container > .container {
 .card.bg-danger {
   background-color: #d9534f;
   border-color: #d9534f; }
+
+.ab-image-fluid img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
 
 .ab-footer {
   bottom: 0;
@@ -5152,6 +5162,11 @@ body.ab-container-fluid .main-container > .container {
 
 .navbar ~ .jumbotron {
   margin-bottom: 0; }
+
+.report-pagination td, .report-pagination th {
+  border-top: 0;
+  padding: 0;
+  padding-left: 0.2rem; }
 
 .blockquote.hide-blockquote-footer .blockquote-footer {
   display: none !important;

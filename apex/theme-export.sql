@@ -566,9 +566,9 @@ wwv_flow_api.create_row_template(
 ,p_row_template_name=>'Standard - Column'
 ,p_row_template1=>'<td headers="#COLUMN_HEADER_NAME#">#COLUMN_VALUE#</td>'
 ,p_row_template_before_rows=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
-'<div>',
-'<table class="t-Report-pagination" role="presentation">#TOP_PAGINATION#</table>',
-'<table id="report-#REGION_STATIC_ID#" class="table #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>',
+'<div id="report-#REGION_STATIC_ID#" class="table #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>',
+'<table class="report-pagination report-pagination-top" role="presentation">#TOP_PAGINATION#</table>',
+'<table class="table">',
 '    '))
 ,p_row_template_after_rows=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
 '</tbody>',
@@ -675,13 +675,27 @@ wwv_flow_api.create_field_template(
 );
 wwv_flow_api.create_field_template(
  p_id=>wwv_flow_api.id(21666767277169746701)
-,p_template_name=>'Image'
-,p_template_body1=>'<label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#">'
+,p_template_name=>'Image (Display image)'
+,p_template_body1=>'<label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" class="hidden-xs-up">'
 ,p_template_body2=>'</label>'
-,p_before_item=>'<div class="ab-image #COMPONENT_CSS_CLASSES#">'
+,p_before_item=>'<div class="ab-image #ITEM_CSS_CLASSES#">'
+,p_after_item=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
+'<figcaption class="figure-caption">#CURRENT_ITEM_HELP_TEXT#</figcaption>',
+'</div>'))
+,p_theme_id=>wwv_flow.g_flow_theme_id
+,p_theme_class_id=>5
+,p_default_template_options=>'ab-image-fluid'
+);
+wwv_flow_api.create_field_template(
+ p_id=>wwv_flow_api.id(24675583319893454849)
+,p_template_name=>'Figure (Display image)'
+,p_template_body1=>'<label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" class="hidden-xs-up">'
+,p_template_body2=>'</label>'
+,p_before_item=>'<div class="ab-image #ITEM_CSS_CLASSES#">'
 ,p_after_item=>'</div>'
 ,p_theme_id=>wwv_flow.g_flow_theme_id
 ,p_theme_class_id=>5
+,p_default_template_options=>'ab-image-fluid'
 );
 end;
 /
@@ -968,6 +982,16 @@ wwv_flow_api.create_template_opt_group(
 ,p_template_types=>'REGION'
 ,p_help_text=>'Apply "Margin top" to any element with a template option.'
 ,p_is_advanced=>'Y'
+);
+wwv_flow_api.create_template_opt_group(
+ p_id=>wwv_flow_api.id(24638563454136000092)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'REPORT_THEAD_STYLE'
+,p_display_name=>'Report thead style'
+,p_display_sequence=>1
+,p_template_types=>'REPORT'
+,p_null_text=>'None'
+,p_is_advanced=>'N'
 );
 end;
 /
@@ -1819,6 +1843,157 @@ wwv_flow_api.create_template_option(
 ,p_css_classes=>'ab-display-4'
 ,p_group_id=>wwv_flow_api.id(21666050145955709488)
 ,p_template_types=>'REGION'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24638517463110990773)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_INVERSE'
+,p_display_name=>'Table inverse'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-table-inverse'
+,p_template_types=>'REPORT'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24638818495987042562)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'THEAD_INVERSE'
+,p_display_name=>'Inverse'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-thead-inverse'
+,p_group_id=>wwv_flow_api.id(24638563454136000092)
+,p_template_types=>'REPORT'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24638868108048044818)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'THEAD_DEFAULT'
+,p_display_name=>'Default'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-thead-default'
+,p_group_id=>wwv_flow_api.id(24638563454136000092)
+,p_template_types=>'REPORT'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24666957512989616847)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_STRIPED'
+,p_display_name=>'Table striped'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-table-striped'
+,p_template_types=>'REPORT'
+,p_help_text=>'Use this to add zebra-striping to any table row within the <tbody>.'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24666967360255004826)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_RESPONSIVE'
+,p_display_name=>'Table responsive'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'table-responsive'
+,p_template_types=>'REPORT'
+,p_help_text=>'Create responsive tables by making them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24666969862666619210)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_BORDERED'
+,p_display_name=>'Table bordered'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-table-bordered'
+,p_template_types=>'REPORT'
+,p_help_text=>'Add this for borders on all sides of the table and cells.'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24666971488961621593)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_HOVER'
+,p_display_name=>'Table hover'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-table-hover'
+,p_template_types=>'REPORT'
+,p_help_text=>'Add this to enable a hover state on table rows within a <tbody>.'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24666983108175624062)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_SMALL'
+,p_display_name=>'Table small'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-table-sm'
+,p_template_types=>'REPORT'
+,p_help_text=>'Add this to make tables more compact by cutting cell padding in half.'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24666999550614007775)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'TABLE_REFLOW'
+,p_display_name=>'Table reflow'
+,p_display_sequence=>1
+,p_report_template_id=>wwv_flow_api.id(13552141119189127708)
+,p_css_classes=>'ab-table-reflow'
+,p_template_types=>'REPORT'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24675583671135454855)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'CIRCLE'
+,p_display_name=>'Circle'
+,p_display_sequence=>1
+,p_field_template_id=>wwv_flow_api.id(24675583319893454849)
+,p_css_classes=>'ab-img-circle'
+,p_group_id=>wwv_flow_api.id(21666849568988941560)
+,p_template_types=>'FIELD'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24675584090474454856)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'RESPONSIVE'
+,p_display_name=>'Responsive'
+,p_display_sequence=>1
+,p_field_template_id=>wwv_flow_api.id(24675583319893454849)
+,p_css_classes=>'ab-image-fluid'
+,p_template_types=>'FIELD'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24675584422731454856)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'ROUNDED'
+,p_display_name=>'Rounded'
+,p_display_sequence=>1
+,p_field_template_id=>wwv_flow_api.id(24675583319893454849)
+,p_css_classes=>'ab-img-rounded'
+,p_group_id=>wwv_flow_api.id(21666849568988941560)
+,p_template_types=>'FIELD'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24675584844990454856)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'THUMBNAIL'
+,p_display_name=>'Thumbnail'
+,p_display_sequence=>1
+,p_field_template_id=>wwv_flow_api.id(24675583319893454849)
+,p_css_classes=>'ab-img-thumbnail'
+,p_group_id=>wwv_flow_api.id(21666849568988941560)
+,p_template_types=>'FIELD'
+);
+wwv_flow_api.create_template_option(
+ p_id=>wwv_flow_api.id(24675998799033483446)
+,p_theme_id => wwv_flow.g_flow_theme_id
+,p_name=>'ITEM_FIGURE'
+,p_display_name=>'Figure'
+,p_display_sequence=>1
+,p_field_template_id=>wwv_flow_api.id(21666767277169746701)
+,p_css_classes=>'ab-figure'
+,p_template_types=>'FIELD'
+,p_help_text=>'Anytime you need to display a piece of content—like an image—with an optional caption, consider using a figure.'
 );
 end;
 /

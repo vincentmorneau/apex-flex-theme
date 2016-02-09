@@ -66,7 +66,8 @@ wwv_flow_api.create_plugin(
 '    and     ato.theme_number    = atog.theme_number',
 '    and     ato.group_id        = atog.template_opt_group_id',
 '    where   atog.application_id = :APP_ID',
-'    and     atog.name           = l_template_option_group;',
+'    and     atog.name           = l_template_option_group',
+'    and     atog.template_types = l_component_type;',
 '',
 '    /* c_template_option_single */',
 '    cursor  c_template_option_single is',
@@ -87,7 +88,8 @@ wwv_flow_api.create_plugin(
 '    and     atog.theme_number         = ato.theme_number',
 '    and     atog.template_opt_group_id= ato.group_id',
 '    where   ato.application_id        = :APP_ID',
-'    and     ato.virtual_template_type = l_component_type;',
+'    and     ato.virtual_template_type = l_component_type',
+'    and     l_include_globals         = ''Y'';',
 '',
 '    /* c_button_all_template_options */',
 '    cursor  c_button_all_template_options is',
@@ -562,7 +564,7 @@ wwv_flow_api.create_plugin(
 '                    end if;',
 '                when ''BREADCRUMB'' then',
 '                    null;',
-'                when ''LABEL'' then',
+'                when ''FIELD'' then',
 '                    if l_displayed_info like ''%ALL_TEMPLATE_OPTIONS%'' then',
 '                        l_html := l_html || open_table(',
 '                            p_th1=>''Group''',
@@ -825,8 +827,8 @@ wwv_flow_api.create_plugin_attribute(
 ,p_supported_ui_types=>'DESKTOP:JQM_SMARTPHONE'
 ,p_is_translatable=>false
 ,p_depending_on_attribute_id=>wwv_flow_api.id(24032433508109914740)
-,p_depending_on_condition_type=>'EQUALS'
-,p_depending_on_expression=>'COMPONENT'
+,p_depending_on_condition_type=>'IN_LIST'
+,p_depending_on_expression=>'COMPONENT,GROUP'
 ,p_lov_type=>'STATIC'
 );
 wwv_flow_api.create_plugin_attr_value(
@@ -842,14 +844,6 @@ wwv_flow_api.create_plugin_attr_value(
 ,p_display_sequence=>20
 ,p_display_value=>'Button'
 ,p_return_value=>'BUTTON'
-,p_is_quick_pick=>true
-);
-wwv_flow_api.create_plugin_attr_value(
- p_id=>wwv_flow_api.id(23497902669927591877)
-,p_plugin_attribute_id=>wwv_flow_api.id(23497876084433961183)
-,p_display_sequence=>30
-,p_display_value=>'Label'
-,p_return_value=>'LABEL'
 ,p_is_quick_pick=>true
 );
 wwv_flow_api.create_plugin_attr_value(
@@ -882,6 +876,14 @@ wwv_flow_api.create_plugin_attr_value(
 ,p_display_sequence=>70
 ,p_display_value=>'Report'
 ,p_return_value=>'REPORT'
+,p_is_quick_pick=>true
+);
+wwv_flow_api.create_plugin_attr_value(
+ p_id=>wwv_flow_api.id(24637994143298842225)
+,p_plugin_attribute_id=>wwv_flow_api.id(23497876084433961183)
+,p_display_sequence=>80
+,p_display_value=>'Field'
+,p_return_value=>'FIELD'
 ,p_is_quick_pick=>true
 );
 wwv_flow_api.create_plugin_attribute(

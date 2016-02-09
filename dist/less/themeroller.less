@@ -674,8 +674,10 @@
 @pre-border-color:            #ccc;
 @pre-scrollable-max-height:   340px;
 
-// Custom APEX mixins
-
+.hide() {
+    display:none!important;
+    visibility: hidden!important;
+}
 
 // Toggles
 //
@@ -733,39 +735,240 @@
 
 
 
-// Single side border-radius
-
-.border-radius(@radius: @border-radius) {
-  & when ( @enable-rounded ){
-    border-radius: @radius;
+.hover {
+  & when ( @enable-hover-media-query ){
+    // See Media Queries Level 4: http://drafts.csswg.org/mediaqueries/#hover
+    // Currently shimmed by https://github.com/twbs/mq4-hover-shim
+    @media (hover: hover) {
+      &:hover { @content }
+    }
+  }
+  @else {
+    &:hover { @content }
   }
 }
 
-.border-top-radius(@radius) {
-  & when ( @enable-rounded ){
-    border-top-right-radius: @radius;
-    border-top-left-radius: @radius;
+.hover-focus {
+  & when ( @enable-hover-media-query ){
+    &:focus { @content }
+    .hover { @content }
+  }
+  @else {
+    &:focus,
+    &:hover {
+      @content
+    }
   }
 }
 
-.border-right-radius(@radius) {
-  & when ( @enable-rounded ){
-    border-bottom-right-radius: @radius;
-    border-top-right-radius: @radius;
+.plain-hover-focus {
+  & when ( @enable-hover-media-query ){
+    &,
+    &:focus {
+      @content
+    }
+    .hover { @content }
+  }
+  @else {
+    &,
+    &:focus,
+    &:hover {
+      @content
+    }
   }
 }
 
-.border-bottom-radius(@radius) {
-  & when ( @enable-rounded ){
-    border-bottom-right-radius: @radius;
-    border-bottom-left-radius: @radius;
+.hover-focus-active {
+  & when ( @enable-hover-media-query ){
+    &:focus,
+    &:active {
+      @content
+    }
+    .hover { @content }
+  }
+  @else {
+    &:focus,
+    &:active,
+    &:hover {
+      @content
+    }
   }
 }
 
-.border-left-radius(@radius) {
-  & when ( @enable-rounded ){
-    border-bottom-left-radius: @radius;
-    border-top-left-radius: @radius;
+// Image Mixins
+// - Responsive image
+// - Retina image
+
+
+// Responsive image
+//
+// Keep images from scaling beyond the width of their parents.
+
+.img-fluid(@display: block) {
+  display: @display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+// Retina image
+//
+// Short retina mixin for setting background-image and -size.
+
+.img-retina(@file-1x, @file-2x, @width-1x, @height-1x) {
+  background-image: url(@file-1x);
+
+  // Autoprefixer takes care of adding -webkit-min-device-pixel-ratio and -o-min-device-pixel-ratio,
+  // but doesn't convert dppx=>dpi.
+  // There's no such thing as unprefixed min-device-pixel-ratio since it's nonstandard.
+  // Compatibility info: http://caniuse.com/#feat=css-media-resolution
+  @media
+  only screen and (min-resolution: 192dpi), // IE9-11 don't support dppx
+  only screen and (min-resolution: 2dppx) { // Standardized
+    background-image: url(@file-2x);
+    background-size: @width-1x @height-1x;
+  }
+}
+
+// Labels
+
+.label-variant(@color) {
+  background-color: @color;
+
+  &[href] {
+    .hover-focus {
+      background-color: darken(@color, 10%);
+    }
+  }
+}
+
+// Reset filters for IE
+//
+// When you need to remove a gradient background, do not forget to use this to reset
+// the IE filter for IE9.
+
+.reset-filter() {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+}
+
+// Resize anything
+
+.resizable(@direction) {
+  resize: @direction; // Options: horizontal, vertical, both
+  overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
+}
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+//
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+//
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+// Sizing shortcuts
+
+.size(@width, @height: @width) {
+  width: @width;
+  height: @height;
+}
+
+// WebKit-style focus
+
+.tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.reset-text {
+  font-family: @font-family-base;
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: @line-height;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+// Typography
+
+.text-emphasis-variant(@parent, @color) {
+  @{parent} {
+    color: @color !important;
+  }
+  a@{parent} {
+    .hover-focus {
+      color: darken(@color, 10%);
+    }
+  }
+}
+
+// CSS image replacement
+.text-hide() {
+  font: "0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// Text truncate
+// Requires inline-block or block for proper styling
+
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Alerts
+
+.alert-variant(@background, @border, @body-color) {
+  background-color: @background;
+  border-color: @border;
+  color: @body-color;
+
+  hr {
+    border-top-color: darken(@border, 5%);
+  }
+  .alert-link {
+    color: darken(@body-color, 10%);
   }
 }
 
@@ -870,16 +1073,301 @@
   .border-radius(@border-radius);
 }
 
-// WebKit-style focus
+// Card variants
 
-.tab-focus() {
-  // Default
-  outline: thin dotted;
-  // WebKit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+.card-variant(@background, @border) {
+  background-color: @background;
+  border-color: @border;
 }
 
+.card-outline-variant(@color) {
+  background-color: transparent;
+  border-color: @color;
+}
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+.card-inverse {
+  .card-header,
+  .card-footer {
+    border-bottom: @card-border-width solid rgba(255,255,255,.2);
+  }
+  .card-header,
+  .card-footer,
+  .card-title,
+  .card-blockquote {
+    color: #fff;
+  }
+  .card-link,
+  .card-text,
+  .card-blockquote > footer {
+    color: rgba(255,255,255,.65);
+  }
+  .card-link {
+    .hover-focus {
+      color: @card-link-hover-color;
+    }
+  }
+}
+
+// Pagination
+
+.pagination-size(@padding-vertical, @padding-horizontal, @font-size, @line-height, @border-radius) {
+  .page-link {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+  }
+
+  .page-item {
+    &:first-child {
+      .page-link {
+        .border-left-radius(@border-radius);
+      }
+    }
+    &:last-child {
+      .page-link {
+        .border-right-radius(@border-radius);
+      }
+    }
+  }
+}
+
+// Lists
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Horizontal dividers
+//
+// Dividers (basically an hr) within dropdowns and nav lists
+
+.nav-divider(@color: #e5e5e5) {
+  height: 1px;
+  margin: (@spacer-y / 2) 0;
+  overflow: hidden;
+  background-color: @color;
+}
+
+// Form validation states
+//
+// Used in _forms.less to generate the form validation CSS for warnings, errors,
+// and successes.
+
+.form-control-validation(@color) {
+  // Color the label and help text
+  .text-help,
+  .form-control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+    color: @color;
+  }
+  // Set the border and box shadow on specific inputs to match
+  .form-control {
+    border-color: @color;
+    // .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+
+    &:focus {
+      // border-color: darken(@border-color, 10%);
+      // @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@border-color, 20%);
+      // .box-shadow(@shadow);
+    }
+  }
+
+  // Set validation states also for addons
+  .input-group-addon {
+    color: @color;
+    border-color: @color;
+    background-color: lighten(@color, 40%);
+  }
+  // Optional feedback icon
+  .form-control-feedback {
+    color: @color;
+  }
+}
+
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `@input-border-focus` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+.form-control-focus() {
+  &:focus {
+    border-color: @input-border-focus;
+    outline: none;
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @input-box-shadow-focus;
+    .box-shadow(@shadow);
+  }
+}
+
+// Form control sizing
+//
+// Relative text size, padding, and border-radii changes for form controls. For
+// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
+// element gets special love because it's special, and that's a fact!
+
+.input-size(@parent, @input-height, @padding-vertical, @padding-horizontal, @font-size, @line-height, @border-radius) {
+  @{parent} {
+    height: @input-height;
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    .border-radius(@border-radius);
+  }
+
+  select@{parent} {
+    height: @input-height;
+    line-height: @input-height;
+  }
+
+  textarea@{parent},
+  select[multiple]@{parent} {
+    height: auto;
+  }
+}
+
+// Tables
+
+.table-row-variant(@state, @background) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table-@{state} {
+    &,
+    > th,
+    > td {
+      background-color: @background;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover {
+    @hover-background: darken(@background, 5%);
+
+    .table-@{state} {
+      .hover {
+        background-color: @hover-background;
+
+        > td,
+        > th {
+          background-color: @hover-background;
+        }
+      }
+    }
+  }
+}
+
+// Contextual backgrounds
+
+.bg-variant(@parent, @color) {
+  @{parent} {
+    color: #fff !important;
+    background-color: @color !important;
+  }
+  a@{parent} {
+    .hover-focus {
+      background-color: darken(@color, 10%);
+    }
+  }
+}
+
+// Single side border-radius
+
+.border-radius(@radius: @border-radius) {
+  & when ( @enable-rounded ){
+    border-radius: @radius;
+  }
+}
+
+.border-top-radius(@radius) {
+  & when ( @enable-rounded ){
+    border-top-right-radius: @radius;
+    border-top-left-radius: @radius;
+  }
+}
+
+.border-right-radius(@radius) {
+  & when ( @enable-rounded ){
+    border-bottom-right-radius: @radius;
+    border-top-right-radius: @radius;
+  }
+}
+
+.border-bottom-radius(@radius) {
+  & when ( @enable-rounded ){
+    border-bottom-right-radius: @radius;
+    border-bottom-left-radius: @radius;
+  }
+}
+
+.border-left-radius(@radius) {
+  & when ( @enable-rounded ){
+    border-bottom-left-radius: @radius;
+    border-top-left-radius: @radius;
+  }
+}
+
+// Gradients
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9.
+.gradient-horizontal(@start-color: #555, @end-color: #333, @start-percent: 0%, @end-percent: 100%) {
+  background-image: linear-gradient(to right, @start-color @start-percent, @end-color @end-percent);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='~"ie-hex-str(@start-color)"', endColorstr='~"ie-hex-str(@end-color)"', GradientType=1); // IE9
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9.
+.gradient-vertical(@start-color: #555, @end-color: #333, @start-percent: 0%, @end-percent: 100%) {
+  background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='~"ie-hex-str(@start-color)"', endColorstr='~"ie-hex-str(@end-color)"', GradientType=0); // IE9
+}
+
+.gradient-directional(@start-color: #555, @end-color: #333, @deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(@deg, @start-color, @end-color);
+}
+.gradient-horizontal-three-colors(@start-color: #00b3ee, @mid-color: #7a43b6, @color-stop: 50%, @end-color: #c3325f) {
+  background-image: linear-gradient(to right, @start-color, @mid-color @color-stop, @end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='~"ie-hex-str(@start-color)"', endColorstr='~"ie-hex-str(@end-color)"', GradientType=1); // IE9 gets no color-stop at all for proper fallback
+}
+.gradient-vertical-three-colors(@start-color: #00b3ee, @mid-color: #7a43b6, @color-stop: 50%, @end-color: #c3325f) {
+  background-image: linear-gradient(@start-color, @mid-color @color-stop, @end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='~"ie-hex-str(@start-color)"', endColorstr='~"ie-hex-str(@end-color)"', GradientType=0); // IE9 gets no color-stop at all for proper fallback
+}
+.gradient-radial(@inner-color: #555, @outer-color: #333) {
+  background-image: radial-gradient(circle, @inner-color, @outer-color);
+  background-repeat: no-repeat;
+}
+.gradient-striped(@color: rgba(255,255,255,.15), @angle: 45deg) {
+  background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+}
 //
 // Base styles
 //
