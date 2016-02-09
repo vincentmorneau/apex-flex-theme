@@ -2,7 +2,7 @@
   "name": "apex-bootstrap4",
   "author": "Vincent Morneau",
   "version": "0.0.1",
-  "description": "APEX 5 Theme for Oracle APEX",
+  "description": "Bootstrap 4 Theme for Oracle APEX",
   "license":"MIT",
   "repository": {
     "type": "git",
