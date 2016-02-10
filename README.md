@@ -1,7 +1,7 @@
-# Bootstrap 4 APEX Theme
-This is a Bootstrap 4 Theme for APEX 5.
+# APEX Bootstrap 4
+This is a Bootstrap 4 Theme for Oracle APEX 5.
 
-[View Demo](https://apex.oracle.com/pls/apex/f?p=73792)
+[See demo](https://apex.oracle.com/pls/apex/f?p=73792)
 
 ## Project Sponsors
 Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
@@ -12,7 +12,7 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 ## Install
 - **Option 1) Application Import**
     - Import the APEX application [demo-app.sql](apex/demo-app.sql) in your workspace.
-- **Option 2 Theme Import**
+- **Option 2) Theme Import**
     - Import the Theme [theme-export.sql](apex/theme-export.sql) in your existing application.
 - **Option 3) Manual compile**
     - Install apex-bootstrap4  
