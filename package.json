@@ -6,12 +6,12 @@
   "license":"MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vincentmorneau/bootstrap4-apex-theme.git"
+    "url": "git://github.com/vincentmorneau/apex-bootstrap4.git"
   },
   "scripts": {
     "start": "gulp"
   },
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "4.0.0-alpha.2"
   }
 }
