@@ -26,3 +26,8 @@
 .navbar~.jumbotron {
     margin-bottom: 0;
 }
+
+a.dropdown-divider {
+    padding: 0;
+    @extend .dropdown-divider;
+}

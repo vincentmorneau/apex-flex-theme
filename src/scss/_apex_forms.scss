@@ -1,0 +1,34 @@
+.text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
+    @extend .form-control;
+}
+
+fieldset.textarea, fieldset.radio_group, fieldset.checkbox_group, .display_only {
+    display: block;
+}
+
+.form-inline {
+    fieldset.textarea, fieldset.radio_group, fieldset.checkbox_group, .display_only {
+        display: inline-block;
+    }
+}
+
+input.file {
+    @extend .form-control-file;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 5px;
+}
+
+label {
+    margin-right: 5px;
+}
+
+.form-group.sr-only {
+    position: relative;
+    width: auto;
+    height: auto;
+    &>label {
+        @extend .sr-only;
+    }
+}
