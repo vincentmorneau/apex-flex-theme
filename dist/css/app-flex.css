@@ -2548,13 +2548,13 @@ fieldset[disabled] a.btn {
     color: #818a91;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, div.btn-lg .btn {
   padding: 0.75rem 1.25rem;
   font-size: 1.25rem;
   line-height: 1.33333;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, div.btn-sm .btn {
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2637,7 +2637,7 @@ input[type="button"].btn-block {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
 
-.dropdown-divider {
+.dropdown-divider, a.dropdown-divider {
   height: 1px;
   margin: 0.5rem 0;
   overflow: hidden;
@@ -2794,18 +2794,18 @@ input[type="button"].btn-block {
   padding-right: 8px;
   padding-left: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, div.btn-lg .btn-group > .btn + .dropdown-toggle {
   padding-right: 12px;
   padding-left: 12px; }
 
 .btn .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, div.btn-lg .btn .caret {
   border-width: 0.3em 0.3em 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, div.btn-lg .dropup .btn .caret {
   border-width: 0 0.3em 0.3em; }
 
 .btn-group-vertical > .btn,
@@ -4725,7 +4725,7 @@ button.close {
   .pull-xl-none {
     float: none !important; } }
 
-.sr-only {
+.sr-only, .form-group.sr-only > label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -5182,10 +5182,13 @@ div.btn-secondary, div.btn-secondary div.btn, div.btn-primary, div.btn-primary d
   background: none;
   color: inherit;
   border-color: inherit; }
-  div.btn-secondary:hover, div.btn-secondary div.btn:hover, div.btn-secondary:focus, div.btn-secondary div.btn:focus, div.btn-secondary:active, div.btn-secondary div.btn:active, div.btn-primary:hover, div.btn-primary div.btn:hover, div.btn-primary:focus, div.btn-primary div.btn:focus, div.btn-primary:active, div.btn-primary div.btn:active, div.btn-success:hover, div.btn-success div.btn:hover, div.btn-success:focus, div.btn-success div.btn:focus, div.btn-success:active, div.btn-success div.btn:active, div.btn-info:hover, div.btn-info div.btn:hover, div.btn-info:focus, div.btn-info div.btn:focus, div.btn-info:active, div.btn-info div.btn:active, div.btn-warning:hover, div.btn-warning div.btn:hover, div.btn-warning:focus, div.btn-warning div.btn:focus, div.btn-warning:active, div.btn-warning div.btn:active, div.btn-danger:hover, div.btn-danger div.btn:hover, div.btn-danger:focus, div.btn-danger div.btn:focus, div.btn-danger:active, div.btn-danger div.btn:active {
+  div.btn-secondary:hover, div.btn-secondary div.btn:hover, div.btn-secondary:focus:active, div.btn-secondary div.btn:focus:active, div.btn-secondary:active:hover, div.btn-secondary div.btn:active:hover, div.btn-secondary:focus, div.btn-secondary div.btn:focus, div.btn-secondary:active, div.btn-secondary div.btn:active, div.btn-primary:hover, div.btn-primary div.btn:hover, div.btn-primary:focus:active, div.btn-primary div.btn:focus:active, div.btn-primary:active:hover, div.btn-primary div.btn:active:hover, div.btn-primary:focus, div.btn-primary div.btn:focus, div.btn-primary:active, div.btn-primary div.btn:active, div.btn-success:hover, div.btn-success div.btn:hover, div.btn-success:focus:active, div.btn-success div.btn:focus:active, div.btn-success:active:hover, div.btn-success div.btn:active:hover, div.btn-success:focus, div.btn-success div.btn:focus, div.btn-success:active, div.btn-success div.btn:active, div.btn-info:hover, div.btn-info div.btn:hover, div.btn-info:focus:active, div.btn-info div.btn:focus:active, div.btn-info:active:hover, div.btn-info div.btn:active:hover, div.btn-info:focus, div.btn-info div.btn:focus, div.btn-info:active, div.btn-info div.btn:active, div.btn-warning:hover, div.btn-warning div.btn:hover, div.btn-warning:focus:active, div.btn-warning div.btn:focus:active, div.btn-warning:active:hover, div.btn-warning div.btn:active:hover, div.btn-warning:focus, div.btn-warning div.btn:focus, div.btn-warning:active, div.btn-warning div.btn:active, div.btn-danger:hover, div.btn-danger div.btn:hover, div.btn-danger:focus:active, div.btn-danger div.btn:focus:active, div.btn-danger:active:hover, div.btn-danger div.btn:active:hover, div.btn-danger:focus, div.btn-danger div.btn:focus, div.btn-danger:active, div.btn-danger div.btn:active {
     background: none;
     color: inherit;
     border-color: inherit; }
+
+div.btn-lg, .btn-group-lg > div.btn, div.btn-lg div.btn, div.btn-sm, .btn-group-sm > div.btn, div.btn-sm div.btn {
+  padding: 0; }
 
 .card.bg-primary {
   background-color: #0275d8;
@@ -5272,6 +5275,9 @@ div.btn-secondary, div.btn-secondary div.btn, div.btn-primary, div.btn-primary d
 .navbar ~ .jumbotron {
   margin-bottom: 0; }
 
+a.dropdown-divider {
+  padding: 0; }
+
 .report-pagination td, .report-pagination th {
   border-top: 0;
   padding: 0;
@@ -5281,7 +5287,21 @@ div.btn-secondary, div.btn-secondary div.btn, div.btn-primary, div.btn-primary d
   display: none !important;
   visibility: hidden !important; }
 
-fieldset.textarea {
+fieldset.textarea, fieldset.radio_group, fieldset.checkbox_group, .display_only {
   display: block; }
+
+.form-inline fieldset.textarea, .form-inline fieldset.radio_group, .form-inline fieldset.checkbox_group, .form-inline .display_only {
+  display: inline-block; }
+
+input[type=checkbox], input[type=radio] {
+  margin-right: 5px; }
+
+label {
+  margin-right: 5px; }
+
+.form-group.sr-only, .form-group.sr-only > label.form-group {
+  position: relative;
+  width: auto;
+  height: auto; }
 
 /*# sourceMappingURL=app-flex.css.map */
