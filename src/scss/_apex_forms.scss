@@ -28,6 +28,7 @@ label {
     position: relative;
     width: auto;
     height: auto;
+    margin-bottom: 1rem;
     &>label {
         @extend .sr-only;
     }
