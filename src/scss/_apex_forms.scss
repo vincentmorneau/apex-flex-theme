@@ -1,0 +1,11 @@
+.text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
+    @extend .form-control;
+}
+
+fieldset.textarea {
+    display: block;
+}
+
+input.file {
+    @extend .form-control-file;
+}
