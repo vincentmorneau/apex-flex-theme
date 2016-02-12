@@ -10,7 +10,7 @@ div.btn-secondary, div.btn-primary, div.btn-success, div.btn-info, div.btn-warni
     background: none;
     color: inherit;
     border-color: inherit;
-    &:hover, &:focus, &:active {
+    &:hover, &:focus:active, &:active:hover, &:focus, &:active {
         background: none;
         color: inherit;
         border-color: inherit;
@@ -39,4 +39,15 @@ div.btn-warning .btn {
 
 div.btn-danger .btn {
     @extend .btn-danger;
+}
+
+div.btn-lg, div.btn-sm {
+    padding: 0;
+}
+
+div.btn-lg .btn{
+    @extend .btn-lg;
+}
+div.btn-sm .btn{
+    @extend .btn-sm;
 }
