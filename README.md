@@ -10,7 +10,7 @@ This is a Bootstrap 4 Theme for Oracle APEX 5.
 Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 
 ## Changelog
-0.1.0 Initial Release 
+0.1.0 Initial Release
 
 ## Install
 - **Option 1) Application Import**
@@ -51,5 +51,3 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
     ```bash
     npm start -- --project=bootstrap4
     ```
-    
-    TODO vincent
