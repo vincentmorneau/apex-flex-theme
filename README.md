@@ -1,4 +1,7 @@
 # APEX Bootstrap 4
+[![Build Status](https://travis-ci.org/vincentmorneau/apex-bootstrap4.svg?branch=master)](https://travis-ci.org/vincentmorneau/apex-bootstrap4)
+[![Dependency Status](https://david-dm.org/vincentmorneau/apex-bootstrap4.svg)](https://david-dm.org/vincentmorneau/apex-bootstrap4)
+
 This is a Bootstrap 4 Theme for Oracle APEX 5.
 
 [See demo](https://apex.oracle.com/pls/apex/f?p=73792)
