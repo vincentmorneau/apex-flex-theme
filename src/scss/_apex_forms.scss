@@ -40,10 +40,14 @@ label {
     line-height: 1.5;
 }
 
-.form-group.form-control-lg input {
-    @extend .form-control-lg;
+.form-group.form-control-lg {
+    input, select {
+        @extend .form-control-lg;
+    }
 }
 
-.form-group.form-control-sm input {
-    @extend .form-control-sm;
+.form-group.form-control-sm {
+    input, select {
+        @extend .form-control-sm;
+    }
 }
