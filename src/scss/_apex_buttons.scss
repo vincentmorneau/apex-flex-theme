@@ -1,3 +1,53 @@
 .btn {
     margin-bottom: 0.25rem;
 }
+
+.btn-group-vertical .btn {
+    margin: 0;
+}
+
+div.btn-secondary, div.btn-primary, div.btn-success, div.btn-info, div.btn-warning, div.btn-danger {
+    background: none;
+    color: inherit;
+    border-color: inherit;
+    &:hover, &:focus:active, &:active:hover, &:focus, &:active {
+        background: none;
+        color: inherit;
+        border-color: inherit;
+    }
+}
+
+div.btn-secondary .btn {
+    @extend .btn-secondary;
+}
+
+div.btn-primary .btn {
+    @extend .btn-primary;
+}
+
+div.btn-success .btn {
+    @extend .btn-success;
+}
+
+div.btn-info .btn {
+    @extend .btn-info;
+}
+
+div.btn-warning .btn {
+    @extend .btn-warning;
+}
+
+div.btn-danger .btn {
+    @extend .btn-danger;
+}
+
+div.btn-lg, div.btn-sm {
+    padding: 0;
+}
+
+div.btn-lg .btn{
+    @extend .btn-lg;
+}
+div.btn-sm .btn{
+    @extend .btn-sm;
+}
