@@ -1,0 +1,5 @@
+.alert {
+    &:not(.alert-dismissible) .close {
+        @include hide();
+    }
+}
