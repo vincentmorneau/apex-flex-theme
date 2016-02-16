@@ -1,3 +1,5 @@
+/*General rules*/
+
 .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
     @extend .form-control;
 }
@@ -24,6 +26,8 @@ label {
     margin-right: 5px;
 }
 
+/*Hidden label*/
+
 .form-group.sr-only {
     position: relative;
     width: auto;
@@ -34,6 +38,8 @@ label {
     }
 }
 
+/*Item size*/
+
 .form-group.form-control-lg, .form-group.form-control-sm {
     padding: 0;
     font-size: 1rem;
@@ -41,13 +47,42 @@ label {
 }
 
 .form-group.form-control-lg {
-    input, select {
+    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-lg;
     }
 }
 
 .form-group.form-control-sm {
-    input, select {
+    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-sm;
+    }
+}
+
+/*Item validation*/
+
+.form-group.has-success {
+    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
+        @extend .form-control-success;
+    }
+    label {
+        @extend .form-control-label;
+    }
+}
+
+.form-group.has-warning {
+    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
+        @extend .form-control-warning;
+    }
+    label {
+        @extend .form-control-label;
+    }
+}
+
+.form-group.has-danger {
+    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
+        @extend .form-control-danger;
+    }
+    label {
+        @extend .form-control-label;
     }
 }

@@ -51,3 +51,43 @@ div.btn-lg .btn{
 div.btn-sm .btn{
     @extend .btn-sm;
 }
+
+/*Button addons*/
+
+.btn-left-addon {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-right-addon {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -22px;
+}
+
+.input-btn-left-addon {
+    margin-left: -14px;
+    margin-top: 0.1px;
+    input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.input-btn-right-addon {
+    margin-right: -9px;
+    margin-top: 0.1px;
+    input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.input-btn-addon {
+    margin-right: -9px;
+    margin-left: -14px;
+    margin-top: 0.1px;
+    input {
+        border-radius: 0;
+    }
+}
