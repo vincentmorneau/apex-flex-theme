@@ -15,3 +15,80 @@
       @include card-variant($brand-danger, $brand-danger);
     }
 }
+
+/*List borders*/
+
+.list-group-flush:first-child .list-group-item:first-child {
+    border-top: 1px solid #ddd;
+}
+
+.list-group-flush:last-child .list-group-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+/*Card image*/
+
+.card-image-top, .card-image-overlay {
+    img {
+        @extend .card-img-top;
+        top: 0;
+    }
+    padding-top: 250px;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    left: 0;
+}
+
+.card-image-bottom {
+    img{
+        @extend .card-img-bottom;
+        bottom: 0;
+    }
+    padding-bottom: 250px;
+}
+
+.a-RegionMedia-graphic {
+    float: none;
+}
+
+.card.card-image-overlay {
+    background: none;
+
+    .card-block {
+        @extend .card-img-overlay;
+    }
+    img {
+        @extend .card-img;
+        z-index: -1;
+    }
+}
+
+/*Title size*/
+
+.card.ab-region-title-hidden .card-title {
+    display: none;
+}
+
+.card.ab-h1 .card-title {
+    @extend .h1;
+}
+
+.card.ab-h2 .card-title {
+    @extend .h2;
+}
+
+.card.ab-h3 .card-title {
+    @extend .h3;
+}
+
+.card.ab-h5 .card-title {
+    @extend .h5;
+}
+
+.card.ab-h6 .card-title {
+    @extend .h6;
+}

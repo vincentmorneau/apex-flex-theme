@@ -1,0 +1,43 @@
+.label-group {
+    span {
+        display: inline-block;
+        @extend .label;
+        @extend .label-default;
+    }
+
+    &.label-success {
+        background: none;
+        span {
+            @extend .label-success;
+        }
+    }
+    &.label-primary {
+        background: none;
+        span {
+            @extend .label-primary;
+        }
+    }
+    &.label-info {
+        background: none;
+        span {
+            @extend .label-info;
+        }
+    }
+    &.label-warning {
+        background: none;
+        span {
+            @extend .label-warning;
+        }
+    }
+    &.label-danger {
+        background: none;
+        span {
+            @extend .label-danger;
+        }
+    }
+    &.label-pill {
+        span {
+            @extend .label-pill;
+        }
+    }
+}
