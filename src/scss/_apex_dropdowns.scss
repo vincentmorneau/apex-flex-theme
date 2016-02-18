@@ -1,0 +1,7 @@
+.dropdown-header {
+    cursor: default;
+    &.dropdown-item:hover {
+        background: none;
+        color: $gray-light;
+    }
+}
