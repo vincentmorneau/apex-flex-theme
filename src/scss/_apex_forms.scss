@@ -86,3 +86,41 @@ div.sr-only {
         @extend .form-control-label;
     }
 }
+
+/*Cutom form*/
+
+/*Checkbox*/
+
+.custom-form {
+  .checkbox_group{
+    @extend .c-input;
+    @extend .c-checkbox;
+    label {
+      @extend .c-input;
+      &::before {
+          content: "";
+          @extend .c-indicator;
+      }
+    }
+  }
+  .radio_group {
+    @extend .c-input;
+    @extend .c-radio;
+    td {
+      @extend .c-input;
+    }
+    label {
+      //@extend .c-input;
+      &::before {
+        content: "";
+        @extend .c-indicator;
+      }
+    }
+  }
+  .selectlist {
+    @extend .c-select;
+  }
+  .file {
+    @extend .file-custom;
+  }
+}
