@@ -92,3 +92,11 @@
 .card.ab-h6 .card-title {
     @extend .h6;
 }
+
+/*Header*/
+
+.card-title-header {
+    .card-title {
+        @extend .card-header;
+    }
+}
