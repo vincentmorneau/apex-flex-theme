@@ -1,0 +1,84 @@
+{{#inline_css}}
+{{/inline_css}}
+{{#header_template}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>#TITLE#</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="author" content="Vincent Morneau">
+        <meta name="description" content="Bootstrap 4 APEX Theme">
+
+        <!-- Mandatory APEX CSS -->
+        #HEAD#
+        #APEX_CSS#
+
+        <!-- Your CSS -->
+        #THEME_CSS#
+        #THEME_STYLE_CSS#
+        #TEMPLATE_CSS#
+        #APPLICATION_CSS#
+
+        <!-- Additionnal CSS -->
+        #PAGE_CSS#
+    </head>
+    <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #ONLOAD#>
+{{/header_template}}
+
+{{#box}}
+#FORM_OPEN#
+
+<div class="modal #PAGE_CSS_CLASSES#">
+    <div class="modal-content">
+        #SUCCESS_MESSAGE#
+        #NOTIFICATION_MESSAGE#
+        #BODY#
+    </div>
+    <div class="modal-footer">
+        #REGION_POSITION_08#
+    </div>
+</div>
+
+#FORM_CLOSE#
+{{/box}}
+
+{{#footer_template}}
+<!-- Mandatory APEX Javascript -->
+#DEVELOPER_TOOLBAR#
+#APEX_JAVASCRIPT#
+
+<!-- Your Javascript -->
+#THEME_JAVASCRIPT#
+#TEMPLATE_JAVASCRIPT#
+#APPLICATION_JAVASCRIPT#
+
+<!-- Additionnal Javascript -->
+#PAGE_JAVASCRIPT#
+
+<!-- Generated Code -->
+#GENERATED_CSS#
+#GENERATED_JAVASCRIPT#
+</body>
+</html>
+{{/footer_template}}
+
+{{#success_message}}
+<div>#MESSAGE#</div>
+{{/success_message}}
+{{#message}}
+<div>#MESSAGE#</div>
+{{/message}}
+
+{{#grid_template}}
+<div class="container">#ROWS#</div>
+{{/grid_template}}
+{{#grid_row_template}}
+<div class="row">#COLUMNS#</div>
+{{/grid_row_template}}
+{{#grid_column_template}}
+<div class="col-xs-12 col-md-#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
+{{/grid_column_template}}
