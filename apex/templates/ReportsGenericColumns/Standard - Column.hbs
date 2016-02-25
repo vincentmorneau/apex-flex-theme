@@ -1,0 +1,77 @@
+{{#row_template_before_rows}}
+<div id="report-#REGION_STATIC_ID#" class="table #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
+<table class="report-pagination report-pagination-top" role="presentation">#TOP_PAGINATION#</table>
+<table class="table">
+{{/row_template_before_rows}}
+
+{{#before_column_heading}}
+<thead>
+{{/before_column_heading}}
+
+    {{#column_heading_template}}
+    <th id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
+    {{/column_heading_template}}
+
+{{#after_column_heading}}
+</thead>
+<tbody>
+{{/after_column_heading}}
+
+    {{#row_template_before_first}}
+    <tr>
+    {{/row_template_before_first}}
+
+        {{#row_template1}}
+        <td headers="#COLUMN_HEADER_NAME#">#COLUMN_VALUE#</td>
+        {{/row_template1}}
+        {{#row_template_condition1}}{{/row_template_condition1}}
+        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
+        {{#row_template2}}{{/row_template2}}
+        {{#row_template_condition2}}{{/row_template_condition2}}
+        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
+        {{#row_template3}}{{/row_template3}}
+        {{#row_template_condition3}}{{/row_template_condition3}}
+        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
+        {{#row_template4}}{{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    </tr>
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}
+</tbody>
+<tfoot>
+    <div class="report-links">#EXTERNAL_LINK##CSV_LINK#</div>
+</tfoot>
+</table>
+<nav><ul class="pagination">#PAGINATION#</ul></nav>
+</div>
+{{/row_template_after_rows}}
+
+{{#pagination_template}}
+<li class="page-item">#TEXT#</li>
+{{/pagination_template}}
+{{#next_page_template}}
+<li class="page-item">
+  <a class="page-link" href="#LINK#" aria-label="Next">
+    <span aria-hidden="true">&raquo;</span>
+    <span class="sr-only">Next</span>
+  </a>
+</li>
+{{/next_page_template}}
+{{#previous_page_template}}
+<li class="page-item">
+  <a class="page-link" href="#LINK#" aria-label="Previous">
+    <span aria-hidden="true">&laquo;</span>
+    <span class="sr-only">Previous</span>
+  </a>
+</li>
+{{/previous_page_template}}
+{{#next_set_template}}
+<li class="page-item"><a class="page-link" href="#LINK#" aria-label="Next">#PAGINATION_NEXT_SET#</a></li>
+{{/next_set_template}}
+{{#previous_set_template}}
+<li class="page-item"><a class="page-link" href="#LINK#" aria-label="Next">#PAGINATION_PREVIOUS_SET#</a></li>
+{{/previous_set_template}}
