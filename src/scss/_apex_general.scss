@@ -2,9 +2,9 @@ body.ab-navbar-fixed-top {
     margin-top: 3rem;
 }
 
-.main-container .ab-region {
-    padding-top: 4rem;
-}
+// .main-container .ab-region {
+//     padding-top: 4rem;
+// }
 
 .ab-region-title-hidden .ab-region-title {
     @extend .hidden-xs-up;
@@ -13,4 +13,12 @@ body.ab-navbar-fixed-top {
 body.ab-container-fluid .main-container>.container{
     max-width: initial;
     @extend .container-fluid;
+}
+
+.ab-region.collapse {
+    display: none;
+
+    &.in {
+        display: block;
+    }
 }

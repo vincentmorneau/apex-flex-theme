@@ -21,4 +21,17 @@
 
 {{#sub_plug_header_template}}{{/sub_plug_header_template}}
 {{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}#SUB_REGION#{{/sub_plug_template}}
+{{#sub_plug_template}}
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-#SUB_REGION_ID#">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="##REGION_STATIC_ID#" href="#sub-#SUB_REGION_ID#" aria-expanded="false" aria-controls="sub-#SUB_REGION_ID#">
+          #SUB_REGION_TITLE#
+        </a>
+      </h4>
+    </div>
+    <div id="sub-#SUB_REGION_ID#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-#SUB_REGION_ID#">
+      #SUB_REGION#
+    </div>
+  </div>
+{{/sub_plug_template}}
