@@ -28,4 +28,28 @@ $(function() {
             });
         }
     });
+
+    // Tooltips
+    $(".ab-field-tooltip [data-help][data-help!=''], .ab-button-tooltip[data-help][data-help!='']").each(function() {
+        $(this).attr({
+            "data-toggle": "tooltip",
+            "title": $(this).data("help")
+        });
+    });
+
+    // Popovers
+    $(".ab-field-popover [data-help][data-help!='']").each(function() {
+        $(this).attr({
+            "data-toggle": "popover",
+            "data-content": $(this).data("help"),
+            "title": $(this).text()
+        });
+    });
+
+    $(".ab-button-popover[data-help][data-help!='']").each(function() {
+        $(this).attr({
+            "data-toggle": "popover",
+            "data-content": $(this).data("help")
+        });
+    });
 });

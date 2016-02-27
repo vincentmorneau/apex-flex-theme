@@ -124,3 +124,10 @@ div.sr-only {
     @extend .file-custom;
   }
 }
+
+/* Help */
+.ab-field-tooltip, .ab-field-popover {
+    label {
+        text-decoration: underline;
+    }
+}
