@@ -1,24 +1,34 @@
+body[data-spy] {
+    position: relative;
+}
+
 body.ab-navbar-fixed-top {
     margin-top: 3rem;
 }
-
-// .main-container .ab-region {
-//     padding-top: 4rem;
-// }
 
 .ab-region-title-hidden .ab-region-title {
     @extend .hidden-xs-up;
 }
 
-body.ab-container-fluid .main-container>.container{
+body.ab-container-fluid .ab-main>.container {
     max-width: initial;
     @extend .container-fluid;
 }
 
 .ab-region.collapse {
     display: none;
-
     &.in {
         display: block;
     }
+}
+
+// Pushpin
+.pin-top,
+.pin-bottom {
+    position: relative;
+}
+
+.pinned {
+    position: fixed !important;
+    z-index: 1;
 }

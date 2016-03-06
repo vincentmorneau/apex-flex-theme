@@ -8,7 +8,8 @@
 {{/inline_css}}
 
 {{#list_template_before_rows}}
- <ul id="#LIST_ID#" class="nav #COMPONENT_CSS_CLASSES#">
+<nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES#">
+<ul class="nav">
 {{/list_template_before_rows}}
     {{#list_template_current}}
     <li class="nav-item active"><a href="#LINK#" class="active nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
@@ -48,6 +49,7 @@
     {{#fitem_template_noncurr_w_child}}{{/fitem_template_noncurr_w_child}}
 {{#list_template_after_rows}}
 </ul>
+</nav>
 {{/list_template_after_rows}}
 
 {{#a01_label}}{{/a01_label}}

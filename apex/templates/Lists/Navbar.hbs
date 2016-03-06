@@ -4,7 +4,10 @@
 {{#inline_css}}{{/inline_css}}
 
 {{#list_template_before_rows}}
-<ul id="#LIST_ID#" class="nav navbar-nav #COMPONENT_CSS_CLASSES#">
+<nav id="#LIST_ID#" class="navbar navbar-dark bg-inverse #COMPONENT_CSS_CLASSES#" role="navigation">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">&#9776;</button>
+    <div id="collapsingNavbar" class="collapse navbar-toggleable-xs">
+        <ul class="nav navbar-nav">
 {{/list_template_before_rows}}
     {{#list_template_current}}
     <li class="nav-item active"><a class="nav-link" href="#LINK#">#TEXT#<span class="sr-only">(current)</span></a></li>
@@ -30,6 +33,7 @@
     {{#fitem_template_noncurr_w_child}}{{/fitem_template_noncurr_w_child}}
 {{#list_template_after_rows}}
 </ul>
+</div>
 </nav>
 {{/list_template_after_rows}}
 
