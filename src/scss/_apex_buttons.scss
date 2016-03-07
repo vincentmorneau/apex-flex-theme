@@ -1,15 +1,28 @@
+// Buttons
 .btn {
     margin-bottom: 0.25rem;
 }
 
-.btn-group-vertical .btn {
-    margin: 0;
+// Horizontal groups
+.ab-btn-group-horizontal > .btn-toolbar >.ab-btn-group {
+    @extend .btn-group;
 }
 
+// Vertical groups
+.ab-btn-group-vertical > .btn-toolbar > .ab-btn-group {
+    @extend .btn-group-vertical;
+
+    & > .btn {
+        margin: 0;
+    }
+}
+
+/* Color schemes */
 div.btn-secondary, div.btn-primary, div.btn-success, div.btn-info, div.btn-warning, div.btn-danger {
     background: none;
     color: inherit;
     border-color: inherit;
+
     &:hover, &:focus:active, &:active:hover, &:focus, &:active {
         background: none;
         color: inherit;
