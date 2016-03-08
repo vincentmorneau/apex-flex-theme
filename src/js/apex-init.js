@@ -134,4 +134,39 @@ $(function() {
             offset: $(".ab-navbar-fixed-top .ab-header .navbar").outerHeight()
         });
     });
+
+    // Single Button Dropdowns
+    $(".ab-single-button-dropdown").each(function() {
+        $(this)
+            .removeAttr("onclick")
+            .addClass("dropdown-toggle")
+            .attr({
+                "data-toggle":"dropdown",
+                "aria-haspopup": "true",
+                "aria-expanded": "false",
+            })
+            .prependTo($(this).closest(".ab-region").find(".ab-btn-dropdown"));
+    });
+
+    // Split Button Dropdowns
+    $(".ab-split-button-dropdown").each(function() {
+        var classes = ["btn-primary", "btn-secondary", "btn-success", "btn-info", "btn-warning", "btn-danger", "btn-primary-outline", "btn-secondary-outline", "btn-success-outline", "btn-info-outline", "btn-warning-outline", "btn-danger-outline"];
+
+        var elementClasses = $(this).attr("class").split(" ");
+
+        for (var i = 0; i < elementClasses.length; i++) {
+            if ($.inArray(elementClasses[i], classes) >= 0) {
+                $thisClass = elementClasses[i];
+                break;
+            }
+        }
+
+        var toggle = '<button type="button" class="btn ' + $thisClass + ' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>';
+
+        $(this).prependTo($(this).closest(".ab-region").find(".ab-btn-dropdown").prepend(toggle));
+    });
+
+    $(".input-field label").each(function() {
+        $(this).appendTo($(this).parent());
+    });
 });

@@ -4,16 +4,15 @@
 {{#inline_css}}{{/inline_css}}
 
 {{#list_template_before_rows}}
-<div id="#LIST_ID#" class="btn-group #COMPONENT_CSS_CLASSES#">
-    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#REGION_TITLE#</button>
+<div id="#LIST_ID#" class="ab-btn-dropdown btn-group #COMPONENT_CSS_CLASSES#">
     <div class="dropdown-menu">
 {{/list_template_before_rows}}
     {{#list_template_current}}
-    <a class="dropdown-item #A01#" href="#LINK#">#TEXT#</a>
+    <a class="dropdown-item" href="#LINK#">#TEXT#</a>
     {{/list_template_current}}
     {{#item_template_curr_w_child}}{{/item_template_curr_w_child}}
     {{#list_template_noncurrent}}
-    <a class="dropdown-item	#A01#" href="#LINK#">#TEXT#</a>
+    <a class="dropdown-item" href="#LINK#">#TEXT#</a>
     {{/list_template_noncurrent}}
     {{#item_template_noncurr_w_child}}{{/item_template_noncurr_w_child}}
     {{#between_items}}{{/between_items}}

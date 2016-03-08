@@ -1,11 +1,15 @@
 {{#template}}
-<pre id="#REGION_STATIC_ID#" class="#REGION_CSS_CLASSES#">
+<pre id="#REGION_STATIC_ID#" class="ab-region #REGION_CSS_CLASSES#">
     <code class="#REGION_CSS_CLASSES#">
         #BODY#
+        #SUB_REGION_HEADERS#
+        #SUB_REGIONS#
     </code>
 </pre>
 {{/template}}
 
 {{#sub_plug_header_template}}{{/sub_plug_header_template}}
 {{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}{{/sub_plug_template}}
+{{#sub_plug_template}}
+#SUB_REGION#
+{{/sub_plug_template}}

@@ -18,7 +18,8 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
     - [See documentation](docs/manual-install.md).
 
 ## Changelog
-0.1.0 Initial Release
+#### 0.0.2
+- Initial Release
 
 [See CHANGELOG.md](CHANGELOG.md) for more details.
 

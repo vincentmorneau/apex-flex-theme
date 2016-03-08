@@ -100,7 +100,19 @@ div.btn-sm .btn{
     margin-right: -9px;
     margin-left: -14px;
     margin-top: 0.1px;
+
     input {
         border-radius: 0;
+    }
+}
+
+// Button Dropdowns
+.ab-single-button-dropdown, .ab-split-button-dropdown {
+    @include hide();
+}
+
+.ab-btn-dropdown {
+    & > .ab-single-button-dropdown, & > .ab-split-button-dropdown {
+        @include show();
     }
 }

@@ -8,6 +8,6 @@ $(function() {
     $('[data-toggle="popover"]').popover(appSettings.popover);
     // Scrollspy
     $(".ab-list-scrollspy").each(function(){
-        $('body').scrollspy({ target: '#' + $(this).attr("id") })
+        $('body').scrollspy({ target: '#' + $(this).attr("id") });
     });
 });
