@@ -10,6 +10,11 @@ body.ab-navbar-fixed-top {
     @extend .hidden-xs-up;
 }
 
+.ab-main {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
 body.ab-container-fluid .ab-main>.container {
     max-width: initial;
     @extend .container-fluid;

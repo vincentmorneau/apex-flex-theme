@@ -13,47 +13,11 @@
     @extend .btn-group-vertical;
 
     & > .btn {
-        margin: 0;
+        margin-bottom: 0;
     }
 }
 
-/* Color schemes */
-div.btn-secondary, div.btn-primary, div.btn-success, div.btn-info, div.btn-warning, div.btn-danger {
-    background: none;
-    color: inherit;
-    border-color: inherit;
-
-    &:hover, &:focus:active, &:active:hover, &:focus, &:active {
-        background: none;
-        color: inherit;
-        border-color: inherit;
-    }
-}
-
-div.btn-secondary .btn {
-    @extend .btn-secondary;
-}
-
-div.btn-primary .btn {
-    @extend .btn-primary;
-}
-
-div.btn-success .btn {
-    @extend .btn-success;
-}
-
-div.btn-info .btn {
-    @extend .btn-info;
-}
-
-div.btn-warning .btn {
-    @extend .btn-warning;
-}
-
-div.btn-danger .btn {
-    @extend .btn-danger;
-}
-
+/* Sizes */
 div.btn-lg, div.btn-sm {
     padding: 0;
 }
@@ -65,53 +29,12 @@ div.btn-sm .btn{
     @extend .btn-sm;
 }
 
-/*Button addons*/
-
-.btn-left-addon {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.btn-right-addon {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -22px;
-}
-
-.input-btn-left-addon {
-    margin-left: -14px;
-    margin-top: 0.1px;
-    input {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-}
-
-.input-btn-right-addon {
-    margin-right: -9px;
-    margin-top: 0.1px;
-    input {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-}
-
-.input-btn-addon {
-    margin-right: -9px;
-    margin-left: -14px;
-    margin-top: 0.1px;
-
-    input {
-        border-radius: 0;
-    }
-}
-
 // Button Dropdowns
 .ab-single-button-dropdown, .ab-split-button-dropdown {
     @include hide();
 }
 
-.ab-btn-dropdown {
+.ab-btn-dropdown, .input-group-btn {
     & > .ab-single-button-dropdown, & > .ab-split-button-dropdown {
         @include show();
     }

@@ -166,7 +166,29 @@ $(function() {
         $(this).prependTo($(this).closest(".ab-region").find(".ab-btn-dropdown").prepend(toggle));
     });
 
+    // Label
     $(".input-field label").each(function() {
         $(this).appendTo($(this).parent());
+    });
+
+    // Input Groups
+    $(".form-group").not(":only-child").each(function() {
+        $(this)
+            .prevAll(".input-group-addon, .input-group-btn")
+            .prependTo($(this).find(".ab-input-group"));
+
+        $(this)
+            .closest(".ab-region")
+            .find(".ab-btn-dropdown").children()
+            .prependTo($(this).find(".ab-input-group .input-group-btn"));
+
+        $(this)
+            .nextAll(".input-group-addon, .input-group-btn")
+            .appendTo($(this).find(".ab-input-group"));
+
+        $(this)
+            .closest(".ab-region")
+            .find(".ab-btn-dropdown").children()
+            .appendTo($(this).find(".ab-input-group .input-group-btn"));
     });
 });

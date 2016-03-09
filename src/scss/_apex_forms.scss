@@ -1,5 +1,4 @@
-/*General rules*/
-
+/* General rules */
 .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
     @extend .form-control;
 }
@@ -18,52 +17,38 @@ input.file {
     @extend .form-control-file;
 }
 
-input[type=checkbox], input[type=radio] {
-    margin-right: 5px;
+// input[type=checkbox], input[type=radio] {
+//     margin-right: 5px;
+// }
+
+// label {
+//     margin-right: 5px;
+// }
+
+/* Hidden label */
+.ab-input-sr-only label {
+    @include sr-only();
 }
 
-label {
-    margin-right: 5px;
-}
-
-/*Hidden label*/
-
-div.sr-only {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin-bottom: 1rem;
-    &>label {
-        @extend .sr-only;
-    }
-}
-
-/*Item size*/
-
-.form-group.form-control-lg, .form-group.form-control-sm {
-    padding: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.form-group.form-control-lg {
+/* Sizes */
+&.ab-form-control-lg {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-lg;
     }
 }
 
-.form-group.form-control-sm {
+&.ab-form-control-sm {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-sm;
     }
 }
 
-/*Item validation*/
-
+/* Item validation */
 .form-group.has-success {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-success;
     }
+
     label {
         @extend .form-control-label;
     }
@@ -87,10 +72,9 @@ div.sr-only {
     }
 }
 
-/*Cutom form*/
+/* Custom form */
 
-/*Checkbox*/
-
+/* Checkbox */
 .custom-form {
   .checkbox_group{
     @extend .c-input;
@@ -110,7 +94,6 @@ div.sr-only {
       @extend .c-input;
     }
     label {
-      //@extend .c-input;
       &::before {
         content: "";
         @extend .c-indicator;
@@ -130,4 +113,13 @@ div.sr-only {
     label {
         text-decoration: underline;
     }
+}
+
+/* Input Groups */
+.input-group-addon > label {
+    @include hide();
+}
+
+.form-group > .ab-input-group {
+    @extend .input-group;
 }
