@@ -764,7 +764,7 @@ begin
                     end if;
             end case;
     end case;
-
+    
     htp.prn(l_html);
 
     return l_result;
