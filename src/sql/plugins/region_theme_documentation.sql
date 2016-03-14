@@ -48,12 +48,12 @@ as
             , ato.help_text
     from    apex_appl_template_options ato
     left join apex_appl_template_opt_groups atog
-    on      atog.application_id       = ato.application_id
-    and     atog.theme_number         = ato.theme_number
-    and     atog.template_opt_group_id= ato.group_id
-    where   ato.application_id        = :APP_ID
-    and     ato.virtual_template_type = l_component_type
-    and     l_include_globals         = 'Y';
+    on      atog.application_id        = ato.application_id
+    and     atog.theme_number          = ato.theme_number
+    and     atog.template_opt_group_id = ato.group_id
+    where   ato.application_id         = :APP_ID
+    and     ato.virtual_template_type  = l_component_type
+    and     l_include_globals          = 'Y';
 
     /* c_button_all_template_options */
     cursor  c_button_all_template_options is
@@ -65,12 +65,12 @@ as
     on      ato.application_id               = apb.application_id
     and     ato.button_template_id           = apb.button_template_id
     left join apex_appl_template_opt_groups atog
-    on      atog.application_id       = ato.application_id
-    and     atog.theme_number         = ato.theme_number
-    and     atog.template_opt_group_id= ato.group_id
+    on      atog.application_id              = ato.application_id
+    and     atog.theme_number                = ato.theme_number
+    and     atog.template_opt_group_id       = ato.group_id
     where   apb.application_id               = :APP_ID
     and     apb.page_id                      = :APP_PAGE_ID
-    and     ltrim(apb.button_static_id,'#') = ltrim(l_component_id,'#');
+    and     ltrim(apb.button_static_id,'#')  = ltrim(l_component_id,'#');
 
     /* c_button_grid_attributes */
     cursor  c_button_grid_attributes is
@@ -102,7 +102,6 @@ as
     select attribute, value
     from (select to_char(button_template) as button_template
                 ,to_char(image_name) as image_name
-                ,to_char(alignment) as alignment
                 ,to_char(image_attributes) as image_attributes
                 ,to_char(button_css_classes) as button_css_classes
                 ,to_char(icon_css_classes) as icon_css_classes
@@ -117,7 +116,6 @@ as
     unpivot exclude nulls (value for attribute in (
          button_template
         ,image_name
-        ,alignment
         ,image_attributes
         ,button_css_classes
         ,icon_css_classes
@@ -172,9 +170,7 @@ as
     cursor  c_item_custom_attributes is
     select attribute, value
     from (select
-            to_char(item_name) as item_name
-            ,to_char(display_as) as display_as
-            ,to_char(item_data_type) as item_data_type
+            to_char(display_as) as display_as
             ,to_char(placeholder) as placeholder
             ,to_char(pre_element_text) as pre_element_text
             ,to_char(post_element_text) as post_element_text
@@ -190,8 +186,6 @@ as
             ,to_char(form_element_option_attributes) as form_element_option_attributes
             ,to_char(item_button_image) as item_button_image
             ,to_char(item_button_image_attributes) as item_button_image_attributes
-            ,to_char(label_alignment) as label_alignment
-            ,to_char(item_alignment) as item_alignment
             ,to_char(item_help_text) as item_help_text
         from    apex_application_page_items api
         where   api.application_id               = :APP_ID
@@ -199,9 +193,7 @@ as
         and     ltrim(api.item_name,'#')        = ltrim(l_component_id,'#')
     )
     unpivot exclude nulls (value for attribute in (
-        item_name
-        ,display_as
-        ,item_data_type
+        display_as
         ,placeholder
         ,pre_element_text
         ,post_element_text
@@ -217,8 +209,6 @@ as
         ,form_element_option_attributes
         ,item_button_image
         ,item_button_image_attributes
-        ,label_alignment
-        ,item_alignment
         ,item_help_text
     ));
 
@@ -231,6 +221,23 @@ as
     join    apex_appl_template_options ato
     on      ato.application_id        = apr.application_id
     and     ato.region_template_id    = apr.template_id
+    left join apex_appl_template_opt_groups atog
+    on      atog.application_id       = ato.application_id
+    and     atog.theme_number         = ato.theme_number
+    and     atog.template_opt_group_id= ato.group_id
+    where   apr.application_id        = :APP_ID
+    and     apr.page_id               = :APP_PAGE_ID
+    and     ltrim(apr.static_id,'#') = ltrim(l_component_id,'#');
+
+    /* c_report_all_template_options */
+    cursor  c_report_all_template_options is
+    select  atog.display_name group_name
+            ,ato.display_name
+            ,ato.help_text
+    from    apex_application_page_regions apr
+    join    apex_appl_template_options ato
+    on      ato.application_id        = apr.application_id
+    and     ato.report_template_id    = apr.report_template_id
     left join apex_appl_template_opt_groups atog
     on      atog.application_id       = ato.application_id
     and     atog.theme_number         = ato.theme_number
@@ -269,24 +276,19 @@ as
     select attribute, value
     from (select to_char(template) as template
                 ,to_char(report_template) as report_template
-                -- ,to_char(display_region_selector) as display_region_selector
                 ,to_char(region_css_classes) as region_css_classes
                 ,to_char(icon_css_classes) as icon_css_classes
                 ,to_char(region_sub_css_classes) as region_sub_css_classes
                 ,to_char(region_attributes_substitution) as region_attributes_substitution
                 ,to_char(report_column_headings) as report_column_headings
-                -- ,to_char(maximum_rows_to_query) as maximum_rows_to_query
                 ,to_char(pagination_scheme) as pagination_scheme
                 ,to_char(pagination_display_position) as pagination_display_position
                 ,to_char(number_of_rows_item) as number_of_rows_item
                 ,to_char(maximum_row_count) as maximum_row_count
-                -- ,to_char(report_null_values_as) as report_null_values_as
                 ,to_char(breaks) as breaks
-                -- ,to_char(strip_html) as strip_html
                 ,to_char(max_dynamic_report_cols) as max_dynamic_report_cols
                 ,to_char(fixed_header) as fixed_header
                 ,to_char(fixed_header_max_height) as fixed_header_max_height
-                -- ,to_char(enable_csv_output) as enable_csv_output
                 ,to_char(repeat_heading_break_format) as repeat_heading_break_format
         from    apex_application_page_regions
         where   application_id       = :APP_ID
@@ -295,25 +297,20 @@ as
     )
     unpivot exclude nulls (value for attribute in (
         template
-        -- ,display_region_selector
         ,region_css_classes
         ,icon_css_classes
         ,region_sub_css_classes
         ,region_attributes_substitution
         ,report_template
         ,report_column_headings
-        -- ,maximum_rows_to_query
         ,pagination_scheme
         ,pagination_display_position
         ,number_of_rows_item
         ,maximum_row_count
-        -- ,report_null_values_as
         ,breaks
-        -- ,strip_html
         ,max_dynamic_report_cols
         ,fixed_header
         ,fixed_header_max_height
-        -- ,enable_csv_output
         ,repeat_heading_break_format
     ));
 
@@ -396,10 +393,20 @@ as
         p_th1 in varchar2
         ,p_th2 in varchar2
         ,p_th3 in varchar2 default '-1'
+        ,p_top_th in varchar2 default null
     ) return varchar2 is
     begin
-        return '<table class="table table-striped table-sm">'
-            || '<thead class="thead-inverse">'
+        return '<table class="table">'
+            || case when p_top_th is not null then
+                '<thead class="thead-inverse">'
+                || '<tr>'
+                || '<th colspan="'
+                || case when p_th3 = '-1' then 2 else 3 end
+                || '" class="text-nowrap">' || replace(initcap(p_top_th),'_',' ') || '</th>'
+                || '</tr>'
+                || '</thead>'
+            end
+            || '<thead class="thead-default">'
             || '<tr>'
             || '<th class="text-nowrap">' || p_th1 || '</th>'
             || '<th class="text-nowrap">' || p_th2 || '</th>'
@@ -440,8 +447,9 @@ begin
     case l_documentation_type
         when 'GROUP' then
             l_html := l_html || open_table(
-                p_th1=>'Template Option(<code>' || l_template_option_group || '</code>)'
+                p_th1=>'Template Option'
                 ,p_th2=>'Comment'
+                ,p_top_th=>l_component_type || ' Template Option Group: ' || l_template_option_group
             );
 
             for i in c_template_option_groups loop
@@ -456,6 +464,7 @@ begin
             l_html := l_html || open_table(
                 p_th1=>'Template Option'
                 ,p_th2=>'Comment'
+                ,p_top_th=>'Template Option: ' || l_template_option_single
             );
 
             for i in c_template_option_single loop
@@ -474,6 +483,7 @@ begin
                             p_th1=>'Group'
                             ,p_th2=>'Template Option'
                             ,p_th3=>'Comment'
+                            ,p_top_th=>l_component_type || ' Template Options'
                         );
 
                         for i in c_button_all_template_options loop
@@ -499,6 +509,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>'Grid Attributes'
                         );
 
                         for i in c_button_grid_attributes loop
@@ -515,6 +526,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>l_component_type || ' Attributes'
                         );
 
                         for i in c_button_custom_attributes loop
@@ -534,6 +546,7 @@ begin
                             p_th1=>'Group'
                             ,p_th2=>'Template Option'
                             ,p_th3=>'Comment'
+                            ,p_top_th=>l_component_type || ' Template Options'
                         );
 
                         for i in c_item_all_template_options loop
@@ -559,6 +572,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>'Grid Attributes'
                         );
 
                         for i in c_item_grid_attributes loop
@@ -575,6 +589,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>l_component_type || ' Attributes'
                         );
 
                         for i in c_item_custom_attributes loop
@@ -592,6 +607,7 @@ begin
                             p_th1=>'Group'
                             ,p_th2=>'Template Option'
                             ,p_th3=>'Comment'
+                            ,p_top_th=>l_component_type || ' Template Options'
                         );
 
                         for i in c_list_all_template_options loop
@@ -617,6 +633,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>'Grid Attributes'
                         );
 
                         for i in c_region_grid_attributes loop
@@ -633,6 +650,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>l_component_type || ' Custom Attributes'
                         );
 
                         for i in c_list_custom_attributes loop
@@ -652,6 +670,7 @@ begin
                             p_th1=>'Group'
                             ,p_th2=>'Template Option'
                             ,p_th3=>'Comment'
+                            ,p_top_th=>l_component_type || ' Template Options'
                         );
 
                         for i in c_region_all_template_options loop
@@ -677,6 +696,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>'Grid Attributes'
                         );
 
                         for i in c_region_grid_attributes loop
@@ -693,6 +713,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>l_component_type || ' Attributes'
                         );
 
                         for i in c_region_custom_attributes loop
@@ -710,9 +731,10 @@ begin
                             p_th1=>'Group'
                             ,p_th2=>'Template Option'
                             ,p_th3=>'Comment'
+                            ,p_top_th=>l_component_type || ' Template Options'
                         );
 
-                        for i in c_region_all_template_options loop
+                        for i in c_report_all_template_options loop
                             l_html := l_html || print_row(
                                 p_td1=>i.group_name
                                 ,p_td2=>i.display_name
@@ -735,6 +757,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>'Grid Attributes'
                         );
 
                         for i in c_region_grid_attributes loop
@@ -751,6 +774,7 @@ begin
                         l_html := l_html || open_table(
                             p_th1=>'Attribute'
                             ,p_th2=>'Value'
+                            ,p_top_th=>l_component_type || ' Attributes'
                         );
 
                         for i in c_region_custom_attributes loop
@@ -764,7 +788,7 @@ begin
                     end if;
             end case;
     end case;
-    
+
     htp.prn(l_html);
 
     return l_result;

@@ -1,47 +1,46 @@
 {{#template}}
-<div id="#REGION_STATIC_ID#" class="ab-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-    <div class="ab-region-container">
-        <div class="ab-region-title">#TITLE#</div>
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar">
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#EDIT#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#EXPAND#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE2#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#NEXT#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#PREVIOUS#</div>
-        </div>
+    <div id="#REGION_STATIC_ID#" class="ab-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+        <div class="ab-region-container">
+            <div class="ab-region-title">#TITLE#</div>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar">
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#EDIT#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#EXPAND#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE2#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#NEXT#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#PREVIOUS#</div>
+            </div>
 
-        <div class="region-body">
-            #BODY#
-        </div>
+            <div class="region-body">
+                #BODY#
+            </div>
 
-        #SUB_REGION_HEADERS#
-        #SUB_REGIONS#
+            #SUB_REGIONS#
 
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar">
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#CLOSE#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#COPY#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#DELETE#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#CHANGE#</div>
-            <div class="ab-btn-group" role="group" aria-label="Button Group">#HELP#</div>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar">
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#CLOSE#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#COPY#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#DELETE#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#CHANGE#</div>
+                <div class="ab-btn-group" role="group" aria-label="Button Group">#HELP#</div>
+            </div>
         </div>
     </div>
-</div>
 {{/template}}
 
 {{#sub_plug_header_template}}{{/sub_plug_header_template}}
 {{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
 {{#sub_plug_template}}
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-#SUB_REGION_ID#">
-        <h4 class="panel-title">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading-#SUB_REGION_ID#">
+            <h4 class="panel-title">
     <a data-toggle="collapse" data-parent="##REGION_STATIC_ID#" href="#sub-#SUB_REGION_ID#" aria-expanded="false" aria-controls="sub-#SUB_REGION_ID#">
       #SUB_REGION_TITLE#
     </a>
   </h4>
+        </div>
+        <div id="sub-#SUB_REGION_ID#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-#SUB_REGION_ID#">
+            #SUB_REGION#
+        </div>
     </div>
-    <div id="sub-#SUB_REGION_ID#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-#SUB_REGION_ID#">
-        #SUB_REGION#
-    </div>
-</div>
 {{/sub_plug_template}}

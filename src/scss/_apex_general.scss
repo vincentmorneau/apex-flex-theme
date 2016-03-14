@@ -2,31 +2,28 @@ body[data-spy] {
     position: relative;
 }
 
-body.ab-navbar-fixed-top {
+.ab-navbar-fixed-top {
     margin-top: 3rem;
 }
 
 .ab-region-title-hidden .ab-region-title {
-    @extend .hidden-xs-up;
+    @include hide();
 }
 
-.ab-main {
+.ab-container-fluid .ab-main > .container {
     @include make-container();
-    @include make-container-max-widths();
-}
-
-body.ab-container-fluid .ab-main>.container {
-    max-width: initial;
-    @extend .container-fluid;
+    max-width: 100%;
 }
 
 .ab-region.collapse {
     display: none;
+
     &.in {
         display: block;
     }
 }
 
+// Blank Region
 .ab-blank {
     display: inline-block;
 }
