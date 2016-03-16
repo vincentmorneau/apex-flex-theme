@@ -191,4 +191,6 @@ $(function() {
             .find(".ab-btn-dropdown").children()
             .appendTo($(this).find(".ab-input-group .input-group-btn"));
     });
+
+    $(".input-group-addon, .input-group-btn").closest(".ab-input-group").addClass("input-group");
 });

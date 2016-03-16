@@ -176,9 +176,6 @@ as
             ,to_char(post_element_text) as post_element_text
             ,to_char(format_mask) as format_mask
             ,to_char(item_label_template) as item_label_template
-            ,to_char(item_element_width) as item_element_width
-            ,to_char(item_element_max_length) as item_element_max_length
-            ,to_char(item_element_height) as item_element_height
             ,to_char(html_table_cell_attr_label) as html_table_cell_attr_label
             ,to_char(html_table_cell_attr_element) as html_table_cell_attr_element
             ,to_char(html_form_element_css_classes) as html_form_element_css_classes
@@ -199,9 +196,6 @@ as
         ,post_element_text
         ,format_mask
         ,item_label_template
-        ,item_element_width
-        ,item_element_max_length
-        ,item_element_height
         ,html_table_cell_attr_label
         ,html_table_cell_attr_element
         ,html_form_element_css_classes

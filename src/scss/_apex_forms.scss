@@ -17,14 +17,6 @@ input.file {
     @extend .form-control-file;
 }
 
-// input[type=checkbox], input[type=radio] {
-//     margin-right: 5px;
-// }
-
-// label {
-//     margin-right: 5px;
-// }
-
 /* Hidden label */
 .ab-input-sr-only label {
     @include sr-only();
@@ -48,18 +40,11 @@ input.file {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-success;
     }
-
-    label {
-        @extend .form-control-label;
-    }
 }
 
 .form-group.has-warning {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-warning;
-    }
-    label {
-        @extend .form-control-label;
     }
 }
 
@@ -67,50 +52,22 @@ input.file {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-danger;
     }
+}
+
+.form-group.has-success, .form-group.has-warning, .form-group.has-danger {
     label {
         @extend .form-control-label;
     }
 }
 
-/* Custom form */
-
-/* Checkbox */
-.custom-form {
-  .checkbox_group{
-    @extend .c-input;
-    @extend .c-checkbox;
-    label {
-      @extend .c-input;
-      &::before {
-          content: "";
-          @extend .c-indicator;
-      }
-    }
-  }
-  .radio_group {
-    @extend .c-input;
-    @extend .c-radio;
-    td {
-      @extend .c-input;
-    }
-    label {
-      &::before {
-        content: "";
-        @extend .c-indicator;
-      }
-    }
-  }
-  .selectlist {
-    @extend .c-select;
-  }
-  .file {
-    @extend .file-custom;
-  }
+/* Checkbox and radios */
+input[type=checkbox], input[type=radio] {
+    margin-right: 0.5rem;
 }
 
 /* Help */
 .ab-field-tooltip, .ab-field-popover {
-    label {
+    & > label[data-toggle] {
         text-decoration: underline;
     }
 }
@@ -118,8 +75,4 @@ input.file {
 /* Input Groups */
 .input-group-addon > label {
     @include hide();
-}
-
-.form-group > .ab-input-group {
-    @extend .input-group;
 }
