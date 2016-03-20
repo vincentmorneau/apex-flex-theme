@@ -1,0 +1,75 @@
+// Progress bars
+
+@mixin progress-variant($color) {
+  &[value]::-webkit-progress-value {
+    background-color: $color;
+  }
+
+  &[value]::-moz-progress-bar {
+    background-color: $color;
+  }
+}
+
+//
+// Basic progress bar
+//
+
+.progress {
+  display: block;
+  width: 100%;
+  height: $spacer-y; // todo: make a new var for this
+  margin-bottom: $spacer-y;
+}
+.progress[value] {
+  // IE10 uses `color` to set the bar background-color
+  color: #0074d9;
+  // Remove Firefox and Opera border
+  border: 0;
+  // Reset the default appearance
+  appearance: none;
+}
+.progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  @include border-radius($border-radius);
+  @include box-shadow(inset 0 .1rem .1rem rgba(0,0,0,.1));
+}
+.progress[value]::-webkit-progress-value::before {
+  content: attr(value);
+}
+.progress[value]::-webkit-progress-value {
+  background-color: #0074d9;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+.progress[value="100"]::-webkit-progress-value {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+//
+// Animated
+//
+
+.progress-animated[value]::-webkit-progress-value {
+  animation: progress-bar-stripes 2s linear infinite;
+}
+.progress-animated[value]::-moz-progress-bar {
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+//
+// Variations
+//
+
+.progress-success {
+  @include progress-variant($progress-bar-success-bg);
+}
+.progress-info {
+  @include progress-variant($progress-bar-info-bg);
+}
+.progress-warning {
+  @include progress-variant($progress-bar-warning-bg);
+}
+.progress-danger {
+  @include progress-variant($progress-bar-danger-bg);
+}

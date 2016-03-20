@@ -1,24 +1,3 @@
-/*
-{
-  "translate": true,
-  "groups":[
-  {
-    "name": "Colors",
-    "common": true,
-    "sequence": 1
-  }
-  ]
-}
-*/
-
-// Variables
-//
-// Copy settings from this file into the provided `_custom.scss` to override
-// the Bootstrap defaults without modifying key, versioned files.
-
-
-// Table of Contents
-//
 // Colors
 // Options
 // Spacing
@@ -28,21 +7,247 @@
 // Grid containers
 // Grid columns
 // Fonts
-// Components
+// Borders
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Navbar
+// Navs
+// Pagination
+// Pager
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Labels
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Breadcrumbs
+// Carousel
+// Code
 
-// General variable structure
+/*
+{
+    "translate": true,
+    "groups":[
+    {
+        "name": "Gray Scales",
+        "common": true,
+        "sequence": 1
+    },
+    {
+        "name": "General Colors",
+        "common": true,
+        "sequence": 0
+    },
+    {
+        "name": "Body Colors",
+        "common": true,
+        "sequence": 3
+    },
+    {
+        "name": "Spacing",
+        "common": true,
+        "sequence": 4
+    },
+    {
+        "name": "Links",
+        "common": true,
+        "sequence": 5
+    },
+    {
+        "name": "Fonts",
+        "common": true,
+        "sequence": 6
+    },
+    {
+        "name": "Borders",
+        "common": true,
+        "sequence": 7
+    },
+    {
+        "name": "Tables",
+        "common": true,
+        "sequence": 8
+    },
+    {
+        "name": "Buttons",
+        "common": true,
+        "sequence": 9
+    },
+    {
+        "name": "Forms",
+        "common": true,
+        "sequence": 10
+    },
+    {
+        "name": "Dropdowns",
+        "common": true,
+        "sequence": 11
+    },
+    {
+        "name": "Navbar",
+        "common": true,
+        "sequence": 12
+    },
+    {
+        "name": "Navs",
+        "common": true,
+        "sequence": 13
+    },
+    {
+        "name": "Pagination",
+        "common": false,
+        "sequence": 14
+    },
+    {
+        "name": "Pager",
+        "common": false,
+        "sequence": 15
+    },
+    {
+        "name": "Jumbotron",
+        "common": false,
+        "sequence": 16
+    },
+    {
+        "name": "Form states and alerts",
+        "common": false,
+        "sequence": 17
+    },
+    {
+        "name": "Cards",
+        "common": true,
+        "sequence": 18
+    },
+    {
+        "name": "Tooltips",
+        "common": true,
+        "sequence": 19
+    },
+    {
+        "name": "Popovers",
+        "common": true,
+        "sequence": 20
+    },
+    {
+        "name": "Labels",
+        "common": true,
+        "sequence": 21
+    },
+    {
+        "name": "Modals",
+        "common": true,
+        "sequence": 22
+    },
+    {
+        "name": "Alerts",
+        "common": true,
+        "sequence": 23
+    },
+    {
+        "name": "Progress bars",
+        "common": false,
+        "sequence": 24
+    },
+    {
+        "name": "List group",
+        "common": false,
+        "sequence": 25
+    },
+    {
+        "name": "Breadcrumbs",
+        "common": false,
+        "sequence": 26
+    },
+    {
+        "name": "Code",
+        "common": false,
+        "sequence": 28
+    }
+  ]
+}
+*/
 //
-// Variable format should follow the `$component-modifier-state-property` order.
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Colors
-//
 // Grayscale and brand colors for use across Bootstrap.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@gray-dark",
+  "name" : "gray-dark",
+  "type" : "color",
+  "group": "Gray Scales"
+}
+*/
 $gray-dark:                 #373a3c;
+/*
+{
+  "var" : "@gray",
+  "name" : "gray",
+  "type" : "color",
+  "group": "Gray Scales"
+}
+*/
 $gray:                      #55595c;
+/*
+{
+  "var" : "@gray-light",
+  "name" : "gray-light",
+  "type" : "color",
+  "group": "Gray Scales"
+}
+*/
 $gray-light:                #818a91;
+/*
+{
+  "var" : "@gray-lighter",
+  "name" : "gray-lighter",
+  "type" : "color",
+  "group": "Gray Scales"
+}
+*/
 $gray-lighter:              #eceeef;
+/*
+{
+  "var" : "@gray-lightest",
+  "name" : "gray-lightest",
+  "type" : "color",
+  "group": "Gray Scales"
+}
+*/
 $gray-lightest:             #f7f7f9;
 
 /*
@@ -50,7 +255,7 @@ $gray-lightest:             #f7f7f9;
   "var" : "@brand-primary",
   "name" : "brand-primary",
   "type" : "color",
-  "group": "Colors"
+  "group": "General Colors"
 }
 */
 $brand-primary:             #0275d8;
@@ -59,7 +264,7 @@ $brand-primary:             #0275d8;
   "var" : "@brand-success",
   "name" : "brand-success",
   "type" : "color",
-  "group": "Colors"
+  "group": "General Colors"
 }
 */
 $brand-success:             #5cb85c;
@@ -68,7 +273,7 @@ $brand-success:             #5cb85c;
   "var" : "@brand-info",
   "name" : "brand-info",
   "type" : "color",
-  "group": "Colors"
+  "group": "General Colors"
 }
 */
 $brand-info:                #5bc0de;
@@ -77,7 +282,7 @@ $brand-info:                #5bc0de;
   "var" : "@brand-warning",
   "name" : "brand-warning",
   "type" : "color",
-  "group": "Colors"
+  "group": "General Colors"
 }
 */
 $brand-warning:             #f0ad4e;
@@ -86,15 +291,43 @@ $brand-warning:             #f0ad4e;
   "var" : "@brand-danger",
   "name" : "brand-danger",
   "type" : "color",
-  "group": "Colors"
+  "group": "General Colors"
 }
 */
 $brand-danger:              #d9534f;
 
-
-// Options
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Options
 // Quickly modify global styling by enabling or disabling optional features.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 $enable-flex:               false;
 $enable-rounded:            true;
@@ -104,103 +337,697 @@ $enable-transitions:        false;
 $enable-hover-media-query:  false;
 $enable-grid-classes:       true;
 
-
-// Spacing
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Spacing
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var"  : "@spacer",
+  "name" : "spacer",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 5,
+    "increment": 1
+  },
+  "group": "Fonts"
+}
+*/
 $spacer:                     1rem;
 $spacer-x:                   $spacer;
 $spacer-y:                   $spacer;
+/*
+{
+  "var"  : "@border-width",
+  "name" : "border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Fonts"
+}
+*/
 $border-width:               1px;
 
-
-// Body
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Body
 // Settings for the `<body>` element.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@body-bg",
+  "name" : "body-bg",
+  "type" : "color",
+  "group": "Body Colors"
+}
+*/
 $body-bg:                    #fff;
+/*
+{
+  "var" : "@body-color",
+  "name" : "body-color",
+  "type" : "color",
+  "group": "Body Colors"
+}
+*/
 $body-color:                 $gray-dark;
 
-
-// Links
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Links
 // Style anchor elements.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@link-color",
+  "name" : "link-color",
+  "type" : "color",
+  "group": "Link Colors"
+}
+*/
 $link-color:                 $brand-primary;
 $link-decoration:            none;
+/*
+{
+  "var" : "@link-hover-color",
+  "name" : "link-hover-color",
+  "type" : "color",
+  "group": "Link Colors"
+}
+*/
 $link-hover-color:           darken($link-color, 15%);
 $link-hover-decoration:      underline;
 
-
-// Grid breakpoints
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Grid breakpoints
 // Define the minimum and maximum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
-
-// Grid columns
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Grid columns
 // Set the number of columns and specify the width of the gutters.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 $grid-columns:               12;
 $grid-gutter-width:          1.875rem; // 30px
-
-
-// Typography
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Typography
 // Font, line-height, and color for body text, headings, and more.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 $font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:          Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:           $font-family-sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+/*
+{
+  "var"  : "@font-size-root",
+  "name" : "font-size-root",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 8,
+    "max": 48,
+    "increment": 4
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-root:             16px;
 
+/*
+{
+  "var"  : "@font-size-base",
+  "name" : "font-size-base",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-base:             1rem;
+/*
+{
+  "var"  : "@font-size-lg",
+  "name" : "font-size-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-lg:               1.25rem;
+/*
+{
+  "var"  : "@font-size-sm",
+  "name" : "font-size-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-sm:               .875rem;
+/*
+{
+  "var"  : "@font-size-xs",
+  "name" : "font-size-xs",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-xs:               .75rem;
 
+/*
+{
+  "var"  : "@font-size-h1",
+  "name" : "font-size-h1",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-h1:               2.5rem;
+/*
+{
+  "var"  : "@font-size-h2",
+  "name" : "font-size-h2",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-h2:               2rem;
+/*
+{
+  "var"  : "@font-size-h3",
+  "name" : "font-size-h3",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-h3:               1.75rem;
+/*
+{
+  "var"  : "@font-size-h4",
+  "name" : "font-size-h4",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-h4:               1.5rem;
+/*
+{
+  "var"  : "@font-size-h5",
+  "name" : "font-size-h5",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-h5:               1.25rem;
+/*
+{
+  "var"  : "@font-size-h6",
+  "name" : "font-size-h6",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $font-size-h6:               1rem;
 
+/*
+{
+  "var"  : "@display1-size",
+  "name" : "display1-size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $display1-size:               6rem;
+/*
+{
+  "var"  : "@display2-size",
+  "name" : "display2-size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $display2-size:               5.5rem;
+/*
+{
+  "var"  : "@display3-size",
+  "name" : "display3-size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $display3-size:               4.5rem;
+/*
+{
+  "var"  : "@display4-size",
+  "name" : "display4-size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $display4-size:               3.5rem;
 
+/*
+{
+  "var"  : "@display1-weight",
+  "name" : "display1-weight",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 50
+  },
+  "group": "Fonts"
+}
+*/
 $display1-weight:             300;
+/*
+{
+  "var"  : "@display2-weight",
+  "name" : "display2-weight",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 50
+  },
+  "group": "Fonts"
+}
+*/
 $display2-weight:             300;
+/*
+{
+  "var"  : "@display3-weight",
+  "name" : "display3-weight",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 50
+  },
+  "group": "Fonts"
+}
+*/
 $display3-weight:             300;
+/*
+{
+  "var"  : "@display4-weight",
+  "name" : "display4-weight",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 50
+  },
+  "group": "Fonts"
+}
+*/
 $display4-weight:             300;
-
+/*
+{
+  "var"  : "@line-height",
+  "name" : "line-height",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 0.5
+  },
+  "group": "Fonts"
+}
+*/
 $line-height:                1.5;
-
+/*
+{
+  "var"  : "@headings-margin-bottom",
+  "name" : "headings-margin-bottom",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 5,
+    "increment": 1
+  },
+  "group": "Fonts"
+}
+*/
 $headings-margin-bottom:     ($spacer / 2);
 $headings-font-family:       inherit;
+/*
+{
+  "var"  : "@headings-font-weight",
+  "name" : "headings-font-weight",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 50
+  },
+  "group": "Fonts"
+}
+*/
 $headings-font-weight:       500;
 $headings-line-height:       1.1;
 $headings-color:             inherit;
 
 $lead-font-size:             1.25rem;
+/*
+{
+  "var"  : "@lead-font-weight",
+  "name" : "lead-font-weight",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 50
+  },
+  "group": "Fonts"
+}
+*/
 $lead-font-weight:           300;
 
+/*
+{
+  "var" : "@text-muted",
+  "name" : "text-muted",
+  "type" : "color",
+  "group": "Fonts"
+}
+*/
 $text-muted:                  $gray-light;
 
+/*
+{
+  "var" : "@abbr-border-color",
+  "name" : "abbr-border-color",
+  "type" : "color",
+  "group": "Fonts"
+}
+*/
 $abbr-border-color:           $gray-light;
 
+/*
+{
+  "var" : "@blockquote-small-color",
+  "name" : "blockquote-small-color",
+  "type" : "color",
+  "group": "Fonts"
+}
+*/
 $blockquote-small-color:      $gray-light;
+/*
+{
+  "var"  : "@blockquote-font-size",
+  "name" : "blockquote-font-size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 4,
+    "increment": 0.25
+  },
+  "group": "Fonts"
+}
+*/
 $blockquote-font-size:        ($font-size-base * 1.25);
+/*
+{
+  "var" : "@blockquote-border-color",
+  "name" : "blockquote-border-color",
+  "type" : "color",
+  "group": "Fonts"
+}
+*/
 $blockquote-border-color:     $gray-lighter;
-
+/*
+{
+  "var" : "@hr-border-color",
+  "name" : "hr-border-color",
+  "type" : "color",
+  "group": "Fonts"
+}
+*/
 $hr-border-color:             rgba(0,0,0,.1);
+/*
+{
+  "var"  : "@hr-border-width",
+  "name" : "hr-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Fonts"
+}
+*/
 $hr-border-width:             $border-width;
 
 $dt-font-weight:              bold;
@@ -209,113 +1036,830 @@ $nested-kbd-font-weight:      bold;
 
 $list-inline-padding:         5px;
 
-
-// Components
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Components
+// Borders
 // Define common padding and border radius sizes and more.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 $line-height-lg:         (4 / 3);
 $line-height-sm:         1.5;
 
+/*
+{
+  "var" : "@border-radius",
+  "name" : "border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Borders"
+}
+*/
 $border-radius:          .25rem;
+/*
+{
+  "var" : "@border-radius-lg",
+  "name" : "border-radius-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Borders"
+}
+*/
 $border-radius-lg:       .3rem;
+/*
+{
+  "var" : "@border-radius-sm",
+  "name" : "border-radius-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Borders"
+}
+*/
 $border-radius-sm:       .2rem;
 
+/*
+{
+  "var" : "@component-active-color",
+  "name" : "component-active-color",
+  "type" : "color",
+  "group": "Borders"
+}
+*/
 $component-active-color: #fff;
+/*
+{
+  "var" : "@component-active-bg",
+  "name" : "component-active-bg",
+  "type" : "color",
+  "group": "Borders"
+}
+*/
 $component-active-bg:    $brand-primary;
 
 $caret-width:            .3em;
 $caret-width-lg:         $caret-width;
 
-
-// Tables
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Tables
 // Customizes the `.table` component with basic values, each used across all table variations.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@table-cell-padding",
+  "name" : "table-cell-padding",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Tables"
+}
+*/
 $table-cell-padding:            .75rem;
+/*
+{
+  "var" : "@table-sm-cell-padding",
+  "name" : "table-sm-cell-padding",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Tables"
+}
+*/
 $table-sm-cell-padding:         .3rem;
 
 $table-bg:                      transparent;
+/*
+{
+  "var" : "@table-bg-accent",
+  "name" : "table-bg-accent",
+  "type" : "color",
+  "group": "Tables"
+}
+*/
 $table-bg-accent:               #f9f9f9;
+/*
+{
+  "var" : "@table-bg-hover",
+  "name" : "table-bg-hover",
+  "type" : "color",
+  "group": "Tables"
+}
+*/
 $table-bg-hover:                #f5f5f5;
+/*
+{
+  "var" : "@table-bg-active",
+  "name" : "table-bg-active",
+  "type" : "color",
+  "group": "Tables"
+}
+*/
 $table-bg-active:               $table-bg-hover;
-
+/*
+{
+  "var"  : "@table-border-width",
+  "name" : "table-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Tables"
+}
+*/
 $table-border-width:            $border-width;
+/*
+{
+  "var" : "@table-border-color",
+  "name" : "table-border-color",
+  "type" : "color",
+  "group": "Tables"
+}
+*/
 $table-border-color:            $gray-lighter;
 
-
-// Buttons
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Buttons
 // For each of Bootstrap's buttons, define text, background and border color.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@btn-padding-x",
+  "name" : "btn-padding-x",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Buttons"
+}
+*/
 $btn-padding-x:                  1rem;
+/*
+{
+  "var" : "@btn-padding-y",
+  "name" : "btn-padding-y",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Buttons"
+}
+*/
 $btn-padding-y:                  .375rem;
 $btn-font-weight:                normal;
 
+/*
+{
+  "var" : "@btn-primary-color",
+  "name" : "btn-primary-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-primary-color:              #fff;
+/*
+{
+  "var" : "@btn-primary-bg",
+  "name" : "btn-primary-bg",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-primary-bg:                 $brand-primary;
+/*
+{
+  "var" : "@btn-primary-border",
+  "name" : "btn-primary-border",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-primary-border:             $btn-primary-bg;
 
+/*
+{
+  "var" : "@btn-secondary-color",
+  "name" : "btn-secondary-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-secondary-color:            $gray-dark;
+/*
+{
+  "var" : "@btn-secondary-bg",
+  "name" : "btn-secondary-bg",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-secondary-bg:               #fff;
+/*
+{
+  "var" : "@btn-secondary-border",
+  "name" : "btn-secondary-border",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-secondary-border:           #ccc;
 
+/*
+{
+  "var" : "@btn-info-color",
+  "name" : "btn-info-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-info-color:                 #fff;
+/*
+{
+  "var" : "@btn-info-bg",
+  "name" : "btn-info-bg",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-info-bg:                    $brand-info;
+/*
+{
+  "var" : "@btn-info-border",
+  "name" : "btn-info-border",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-info-border:                $btn-info-bg;
 
+/*
+{
+  "var" : "@btn-success-color",
+  "name" : "btn-success-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-success-color:              #fff;
+/*
+{
+  "var" : "@btn-success-bg",
+  "name" : "btn-success-bg",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-success-bg:                 $brand-success;
+/*
+{
+  "var" : "@btn-success-border",
+  "name" : "btn-success-border",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-success-border:             $btn-success-bg;
 
+/*
+{
+  "var" : "@btn-warning-color",
+  "name" : "btn-warning-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-warning-color:              #fff;
+/*
+{
+  "var" : "@btn-warning-bg",
+  "name" : "btn-warning-bg",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-warning-bg:                 $brand-warning;
+/*
+{
+  "var" : "@btn-warning-border",
+  "name" : "btn-warning-border",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-warning-border:             $btn-warning-bg;
 
+/*
+{
+  "var" : "@btn-danger-color",
+  "name" : "btn-danger-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-danger-color:               #fff;
+/*
+{
+  "var" : "@btn-danger-bg",
+  "name" : "btn-danger-bg",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-danger-bg:                  $brand-danger;
+/*
+{
+  "var" : "@btn-danger-border",
+  "name" : "btn-danger-border",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-danger-border:              $btn-danger-bg;
 
+/*
+{
+  "var" : "@btn-link-disabled-color",
+  "name" : "btn-link-disabled-color",
+  "type" : "color",
+  "group": "Buttons"
+}
+*/
 $btn-link-disabled-color:        $gray-light;
 
+/*
+{
+  "var" : "@btn-padding-x-sm",
+  "name" : "btn-padding-x-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Buttons"
+}
+*/
 $btn-padding-x-sm:               .75rem;
+/*
+{
+  "var" : "@btn-padding-y-sm",
+  "name" : "btn-padding-y-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Buttons"
+}
+*/
 $btn-padding-y-sm:               .25rem;
 
+/*
+{
+  "var" : "@btn-padding-x-lg",
+  "name" : "btn-padding-x-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Buttons"
+}
+*/
 $btn-padding-x-lg:               1.25rem;
+/*
+{
+  "var" : "@btn-padding-y-lg",
+  "name" : "btn-padding-y-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Buttons"
+}
+*/
 $btn-padding-y-lg:               .75rem;
 
 // Allows for customizing button radius independently from global border radius
+/*
+{
+  "var" : "@btn-border-radius",
+  "name" : "btn-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Buttons"
+}
+*/
 $btn-border-radius:              $border-radius;
+/*
+{
+  "var" : "@btn-border-radius-lg",
+  "name" : "btn-border-radius-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Buttons"
+}
+*/
 $btn-border-radius-lg:           $border-radius-lg;
+/*
+{
+  "var" : "@btn-border-radius-sm",
+  "name" : "btn-border-radius-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Buttons"
+}
+*/
 $btn-border-radius-sm:           $border-radius-sm;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Forms
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+/*
+{
+  "var" : "@input-padding-x",
+  "name" : "input-padding-x",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Forms"
+}
+*/
 $input-padding-x:                .75rem;
+/*
+{
+  "var" : "@input-padding-y",
+  "name" : "input-padding-y",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Forms"
+}
+*/
 $input-padding-y:                .375rem;
 
+/*
+{
+  "var" : "@input-bg",
+  "name" : "input-bg",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-bg:                       #fff;
+/*
+{
+  "var" : "@input-bg-disabled",
+  "name" : "input-bg-disabled",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-bg-disabled:              $gray-lighter;
 
+/*
+{
+  "var" : "@input-color",
+  "name" : "input-color",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-color:                    $gray;
+/*
+{
+  "var" : "@input-border-color",
+  "name" : "input-border-color",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-border-color:             #ccc;
+/*
+{
+  "var"  : "@input-btn-border-width",
+  "name" : "input-btn-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Forms"
+}
+*/
 $input-btn-border-width:         $border-width; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075);
 
+/*
+{
+  "var" : "@input-border-radius",
+  "name" : "input-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Forms"
+}
+*/
 $input-border-radius:            $border-radius;
+/*
+{
+  "var" : "@input-border-radius-lg",
+  "name" : "input-border-radius-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Forms"
+}
+*/
 $input-border-radius-lg:         $border-radius-lg;
+/*
+{
+  "var" : "@input-border-radius-sm",
+  "name" : "input-border-radius-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Forms"
+}
+*/
 $input-border-radius-sm:         $border-radius-sm;
 
+/*
+{
+  "var" : "@input-border-focus",
+  "name" : "input-border-focus",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-border-focus:             #66afe9;
+/*
+{
+  "var" : "@input-box-shadow-focus",
+  "name" : "input-box-shadow-focus",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-box-shadow-focus:         rgba(102,175,233,.6);
 
+/*
+{
+  "var" : "@input-color-placeholder",
+  "name" : "input-color-placeholder",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-color-placeholder:        #999;
 
+/*
+{
+  "var" : "@input-padding-x-sm",
+  "name" : "input-padding-x-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Forms"
+}
+*/
 $input-padding-x-sm:             .75rem;
+/*
+{
+  "var" : "@input-padding-y-sm",
+  "name" : "input-padding-y-sm",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Forms"
+}
+*/
 $input-padding-y-sm:             .275rem;
 
+/*
+{
+  "var" : "@input-padding-x-lg",
+  "name" : "input-padding-x-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Forms"
+}
+*/
 $input-padding-x-lg:             1.25rem;
+/*
+{
+  "var" : "@input-padding-y-lg",
+  "name" : "input-padding-y-lg",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Forms"
+}
+*/
 $input-padding-y-lg:             .75rem;
 
 $input-height:                   (($font-size-base * $line-height) + ($input-padding-y * 2));
@@ -324,7 +1868,23 @@ $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-pa
 
 $form-group-margin-bottom:       $spacer-y;
 
+/*
+{
+  "var" : "@input-group-addon-bg",
+  "name" : "input-group-addon-bg",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-group-addon-bg:           $gray-lighter;
+/*
+{
+  "var" : "@input-group-addon-border-color",
+  "name" : "input-group-addon-border-color",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
 $input-group-addon-border-color: $input-border-color;
 
 $cursor-disabled:                not-allowed;
@@ -335,28 +1895,174 @@ $form-icon-warning: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53M
 $form-icon-danger: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 
 
-// Dropdowns
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Dropdowns
 // Dropdown menu container and contents.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@input-group-addon-border-color",
+  "name" : "input-group-addon-border-color",
+  "type" : "color",
+  "group": "Forms"
+}
+*/
+/*
+{
+  "var" : "@dropdown-bg",
+  "name" : "dropdown-bg",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-bg:                    #fff;
+/*
+{
+  "var" : "@dropdown-border-color",
+  "name" : "dropdown-border-color",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-border-color:          rgba(0,0,0,.15);
 $dropdown-border-width:          $border-width;
+/*
+{
+  "var" : "@dropdown-divider-bg",
+  "name" : "dropdown-divider-bg",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-divider-bg:            #e5e5e5;
 
+/*
+{
+  "var" : "@dropdown-link-color",
+  "name" : "dropdown-link-color",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-link-color:            $gray-dark;
+/*
+{
+  "var" : "@dropdown-link-hover-color",
+  "name" : "dropdown-link-hover-color",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-link-hover-color:      darken($gray-dark, 5%);
+/*
+{
+  "var" : "@dropdown-link-hover-bg",
+  "name" : "dropdown-link-hover-bg",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-link-hover-bg:         #f5f5f5;
 
+/*
+{
+  "var" : "@dropdown-link-active-color",
+  "name" : "dropdown-link-active-color",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-link-active-color:     $component-active-color;
+/*
+{
+  "var" : "@dropdown-link-active-bg",
+  "name" : "dropdown-link-active-bg",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-link-active-bg:        $component-active-bg;
 
+/*
+{
+  "var" : "@dropdown-link-disabled-color",
+  "name" : "dropdown-link-disabled-color",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-link-disabled-color:   $gray-light;
 
+/*
+{
+  "var" : "@dropdown-header-color",
+  "name" : "dropdown-header-color",
+  "type" : "color",
+  "group": "Dropdowns"
+}
+*/
 $dropdown-header-color:          $gray-light;
 
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Z-index master list
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
@@ -371,276 +2077,2184 @@ $zindex-modal-bg:          1040;
 $zindex-modal:             1050;
 
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Navbar
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@navbar-border-radius",
+  "name" : "navbar-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Navbar"
+}
+*/
 $navbar-border-radius:              $border-radius;
+/*
+{
+  "var" : "@navbar-padding-horizontal",
+  "name" : "navbar-padding-horizontal",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Navbar"
+}
+*/
 $navbar-padding-horizontal:         $spacer;
+/*
+{
+  "var" : "@navbar-padding-vertical",
+  "name" : "navbar-padding-vertical",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Navbar"
+}
+*/
 $navbar-padding-vertical:           ($spacer / 2);
 
+/*
+{
+  "var" : "@navbar-dark-color",
+  "name" : "navbar-dark-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-dark-color:                 rgba(255,255,255,.5);
+/*
+{
+  "var" : "@navbar-dark-hover-color",
+  "name" : "navbar-dark-hover-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-dark-hover-color:           rgba(255,255,255,.75);
+/*
+{
+  "var" : "@navbar-dark-active-color",
+  "name" : "navbar-dark-active-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-dark-active-color:          rgba(255,255,255,1);
+/*
+{
+  "var" : "@navbar-dark-disabled-color",
+  "name" : "navbar-dark-disabled-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-dark-disabled-color:        rgba(255,255,255,.25);
 
+/*
+{
+  "var" : "@navbar-light-color",
+  "name" : "navbar-light-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-light-color:                rgba(0,0,0,.3);
+/*
+{
+  "var" : "@navbar-light-hover-color",
+  "name" : "navbar-light-hover-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-light-hover-color:          rgba(0,0,0,.6);
+/*
+{
+  "var" : "@navbar-light-active-color",
+  "name" : "navbar-light-active-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-light-active-color:         rgba(0,0,0,.8);
+/*
+{
+  "var" : "@navbar-light-disabled-color",
+  "name" : "navbar-light-disabled-color",
+  "type" : "color",
+  "group": "Navbar"
+}
+*/
 $navbar-light-disabled-color:       rgba(0,0,0,.15);
 
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Navs
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 $nav-link-padding:                          .5em 1em;
+/*
+{
+  "var" : "@nav-link-hover-bg",
+  "name" : "nav-link-hover-bg",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-link-hover-bg:                         $gray-lighter;
 
+/*
+{
+  "var" : "@nav-disabled-link-color",
+  "name" : "nav-disabled-link-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-disabled-link-color:                   $gray-light;
+/*
+{
+  "var" : "@nav-disabled-link-hover-color",
+  "name" : "nav-disabled-link-hover-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-disabled-link-hover-color:             $gray-light;
 
+/*
+{
+  "var" : "@nav-tabs-border-color",
+  "name" : "nav-tabs-border-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-border-color:                     #ddd;
-
+/*
+{
+  "var"  : "@nav-tabs-link-border-width",
+  "name" : "nav-tabs-link-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Navs"
+}
+*/
 $nav-tabs-link-border-width:                $border-width;
+/*
+{
+  "var" : "@nav-tabs-link-hover-border-color",
+  "name" : "nav-tabs-link-hover-border-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-link-hover-border-color:          $gray-lighter;
 
+/*
+{
+  "var" : "@nav-tabs-active-link-hover-bg",
+  "name" : "nav-tabs-active-link-hover-bg",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-active-link-hover-bg:             $body-bg;
+/*
+{
+  "var" : "@nav-tabs-active-link-hover-color",
+  "name" : "nav-tabs-active-link-hover-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-active-link-hover-color:          $gray;
+/*
+{
+  "var" : "@nav-tabs-active-link-hover-border-color",
+  "name" : "nav-tabs-active-link-hover-border-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-active-link-hover-border-color:   #ddd;
 
+/*
+{
+  "var" : "@nav-tabs-justified-link-border-color",
+  "name" : "nav-tabs-justified-link-border-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-justified-link-border-color:            #ddd;
+/*
+{
+  "var" : "@nav-tabs-justified-active-link-border-color",
+  "name" : "nav-tabs-justified-active-link-border-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-tabs-justified-active-link-border-color:     $body-bg;
-
+/*
+{
+  "var" : "@nav-pills-border-radius",
+  "name" : "nav-pills-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Navs"
+}
+*/
 $nav-pills-border-radius:                   $border-radius;
+/*
+{
+  "var" : "@nav-pills-active-link-hover-bg",
+  "name" : "nav-pills-active-link-hover-bg",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-pills-active-link-hover-bg:            $component-active-bg;
+/*
+{
+  "var" : "@nav-pills-active-link-hover-color",
+  "name" : "nav-pills-active-link-hover-color",
+  "type" : "color",
+  "group": "Navs"
+}
+*/
 $nav-pills-active-link-hover-color:         $component-active-color;
 
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Pagination
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+/*
+{
+  "var"  : "@pagination-padding-x",
+  "name" : "pagination-padding-x",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-padding-x:                .75rem;
+/*
+{
+  "var"  : "@pagination-padding-y",
+  "name" : "pagination-padding-y",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-padding-y:                .5rem;
+/*
+{
+  "var"  : "@pagination-padding-x-sm",
+  "name" : "pagination-padding-x-sm",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-padding-x-sm:             .75rem;
+/*
+{
+  "var"  : "@pagination-padding-y-sm",
+  "name" : "pagination-padding-y-sm",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-padding-y-sm:             .275rem;
+/*
+{
+  "var"  : "@pagination-padding-x-lg",
+  "name" : "pagination-padding-x-lg",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-padding-x-lg:             1.5rem;
+/*
+{
+  "var"  : "@pagination-padding-y-lg",
+  "name" : "pagination-padding-y-lg",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-padding-y-lg:             .75rem;
 
 
+/*
+{
+  "var" : "@pagination-color",
+  "name" : "pagination-color",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-color:                     $link-color;
 $pagination-bg:                        #fff;
+/*
+{
+  "var"  : "@pagination-border-width",
+  "name" : "pagination-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Pagination"
+}
+*/
 $pagination-border-width:              $border-width;
+/*
+{
+  "var" : "@pagination-border-color",
+  "name" : "pagination-border-color",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-border-color:              #ddd;
 
+/*
+{
+  "var" : "@pagination-hover-color",
+  "name" : "pagination-hover-color",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-hover-color:               $link-hover-color;
+/*
+{
+  "var" : "@pagination-hover-bg",
+  "name" : "pagination-hover-bg",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-hover-bg:                  $gray-lighter;
+/*
+{
+  "var" : "@pagination-hover-border",
+  "name" : "pagination-hover-border",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-hover-border:              #ddd;
 
+/*
+{
+  "var" : "@pagination-active-color",
+  "name" : "pagination-active-color",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-active-color:              #fff;
+/*
+{
+  "var" : "@pagination-active-bg",
+  "name" : "pagination-active-bg",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-active-bg:                 $brand-primary;
+/*
+{
+  "var" : "@pagination-active-border",
+  "name" : "pagination-active-border",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-active-border:             $brand-primary;
 
+/*
+{
+  "var" : "@pagination-disabled-color",
+  "name" : "pagination-disabled-color",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-disabled-color:            $gray-light;
+/*
+{
+  "var" : "@pagination-disabled-bg",
+  "name" : "pagination-disabled-bg",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-disabled-bg:               #fff;
+/*
+{
+  "var" : "@pagination-disabled-border",
+  "name" : "pagination-disabled-border",
+  "type" : "color",
+  "group": "Pagination"
+}
+*/
 $pagination-disabled-border:           #ddd;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Pager
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@pager-bg",
+  "name" : "pager-bg",
+  "type" : "color",
+  "group": "Pager"
+}
+*/
 $pager-bg:                             $pagination-bg;
+/*
+{
+  "var"  : "@pager-border-width",
+  "name" : "pager-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Pager"
+}
+*/
 $pager-border-width:                   $border-width;
+/*
+{
+  "var" : "@pager-border-color",
+  "name" : "pager-border-color",
+  "type" : "color",
+  "group": "Pager"
+}
+*/
 $pager-border-color:                   $pagination-border-color;
+/*
+{
+  "var" : "@pager-border-radius",
+  "name" : "pager-border-radius",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 30,
+    "increment": 1
+  },
+  "group": "Pager"
+}
+*/
 $pager-border-radius:                  15px;
 
+/*
+{
+  "var" : "@pager-hover-bg",
+  "name" : "pager-hover-bg",
+  "type" : "color",
+  "group": "Pager"
+}
+*/
 $pager-hover-bg:                       $pagination-hover-bg;
 
+/*
+{
+  "var" : "@pager-active-bg",
+  "name" : "pager-active-bg",
+  "type" : "color",
+  "group": "Pager"
+}
+*/
 $pager-active-bg:                      $pagination-active-bg;
+/*
+{
+  "var" : "@pager-active-color",
+  "name" : "pager-active-color",
+  "type" : "color",
+  "group": "Pager"
+}
+*/
 $pager-active-color:                   $pagination-active-color;
 
+/*
+{
+  "var" : "@pager-disabled-color",
+  "name" : "pager-disabled-color",
+  "type" : "color",
+  "group": "Pager"
+}
+*/
 $pager-disabled-color:                 $pagination-disabled-color;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Jumbotron
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+/*
+{
+  "var" : "@jumbotron-padding",
+  "name" : "jumbotron-padding",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Jumbotron"
+}
+*/
 $jumbotron-padding:              2rem;
+/*
+{
+  "var" : "@jumbotron-bg",
+  "name" : "jumbotron-bg",
+  "type" : "color",
+  "group": "Jumbotron"
+}
+*/
 $jumbotron-bg:                   $gray-lighter;
 
-
-// Form states and alerts
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Form states and alerts
 // Define colors for form feedback states and, by default, alerts.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+/*
+{
+  "var" : "@state-success-text",
+  "name" : "state-success-text",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-success-text:             #3c763d;
+/*
+{
+  "var" : "@state-success-bg",
+  "name" : "state-success-bg",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-success-bg:               #dff0d8;
 $state-success-border:           darken($state-success-bg, 5%);
 
+/*
+{
+  "var" : "@state-info-text",
+  "name" : "state-info-text",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-info-text:                #31708f;
+/*
+{
+  "var" : "@state-info-bg",
+  "name" : "state-info-bg",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-info-bg:                  #d9edf7;
 $state-info-border:              darken($state-info-bg, 7%);
 
+/*
+{
+  "var" : "@state-warning-text",
+  "name" : "state-warning-text",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-warning-text:             #8a6d3b;
+/*
+{
+  "var" : "@state-warning-bg",
+  "name" : "state-warning-bg",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-warning-bg:               #fcf8e3;
 $state-warning-border:           darken($state-warning-bg, 5%);
 
+/*
+{
+  "var" : "@state-danger-text",
+  "name" : "state-danger-text",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-danger-text:              #a94442;
+/*
+{
+  "var" : "@state-danger-bg",
+  "name" : "state-danger-bg",
+  "type" : "color",
+  "group": "Form states and alerts"
+}
+*/
 $state-danger-bg:                #f2dede;
 $state-danger-border:            darken($state-danger-bg, 5%);
 
 
 // Cards
+/*
+{
+  "var" : "@card-spacer-x",
+  "name" : "card-spacer-x",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Cards"
+}
+*/
 $card-spacer-x:            1.25rem;
+/*
+{
+  "var" : "@card-spacer-y",
+  "name" : "card-spacer-y",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Cards"
+}
+*/
 $card-spacer-y:            .75rem;
+/*
+{
+  "var"  : "@card-border-width",
+  "name" : "card-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Cards"
+}
+*/
 $card-border-width:        1px;
+/*
+{
+  "var" : "@card-border-radius",
+  "name" : "card-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Cards"
+}
+*/
 $card-border-radius:       $border-radius;
+/*
+{
+  "var" : "@card-border-color",
+  "name" : "card-border-color",
+  "type" : "color",
+  "group": "Cards"
+}
+*/
 $card-border-color:        #e5e5e5;
+/*
+{
+  "var" : "@card-border-radius-inner",
+  "name" : "card-border-radius-inner",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Cards"
+}
+*/
 $card-border-radius-inner: $card-border-radius;
+/*
+{
+  "var" : "@card-cap-bg",
+  "name" : "card-cap-bg",
+  "type" : "color",
+  "group": "Cards"
+}
+*/
 $card-cap-bg:              #f5f5f5;
+/*
+{
+  "var" : "@card-bg",
+  "name" : "card-bg",
+  "type" : "color",
+  "group": "Cards"
+}
+*/
 $card-bg:                  #fff;
 
+/*
+{
+  "var" : "@card-link-hover-color",
+  "name" : "card-link-hover-color",
+  "type" : "color",
+  "group": "Cards"
+}
+*/
 $card-link-hover-color:    #fff;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Tooltips
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@tooltip-max-width",
+  "name" : "tooltip-max-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 100,
+    "max": 800,
+    "increment": 50
+  },
+  "group": "Tooltips"
+}
+*/
 $tooltip-max-width:           200px;
+/*
+{
+  "var" : "@tooltip-color",
+  "name" : "tooltip-color",
+  "type" : "color",
+  "group": "Tooltips"
+}
+*/
 $tooltip-color:               #fff;
+/*
+{
+  "var" : "@tooltip-bg",
+  "name" : "tooltip-bg",
+  "type" : "color",
+  "group": "Tooltips"
+}
+*/
 $tooltip-bg:                  #000;
+/*
+{
+  "var" : "@tooltip-opacity",
+  "name" : "tooltip-opacity",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Tooltips"
+}
+*/
 $tooltip-opacity:             .9;
 
+/*
+{
+  "var" : "@tooltip-arrow-width",
+  "name" : "tooltip-arrow-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Tooltips"
+}
+*/
 $tooltip-arrow-width:         5px;
+/*
+{
+  "var" : "@tooltip-arrow-color",
+  "name" : "tooltip-arrow-color",
+  "type" : "color",
+  "group": "Tooltips"
+}
+*/
 $tooltip-arrow-color:         $tooltip-bg;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Popovers
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@popover-bg",
+  "name" : "popover-bg",
+  "type" : "color",
+  "group": "Popovers"
+}
+*/
 $popover-bg:                          #fff;
-$popover-max-width:                   276px;
+/*
+{
+  "var"  : "@popover-max-width",
+  "name" : "popover-max-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 100,
+    "max": 600,
+    "increment": 25
+  },
+  "group": "Popovers"
+}
+*/
+$popover-max-width:                   275px;
+/*
+{
+  "var"  : "@popover-border-width",
+  "name" : "popover-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Popovers"
+}
+*/
 $popover-border-width:                $border-width;
+/*
+{
+  "var" : "@popover-border-color",
+  "name" : "popover-border-color",
+  "type" : "color",
+  "group": "Popovers"
+}
+*/
 $popover-border-color:                rgba(0,0,0,.2);
 
+/*
+{
+  "var" : "@popover-title-bg",
+  "name" : "popover-title-bg",
+  "type" : "color",
+  "group": "Popovers"
+}
+*/
 $popover-title-bg:                    darken($popover-bg, 3%);
-
+/*
+{
+  "var"  : "@popover-arrow-width",
+  "name" : "popover-arrow-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 20,
+    "increment": 1
+  },
+  "group": "Popovers"
+}
+*/
 $popover-arrow-width:                 10px;
+/*
+{
+  "var" : "@popover-arrow-color",
+  "name" : "popover-arrow-color",
+  "type" : "color",
+  "group": "Popovers"
+}
+*/
 $popover-arrow-color:                 $popover-bg;
 
 $popover-arrow-outer-width:           ($popover-arrow-width + 1);
+/*
+{
+  "var" : "@popover-arrow-outer-color",
+  "name" : "popover-arrow-outer-color",
+  "type" : "color",
+  "group": "Popovers"
+}
+*/
 $popover-arrow-outer-color:           fade-in($popover-border-color, 0.05);
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Labels
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@label-default-bg",
+  "name" : "label-default-bg",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-default-bg:            $gray-light;
+/*
+{
+  "var" : "@label-primary-bg",
+  "name" : "label-primary-bg",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-primary-bg:            $brand-primary;
+/*
+{
+  "var" : "@label-success-bg",
+  "name" : "label-success-bg",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-success-bg:            $brand-success;
+/*
+{
+  "var" : "@label-info-bg",
+  "name" : "label-info-bg",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-info-bg:               $brand-info;
+/*
+{
+  "var" : "@label-warning-bg",
+  "name" : "label-warning-bg",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-warning-bg:            $brand-warning;
+/*
+{
+  "var" : "@label-danger-bg",
+  "name" : "label-danger-bg",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-danger-bg:             $brand-danger;
 
+/*
+{
+  "var" : "@label-color",
+  "name" : "label-color",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-color:                 #fff;
+/*
+{
+  "var" : "@label-link-hover-color",
+  "name" : "label-link-hover-color",
+  "type" : "color",
+  "group": "Labels"
+}
+*/
 $label-link-hover-color:      #fff;
 $label-font-weight:           bold;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Modals
-
 // Padding applied to the modal body
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@modal-inner-padding",
+  "name" : "modal-inner-padding",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 30,
+    "increment": 1
+  },
+  "group": "Modals"
+}
+*/
 $modal-inner-padding:         15px;
 
+/*
+{
+  "var" : "@modal-title-padding",
+  "name" : "modal-title-padding",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 30,
+    "increment": 1
+  },
+  "group": "Modals"
+}
+*/
 $modal-title-padding:         15px;
 $modal-title-line-height:     $line-height;
 
+/*
+{
+  "var" : "@modal-content-bg",
+  "name" : "modal-content-bg",
+  "type" : "color",
+  "group": "Modals"
+}
+*/
 $modal-content-bg:                             #fff;
+/*
+{
+  "var" : "@modal-content-border-color",
+  "name" : "modal-content-border-color",
+  "type" : "color",
+  "group": "Modals"
+}
+*/
 $modal-content-border-color:                   rgba(0,0,0,.2);
 
+/*
+{
+  "var" : "@modal-backdrop-bg",
+  "name" : "modal-backdrop-bg",
+  "type" : "color",
+  "group": "Modals"
+}
+*/
 $modal-backdrop-bg:           #000;
+/*
+{
+  "var"  : "@modal-backdrop-opacity",
+  "name" : "modal-backdrop-opacity",
+  "type" : "number",
+  "units": "",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Modals"
+}
+*/
 $modal-backdrop-opacity:      .5;
+/*
+{
+  "var" : "@modal-header-border-color",
+  "name" : "modal-header-border-color",
+  "type" : "color",
+  "group": "Modals"
+}
+*/
 $modal-header-border-color:   #e5e5e5;
+/*
+{
+  "var" : "@modal-footer-border-color",
+  "name" : "modal-footer-border-color",
+  "type" : "color",
+  "group": "Modals"
+}
+*/
 $modal-footer-border-color:   $modal-header-border-color;
 
+/*
+{
+  "var" : "@modal-lg",
+  "name" : "modal-lg",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 1200,
+    "increment": 100
+  },
+  "group": "Modals"
+}
+*/
 $modal-lg:                    900px;
+/*
+{
+  "var" : "@modal-md",
+  "name" : "modal-md",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 1200,
+    "increment": 100
+  },
+  "group": "Modals"
+}
+*/
 $modal-md:                    600px;
+/*
+{
+  "var" : "@modal-sm",
+  "name" : "modal-sm",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 1200,
+    "increment": 100
+  },
+  "group": "Modals"
+}
+*/
 $modal-sm:                    300px;
 
-
-// Alerts
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Alerts
 // Define alert colors, border radius, and padding.
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@alert-padding",
+  "name" : "alert-padding",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 30,
+    "increment": 1
+  },
+  "group": "Alerts"
+}
+*/
 $alert-padding:               15px;
+/*
+{
+  "var" : "@alert-border-radius",
+  "name" : "alert-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Alerts"
+}
+*/
 $alert-border-radius:         $border-radius;
 $alert-link-font-weight:      bold;
+/*
+{
+  "var" : "@alert-border-width",
+  "name" : "alert-border-width",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-border-width:          $border-width;
-
+/*
+{
+  "var" : "@alert-success-bg",
+  "name" : "alert-success-bg",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-success-bg:            $state-success-bg;
+/*
+{
+  "var" : "@alert-success-text",
+  "name" : "alert-success-text",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-success-text:          $state-success-text;
+/*
+{
+  "var" : "@alert-success-border",
+  "name" : "alert-success-border",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-success-border:        $state-success-border;
 
+/*
+{
+  "var" : "@alert-info-bg",
+  "name" : "alert-info-bg",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-info-bg:               $state-info-bg;
+/*
+{
+  "var" : "@alert-info-text",
+  "name" : "alert-info-text",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-info-text:             $state-info-text;
+/*
+{
+  "var" : "@alert-info-border",
+  "name" : "alert-info-border",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-info-border:           $state-info-border;
 
+/*
+{
+  "var" : "@alert-warning-bg",
+  "name" : "alert-warning-bg",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-warning-bg:            $state-warning-bg;
+/*
+{
+  "var" : "@alert-warning-text",
+  "name" : "alert-warning-text",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-warning-text:          $state-warning-text;
+/*
+{
+  "var" : "@alert-warning-border",
+  "name" : "alert-warning-border",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-warning-border:        $state-warning-border;
 
+/*
+{
+  "var" : "@alert-danger-bg",
+  "name" : "alert-danger-bg",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-danger-bg:             $state-danger-bg;
+/*
+{
+  "var" : "@alert-danger-text",
+  "name" : "alert-danger-text",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-danger-text:           $state-danger-text;
+/*
+{
+  "var" : "@alert-danger-border",
+  "name" : "alert-danger-border",
+  "type" : "color",
+  "group": "Alerts"
+}
+*/
 $alert-danger-border:         $state-danger-border;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Progress bars
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@progress-bg",
+  "name" : "progress-bg",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bg:                 #f5f5f5;
+/*
+{
+  "var" : "@progress-bar-color",
+  "name" : "progress-bar-color",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bar-color:          #fff;
+/*
+{
+  "var" : "@progress-border-radius",
+  "name" : "progress-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Progress bars"
+}
+*/
 $progress-border-radius:      $border-radius;
 
+/*
+{
+  "var" : "@progress-bar-bg",
+  "name" : "progress-bar-bg",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bar-bg:             $brand-primary;
+/*
+{
+  "var" : "@progress-bar-success-bg",
+  "name" : "progress-bar-success-bg",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bar-success-bg:     $brand-success;
+/*
+{
+  "var" : "@progress-bar-warning-bg",
+  "name" : "progress-bar-warning-bg",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bar-warning-bg:     $brand-warning;
+/*
+{
+  "var" : "@progress-bar-danger-bg",
+  "name" : "progress-bar-danger-bg",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bar-danger-bg:      $brand-danger;
+/*
+{
+  "var" : "@progress-bar-info-bg",
+  "name" : "progress-bar-info-bg",
+  "type" : "color",
+  "group": "Progress Bars"
+}
+*/
 $progress-bar-info-bg:        $brand-info;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // List group
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@list-group-bg",
+  "name" : "list-group-bg",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-bg:                 #fff;
+/*
+{
+  "var" : "@list-group-border-color",
+  "name" : "list-group-border-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-border-color:       #ddd;
+/*
+{
+  "var"  : "@list-group-border-width",
+  "name" : "list-group-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 20,
+    "increment": 1
+  },
+  "group": "List group"
+}
+*/
 $list-group-border-width:       $border-width;
+/*
+{
+  "var" : "@list-group-border-radius",
+  "name" : "list-group-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "List group"
+}
+*/
 $list-group-border-radius:      $border-radius;
 
+/*
+{
+  "var" : "@list-group-hover-bg",
+  "name" : "list-group-hover-bg",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-hover-bg:           #f5f5f5;
+/*
+{
+  "var" : "@list-group-active-color",
+  "name" : "list-group-active-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-active-color:       $component-active-color;
+/*
+{
+  "var" : "@list-group-active-bg",
+  "name" : "list-group-active-bg",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-active-bg:          $component-active-bg;
+/*
+{
+  "var" : "@list-group-active-border",
+  "name" : "list-group-active-border",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-active-border:      $list-group-active-bg;
+/*
+{
+  "var" : "@list-group-active-text-color",
+  "name" : "list-group-active-text-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-active-text-color:  lighten($list-group-active-bg, 40%);
 
+/*
+{
+  "var" : "@list-group-disabled-color",
+  "name" : "list-group-disabled-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-disabled-color:      $gray-light;
+/*
+{
+  "var" : "@list-group-disabled-bg",
+  "name" : "list-group-disabled-bg",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-disabled-bg:         $gray-lighter;
+/*
+{
+  "var" : "@list-group-disabled-text-color",
+  "name" : "list-group-disabled-text-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-disabled-text-color: $list-group-disabled-color;
 
+/*
+{
+  "var" : "@list-group-link-color",
+  "name" : "list-group-link-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-link-color:         #555;
+/*
+{
+  "var" : "@list-group-link-hover-color",
+  "name" : "list-group-link-hover-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-link-hover-color:   $list-group-link-color;
+/*
+{
+  "var" : "@list-group-link-heading-color",
+  "name" : "list-group-link-heading-color",
+  "type" : "color",
+  "group": "List Group"
+}
+*/
 $list-group-link-heading-color: #333;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Image thumbnails
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@thumbnail-padding",
+  "name" : "thumbnail-padding",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Image thumbnails"
+}
+*/
 $thumbnail-padding:           .25rem;
+/*
+{
+  "var" : "@thumbnail-bg",
+  "name" : "thumbnail-bg",
+  "type" : "color",
+  "group": "Image thumbnails"
+}
+*/
 $thumbnail-bg:                $body-bg;
+/*
+{
+  "var"  : "@thumbnail-border-width",
+  "name" : "thumbnail-border-width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
+  },
+  "group": "Image thumbnails"
+}
+*/
 $thumbnail-border-width:      $border-width;
+/*
+{
+  "var" : "@thumbnail-border-color",
+  "name" : "thumbnail-border-color",
+  "type" : "color",
+  "group": "Image thumbnails"
+}
+*/
 $thumbnail-border-color:      #ddd;
+/*
+{
+  "var" : "@thumbnail-border-radius",
+  "name" : "thumbnail-border-radius",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 1,
+    "increment": 0.05
+  },
+  "group": "Image thumbnails"
+}
+*/
 $thumbnail-border-radius:     $border-radius;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Breadcrumbs
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@breadcrumb-padding-vertical",
+  "name" : "breadcrumb-padding-vertical",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Cards"
+}
+*/
 $breadcrumb-padding-vertical:   .75rem;
+/*
+{
+  "var" : "@breadcrumb-padding-horizontal",
+  "name" : "breadcrumb-padding-horizontal",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 2,
+    "increment": 0.25
+  },
+  "group": "Cards"
+}
+*/
 $breadcrumb-padding-horizontal: 1rem;
 
+/*
+{
+  "var" : "@breadcrumb-bg",
+  "name" : "breadcrumb-bg",
+  "type" : "color",
+  "group": "Breadcrumbs"
+}
+*/
 $breadcrumb-bg:                 $gray-lighter;
+/*
+{
+  "var" : "@breadcrumb-divider-color",
+  "name" : "breadcrumb-divider-color",
+  "type" : "color",
+  "group": "Breadcrumbs"
+}
+*/
 $breadcrumb-divider-color:      $gray-light;
+/*
+{
+  "var" : "@breadcrumb-active-color",
+  "name" : "breadcrumb-active-color",
+  "type" : "color",
+  "group": "Breadcrumbs"
+}
+*/
 $breadcrumb-active-color:       $gray-light;
 $breadcrumb-divider:            "/";
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Carousel
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
 $carousel-control-color:                      #fff;
@@ -648,28 +4262,142 @@ $carousel-control-width:                      15%;
 $carousel-control-opacity:                    .5;
 $carousel-control-font-size:                  20px;
 
+
 $carousel-indicator-active-bg:                #fff;
+
 $carousel-indicator-border-color:             #fff;
 
 $carousel-caption-color:                      #fff;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Close
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 $close-font-weight:           bold;
 $close-color:                 #000;
 $close-text-shadow:           0 1px 0 #fff;
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Code
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*
+{
+  "var" : "@code-color",
+  "name" : "code-color",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $code-color:                  #bd4147;
+/*
+{
+  "var" : "@code-bg",
+  "name" code-bg",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $code-bg:                     #f7f7f9;
 
+/*
+{
+  "var" : "@kbd-color",
+  "name" : "kbd-color",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $kbd-color:                   #fff;
+/*
+{
+  "var" : "@kbd-bg",
+  "name" kbd-bg",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $kbd-bg:                      #333;
 
+/*
+{
+  "var" : "@pre-bg",
+  "name" pre-bg",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $pre-bg:                      #f7f7f9;
+/*
+{
+  "var" : "@pre-color",
+  "name" : "pre-color",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $pre-color:                   $gray-dark;
+/*
+{
+  "var" : "@pre-border-color",
+  "name" : "pre-border-color",
+  "type" : "color",
+  "group": "Code"
+}
+*/
 $pre-border-color:            #ccc;
-$pre-scrollable-max-height:   340px !default;
+$pre-scrollable-max-height:   340px;

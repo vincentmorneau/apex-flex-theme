@@ -1,0 +1,64 @@
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $color) {
+  .#{$parent} {
+    color: #fff !important;
+    background-color: $color !important;
+  }
+  a.#{$parent} {
+    @include hover-focus {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
+// Inverse
+// TODO: redo this as a proper class
+.bg-inverse {
+  color: $gray-lighter;
+  background-color: $gray-dark;
+}
+
+.bg-faded {
+  background-color: $gray-lightest;
+}
+
+@include bg-variant(bg-primary, $brand-primary);
+
+@include bg-variant(bg-success, $brand-success);
+
+@include bg-variant(bg-info, $brand-info);
+
+@include bg-variant(bg-warning, $brand-warning);
+
+@include bg-variant(bg-danger, $brand-danger);
+
+// Typography
+
+@mixin text-emphasis-variant($parent, $color) {
+  .#{$parent} {
+    color: $color !important;
+  }
+  a.#{$parent} {
+    @include hover-focus {
+      color: darken($color, 10%);
+    }
+  }
+}
+
+
+// Contextual colors
+
+.text-muted {
+  color: $text-muted;
+}
+
+@include text-emphasis-variant(text-primary, $brand-primary);
+
+@include text-emphasis-variant(text-success, $brand-success);
+
+@include text-emphasis-variant(text-info, $brand-info);
+
+@include text-emphasis-variant(text-warning, $brand-warning);
+
+@include text-emphasis-variant(text-danger, $brand-danger);

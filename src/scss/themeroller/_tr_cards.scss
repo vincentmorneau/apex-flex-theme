@@ -1,0 +1,137 @@
+//
+// Base styles
+//
+
+.card {
+  position: relative;
+  display: block;
+  margin-bottom: $card-spacer-y;
+  background-color: $card-bg;
+  border: $card-border-width solid $card-border-color;
+  @include border-radius($card-border-radius);
+}
+
+.card-block {
+  padding: $card-spacer-x;
+}
+
+.card-title {
+  margin-bottom: $card-spacer-y;
+}
+
+.card-subtitle {
+  margin-top: -($card-spacer-y / 2);
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+// .card-actions {
+//   padding: $card-spacer-y $card-spacer-x;
+
+//   .card-link + .card-link {
+//     margin-left: $card-spacer-x;
+//   }
+// }
+
+.card-link {
+  @include hover {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: $card-spacer-x;
+  }
+}
+
+@if $enable-rounded {
+  .card {
+    > .list-group:first-child {
+      .list-group-item:first-child {
+        border-radius: $card-border-radius $card-border-radius 0 0;
+      }
+    }
+
+    > .list-group:last-child {
+      .list-group-item:last-child {
+        border-radius: 0 0 $card-border-radius $card-border-radius;
+      }
+    }
+  }
+}
+
+
+//
+// Optional textual caps
+//
+
+.card-header {
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+
+  &:first-child {
+    @include border-radius($card-border-radius-inner $card-border-radius-inner 0 0);
+  }
+}
+
+.card-footer {
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
+  border-top: $card-border-width solid $card-border-color;
+
+  &:last-child {
+    @include border-radius(0 0 $card-border-radius-inner $card-border-radius-inner);
+  }
+}
+
+
+//
+// Background variations
+//
+
+.card-primary {
+  @include card-variant($brand-primary, $brand-primary);
+}
+.card-success {
+  @include card-variant($brand-success, $brand-success);
+}
+.card-info {
+  @include card-variant($brand-info, $brand-info);
+}
+.card-warning {
+  @include card-variant($brand-warning, $brand-warning);
+}
+.card-danger {
+  @include card-variant($brand-danger, $brand-danger);
+}
+
+// Remove all backgrounds
+.card-primary-outline {
+  @include card-outline-variant($btn-primary-bg);
+}
+.card-secondary-outline {
+  @include card-outline-variant($btn-secondary-border);
+}
+.card-info-outline {
+  @include card-outline-variant($btn-info-bg);
+}
+.card-success-outline {
+  @include card-outline-variant($btn-success-bg);
+}
+.card-warning-outline {
+  @include card-outline-variant($btn-warning-bg);
+}
+.card-danger-outline {
+  @include card-outline-variant($btn-danger-bg);
+}
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+.card-inverse {
+  @include card-inverse;
+}
