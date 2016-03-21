@@ -1,3 +1,4 @@
+/* Colors */
 .card {
     &.bg-primary {
       @include card-variant($brand-primary, $brand-primary);
@@ -17,23 +18,26 @@
 }
 
 /*List borders*/
+.card .list-group {
+    @extend .list-group-flush;
 
-.list-group-flush:first-child .list-group-item:first-child {
-    border-top: 1px solid #ddd;
+    &:first-child {
+        border-top: 1px solid $list-group-border-color;
+    }
+
+    &:last-child {
+        border-bottom: 1px solid $list-group-border-color;
+    }
 }
 
-.list-group-flush:last-child .list-group-item:last-child {
-    border-bottom: 1px solid #ddd;
-}
-
-/*Card image*/
-
+/* Card image */
 .card-image-top, .card-image-overlay {
+    padding-top: 250px;
+
     img {
         @extend .card-img-top;
         top: 0;
     }
-    padding-top: 250px;
 }
 
 .card img {
@@ -44,11 +48,12 @@
 }
 
 .card-image-bottom {
-    img{
+    padding-bottom: 250px;
+
+    img {
         @extend .card-img-bottom;
         bottom: 0;
     }
-    padding-bottom: 250px;
 }
 
 .a-RegionMedia-graphic {
@@ -61,16 +66,16 @@
     .card-block {
         @extend .card-img-overlay;
     }
+
     img {
         @extend .card-img;
         z-index: -1;
     }
 }
 
-/*Title size*/
-
+/* Titles */
 .card.ab-region-title-hidden .card-title {
-    display: none;
+    @include hide();
 }
 
 .card.ab-h1 .card-title {
@@ -91,12 +96,4 @@
 
 .card.ab-h6 .card-title {
     @extend .h6;
-}
-
-/*Header*/
-
-.card-title-header {
-    .card-title {
-        @extend .card-header;
-    }
 }
