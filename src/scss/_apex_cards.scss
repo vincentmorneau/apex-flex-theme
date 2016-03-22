@@ -17,7 +17,39 @@
     }
 }
 
-/*List borders*/
+.ab-card-btn-primary .ab-card-btn {
+    @extend .btn-primary;
+}
+
+.ab-card-btn-secondary .ab-card-btn {
+    @extend .btn-secondary;
+}
+
+.ab-card-btn-success .ab-card-btn {
+    @extend .btn-success;
+}
+
+.ab-card-btn-info .ab-card-btn {
+    @extend .btn-info;
+}
+
+.ab-card-btn-warning .ab-card-btn {
+    @extend .btn-warning;
+}
+
+.ab-card-btn-danger .ab-card-btn {
+    @extend .btn-danger;
+}
+
+.ab-card-btn-inverse .ab-card-btn {
+    @extend .btn-inverse;
+}
+
+.ab-card-btn-link .ab-card-btn {
+    @extend .btn-link;
+}
+
+/* List borders */
 .card .list-group {
     @extend .list-group-flush;
 
@@ -31,69 +63,67 @@
 }
 
 /* Card image */
-.card-image-top, .card-image-overlay {
-    padding-top: 250px;
-
-    img {
-        @extend .card-img-top;
-        top: 0;
-    }
-}
-
 .card img {
-    width: 100%;
-    height: 250px;
-    position: absolute;
-    left: 0;
+    @include img-fluid();
 }
 
-.card-image-bottom {
-    padding-bottom: 250px;
-
-    img {
-        @extend .card-img-bottom;
-        bottom: 0;
-    }
+.ab-card-img-top img {
+    @extend .card-img-top;
 }
 
-.a-RegionMedia-graphic {
-    float: none;
+.ab-card-img-bottom img {
+    @extend .card-img-bottom;
 }
 
-.card.card-image-overlay {
-    background: none;
-
-    .card-block {
-        @extend .card-img-overlay;
-    }
-
-    img {
-        @extend .card-img;
-        z-index: -1;
-    }
+.ab-card-img-overlay > .card-block {
+    @extend .card-img-overlay;
 }
 
 /* Titles */
-.card.ab-region-title-hidden .card-title {
+.ab-region-title-hidden > .card-title {
     @include hide();
 }
 
-.card.ab-h1 .card-title {
+.ab-h1 > .card-title {
     @extend .h1;
 }
 
-.card.ab-h2 .card-title {
+.ab-h2 > .card-title {
     @extend .h2;
 }
 
-.card.ab-h3 .card-title {
+.ab-h3 > .card-title {
     @extend .h3;
 }
 
-.card.ab-h5 .card-title {
+.ab-h4 > .card-title {
+    @extend .h4;
+}
+
+.ab-h5 > .card-title {
     @extend .h5;
 }
 
-.card.ab-h6 .card-title {
+.ab-h6 > .card-title {
     @extend .h6;
+}
+
+.ab-display-1 > .card-title {
+    @extend .display-1;
+}
+
+.ab-display-2 > .card-title {
+    @extend .display-2;
+}
+
+.ab-display-3 > .card-title {
+    @extend .display-3;
+}
+
+.ab-display-4 > .card-title {
+    @extend .display-4;
+}
+
+.card-subtitle {
+    margin-bottom: .75rem;
 }

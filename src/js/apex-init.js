@@ -193,4 +193,22 @@ $(function() {
     });
 
     $(".input-group-addon, .input-group-btn").closest(".ab-input-group").addClass("input-group");
+
+    // Region Cards
+    $(".card.ab-card-img-top, .card.ab-card-img-overlay").each(function() {
+        $(this).prepend($(this).find("img"));
+    });
+
+    $(".card.ab-card-img-bottom").each(function() {
+        $(this).append($(this).find("img"));
+    });
+
+    // Report Cards
+    $(".ab-card-img-top .card, .ab-card-img-overlay .card").each(function() {
+        $(this).prepend($(this).find("img"));
+    });
+
+    $(".ab-card-img-bottom .card").each(function() {
+        $(this).append($(this).find("img"));
+    });
 });
