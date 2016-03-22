@@ -3,3 +3,8 @@ node_modules
 bower_components
 apex
 dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
