@@ -3,6 +3,7 @@
   "author": "Vincent Morneau",
   "version": "0.0.2",
   "description": "Bootstrap 4 Theme for Oracle APEX",
+  "link": "https://apex.oracle.com/pls/apex/f?p=73792",
   "license":"MIT",
   "repository": {
     "type": "git",
