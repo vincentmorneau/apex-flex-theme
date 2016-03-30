@@ -11,7 +11,7 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 
 ## Install
 - **Option 1) Application Import** - *Best for new application*
-    - Import [barebone-app.sql](apex/barebone-app.sql) or [demo-app.sql](apex/demo-app.sql) in your workspace.
+    - Import [barebone-app.sql](https://github.com/vincentmorneau/apex-bootstrap4/releases/download/v0.0.2/barebone-app.sql) or [demo-app.sql](https://github.com/vincentmorneau/apex-bootstrap4/releases/download/v0.0.2/demo-app.sql) in your workspace.
 - **Option 2) Theme Import** - *Best for upgrading existing application*
     - [See documentation](docs/theme-import.md).
 - **Option 3) Manual compile** - *Best for customizing the theme*
