@@ -42,8 +42,8 @@
     @extend .page-link;
     @extend a;
     color: $btn-primary-color;
-    background-color: $brand-primary;
-    border-color: $brand-primary;
+    background-color: $primary;
+    border-color: $primary;
 }
 
 .page-item:first-child .page-link,

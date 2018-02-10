@@ -23,40 +23,15 @@ input.file {
 }
 
 /* Sizes */
-&.ab-form-control-lg {
+.ab-form-control-lg {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-lg;
     }
 }
 
-&.ab-form-control-sm {
+.ab-form-control-sm {
     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
         @extend .form-control-sm;
-    }
-}
-
-/* Item validation */
-.form-group.has-success {
-    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
-        @extend .form-control-success;
-    }
-}
-
-.form-group.has-warning {
-    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
-        @extend .form-control-warning;
-    }
-}
-
-.form-group.has-danger {
-    .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
-        @extend .form-control-danger;
-    }
-}
-
-.form-group.has-success, .form-group.has-warning, .form-group.has-danger {
-    label {
-        @extend .form-control-label;
     }
 }
 

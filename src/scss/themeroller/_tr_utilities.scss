@@ -23,15 +23,15 @@
   background-color: $gray-lightest;
 }
 
-@include bg-variant(bg-primary, $brand-primary);
+@include bg-variant(bg-primary, $primary);
 
-@include bg-variant(bg-success, $brand-success);
+@include bg-variant(bg-success, $success);
 
-@include bg-variant(bg-info, $brand-info);
+@include bg-variant(bg-info, $info);
 
-@include bg-variant(bg-warning, $brand-warning);
+@include bg-variant(bg-warning, $warning);
 
-@include bg-variant(bg-danger, $brand-danger);
+@include bg-variant(bg-danger, $danger);
 
 // Typography
 
@@ -53,12 +53,12 @@
   color: $text-muted;
 }
 
-@include text-emphasis-variant(text-primary, $brand-primary);
+@include text-emphasis-variant(text-primary, $primary);
 
-@include text-emphasis-variant(text-success, $brand-success);
+@include text-emphasis-variant(text-success, $success);
 
-@include text-emphasis-variant(text-info, $brand-info);
+@include text-emphasis-variant(text-info, $info);
 
-@include text-emphasis-variant(text-warning, $brand-warning);
+@include text-emphasis-variant(text-warning, $warning);
 
-@include text-emphasis-variant(text-danger, $brand-danger);
+@include text-emphasis-variant(text-danger, $danger);

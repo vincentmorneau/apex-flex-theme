@@ -1,0 +1,37 @@
+{
+	"mode": "advanced",
+	"appURL": "CHANGEME_URL/f?p=12192:1",
+	"srcFolder": "CHANGE_ME_PATH/apex-bootstrap4/src",
+	"distFolder": "CHANGE_ME_PATH/apex-bootstrap4/dist",
+	"js": {
+		"processor": "default",
+		"concat": false,
+		"library": false,
+		"tsConcat": false
+	},
+	"css": {
+		"language": "sass",
+		"concat": false,
+		"sassIncludePath": "CHANGE_ME_PATH/apex-bootstrap4/node_modules/bootstrap/scss"
+	},
+	"browsersync": {
+		"notify": true,
+		"ghostMode": false
+	},
+	"header": {
+		"enabled": true,
+		"packageJsonPath": "CHANGE_ME_PATH/apex-bootstrap4/package.json"
+	},
+	"apex": {
+		"openBuilder": true
+	},
+	"publish": {
+		"destination": "theme",
+		"path": "sql",
+		"connectionType": "basic"
+	},
+	"themeroller": {
+		"files": [
+		]
+	}
+}

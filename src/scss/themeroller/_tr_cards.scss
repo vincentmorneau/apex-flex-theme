@@ -87,27 +87,6 @@
   }
 }
 
-
-//
-// Background variations
-//
-
-.card-primary {
-  @include card-variant($brand-primary, $brand-primary);
-}
-.card-success {
-  @include card-variant($brand-success, $brand-success);
-}
-.card-info {
-  @include card-variant($brand-info, $brand-info);
-}
-.card-warning {
-  @include card-variant($brand-warning, $brand-warning);
-}
-.card-danger {
-  @include card-variant($brand-danger, $brand-danger);
-}
-
 // Remove all backgrounds
 .card-primary-outline {
   @include card-outline-variant($btn-primary-bg);

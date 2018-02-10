@@ -4,15 +4,12 @@
   "version": "0.0.2",
   "description": "Bootstrap 4 Theme for Oracle APEX",
   "link": "https://apex.oracle.com/pls/apex/f?p=73792",
-  "license":"MIT",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/vincentmorneau/apex-bootstrap4.git"
   },
-  "scripts": {
-    "start": "gulp"
-  },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.2"
+    "bootstrap": "4.0.0"
   }
 }

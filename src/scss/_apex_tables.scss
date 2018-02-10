@@ -6,28 +6,12 @@
     }
 }
 
-.ab-thead-default thead {
-    @extend .thead-default;
-}
-
-.ab-thead-inverse thead {
-    @extend .thead-inverse;
-}
-
 .ab-table-bordered .table {
     @extend .table-bordered;
 }
 
 .ab-table-hover .table {
     @extend .table-hover;
-}
-
-.ab-table-inverse .table {
-    @extend .table-inverse;
-}
-
-.ab-table-reflow .table {
-    @extend .table-reflow;
 }
 
 .ab-table-sm .table {

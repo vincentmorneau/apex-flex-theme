@@ -1,22 +1,4 @@
 /* Colors */
-.card {
-    &.bg-primary {
-      @include card-variant($brand-primary, $brand-primary);
-    }
-    &.bg-success {
-      @include card-variant($brand-success, $brand-success);
-    }
-    &.bg-info {
-      @include card-variant($brand-info, $brand-info);
-    }
-    &.bg-warning {
-      @include card-variant($brand-warning, $brand-warning);
-    }
-    &.bg-danger {
-      @include card-variant($brand-danger, $brand-danger);
-    }
-}
-
 .ab-card-btn-primary .ab-card-btn {
     @extend .btn-primary;
 }
@@ -39,10 +21,6 @@
 
 .ab-card-btn-danger .ab-card-btn {
     @extend .btn-danger;
-}
-
-.ab-card-btn-inverse .ab-card-btn {
-    @extend .btn-inverse;
 }
 
 .ab-card-btn-link .ab-card-btn {

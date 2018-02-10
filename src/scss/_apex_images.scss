@@ -2,18 +2,6 @@
     @include img-fluid();
 }
 
-.ab-img-rounded img {
-    @extend .img-rounded;
-}
-
-.ab-img-circle img {
-    @extend .img-circle;
-}
-
-.ab-img-thumbnail img {
-    @extend .img-thumbnail;
-}
-
 .ab-image {
     &.ab-figure {
         @extend figure;
