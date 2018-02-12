@@ -1,0 +1,10 @@
+@if $navbar-text-style == navbar-light {
+	.ab-header {
+		@extend .navbar-light;
+	}
+} @else
+if $navbar-text-style == navbar-dark {
+	.ab-header {
+		@extend .navbar-dark;
+	}
+}

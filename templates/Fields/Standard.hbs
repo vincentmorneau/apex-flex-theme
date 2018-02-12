@@ -1,24 +1,98 @@
 {{#before_label_and_item}}
-<div class="form-group #ITEM_CSS_CLASSES#">
-{{/before_label_and_item}}
-    {{#before_label}}
-    <label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" data-help="#HELP_TEMPLATE#">
-    {{/before_label}}
-    {{#after_label}}
-    </label>
-    {{/after_label}}
 
-    {{#before_item}}
-    <div class="ab-input-group">
-    {{/before_item}}
-    {{#after_item}}
-    </div>
-    {{/after_item}}
+{{/before_label_and_item}}
+	{{#before_label}}
+	
+	{{/before_label}}
+	{{#after_label}}
+	
+	{{/after_label}}
+	{{#before_item}}
+	<div class="form-group #ITEM_CSS_CLASSES#">
+	{{/before_item}}
+	{{#after_item}}
+	</div>
+
+	{{/after_item}}
 {{#after_label_and_item}}
-</div>
+
 {{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
-{{#help_template}}#CURRENT_ITEM_HELP_TEXT#{{/help_template}}
+{{#on_error_before_label}}
+
+{{/on_error_before_label}}
+{{#on_error_after_label}}
+
+{{/on_error_after_label}}
+{{#error_template}}
+
+{{/error_template}}
+{{#help_template}}
+
+{{/help_template}}
+
+{{#template_option_groups}}
+[
+  {
+    "NAME": "FIELD_INPUT_SIZE",
+    "DISPLAY_NAME": "Input Size",
+    "DISPLAY_SEQUENCE": 20,
+    "HELP_TEXT": "Specify the input size.",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "LARGE",
+        "DISPLAY_NAME": "Large",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ab-form-control-lg"
+      },
+      {
+        "NAME": "SMALL",
+        "DISPLAY_NAME": "Small",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ab-form-control-sm"
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_VALIDATION_STYLE",
+    "DISPLAY_NAME": "Validation Style",
+    "DISPLAY_SEQUENCE": 30,
+    "HELP_TEXT": "Bootstrap includes validation styles for danger, warning, and success states on form controls.",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "SUCCESS",
+        "DISPLAY_NAME": "Success",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "has-success"
+      },
+      {
+        "NAME": "WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "has-warning"
+      },
+      {
+        "NAME": "DANGER",
+        "DISPLAY_NAME": "Danger",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "has-danger"
+      }
+    ]
+  }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+  {
+    "NAME": "HIDDEN_LABEL",
+    "DISPLAY_NAME": "Hidden label",
+    "DISPLAY_SEQUENCE": 10,
+    "CSS_CLASSES": "ab-input-sr-only",
+    "HELP_TEXT": null
+  }
+]
+{{/template_options}}

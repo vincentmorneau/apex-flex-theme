@@ -1,0 +1,39 @@
+.ab-h1 > .ab-region-container > .ab-region-title {
+	@extend .h1;
+}
+
+.ab-h2 > .ab-region-container > .ab-region-title {
+	@extend .h2;
+}
+
+.ab-h3 > .ab-region-container > .ab-region-title {
+	@extend .h3;
+}
+
+.ab-h4 > .ab-region-container > .ab-region-title {
+	@extend .h4;
+}
+
+.ab-h5 > .ab-region-container > .ab-region-title {
+	@extend .h5;
+}
+
+.ab-h6 > .ab-region-container > .ab-region-title {
+	@extend .h6;
+}
+
+.ab-display-1 > .ab-region-container > .ab-region-title {
+	@extend .display-1;
+}
+
+.ab-display-2 > .ab-region-container > .ab-region-title {
+	@extend .display-2;
+}
+
+.ab-display-3 > .ab-region-container > .ab-region-title {
+	@extend .display-3;
+}
+
+.ab-display-4 > .ab-region-container > .ab-region-title {
+	@extend .display-4;
+}

@@ -1,20 +1,82 @@
 {{#before_label_and_item}}
-<div class="ab-image #ITEM_CSS_CLASSES#">
+
 {{/before_label_and_item}}
-    {{#before_label}}
-    <label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" class="hidden-xs-up">
-    {{/before_label}}
-    {{#after_label}}
-    </label>
-    {{/after_label}}
-    {{#before_item}}{{/before_item}}
-    {{#after_item}}{{/after_item}}
+	{{#before_label}}
+	
+	{{/before_label}}
+	{{#after_label}}
+	
+	{{/after_label}}
+	{{#before_item}}
+	<div class="ab-image #ITEM_CSS_CLASSES#">
+	{{/before_item}}
+	{{#after_item}}
+	<figcaption class="figure-caption">#CURRENT_ITEM_HELP_TEXT#</figcaption></div>
+	{{/after_item}}
 {{#after_label_and_item}}
-<figcaption class="figure-caption">#CURRENT_ITEM_HELP_TEXT#</figcaption>
-</div>
+
 {{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
-{{#help_template}}{{/help_template}}
+{{#on_error_before_label}}
+
+{{/on_error_before_label}}
+{{#on_error_after_label}}
+
+{{/on_error_after_label}}
+{{#error_template}}
+
+{{/error_template}}
+{{#help_template}}
+
+{{/help_template}}
+
+{{#template_option_groups}}
+[
+  {
+    "NAME": "FIELD_IMG_STYLE",
+    "DISPLAY_NAME": "Image Style",
+    "DISPLAY_SEQUENCE": 50,
+    "HELP_TEXT": "Add these template option to any image item.",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "ROUNDED",
+        "DISPLAY_NAME": "Rounded",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ab-img-rounded"
+      },
+      {
+        "NAME": "CIRCLE",
+        "DISPLAY_NAME": "Circle",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ab-img-circle"
+      },
+      {
+        "NAME": "THUMBNAIL",
+        "DISPLAY_NAME": "Thumbnail",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ab-img-thumbnail"
+      }
+    ]
+  }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+  {
+    "NAME": "ITEM_FIGURE",
+    "DISPLAY_NAME": "Figure",
+    "DISPLAY_SEQUENCE": 20,
+    "CSS_CLASSES": "ab-figure",
+    "HELP_TEXT": "Anytime you need to display a piece of content—like an image—with an optional caption, consider using a figure."
+  },
+  {
+    "NAME": "RESPONSIVE",
+    "DISPLAY_NAME": "Responsive",
+    "DISPLAY_SEQUENCE": 10,
+    "CSS_CLASSES": "ab-image-fluid",
+    "HELP_TEXT": null
+  }
+]
+{{/template_options}}

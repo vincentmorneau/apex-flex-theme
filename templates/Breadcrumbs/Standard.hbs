@@ -1,16 +1,33 @@
 {{#before_first}}
-<ol class="breadcrumb #COMPONENT_CSS_CLASSES#">
+[]
 {{/before_first}}
-    {{#current_page_option}}
-    <li class="active">#NAME#</li>
-    {{/current_page_option}}
-    {{#non_current_page_option}}
-    <li><a href="#LINK#">#NAME#</a></li>
-    {{/non_current_page_option}}
-    {{#menu_link_attributes}}{{/menu_link_attributes}}
-    {{#between_levels}}{{/between_levels}}
+	{{#current_page_option}}
+	    <li class="active">#NAME#</li>
+
+	{{/current_page_option}}
+	{{#non_current_page_option}}
+	    <li><a href="#LINK#">#NAME#</a></li>
+
+	{{/non_current_page_option}}
+	{{#menu_link_attributes}}
+	
+	{{/menu_link_attributes}}
+	{{#between_levels}}
+	
+	{{/between_levels}}
 {{#after_last}}
 </ol>
+
 {{/after_last}}
 
-{{#max_levels}}{{/max_levels}}
+{{#max_levels}}
+
+{{/max_levels}}
+
+{{#template_option_groups}}
+[]
+{{/template_option_groups}}
+
+{{#template_options}}
+[]
+{{/template_options}}

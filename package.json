@@ -10,6 +10,7 @@
     "url": "git://github.com/vincentmorneau/apex-bootstrap4.git"
   },
   "dependencies": {
-    "bootstrap": "4.0.0"
+    "bootstrap": "4.0.0",
+    "knockout-pre-rendered": "^0.9.1"
   }
 }

@@ -1,23 +1,89 @@
 {{#before_label_and_item}}
-<div class="label-group #ITEM_CSS_CLASSES#">
+
 {{/before_label_and_item}}
-    {{#before_label}}
-    <label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#">
-    {{/before_label}}
-    {{#after_label}}
-    </label>
-    {{/after_label}}
-    {{#before_item}}{{/before_item}}
-    {{#after_item}}
-    #HELP_TEMPLATE#
-    {{/after_item}}
+	{{#before_label}}
+	
+	{{/before_label}}
+	{{#after_label}}
+	
+	{{/after_label}}
+	{{#before_item}}
+	<div class="label-group #ITEM_CSS_CLASSES#">
+
+	{{/before_item}}
+	{{#after_item}}
+	</div>
+
+	{{/after_item}}
 {{#after_label_and_item}}
-</div>
+
 {{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
+{{#on_error_before_label}}
+
+{{/on_error_before_label}}
+{{#on_error_after_label}}
+
+{{/on_error_after_label}}
+{{#error_template}}
+
+{{/error_template}}
 {{#help_template}}
-<small class="text-muted">#CURRENT_ITEM_HELP_TEXT#</small>
+
 {{/help_template}}
+
+{{#template_option_groups}}
+[
+  {
+    "NAME": "FIELD_LABEL_STYLE",
+    "DISPLAY_NAME": "Label Style",
+    "DISPLAY_SEQUENCE": 10,
+    "HELP_TEXT": "Add any of the following mentioned modifier classes to change the appearance of a label: (Default Primary Success Info Warning Danger)",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "SUCCESS",
+        "DISPLAY_NAME": "Success",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "label-success"
+      },
+      {
+        "NAME": "WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "label-warning"
+      },
+      {
+        "NAME": "PRIMARY",
+        "DISPLAY_NAME": "Primary",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "label-primary"
+      },
+      {
+        "NAME": "INFO",
+        "DISPLAY_NAME": "Info",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "label-info"
+      },
+      {
+        "NAME": "DANGER",
+        "DISPLAY_NAME": "Danger",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "label-danger"
+      }
+    ]
+  }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+  {
+    "NAME": "PILL",
+    "DISPLAY_NAME": "Pill",
+    "DISPLAY_SEQUENCE": 10,
+    "CSS_CLASSES": "label-pill",
+    "HELP_TEXT": null
+  }
+]
+{{/template_options}}

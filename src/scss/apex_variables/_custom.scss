@@ -1,0 +1,29 @@
+/*
+{
+  "var" : "@navbar-background-color",
+  "name" : "Background Color",
+  "type" : "color",
+  "group": "Navigation"
+}
+*/
+$navbar-background-color: $gray-100;
+
+/*
+{
+    "var": "@navbar-text-style",
+    "name": "Text Color Style",
+    "type": "select",
+    "options": [
+        {
+            "d": "Dark (Default)",
+            "r": "navbar-light"
+        },
+        {
+            "d": "Light",
+            "r": "navbar-dark"
+        }
+    ],
+    "group": "Navigation"
+}
+*/
+$navbar-text-style: navbar-light;

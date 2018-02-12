@@ -1,10 +1,17 @@
-// Custom APEX variables
+// Bootstrap required files
+@import "functions";
+@import "variables";
+@import "mixins";
+
+// APEX required files
 @import "apex_variables";
-// Custom APEX mixins
 @import "apex_mixins";
 
-// Bootstrap
+// Bootstrap Sass
 @import "bootstrap";
 
-// Custom APEX Sass
-@import "apex";
+// Extends from Bootstrap code for APEX
+@import "apex_extends";
+
+// APEX Sass
+@import "apex_components";

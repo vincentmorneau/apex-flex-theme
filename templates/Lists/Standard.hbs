@@ -1,74 +1,171 @@
 {{#javascript_file_urls}}
+
 {{/javascript_file_urls}}
 {{#javascript_code_onload}}
+
 {{/javascript_code_onload}}
 {{#css_file_urls}}
+
 {{/css_file_urls}}
 {{#inline_css}}
+
 {{/inline_css}}
 
 {{#list_template_before_rows}}
-<nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES#">
-<ul class="nav">
+<nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES#"><ul class="nav">
 {{/list_template_before_rows}}
-    {{#list_template_current}}
-    <li class="nav-item active"><a href="#LINK#" class="active nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
-    {{/list_template_current}}
-    {{#list_template_noncurrent}}
-    <li class="nav-item"><a href="#LINK#" class="nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
-    {{/list_template_noncurrent}}
-    {{#item_template_curr_w_child}}
-    <li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a><div class="dropdown-menu">
-    {{/item_template_curr_w_child}}
-    {{#item_template_noncurr_w_child}}
-    <li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a><div class="dropdown-menu">
-    {{/item_template_noncurr_w_child}}
-    {{#between_items}}
-    {{/between_items}}
+	{{#list_template_current}}
+	<li class="nav-item active"><a href="#LINK#" class="active nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
+	{{/list_template_current}}
+	{{#item_template_curr_w_child}}
+	<li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="#ICON_CSS_CLASSES#"></i> #TEXT#</a><div class="dropdown-menu">
+	{{/item_template_curr_w_child}}
+	{{#list_template_noncurrent}}
+	<li class="nav-item"><a href="#LINK#" class="nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
+	{{/list_template_noncurrent}}
+	{{#item_template_noncurr_w_child}}
+	<li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="#ICON_CSS_CLASSES#"></i> #TEXT#</a><div class="dropdown-menu">
+	{{/item_template_noncurr_w_child}}
+	{{#between_items}}
+	
+	{{/between_items}}
 
-    {{#before_sub_list}}
-    {{/before_sub_list}}
-        {{#sub_list_item_current}}
-        <a href="#LINK#" class="dropdown-item #A01# active" href="#">#TEXT#</a>
-        {{/sub_list_item_current}}
-        {{#sub_template_curr_w_child}}{{/sub_template_curr_w_child}}
-        {{#sub_list_item_noncurrent}}
-        <a href="#LINK#" class="dropdown-item #A01#" href="#">#TEXT#</a>
-        {{/sub_list_item_noncurrent}}
-        {{#sub_template_noncurr_w_child}}{{/sub_template_noncurr_w_child}}
-        {{#between_sub_list_items}}{{/between_sub_list_items}}
-    {{#after_sub_list}}
-    </div></li>
-    {{/after_sub_list}}
+	{{#before_sub_list}}
+	
+	{{/before_sub_list}}
+		{{#sub_list_item_current}}
+		<a href="#LINK#" class="dropdown-item #A01# active" href="#">#TEXT#</a>
+		{{/sub_list_item_current}}
+		{{#sub_list_item_noncurrent}}
+		<a href="#LINK#" class="dropdown-item #A01#" href="#">#TEXT#</a>
+		{{/sub_list_item_noncurrent}}
+		{{#sub_template_curr_w_child}}
+		
+		{{/sub_template_curr_w_child}}
+		{{#sub_template_noncurr_w_child}}
+		
+		{{/sub_template_noncurr_w_child}}
+		{{#between_sub_list_items}}
+		
+		{{/between_sub_list_items}}
+	{{#after_sub_list}}
+	</div></li>
+	{{/after_sub_list}}
 
-    {{#first_list_template_noncurrent}}{{/first_list_template_noncurrent}}
-    {{#first_list_template_current}}{{/first_list_template_current}}
-    {{#f_item_template_curr_w_child}}{{/f_item_template_curr_w_child}}
-    {{#fitem_template_noncurr_w_child}}{{/fitem_template_noncurr_w_child}}
+	{{#first_list_template_noncurrent}}
+	
+	{{/first_list_template_noncurrent}}
+	{{#first_list_template_current}}
+	
+	{{/first_list_template_current}}
+	{{#f_item_template_curr_w_child}}
+	
+	{{/f_item_template_curr_w_child}}
+	{{#fitem_template_noncurr_w_child}}
+	
+	{{/fitem_template_noncurr_w_child}}
 {{#list_template_after_rows}}
-</ul>
-</nav>
+</ul></nav>
 {{/list_template_after_rows}}
 
-{{#a01_label}}{{/a01_label}}
-{{#a02_label}}{{/a02_label}}
-{{#a03_label}}{{/a03_label}}
-{{#a04_label}}{{/a04_label}}
-{{#a05_label}}{{/a05_label}}
-{{#a06_label}}{{/a06_label}}
-{{#a07_label}}{{/a07_label}}
-{{#a08_label}}{{/a08_label}}
-{{#a09_label}}{{/a09_label}}
-{{#a10_label}}{{/a10_label}}
-{{#a11_label}}{{/a11_label}}
-{{#a12_label}}{{/a12_label}}
-{{#a13_label}}{{/a13_label}}
-{{#a14_label}}{{/a14_label}}
-{{#a15_label}}{{/a15_label}}
-{{#a16_label}}{{/a16_label}}
-{{#a17_label}}{{/a17_label}}
-{{#a18_label}}{{/a18_label}}
-{{#a19_label}}{{/a19_label}}
-{{#a20_label}}{{/a20_label}}
+{{#a01_label}}
+
+{{/a01_label}}
+{{#a02_label}}
+
+{{/a02_label}}
+{{#a03_label}}
+
+{{/a03_label}}
+{{#a04_label}}
+
+{{/a04_label}}
+{{#a05_label}}
+
+{{/a05_label}}
+{{#a06_label}}
+
+{{/a06_label}}
+{{#a07_label}}
+
+{{/a07_label}}
+{{#a08_label}}
+
+{{/a08_label}}
+{{#a09_label}}
+
+{{/a09_label}}
+{{#a10_label}}
+
+{{/a10_label}}
+{{#a11_label}}
+
+{{/a11_label}}
+{{#a12_label}}
+
+{{/a12_label}}
+{{#a13_label}}
+
+{{/a13_label}}
+{{#a14_label}}
+
+{{/a14_label}}
+{{#a15_label}}
+
+{{/a15_label}}
+{{#a16_label}}
+
+{{/a16_label}}
+{{#a17_label}}
+
+{{/a17_label}}
+{{#a18_label}}
+
+{{/a18_label}}
+{{#a19_label}}
+
+{{/a19_label}}
+{{#a20_label}}
+
+{{/a20_label}}
+
+{{#template_option_groups}}
+[
+  {
+    "NAME": "LIST_TYPE",
+    "DISPLAY_NAME": "Type",
+    "DISPLAY_SEQUENCE": 1,
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "INLINE",
+        "DISPLAY_NAME": "Inline",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "nav-inline"
+      },
+      {
+        "NAME": "TAB",
+        "DISPLAY_NAME": "Tab",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "nav-tabs"
+      },
+      {
+        "NAME": "PILLS",
+        "DISPLAY_NAME": "Pills",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "nav-pills"
+      },
+      {
+        "NAME": "STACKED_PILLS",
+        "DISPLAY_NAME": "Stacked pills",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "nav-pills nav-stacked"
+      }
+    ]
+  }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[]
+{{/template_options}}

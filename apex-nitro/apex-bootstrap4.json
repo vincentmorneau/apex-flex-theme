@@ -1,6 +1,6 @@
 {
 	"mode": "advanced",
-	"appURL": "CHANGEME_URL/f?p=12192:1",
+	"appURL": "CHANGE_ME_URL/f?p=12192:1",
 	"srcFolder": "CHANGE_ME_PATH/apex-bootstrap4/src",
 	"distFolder": "CHANGE_ME_PATH/apex-bootstrap4/dist",
 	"js": {
@@ -23,15 +23,27 @@
 		"packageJsonPath": "CHANGE_ME_PATH/apex-bootstrap4/package.json"
 	},
 	"apex": {
-		"openBuilder": true
+		"openBuilder": false
 	},
 	"publish": {
 		"destination": "theme",
 		"path": "sql",
-		"connectionType": "basic"
+		"connectionType": "basic",
+		"username": "CHANGE_ME",
+		"password": "CHANGE_ME",
+		"host": "localhost",
+		"port": "CHANGE_ME",
+		"basicType": "sid",
+		"sid": "CHANGE_ME"
 	},
 	"themeroller": {
 		"files": [
+			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_variables/_groups.scss",
+			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_variables/_bootstrap.scss",
+			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_variables/_custom.scss",
+			"CHANGE_ME_PATH/apex-bootstrap4/src/less/variables.less",
+			"CHANGE_ME_PATH/apex-bootstrap4/src/less/navbar.less",
+			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_components/_navbar.scss"
 		]
 	}
 }

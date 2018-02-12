@@ -1,97 +1,96 @@
 {{#inline_css}}
+
 {{/inline_css}}
+
 {{#header_template}}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>#TITLE#</title>
-        #FAVICONS#
+<!doctype html>
+<html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
+	<head>
+		<title>#TITLE#</title>
+		#FAVICONS#
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="author" content="Vincent Morneau">
-        <meta name="description" content="Bootstrap 4 APEX Theme">
-
-        <!-- Mandatory APEX CSS -->
-        #HEAD#
-        #APEX_CSS#
-
-        <!-- Your CSS -->
-        #THEME_CSS#
-        #THEME_STYLE_CSS#
-        #TEMPLATE_CSS#
-        #APPLICATION_CSS#
-
-        <!-- Additionnal CSS -->
-        #PAGE_CSS#
-    </head>
-    <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #ONLOAD#>
+		#HEAD#
+		#APEX_CSS#
+		#THEME_CSS#
+		#THEME_STYLE_CSS#
+		#TEMPLATE_CSS#
+		#APPLICATION_CSS#
+		#PAGE_CSS#
+	</head>
+	<body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
 {{/header_template}}
-
 {{#box}}
 #FORM_OPEN#
 
-<div class="ab-header">
-    <!-- Item Container -->
-    #REGION_POSITION_01#
+<!-- <input type="hidden" data-bind="init, value: homeLink" value="#HOME_LINK#"/>
+<input type="hidden" data-bind="init, value: appName" value="#LOGO#"/> -->
 
-    <a class="navbar-brand hidden-xs-up" href="#HOME_LINK#">#LOGO#</a>
-    #NAVIGATION_BAR#
+<!-- Item Container -->
+#REGION_POSITION_01#
 
-    #TOP_GLOBAL_NAVIGATION_LIST#
-    #SIDE_GLOBAL_NAVIGATION_LIST#
+<header class="ab-header navbar flex-column flex-md-row">
+	#TOP_GLOBAL_NAVIGATION_LIST#
+	<a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
+	#NAVIGATION_BAR#
+</header>
 
-    <!-- Header -->
-    #REGION_POSITION_02#
-</div>
+<!-- Header -->
+#REGION_POSITION_02#
 
-<!-- Main Content -->
+#SIDE_GLOBAL_NAVIGATION_LIST#
+
 <div class="ab-main">
-    <!-- Breadcrumbs -->
-    #REGION_POSITION_03#
-    <!-- Messages -->
-    #GLOBAL_NOTIFICATION#
-    #SUCCESS_MESSAGE#
-    #NOTIFICATION_MESSAGE#
+	<!-- Messages -->
+	#GLOBAL_NOTIFICATION#
+	#SUCCESS_MESSAGE#
+	#NOTIFICATION_MESSAGE#
 
-    #BODY#
+	#BODY#
 </div>
 
-<!-- Footer -->
-<footer class="ab-footer bg-faded m-t-3">
-    #REGION_POSITION_08#
+<footer class="ab-footer">
+	<div class="container">
+		<!-- Footer Top -->
+		#REGION_POSITION_08#
+	</div>
+
+	<!-- Footer Bottom -->
+	<div class="footer-copyright">
+		<div class="container">
+			<div class="version">#APP_VERSION#</div>
+			<div class="customize right">#CUSTOMIZE#</div>
+			<div class="screenreader right">#SCREEN_READER_TOGGLE#</div>
+		</div>
+	</div>
 </footer>
 
 #FORM_CLOSE#
 {{/box}}
-
 {{#footer_template}}
-<!-- Mandatory APEX Javascript -->
+#FORM_CLOSE#
 #DEVELOPER_TOOLBAR#
 #APEX_JAVASCRIPT#
-
-<!-- Your Javascript -->
+#GENERATED_CSS#
 #THEME_JAVASCRIPT#
 #TEMPLATE_JAVASCRIPT#
 #APPLICATION_JAVASCRIPT#
-
-<!-- Additionnal Javascript -->
 #PAGE_JAVASCRIPT#
-
-<!-- Generated Code -->
-#GENERATED_CSS#
 #GENERATED_JAVASCRIPT#
 </body>
 </html>
 {{/footer_template}}
 
 {{#success_message}}
-<div>#MESSAGE#</div>
+TODO
+SUCCESS_MESSAGE
+CLOSE_NOTIFICATION
 {{/success_message}}
 {{#message}}
-<div>#MESSAGE#</div>
+TODO
+MESSAGE
+CLOSE_NOTIFICATION
 {{/message}}
 
 {{#grid_template}}
@@ -101,5 +100,81 @@
 <div class="row">#COLUMNS#</div>
 {{/grid_row_template}}
 {{#grid_column_template}}
-<div class="col-xs-12 col-md-#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
+<div class="col-12 col-md-#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
 {{/grid_column_template}}
+
+{{#dialog_browser_frame}}
+MODAL
+{{/dialog_browser_frame}}
+{{#dialog_css_classes}}
+
+{{/dialog_css_classes}}
+{{#dialog_height}}
+
+{{/dialog_height}}
+{{#dialog_js_cancel_code}}
+apex.navigation.dialog.cancel(#IS_MODAL#);
+{{/dialog_js_cancel_code}}
+{{#dialog_js_close_code}}
+apex.navigation.dialog.close(#IS_MODAL#,#TARGET#);
+{{/dialog_js_close_code}}
+{{#dialog_js_init_code}}
+apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#DIALOG_WIDTH#,maxWidth:#DIALOG_MAX_WIDTH#,modal:#IS_MODAL#,dialog:#DIALOG#,#DIALOG_ATTRIBUTES#},#DIALOG_CSS_CLASSES#,#TRIGGERING_ELEMENT#);
+{{/dialog_js_init_code}}
+{{#dialog_max_width}}
+
+{{/dialog_max_width}}
+{{#dialog_width}}
+
+{{/dialog_width}}
+
+{{#template_option_groups}}
+[
+  {
+    "NAME": "NAVBAR_PLACEMENT",
+    "DISPLAY_NAME": "Placement",
+    "DISPLAY_SEQUENCE": 2,
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "NAVBAR_PLACEMENT_FIXED_TOP",
+        "DISPLAY_NAME": "Fixed Top",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "fixed-top"
+      },
+      {
+        "NAME": "NAVBAR_PLACEMENT_FIXED_BOTTOM",
+        "DISPLAY_NAME": "Fixed Bottom",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "fixed-bottom"
+      }
+    ]
+  },
+  {
+    "NAME": "PAGE_CONTAINER",
+    "DISPLAY_NAME": "Page Container",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "Containers provide a means to center and horizontally pad your site’s contents",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "PAGE_CONTAINER_DEFAULT",
+        "DISPLAY_NAME": "Default",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ab-container"
+      },
+      {
+        "NAME": "PAGE_CONTAINER_FLUID",
+        "DISPLAY_NAME": "100% Width",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ab-container-fluid"
+      }
+    ]
+  }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[]
+{{/template_options}}
