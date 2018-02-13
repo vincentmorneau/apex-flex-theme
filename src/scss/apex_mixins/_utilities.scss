@@ -1,0 +1,14 @@
+@mixin hide() {
+	display:none!important;
+	visibility: hidden!important;
+}
+
+@mixin showBlock() {
+	display:block!important;
+	visibility:visible!important;
+}
+
+@mixin showInlineBlock() {
+	display:inline-block!important;
+	visibility:visible!important;
+}

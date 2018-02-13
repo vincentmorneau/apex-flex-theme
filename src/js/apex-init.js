@@ -41,6 +41,18 @@ apexBootstrap.debug = {
 };
 
 /**
+ * @module messages
+ **/
+apexBootstrap.messages = {
+	init: function() {
+		// message is missing for theme roller
+		apex.lang.addMessages({
+			"PE.SELECT": "- Select -"
+		});
+	}
+};
+
+/**
  * @module theme
  **/
 apexBootstrap.theme = {
@@ -193,4 +205,5 @@ apexBootstrap.theme = {
 $(function() {
 	apexBootstrap.theme.init();
 	apexBootstrap.theme.bindings();
+	apexBootstrap.messages.init();
 });

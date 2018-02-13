@@ -1,6 +1,32 @@
 {{#template}}
-<div id="#REGION_STATIC_ID#" class="ab-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#><div class="ab-region-container"><div class="ab-region-title">#TITLE#</div><div class="btn-toolbar" role="toolbar" aria-label="Toolbar"><div class="ab-btn-group" role="group" aria-label="Button Group">#EDIT#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#EXPAND#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE2#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#NEXT#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#PREVIOUS#</div></div><div class="region-body"> #BODY# #SUB_REGIONS#</div><div class="btn-toolbar" role="toolbar" aria-label="Toolbar"><div class="ab-btn-group" role="group" aria-label="Button Group">#CLOSE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#COPY#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#DELETE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CHANGE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#HELP#</div></div></div></div>
+<div id="#REGION_STATIC_ID#" class="ab-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+	<div class="ab-flex-left">#PREVIOUS#</div>
 
+	<div class="ab-flex-center">
+		<div class="ab-region-header">
+			<div class="ab-flex-center">
+				<div class="ab-region-title"><i class="#ICON_CSS_CLASSES#"></i>#TITLE#</div>
+			</div>
+			<div class="ab-flex-right">#EDIT#</div>
+		</div>
+
+		<div class="ab-region-buttons ab-flex-justify">
+			<div class="ab-flex-left">#COPY#</div>
+			<div class="ab-flex-center"></div>
+			<div class="ab-flex-right">#EXPAND#</div>
+		</div>
+
+		<div class="ab-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+
+		<div class="ab-region-buttons ab-flex-justify">
+			<div class="ab-flex-left">#CLOSE##HELP#</div>
+			<div class="ab-flex-center">#CHANGE#</div>
+			<div class="ab-flex-right">#DELETE##CREATE##CREATE2#</div>
+		</div>
+	</div>
+
+	<div class="ab-flex-right">#NEXT#</div>
+</div>
 {{/template}}
 {{#sub_plug_header_template}}
 
@@ -14,48 +40,40 @@
 
 {{#template_option_groups}}
 [
-  {
-    "NAME": "REGION_JUMBOTRON",
-    "DISPLAY_NAME": "Jumbotron",
-    "DISPLAY_SEQUENCE": 50,
-    "HELP_TEXT": "Activates the Jumbotron behavior.",
-    "NULL_TEXT": "None",
-    "IS_ADVANCED": "N",
-    "TEMPLATE_OPTIONS": [
-      {
-        "NAME": "JUMBOTRON_NORMAL",
-        "DISPLAY_NAME": "Jumbotron Normal",
-        "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "jumbotron",
-        "HELP_TEXT": "This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
-      },
-      {
-        "NAME": "JUMBOTRON_FLUID",
-        "DISPLAY_NAME": "Jumbotron Fluid",
-        "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "jumbotron jumbotron-fluid",
-        "HELP_TEXT": "This is a modified jumbotron that occupies the entire horizontal space of its parent."
-      },
-      {
-        "NAME": "JUMBOTRON_MASTER",
-        "DISPLAY_NAME": "Jumbotron Master",
-        "DISPLAY_SEQUENCE": 3,
-        "CSS_CLASSES": "jumbotron jumbotron-fluid master-jumbotron",
-        "HELP_TEXT": "Make the jumbotron even bigger."
-      }
-    ]
-  }
+{
+	"name": "REGION_JUMBOTRON",
+	"display_name": "Jumbotron",
+	"display_sequence": 50,
+	"help_text": "Activates the Jumbotron behavior.",
+	"null_text": "None",
+	"is_advanced": "N",
+	"template_options": [
+	{
+		"name": "JUMBOTRON_NORMAL",
+		"display_name": "Jumbotron Normal",
+		"display_sequence": 1,
+		"css_classes": "jumbotron",
+		"help_text": "This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
+	},
+	{
+		"name": "JUMBOTRON_FLUID",
+		"display_name": "Jumbotron Fluid",
+		"display_sequence": 2,
+		"css_classes": "jumbotron jumbotron-fluid",
+		"help_text": "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+	},
+	{
+		"name": "JUMBOTRON_MASTER",
+		"display_name": "Jumbotron Master",
+		"display_sequence": 3,
+		"css_classes": "jumbotron jumbotron-fluid master-jumbotron",
+		"help_text": "Make the jumbotron even bigger."
+	}
+	]
+}
 ]
 {{/template_option_groups}}
 
 {{#template_options}}
-[
-  {
-    "NAME": "INLINE_FORM",
-    "DISPLAY_NAME": "Inline form",
-    "DISPLAY_SEQUENCE": 10,
-    "CSS_CLASSES": "form-inline",
-    "HELP_TEXT": null
-  }
-]
+[]
 {{/template_options}}
