@@ -1,10 +1,20 @@
 @if $navbar-text-style == navbar-light {
-	.ab-header {
+	.ab-navbar {
 		@extend .navbar-light;
 	}
 } @else
 if $navbar-text-style == navbar-dark {
-	.ab-header {
+	.ab-navbar {
 		@extend .navbar-dark;
 	}
+}
+
+.ab-navbar-sticky-top .ab-navbar {
+	@extend .sticky-top;
+}
+.ab-navbar-fixed-top .ab-navbar {
+	@extend .fixed-top;
+}
+.ab-navbar-fixed-bottom .ab-navbar {
+	@extend .fixed-bottom;
 }

@@ -30,14 +30,15 @@
 <!-- Item Container -->
 #REGION_POSITION_01#
 
-<header class="ab-header navbar flex-column flex-md-row">
-	#TOP_GLOBAL_NAVIGATION_LIST#
-	<a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
-	#NAVIGATION_BAR#
+<header class="ab-header">
+	<nav class="ab-navbar navbar d-flex flex-column flex-md-row">
+		#TOP_GLOBAL_NAVIGATION_LIST#
+		<a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
+		#NAVIGATION_BAR#
+	</nav>
+	<!-- Header -->
+	#REGION_POSITION_02#
 </header>
-
-<!-- Header -->
-#REGION_POSITION_02#
 
 #SIDE_GLOBAL_NAVIGATION_LIST#
 
@@ -128,22 +129,28 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
 [
   {
     "name": "NAVBAR_PLACEMENT",
-    "display_name": "Placement",
+    "display_name": "Navigation Bar Placement",
     "display_sequence": 2,
     "null_text": "Default",
     "is_advanced": "N",
     "template_options": [
       {
+        "name": "NAVBAR_PLACEMENT_STICKY",
+        "display_name": "Sticky",
+        "display_sequence": 0,
+        "css_classes": "ab-navbar-sticky-top"
+      },
+      {
         "name": "NAVBAR_PLACEMENT_FIXED_TOP",
         "display_name": "Fixed Top",
         "display_sequence": 1,
-        "css_classes": "fixed-top"
+        "css_classes": "ab-navbar-fixed-top"
       },
       {
         "name": "NAVBAR_PLACEMENT_FIXED_BOTTOM",
         "display_name": "Fixed Bottom",
         "display_sequence": 1,
-        "css_classes": "fixed-bottom"
+        "css_classes": "ab-navbar-fixed-bottom"
       }
     ]
   },
