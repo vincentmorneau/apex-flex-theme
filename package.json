@@ -1,5 +1,5 @@
 {
-  "name": "apex-bootstrap4",
+  "name": "apex-flex-theme",
   "author": "Vincent Morneau",
   "version": "0.0.2",
   "description": "Bootstrap 4 Theme for Oracle APEX",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vincentmorneau/apex-bootstrap4.git"
+    "url": "git://github.com/vincentmorneau/apex-flex-theme.git"
   },
   "dependencies": {
     "bootstrap": "4.0.0",

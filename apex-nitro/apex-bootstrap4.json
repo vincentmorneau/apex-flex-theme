@@ -1,8 +1,8 @@
 {
 	"mode": "advanced",
 	"appURL": "CHANGE_ME_URL/f?p=12192:1",
-	"srcFolder": "CHANGE_ME_PATH/apex-bootstrap4/src",
-	"distFolder": "CHANGE_ME_PATH/apex-bootstrap4/dist",
+	"srcFolder": "CHANGE_ME_PATH/apex-flex-theme/src",
+	"distFolder": "CHANGE_ME_PATH/apex-flex-theme/dist",
 	"js": {
 		"processor": "default",
 		"concat": false,
@@ -12,7 +12,7 @@
 	"css": {
 		"language": "sass",
 		"concat": false,
-		"sassIncludePath": "CHANGE_ME_PATH/apex-bootstrap4/node_modules/bootstrap/scss"
+		"sassIncludePath": "CHANGE_ME_PATH/apex-flex-theme/node_modules/bootstrap/scss"
 	},
 	"browsersync": {
 		"notify": true,
@@ -20,7 +20,7 @@
 	},
 	"header": {
 		"enabled": true,
-		"packageJsonPath": "CHANGE_ME_PATH/apex-bootstrap4/package.json"
+		"packageJsonPath": "CHANGE_ME_PATH/apex-flex-theme/package.json"
 	},
 	"apex": {
 		"openBuilder": false
@@ -38,12 +38,12 @@
 	},
 	"themeroller": {
 		"files": [
-			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_variables/_groups.scss",
-			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_variables/_bootstrap.scss",
-			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_variables/_custom.scss",
-			"CHANGE_ME_PATH/apex-bootstrap4/src/less/variables.less",
-			"CHANGE_ME_PATH/apex-bootstrap4/src/less/navbar.less",
-			"CHANGE_ME_PATH/apex-bootstrap4/src/scss/apex_components/_navbar.scss"
+			"CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_groups.scss",
+			"CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_bootstrap.scss",
+			"CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_custom.scss",
+			"CHANGE_ME_PATH/apex-flex-theme/src/less/variables.less",
+			"CHANGE_ME_PATH/apex-flex-theme/src/less/navbar.less",
+			"CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_components/_navbar.scss"
 		]
 	}
 }
