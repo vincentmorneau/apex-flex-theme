@@ -1,29 +1,31 @@
-// // jumbotron fluid
-// .jumbotron.jumbotron-fluid > .ab-region-container {
-//     @include make-container();
-//     @include make-container-max-widths();
-// }
-//
-// // jumbotron master
-// @include media-breakpoint-up(sm) {
-//     .jumbotron.master-jumbotron {
-//         padding-top: 8rem!important;
-//         padding-bottom: 6rem!important;
-//         margin-bottom: 0;
-//
-//         & .region-body, & .region-body p {
-//             font-size: 1.5rem;
-//         }
-//     }
-// }
-//
-// @include media-breakpoint-up(md) {
-//     .jumbotron.master-jumbotron {
-//         padding-top: 10rem!important;
-//         padding-bottom: 8rem!important;
-//
-//         & .region-body, & .region-body p {
-//             font-size: 2rem;
-//         }
-//     }
-// }
+// jumbotron fluid
+.jumbotron.jumbotron-fluid > .ab-region-center {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
+// jumbotron master
+@include media-breakpoint-up(sm) {
+	.jumbotron.ab-jumbotron-jumbo {
+		padding-top: 8rem!important;
+		padding-bottom: 6rem!important;
+		margin-bottom: 0;
+
+		& .ab-region-body,
+		& .ab-region-body p {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.jumbotron.ab-jumbotron-jumbo {
+		padding-top: 10rem!important;
+		padding-bottom: 8rem!important;
+
+		& .ab-region-body,
+		& .ab-region-body p {
+			font-size: 2rem;
+		}
+	}
+}

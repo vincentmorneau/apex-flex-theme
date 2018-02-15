@@ -1,0 +1,71 @@
+{{#template}}
+<div id="#REGION_STATIC_ID#" class="ab-region jumbotron d-flex flex-row justify-content-between #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+	<div class="ab-region-left align-self-center mr-2">#PREVIOUS#</div>
+
+	<div class="ab-region-center w-100">
+		<div class="ab-region-header d-flex flex-row">
+			<div class="ab-region-left w-100">
+				<div class="ab-region-title"><i class="#ICON_CSS_CLASSES#"></i>#TITLE#</div>
+			</div>
+			<div class="ab-region-right">#EDIT#</div>
+		</div>
+
+		<div class="ab-region-buttons d-flex flex-row justify-content-between">
+			<div class="ab-region-left">#COPY#</div>
+			<div class="ab-region-right">#EXPAND#</div>
+		</div>
+
+		<div class="ab-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+
+		<div class="ab-region-buttons d-flex flex-row justify-content-between">
+			<div class="ab-region-left">#CLOSE##HELP#</div>
+			<div class="ab-region-center">#CHANGE#</div>
+			<div class="ab-region-right">#DELETE##CREATE##CREATE2#</div>
+		</div>
+	</div>
+
+	<div class="ab-region-right align-self-center ml-2">#NEXT#</div>
+</div>
+{{/template}}
+{{#sub_plug_header_template}}
+
+{{/sub_plug_header_template}}
+{{#sub_plug_header_entry_template}}
+
+{{/sub_plug_header_entry_template}}
+{{#sub_plug_template}}
+
+{{/sub_plug_template}}
+
+{{#template_option_groups}}
+[
+{
+	"name": "REGION_JUMBOTRON_STYLE",
+	"display_name": "Jumbotron Style",
+	"display_sequence": 1,
+	"help_text": "A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.",
+	"null_text": "Default",
+	"is_advanced": "N",
+	"template_options": [
+		{
+			"name": "JUMBOTRON_FLUID",
+			"display_name": "Jumbotron Fluid",
+			"display_sequence": 2,
+			"css_classes": "jumbotron-fluid",
+			"help_text": "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+		},
+		{
+			"name": "JUMBOTRON_MASTER",
+			"display_name": "Jumbotron Master",
+			"display_sequence": 3,
+			"css_classes": "ab-jumbotron-jumbo",
+			"help_text": "Make it even bigger!"
+		}
+	]
+}
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[]
+{{/template_options}}
