@@ -1,0 +1,3 @@
+@each $color, $value in $theme-colors {
+	@include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+}
