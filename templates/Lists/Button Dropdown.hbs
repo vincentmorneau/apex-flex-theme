@@ -12,57 +12,57 @@
 {{/inline_css}}
 
 {{#list_template_before_rows}}
-<div id="#LIST_ID#" class="ab-btn-dropdown btn-group #COMPONENT_CSS_CLASSES#"><div class="dropdown-menu">
+<div id="#LIST_ID#" class="ft-btn-dropdown btn-group #COMPONENT_CSS_CLASSES#"><div class="dropdown-menu">
 {{/list_template_before_rows}}
 	{{#list_template_current}}
 	<a class="dropdown-item" href="#LINK#">#TEXT#</a>
 	{{/list_template_current}}
 	{{#item_template_curr_w_child}}
-	
+
 	{{/item_template_curr_w_child}}
 	{{#list_template_noncurrent}}
 	<a class="dropdown-item" href="#LINK#">#TEXT#</a>
 	{{/list_template_noncurrent}}
 	{{#item_template_noncurr_w_child}}
-	
+
 	{{/item_template_noncurr_w_child}}
 	{{#between_items}}
-	
+
 	{{/between_items}}
 
 	{{#before_sub_list}}
-	
+
 	{{/before_sub_list}}
 		{{#sub_list_item_current}}
-		
+
 		{{/sub_list_item_current}}
 		{{#sub_list_item_noncurrent}}
-		
+
 		{{/sub_list_item_noncurrent}}
 		{{#sub_template_curr_w_child}}
-		
+
 		{{/sub_template_curr_w_child}}
 		{{#sub_template_noncurr_w_child}}
-		
+
 		{{/sub_template_noncurr_w_child}}
 		{{#between_sub_list_items}}
-		
+
 		{{/between_sub_list_items}}
 	{{#after_sub_list}}
-	
+
 	{{/after_sub_list}}
 
 	{{#first_list_template_noncurrent}}
-	
+
 	{{/first_list_template_noncurrent}}
 	{{#first_list_template_current}}
-	
+
 	{{/first_list_template_current}}
 	{{#f_item_template_curr_w_child}}
-	
+
 	{{/f_item_template_curr_w_child}}
 	{{#fitem_template_noncurr_w_child}}
-	
+
 	{{/fitem_template_noncurr_w_child}}
 {{#list_template_after_rows}}
 </div></div>
@@ -134,13 +134,5 @@
 {{/template_option_groups}}
 
 {{#template_options}}
-[
-  {
-    "NAME": "BUTTON_DROPUP",
-    "DISPLAY_NAME": "Dropup",
-    "DISPLAY_SEQUENCE": 10,
-    "CSS_CLASSES": "dropup",
-    "HELP_TEXT": "For single button dropdown and split button dropdowns, this option triggers dropdown menu above elements."
-  }
-]
+[]
 {{/template_options}}

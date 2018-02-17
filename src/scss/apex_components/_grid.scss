@@ -1,25 +1,25 @@
-.ab-page-body-container {
-	.ab-body {
+.ft-page-body-container {
+	.ft-main {
 		@include make-container();
 		@include make-container-max-widths();
 	}
 }
 
-.ab-page-body-container-fluid {
-	.ab-body {
+.ft-page-body-container-fluid {
+	.ft-main {
 		@include make-container();
 	}
 }
 
-.ab-page-footer-container {
-	.ab-footer {
+.ft-page-footer-container {
+	.ft-footer {
 		@include make-container();
 		@include make-container-max-widths();
 	}
 }
 
-.ab-page-footer-container-fluid {
-	.ab-footer {
+.ft-page-footer-container-fluid {
+	.ft-footer {
 		@include make-container();
 	}
 }

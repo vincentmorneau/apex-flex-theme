@@ -4,12 +4,12 @@
 }
 
 // Horizontal groups
-.ab-btn-group-horizontal > .ab-region-container > .btn-toolbar >.ab-btn-group {
+.ft-btn-group-horizontal > .ft-region-container > .btn-toolbar >.ft-btn-group {
     @extend .btn-group;
 }
 
 // Vertical groups
-.ab-btn-group-vertical > .ab-region-container > .btn-toolbar > .ab-btn-group {
+.ft-btn-group-vertical > .ft-region-container > .btn-toolbar > .ft-btn-group {
     @extend .btn-group-vertical;
 
     & > .btn {
@@ -18,12 +18,12 @@
 }
 
 // Button Dropdowns
-.ab-single-button-dropdown, .ab-split-button-dropdown {
+.ft-single-button-dropdown, .ft-split-button-dropdown {
     // @include hide();
 }
 
-.ab-btn-dropdown, .input-group-btn {
-    & > .ab-single-button-dropdown, & > .ab-split-button-dropdown {
+.ft-btn-dropdown, .input-group-btn {
+    & > .ft-single-button-dropdown, & > .ft-split-button-dropdown {
         // @include show();
     }
 }

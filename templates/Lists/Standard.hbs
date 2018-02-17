@@ -27,11 +27,11 @@
 	<li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="#ICON_CSS_CLASSES#"></i> #TEXT#</a><div class="dropdown-menu">
 	{{/item_template_noncurr_w_child}}
 	{{#between_items}}
-	
+
 	{{/between_items}}
 
 	{{#before_sub_list}}
-	
+
 	{{/before_sub_list}}
 		{{#sub_list_item_current}}
 		<a href="#LINK#" class="dropdown-item #A01# active" href="#">#TEXT#</a>
@@ -40,29 +40,29 @@
 		<a href="#LINK#" class="dropdown-item #A01#" href="#">#TEXT#</a>
 		{{/sub_list_item_noncurrent}}
 		{{#sub_template_curr_w_child}}
-		
+
 		{{/sub_template_curr_w_child}}
 		{{#sub_template_noncurr_w_child}}
-		
+
 		{{/sub_template_noncurr_w_child}}
 		{{#between_sub_list_items}}
-		
+
 		{{/between_sub_list_items}}
 	{{#after_sub_list}}
 	</div></li>
 	{{/after_sub_list}}
 
 	{{#first_list_template_noncurrent}}
-	
+
 	{{/first_list_template_noncurrent}}
 	{{#first_list_template_current}}
-	
+
 	{{/first_list_template_current}}
 	{{#f_item_template_curr_w_child}}
-	
+
 	{{/f_item_template_curr_w_child}}
 	{{#fitem_template_noncurr_w_child}}
-	
+
 	{{/fitem_template_noncurr_w_child}}
 {{#list_template_after_rows}}
 </ul></nav>
@@ -130,40 +130,7 @@
 {{/a20_label}}
 
 {{#template_option_groups}}
-[
-  {
-    "NAME": "LIST_TYPE",
-    "DISPLAY_NAME": "Type",
-    "DISPLAY_SEQUENCE": 1,
-    "IS_ADVANCED": "N",
-    "TEMPLATE_OPTIONS": [
-      {
-        "NAME": "INLINE",
-        "DISPLAY_NAME": "Inline",
-        "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "nav-inline"
-      },
-      {
-        "NAME": "TAB",
-        "DISPLAY_NAME": "Tab",
-        "DISPLAY_SEQUENCE": 4,
-        "CSS_CLASSES": "nav-tabs"
-      },
-      {
-        "NAME": "PILLS",
-        "DISPLAY_NAME": "Pills",
-        "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "nav-pills"
-      },
-      {
-        "NAME": "STACKED_PILLS",
-        "DISPLAY_NAME": "Stacked pills",
-        "DISPLAY_SEQUENCE": 3,
-        "CSS_CLASSES": "nav-pills nav-stacked"
-      }
-    ]
-  }
-]
+[]
 {{/template_option_groups}}
 
 {{#template_options}}

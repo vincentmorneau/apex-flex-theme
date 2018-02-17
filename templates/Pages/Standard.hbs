@@ -30,8 +30,8 @@
 <!-- Item Container -->
 #REGION_POSITION_01#
 
-<header class="ab-header">
-	<nav class="ab-navbar navbar d-flex flex-column flex-md-row">
+<header class="ft-header">
+	<nav class="ft-navbar navbar d-flex flex-column flex-md-row">
 		#TOP_GLOBAL_NAVIGATION_LIST#
 		<a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
 		#NAVIGATION_BAR#
@@ -40,23 +40,24 @@
 	#REGION_POSITION_02#
 </header>
 
-#SIDE_GLOBAL_NAVIGATION_LIST#
+<div class="container-fluid">
+	<div class="row">
+		<div class="ft-main-left col-md-2">#SIDE_GLOBAL_NAVIGATION_LIST##REGION_POSITION_03#</div>
 
-<main class="ab-body">
-	<!-- Messages -->
-	#GLOBAL_NOTIFICATION#
-	#SUCCESS_MESSAGE#
-	#NOTIFICATION_MESSAGE#
+		<main class="ft-main col">
+			<div class="ft-breadcrumb">#REGION_POSITION_04#</div>
+			<div class="ft-messages">#GLOBAL_NOTIFICATION##SUCCESS_MESSAGE##NOTIFICATION_MESSAGE#</div>
+			<div class="ft-body">#BODY#</div>
+		</main>
 
-	#BODY#
-</main>
+		<div class="ft-main-right col-md-2">#REGION_POSITION_05#</div>
+	</div>
+</div>
 
-<footer class="ab-footer">
-	<!-- Footer Top -->
-	#REGION_POSITION_08#
+<footer class="ft-footer">
+	<div class="ft-footer-top">#REGION_POSITION_08#</div>
 
-	<!-- Footer Bottom -->
-	<div class="ab-footer-bottom d-flex flex-row justify-content-between">
+	<div class="ft-footer-bottom d-flex flex-row justify-content-between">
 		<div class="version">#APP_VERSION#</div>
 		<div class="customize right">#CUSTOMIZE#</div>
 		<div class="screenreader right">#SCREEN_READER_TOGGLE#</div>
@@ -91,7 +92,7 @@ CLOSE_NOTIFICATION
 {{/message}}
 
 {{#grid_template}}
-<div class="ab-container">#ROWS#</div>
+<div class="ft-container">#ROWS#</div>
 {{/grid_template}}
 {{#grid_row_template}}
 <div class="row">#COLUMNS#</div>
@@ -138,19 +139,19 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
         "name": "NAVBAR_PLACEMENT_STICKY",
         "display_name": "Sticky",
         "display_sequence": 0,
-        "css_classes": "ab-navbar-sticky-top"
+        "css_classes": "ft-navbar-sticky-top"
       },
       {
         "name": "NAVBAR_PLACEMENT_FIXED_TOP",
         "display_name": "Fixed Top",
         "display_sequence": 1,
-        "css_classes": "ab-navbar-fixed-top"
+        "css_classes": "ft-navbar-fixed-top"
       },
       {
         "name": "NAVBAR_PLACEMENT_FIXED_BOTTOM",
         "display_name": "Fixed Bottom",
         "display_sequence": 1,
-        "css_classes": "ab-navbar-fixed-bottom"
+        "css_classes": "ft-navbar-fixed-bottom"
       }
     ]
   },
@@ -165,19 +166,19 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
         "name": "PAGE_BODY_CONTAINER_DEFAULT",
         "display_name": "Default",
         "display_sequence": 1,
-        "css_classes": "ab-page-body-container"
+        "css_classes": "ft-page-body-container"
       },
       {
         "name": "PAGE_BODY_CONTAINER_FLUID",
         "display_name": "Full Width",
         "display_sequence": 2,
-        "css_classes": "ab-page-body-container-fluid"
+        "css_classes": "ft-page-body-container-fluid"
       },
       {
         "name": "PAGE_BODY_CONTAINER_NONE",
         "display_name": "No Container",
         "display_sequence": 3,
-        "css_classes": "ab-page-body-container-none"
+        "css_classes": "ft-page-body-container-none"
       }
     ]
   },
@@ -192,19 +193,19 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
         "name": "PAGE_FOOTER_CONTAINER_DEFAULT",
         "display_name": "Default",
         "display_sequence": 1,
-        "css_classes": "ab-page-footer-container"
+        "css_classes": "ft-page-footer-container"
       },
       {
         "name": "PAGE_FOOTER_CONTAINER_FLUID",
         "display_name": "Full Width",
         "display_sequence": 2,
-        "css_classes": "ab-page-footer-container-fluid"
+        "css_classes": "ft-page-footer-container-fluid"
       },
       {
         "name": "PAGE_FOOTER_CONTAINER_NONE",
         "display_name": "No Container",
         "display_sequence": 3,
-        "css_classes": "ab-page-footer-container-none"
+        "css_classes": "ft-page-footer-container-none"
       }
     ]
   }

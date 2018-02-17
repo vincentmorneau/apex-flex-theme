@@ -1,20 +1,20 @@
 @if $navbar-text-style == navbar-light {
-	.ab-navbar {
+	.ft-navbar {
 		@extend .navbar-light;
 	}
 } @else
 if $navbar-text-style == navbar-dark {
-	.ab-navbar {
+	.ft-navbar {
 		@extend .navbar-dark;
 	}
 }
 
-.ab-navbar-sticky-top .ab-navbar {
+.ft-navbar-sticky-top .ft-navbar {
 	@extend .sticky-top;
 }
-.ab-navbar-fixed-top .ab-navbar {
+.ft-navbar-fixed-top .ft-navbar {
 	@extend .fixed-top;
 }
-.ab-navbar-fixed-bottom .ab-navbar {
+.ft-navbar-fixed-bottom .ft-navbar {
 	@extend .fixed-bottom;
 }

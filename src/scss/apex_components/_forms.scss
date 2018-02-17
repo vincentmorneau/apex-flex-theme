@@ -18,18 +18,18 @@
 // }
 //
 // /* Hidden label */
-// .ab-input-sr-only label {
+// .ft-input-sr-only label {
 //     @include sr-only();
 // }
 //
 // /* Sizes */
-// .ab-form-control-lg {
+// .ft-form-control-lg {
 //     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
 //         @extend .form-control-lg;
 //     }
 // }
 //
-// .ab-form-control-sm {
+// .ft-form-control-sm {
 //     .text_field, .password, .selectlist, .multi_selectlist, textarea.textarea {
 //         @extend .form-control-sm;
 //     }
@@ -41,7 +41,7 @@
 // }
 //
 // /* Help */
-// .ab-field-tooltip, .ab-field-popover {
+// .ft-field-tooltip, .ft-field-popover {
 //     & > label[data-toggle] {
 //         text-decoration: underline;
 //     }
