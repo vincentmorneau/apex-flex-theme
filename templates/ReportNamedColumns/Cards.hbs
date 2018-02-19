@@ -1,88 +1,57 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <div id="#REGION_STATIC_ID#_cards" class="row #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
-{{/row_template_before_rows}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-{{#before_column_heading}}
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
 
-{{/before_column_heading}}
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
 
-	{{#column_heading_template}}
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
 
-	{{/column_heading_template}}
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
-{{#after_column_heading}}
+{{#ROW_TEMPLATE1}}
+<div class="col-xs-12 ft-card-columns"><div class="card bg-#CARD_STYLE#"> <img src="#IMG_SRC#" alt="#IMG_ALT#"><div class="card-block"><h4 class="card-title">#CARD_TITLE#</h4><h6 class="card-subtitle text-muted">#CARD_SUBTITLE#</h6><blockquote class="card-text">#CARD_TEXT#</blockquote> <a href="#CARD_LINK1#" class="btn ft-card-btn card-link">#CARD_LINK_LABEL1#</a> <a href="#CARD_LINK2#" class="btn ft-card-btn card-link">#CARD_LINK_LABEL2#</a></div></div></div>
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-{{/after_column_heading}}
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
-	{{#row_template_before_first}}
-
-	{{/row_template_before_first}}
-
-		{{#row_template1}}
-		<div class="col-xs-12 ft-card-columns"><div class="card bg-#CARD_STYLE#"> <img src="#IMG_SRC#" alt="#IMG_ALT#"><div class="card-block"><h4 class="card-title">#CARD_TITLE#</h4><h6 class="card-subtitle text-muted">#CARD_SUBTITLE#</h6><blockquote class="card-text">#CARD_TEXT#</blockquote> <a href="#CARD_LINK1#" class="btn ft-card-btn card-link">#CARD_LINK_LABEL1#</a> <a href="#CARD_LINK2#" class="btn ft-card-btn card-link">#CARD_LINK_LABEL2#</a></div></div></div>
-		{{/row_template1}}
-		{{#row_template_condition1}}
-
-		{{/row_template_condition1}}
-		{{#row_template_display_cond1}}
-
-		{{/row_template_display_cond1}}
-		{{#row_template2}}
-
-		{{/row_template2}}
-		{{#row_template_condition2}}
-
-		{{/row_template_condition2}}
-		{{#row_template_display_cond2}}
-
-		{{/row_template_display_cond2}}
-		{{#row_template3}}
-
-		{{/row_template3}}
-		{{#row_template_condition3}}
-
-		{{/row_template_condition3}}
-		{{#row_template_display_cond3}}
-
-		{{/row_template_display_cond3}}
-		{{#row_template4}}
-
-		{{/row_template4}}
-		{{#row_template_condition4}}
-
-		{{/row_template_condition4}}
-		{{#row_template_display_cond4}}
-
-		{{/row_template_display_cond4}}
-
-	{{#row_template_after_last}}
-
-	{{/row_template_after_last}}
-
-{{#row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </div>
-{{/row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
 
-{{#pagination_template}}
+{{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
 
-{{/pagination_template}}
-{{#next_page_template}}
-
-{{/next_page_template}}
-{{#previous_page_template}}
-
-{{/previous_page_template}}
-{{#next_set_template}}
-
-{{/next_set_template}}
-{{#previous_set_template}}
-
-{{/previous_set_template}}
-
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 []
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ab-card-img-top
+{{/PRESET_TEMPLATE_OPTIONS}}

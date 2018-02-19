@@ -1,20 +1,61 @@
-{{#template}}
-todo
-{{/template}}
-{{#sub_plug_header_template}}
+{{#TEMPLATE}}
+<div id="#REGION_STATIC_ID#" class="ab-region alert #REGION_CSS_CLASSES#" role="alert" #REGION_ATTRIBUTES#> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>#TITLE#</strong> #BODY# #SUB_REGIONS#<div class="btn-toolbar" role="toolbar" aria-label="Toolbar"><div class="ab-btn-group" role="group" aria-label="Button Group">#EDIT#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#EXPAND#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE2#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#NEXT#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#PREVIOUS#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CLOSE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#COPY#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#DELETE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CHANGE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#HELP#</div></div></div>
+{{/TEMPLATE}}
+{{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
+{{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+{{#SUB_PLUG_TEMPLATE}}{{/SUB_PLUG_TEMPLATE}}
 
-{{/sub_plug_header_template}}
-{{#sub_plug_header_entry_template}}
-
-{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}
-
-{{/sub_plug_template}}
-
-{{#template_option_groups}}
-[]
-{{/template_option_groups}}
-
-{{#template_options}}
-[]
-{{/template_options}}
+{{#TEMPLATE_OPTION_GROUPS}}
+[
+  {
+    "NAME": "REGION_ALERT_STYLE",
+    "DISPLAY_NAME": "Style",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "Specify the alert style.",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "ALERT_SUCCESS",
+        "DISPLAY_NAME": "Success",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "alert-success"
+      },
+      {
+        "NAME": "ALERT_INFO",
+        "DISPLAY_NAME": "Info",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "alert-info"
+      },
+      {
+        "NAME": "ALERT_WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "alert-warning"
+      },
+      {
+        "NAME": "ALERT_DANGER",
+        "DISPLAY_NAME": "Danger",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "alert-danger"
+      }
+    ]
+  }
+]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[
+  {
+    "NAME": "ALERT_DISMISSIBLE",
+    "DISPLAY_NAME": "Dismissible",
+    "DISPLAY_SEQUENCE": 10,
+    "CSS_CLASSES": "alert-dismissible fade in",
+    "HELP_TEXT": "It’s possible to dismiss any alert inline"
+  }
+]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+alert-dismissible fade in
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ab-h3:alert-success
+{{/PRESET_TEMPLATE_OPTIONS}}

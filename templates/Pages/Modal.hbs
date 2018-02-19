@@ -1,8 +1,10 @@
-{{#inline_css}}
+{{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
+{{#JAVASCRIPT_CODE}}{{/JAVASCRIPT_CODE}}
+{{#JAVASCRIPT_CODE_ONLOAD}}{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
+{{#INLINE_CSS}}{{/INLINE_CSS}}
 
-{{/inline_css}}
-
-{{#header_template}}
+{{#HEADER_TEMPLATE}}
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,9 +32,8 @@
         #PAGE_CSS#
     </head>
     <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #ONLOAD#>
-
-{{/header_template}}
-{{#box}}
+{{/HEADER_TEMPLATE}}
+{{#BOX}}
 #FORM_OPEN#
 
 <!-- Item Container -->
@@ -50,9 +51,8 @@
 </div>
 
 #FORM_CLOSE#
-
-{{/box}}
-{{#footer_template}}
+{{/BOX}}
+{{#FOOTER_TEMPLATE}}
 <!-- Mandatory APEX Javascript -->
 #DEVELOPER_TOOLBAR#
 #APEX_JAVASCRIPT#
@@ -70,60 +70,47 @@
 #GENERATED_JAVASCRIPT#
 </body>
 </html>
+{{/FOOTER_TEMPLATE}}
 
-{{/footer_template}}
-
-{{#success_message}}
+{{#SUCCESS_MESSAGE}}
 <div>#MESSAGE#</div>
-
-{{/success_message}}
-{{#message}}
+{{/SUCCESS_MESSAGE}}
+{{#MESSAGE}}
 <div>#MESSAGE#</div>
+{{/MESSAGE}}
 
-{{/message}}
-
-{{#grid_template}}
+{{#GRID_TEMPLATE}}
 <div class="container">#ROWS#</div>
-
-{{/grid_template}}
-{{#grid_row_template}}
+{{/GRID_TEMPLATE}}
+{{#GRID_ROW_TEMPLATE}}
 <div class="row">#COLUMNS#</div>
-
-{{/grid_row_template}}
-{{#grid_column_template}}
+{{/GRID_ROW_TEMPLATE}}
+{{#GRID_COLUMN_TEMPLATE}}
 <div class="col-xs-12 col-md-#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
+{{/GRID_COLUMN_TEMPLATE}}
 
-{{/grid_column_template}}
-
-{{#dialog_browser_frame}}
+{{#DIALOG_BROWSER_FRAME}}
 MODAL
-{{/dialog_browser_frame}}
-{{#dialog_css_classes}}
-
-{{/dialog_css_classes}}
-{{#dialog_height}}
-
-{{/dialog_height}}
-{{#dialog_js_cancel_code}}
+{{/DIALOG_BROWSER_FRAME}}
+{{#DIALOG_CSS_CLASSES}}{{/DIALOG_CSS_CLASSES}}
+{{#DIALOG_HEIGHT}}{{/DIALOG_HEIGHT}}
+{{#DIALOG_JS_CANCEL_CODE}}
 apex.navigation.dialog.cancel(#IS_MODAL#);
-{{/dialog_js_cancel_code}}
-{{#dialog_js_close_code}}
+{{/DIALOG_JS_CANCEL_CODE}}
+{{#DIALOG_JS_CLOSE_CODE}}
 apex.navigation.dialog.close(#IS_MODAL#,#TARGET#);
-{{/dialog_js_close_code}}
-{{#dialog_js_init_code}}
+{{/DIALOG_JS_CLOSE_CODE}}
+{{#DIALOG_JS_INIT_CODE}}
 apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#DIALOG_WIDTH#,maxWidth:#DIALOG_MAX_WIDTH#,modal:#IS_MODAL#,dialog:#DIALOG#,#DIALOG_ATTRIBUTES#},#DIALOG_CSS_CLASSES#,#TRIGGERING_ELEMENT#);
-{{/dialog_js_init_code}}
-{{#dialog_max_width}}
+{{/DIALOG_JS_INIT_CODE}}
+{{#DIALOG_MAX_WIDTH}}{{/DIALOG_MAX_WIDTH}}
+{{#DIALOG_WIDTH}}{{/DIALOG_WIDTH}}
 
-{{/dialog_max_width}}
-{{#dialog_width}}
-
-{{/dialog_width}}
-
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 []
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

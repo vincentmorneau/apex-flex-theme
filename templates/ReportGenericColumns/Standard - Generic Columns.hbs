@@ -1,86 +1,73 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <div id="report-#REGION_STATIC_ID#" class="table #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#><table class="report-pagination report-pagination-top" role="presentation">#TOP_PAGINATION#</table><table class="table">
-{{/row_template_before_rows}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-{{#before_column_heading}}
+{{#BEFORE_COLUMN_HEADING}}
 <thead>
-{{/before_column_heading}}
-	{{#column_heading_template}}
-	<th id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
-	{{/column_heading_template}}
-{{#after_column_heading}}
+{{/BEFORE_COLUMN_HEADING}}
+{{#COLUMN_HEADING_TEMPLATE}}
+<th id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
+{{/COLUMN_HEADING_TEMPLATE}}
+{{#AFTER_COLUMN_HEADING}}
 </thead><tbody>
-{{/after_column_heading}}
+{{/AFTER_COLUMN_HEADING}}
 
-	{{#row_template_before_first}}
-	<tr>
-	{{/row_template_before_first}}
+{{#ROW_TEMPLATE_BEFORE_FIRST}}
+<tr>
+{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
-		{{#row_template1}}
-		<td headers="#COLUMN_HEADER_NAME#">#COLUMN_VALUE#</td>
-		{{/row_template1}}
-		{{#row_template_condition1}}
+{{#ROW_TEMPLATE1}}
+<td headers="#COLUMN_HEADER_NAME#">#COLUMN_VALUE#</td>
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-		{{/row_template_condition1}}
-		{{#row_template_display_cond1}}
+{{#ROW_TEMPLATE_AFTER_LAST}}
+</tr>
+{{/ROW_TEMPLATE_AFTER_LAST}}
 
-		{{/row_template_display_cond1}}
-		{{#row_template2}}
-
-		{{/row_template2}}
-		{{#row_template_condition2}}
-
-		{{/row_template_condition2}}
-		{{#row_template_display_cond2}}
-
-		{{/row_template_display_cond2}}
-		{{#row_template3}}
-
-		{{/row_template3}}
-		{{#row_template_condition3}}
-
-		{{/row_template_condition3}}
-		{{#row_template_display_cond3}}
-
-		{{/row_template_display_cond3}}
-		{{#row_template4}}
-
-		{{/row_template4}}
-		{{#row_template_condition4}}
-
-		{{/row_template_condition4}}
-		{{#row_template_display_cond4}}
-
-		{{/row_template_display_cond4}}
-
-	{{#row_template_after_last}}
-	</tr>
-	{{/row_template_after_last}}
-
-{{#row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </tbody><tfoot><div class="report-links">#EXTERNAL_LINK##CSV_LINK#</div></tfoot></table><nav><ul class="pagination">#PAGINATION#</ul></nav></div>
-{{/row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
 
-{{#pagination_template}}
+{{#PAGINATION_TEMPLATE}}
 <li class="page-item">#TEXT#</li>
-{{/pagination_template}}
-{{#next_page_template}}
+{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}
 <li class="page-item"> <a class="page-link" href="#LINK#" aria-label="Next"><span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span></a></li>
-{{/next_page_template}}
-{{#previous_page_template}}
+{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}
 <li class="page-item"> <a class="page-link" href="#LINK#" aria-label="Previous"><span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span></a></li>
-{{/previous_page_template}}
-{{#next_set_template}}
+{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}
 <li class="page-item"><a class="page-link" href="#LINK#" aria-label="Next">#PAGINATION_NEXT_SET#</a></li>
-{{/next_set_template}}
-{{#previous_set_template}}
+{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}
 <li class="page-item"><a class="page-link" href="#LINK#" aria-label="Next">#PAGINATION_PREVIOUS_SET#</a></li>
-{{/previous_set_template}}
+{{/PREVIOUS_SET_TEMPLATE}}
 
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 []
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

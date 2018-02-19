@@ -1,99 +1,67 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <div id="report-#REGION_STATIC_ID#" class="list-group #COMPONENT_CSS_CLASSES#">
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-{{/row_template_before_rows}}
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
 
-{{#before_column_heading}}
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
 
-{{/before_column_heading}}
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
 
-	{{#column_heading_template}}
-	
-	{{/column_heading_template}}
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
-{{#after_column_heading}}
-
-{{/after_column_heading}}
-
-	{{#row_template_before_first}}
-	
-	{{/row_template_before_first}}
-
-		{{#row_template1}}
-		        <a href="#LINK#" class="list-group-item list-group-item-#STYLE# #ACTIVE# #DISABLED#">
+{{#ROW_TEMPLATE1}}
+<a href="#LINK#" class="list-group-item list-group-item-#STYLE# #ACTIVE# #DISABLED#">
             <span class="label label-#LABEL_STYLE# label-pill pull-xs-right">#LABEL_TEXT#</span>
             <h4 class="list-group-item-heading">#HEADING#</h4>
             <p class="list-group-item-text">#TEXT#</p>
         </a>
-
-		{{/row_template1}}
-		{{#row_template_condition1}}
-		:LINK is not null
-		{{/row_template_condition1}}
-		{{#row_template_display_cond1}}
-		NOT_CONDITIONAL
-		{{/row_template_display_cond1}}
-		{{#row_template2}}
-		        <div class="list-group-item list-group-item-#STYLE# #ACTIVE# #DISABLED#">
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}
+:LINK is not null
+{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+NOT_CONDITIONAL
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}
+<div class="list-group-item list-group-item-#STYLE# #ACTIVE# #DISABLED#">
             <span class="label label-#LABEL_STYLE# label-pill pull-xs-right">#LABEL_TEXT#</span>
             <h4 class="list-group-item-heading">#HEADING#</h4>
             <p class="list-group-item-text">#TEXT#</p>
         </div>
+{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+NOT_CONDITIONAL
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-		{{/row_template2}}
-		{{#row_template_condition2}}
-		
-		{{/row_template_condition2}}
-		{{#row_template_display_cond2}}
-		0
-		{{/row_template_display_cond2}}
-		{{#row_template3}}
-		
-		{{/row_template3}}
-		{{#row_template_condition3}}
-		
-		{{/row_template_condition3}}
-		{{#row_template_display_cond3}}
-		0
-		{{/row_template_display_cond3}}
-		{{#row_template4}}
-		
-		{{/row_template4}}
-		{{#row_template_condition4}}
-		
-		{{/row_template_condition4}}
-		{{#row_template_display_cond4}}
-		NOT_CONDITIONAL
-		{{/row_template_display_cond4}}
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
-	{{#row_template_after_last}}
-	
-	{{/row_template_after_last}}
-
-{{#row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </div>
-{{/row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
 
-{{#pagination_template}}
+{{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
 
-{{/pagination_template}}
-{{#next_page_template}}
-
-{{/next_page_template}}
-{{#previous_page_template}}
-
-{{/previous_page_template}}
-{{#next_set_template}}
-
-{{/next_set_template}}
-{{#previous_set_template}}
-
-{{/previous_set_template}}
-
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 []
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

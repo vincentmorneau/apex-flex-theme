@@ -1,4 +1,4 @@
-{{#template}}
+{{#TEMPLATE}}
 <div id="#REGION_STATIC_ID#" class="ft-region jumbotron d-flex flex-row justify-content-between #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
 	<div class="ft-region-left align-self-center mr-2">#PREVIOUS#</div>
 
@@ -26,46 +26,41 @@
 
 	<div class="ft-region-right align-self-center ml-2">#NEXT#</div>
 </div>
-{{/template}}
-{{#sub_plug_header_template}}
+{{/TEMPLATE}}
+{{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
+{{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+{{#SUB_PLUG_TEMPLATE}}{{/SUB_PLUG_TEMPLATE}}
 
-{{/sub_plug_header_template}}
-{{#sub_plug_header_entry_template}}
-
-{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}
-
-{{/sub_plug_template}}
-
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-{
-	"name": "REGION_JUMBOTRON_STYLE",
-	"display_name": "Jumbotron Style",
-	"display_sequence": 1,
-	"help_text": "A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.",
-	"null_text": "Default",
-	"is_advanced": "N",
-	"template_options": [
-		{
-			"name": "JUMBOTRON_FLUID",
-			"display_name": "Jumbotron Fluid",
-			"display_sequence": 2,
-			"css_classes": "jumbotron-fluid",
-			"help_text": "This is a modified jumbotron that occupies the entire horizontal space of its parent."
-		},
-		{
-			"name": "JUMBOTRON_MASTER",
-			"display_name": "Jumbotron Master",
-			"display_sequence": 3,
-			"css_classes": "ft-jumbotron-jumbo",
-			"help_text": "Make it even bigger!"
-		}
-	]
-}
+  {
+    "NAME": "REGION_JUMBOTRON_STYLE",
+    "DISPLAY_NAME": "Jumbotron Style",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "JUMBOTRON_FLUID",
+        "DISPLAY_NAME": "Jumbotron Fluid",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "jumbotron-fluid",
+        "HELP_TEXT": "This is a modified jumbotron that occupies the entire horizontal space of its parent."
+      },
+      {
+        "NAME": "JUMBOTRON_MASTER",
+        "DISPLAY_NAME": "Jumbotron Master",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-jumbotron-jumbo",
+        "HELP_TEXT": "Make it even bigger!"
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

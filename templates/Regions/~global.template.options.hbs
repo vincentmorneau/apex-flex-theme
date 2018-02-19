@@ -1,551 +1,550 @@
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-	{
-		"name": "REGION_TITLE_SIZE",
-		"display_name": "Title Size",
-		"display_sequence": 100,
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "REGION_TITLE_SIZE_HIDDEN",
-				"display_name": "Hidden",
-				"display_sequence": 0,
-				"css_classes": "ft-region-title-size-hidden"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_D1",
-				"display_name": "Display Heading 1",
-				"display_sequence": 1,
-				"css_classes": "ft-region-title-size-display-1"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_D2",
-				"display_name": "Display Heading 2",
-				"display_sequence": 2,
-				"css_classes": "ft-region-title-size-display-2"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_D3",
-				"display_name": "Display Heading 3",
-				"display_sequence": 3,
-				"css_classes": "ft-region-title-size-display-3"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_D4",
-				"display_name": "Display Heading 4",
-				"display_sequence": 4,
-				"css_classes": "ft-region-title-size-display-4"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_H1",
-				"display_name": "Heading 1",
-				"display_sequence": 5,
-				"css_classes": "ft-region-title-size-h1"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_H2",
-				"display_name": "Heading 2",
-				"display_sequence": 6,
-				"css_classes": "ft-region-title-size-h2"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_H3",
-				"display_name": "Heading 3",
-				"display_sequence": 7,
-				"css_classes": "ft-region-title-size-h3"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_H4",
-				"display_name": "Heading 4",
-				"display_sequence": 8,
-				"css_classes": "ft-region-title-size-h4"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_H5",
-				"display_name": "Heading 5",
-				"display_sequence": 9,
-				"css_classes": "ft-region-title-size-h5"
-			},
-			{
-				"name": "REGION_TITLE_SIZE_H6",
-				"display_name": "Heading 6",
-				"display_sequence": 10,
-				"css_classes": "ft-region-title-size-h6"
-			}
-		]
-	},
-	{
-		"name": "REGION_TEXT_ALIGN",
-		"display_name": "Text Alignment",
-		"display_sequence": 110,
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "REGION_TEXT_ALIGN_LEFT",
-				"display_name": "Left",
-				"display_sequence": 1,
-				"css_classes": "text-left"
-			},
-			{
-				"name": "REGION_TEXT_ALIGN_RIGHT",
-				"display_name": "Right",
-				"display_sequence": 3,
-				"css_classes": "text-right"
-			},
-			{
-				"name": "REGION_TEXT_ALIGN_CENTER",
-				"display_name": "Center",
-				"display_sequence": 2,
-				"css_classes": "text-center"
-			}
-		]
-	},
-	{
-		"name": "REGION_TEXT_COLOR",
-		"display_name": "Text Color",
-		"display_sequence": 800,
-		"is_advanced": "Y",
-		"null_text": "Default",
-		"help_text": "Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.",
-		"template_options": [
-			{
-				"name": "REGION_TEXT_COLOR_PRIMARY",
-				"display_name": "Primary",
-				"display_sequence": 1,
-				"css_classes": "text-primary"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_SECONDARY",
-				"display_name": "Secondary",
-				"display_sequence": 2,
-				"css_classes": "text-secondary"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_SUCCESS",
-				"display_name": "Success",
-				"display_sequence": 3,
-				"css_classes": "text-success"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_DANGER",
-				"display_name": "Danger",
-				"display_sequence": 4,
-				"css_classes": "text-danger"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_WARNING",
-				"display_name": "Warning",
-				"display_sequence": 5,
-				"css_classes": "text-warning"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_INFO",
-				"display_name": "Info",
-				"display_sequence": 6,
-				"css_classes": "text-info"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_LIGHT",
-				"display_name": "Light",
-				"display_sequence": 7,
-				"css_classes": "text-light"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_DARK",
-				"display_name": "Dark",
-				"display_sequence": 8,
-				"css_classes": "text-dark"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_MUTED",
-				"display_name": "Muted",
-				"display_sequence": 9,
-				"css_classes": "text-muted"
-			},
-			{
-				"name": "REGION_TEXT_COLOR_WHITE",
-				"display_name": "White",
-				"display_sequence": 10,
-				"css_classes": "text-white"
-			}
-		]
-	},
-	{
-		"name": "REGION_BG_COLOR",
-		"display_name": "Background Color",
-		"display_sequence": 810,
-		"is_advanced": "Y",
-		"null_text": "Default",
-		"help_text": "Easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities do not set color.",
-		"template_options": [
-			{
-				"name": "REGION_BG_COLOR_PRIMARY",
-				"display_name": "Primary",
-				"display_sequence": 1,
-				"css_classes": "bg-primary"
-			},
-			{
-				"name": "REGION_BG_COLOR_SECONDARY",
-				"display_name": "Secondary",
-				"display_sequence": 2,
-				"css_classes": "bg-secondary"
-			},
-			{
-				"name": "REGION_BG_COLOR_SUCCESS",
-				"display_name": "Success",
-				"display_sequence": 3,
-				"css_classes": "bg-success"
-			},
-			{
-				"name": "REGION_BG_COLOR_DANGER",
-				"display_name": "Danger",
-				"display_sequence": 4,
-				"css_classes": "bg-danger"
-			},
-			{
-				"name": "REGION_BG_COLOR_WARNING",
-				"display_name": "Warning",
-				"display_sequence": 5,
-				"css_classes": "bg-warning"
-			},
-			{
-				"name": "REGION_BG_COLOR_INFO",
-				"display_name": "Info",
-				"display_sequence": 6,
-				"css_classes": "bg-info"
-			},
-			{
-				"name": "REGION_BG_COLOR_LIGHT",
-				"display_name": "Light",
-				"display_sequence": 7,
-				"css_classes": "bg-light"
-			},
-			{
-				"name": "REGION_BG_COLOR_DARK",
-				"display_name": "Dark",
-				"display_sequence": 8,
-				"css_classes": "bg-dark"
-			},
-			{
-				"name": "REGION_BG_COLOR_WHITE",
-				"display_name": "White",
-				"display_sequence": 9,
-				"css_classes": "bg-white"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_PRIMARY",
-				"display_name": "Primary Gradient",
-				"display_sequence": 10,
-				"css_classes": "bg-gradient-primary"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_SECONDARY",
-				"display_name": "Secondary Gradient",
-				"display_sequence": 11,
-				"css_classes": "bg-gradient-secondary"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_SUCCESS",
-				"display_name": "Success Gradient",
-				"display_sequence": 12,
-				"css_classes": "bg-gradient-success"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_DANGER",
-				"display_name": "Danger Gradient",
-				"display_sequence": 13,
-				"css_classes": "bg-gradient-danger"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_WARNING",
-				"display_name": "Warning Gradient",
-				"display_sequence": 14,
-				"css_classes": "bg-gradient-warning"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_INFO",
-				"display_name": "Info Gradient",
-				"display_sequence": 15,
-				"css_classes": "bg-gradient-info"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_LIGHT",
-				"display_name": "Light Gradient",
-				"display_sequence": 16,
-				"css_classes": "bg-gradient-light"
-			},
-			{
-				"name": "REGION_BG_G_COLOR_DARK",
-				"display_name": "Dark Gradient",
-				"display_sequence": 17,
-				"css_classes": "bg-gradient-dark"
-			}
-		]
-	},
-	{
-		"name": "REGION_MARGIN_TOP",
-		"display_name": "Margin Top",
-		"display_sequence": 900,
-		"is_advanced": "Y",
-		"null_text": "Default",
-		"template_options": [
-			{
-				"name": "REGION_MARGIN_TOP_0",
-				"display_name": "0",
-				"display_sequence": 0,
-				"css_classes": "mt-0"
-			},
-			{
-				"name": "REGION_MARGIN_TOP_1",
-				"display_name": "1",
-				"display_sequence": 1,
-				"css_classes": "mt-1"
-			},
-			{
-				"name": "REGION_MARGIN_TOP_2",
-				"display_name": "2",
-				"display_sequence": 2,
-				"css_classes": "mt-2"
-			},
-			{
-				"name": "REGION_MARGIN_TOP_3",
-				"display_name": "3",
-				"display_sequence": 3,
-				"css_classes": "mt-3"
-			},
-			{
-				"name": "REGION_MARGIN_TOP_4",
-				"display_name": "4",
-				"display_sequence": 4,
-				"css_classes": "mt-4"
-			},
-			{
-				"name": "REGION_MARGIN_TOP_5",
-				"display_name": "5",
-				"display_sequence": 5,
-				"css_classes": "mt-5"
-			}
-		]
-	},
-	{
-		"name": "REGION_MARGIN_BOTTOM",
-		"display_name": "Margin Bottom",
-		"display_sequence": 901,
-		"is_advanced": "Y",
-		"null_text": "Default",
-		"template_options": [
-			{
-				"name": "REGION_MARGIN_BOTTOM_0",
-				"display_name": "0",
-				"display_sequence": 0,
-				"css_classes": "mb-0"
-			},
-			{
-				"name": "REGION_MARGIN_BOTTOM_1",
-				"display_name": "1",
-				"display_sequence": 1,
-				"css_classes": "mb-1"
-			},
-			{
-				"name": "REGION_MARGIN_BOTTOM_2",
-				"display_name": "2",
-				"display_sequence": 2,
-				"css_classes": "mb-2"
-			},
-			{
-				"name": "REGION_MARGIN_BOTTOM_3",
-				"display_name": "3",
-				"display_sequence": 3,
-				"css_classes": "mb-3"
-			},
-			{
-				"name": "REGION_MARGIN_BOTTOM_4",
-				"display_name": "4",
-				"display_sequence": 4,
-				"css_classes": "mb-4"
-			},
-			{
-				"name": "REGION_MARGIN_BOTTOM_5",
-				"display_name": "5",
-				"display_sequence": 5,
-				"css_classes": "mb-5"
-			}
-		]
-	},
-	{
-		"name": "REGION_MARGIN_LEFT",
-		"display_name": "Margin Left",
-		"display_sequence": 902,
-		"is_advanced": "Y",
-		"null_text": "Default",
-		"template_options": [
-			{
-				"name": "REGION_MARGIN_LEFT_0",
-				"display_name": "0",
-				"display_sequence": 0,
-				"css_classes": "ml-0"
-			},
-			{
-				"name": "REGION_MARGIN_LEFT_1",
-				"display_name": "1",
-				"display_sequence": 1,
-				"css_classes": "ml-1"
-			},
-			{
-				"name": "REGION_MARGIN_LEFT_2",
-				"display_name": "2",
-				"display_sequence": 2,
-				"css_classes": "ml-2"
-			},
-			{
-				"name": "REGION_MARGIN_LEFT_3",
-				"display_name": "3",
-				"display_sequence": 3,
-				"css_classes": "ml-3"
-			},
-			{
-				"name": "REGION_MARGIN_LEFT_4",
-				"display_name": "4",
-				"display_sequence": 4,
-				"css_classes": "ml-4"
-			},
-			{
-				"name": "REGION_MARGIN_LEFT_5",
-				"display_name": "5",
-				"display_sequence": 5,
-				"css_classes": "ml-5"
-			}
-		]
-	},
-	{
-		"name": "REGION_MARGIN_RIGHT",
-		"display_name": "Margin Right",
-		"display_sequence": 903,
-		"is_advanced": "Y",
-		"null_text": "Default",
-		"template_options": [
-			{
-				"name": "REGION_MARGIN_RIGHT_0",
-				"display_name": "0",
-				"display_sequence": 0,
-				"css_classes": "mr-0"
-			},
-			{
-				"name": "REGION_MARGIN_RIGHT_1",
-				"display_name": "1",
-				"display_sequence": 1,
-				"css_classes": "mr-1"
-			},
-			{
-				"name": "REGION_MARGIN_RIGHT_2",
-				"display_name": "2",
-				"display_sequence": 2,
-				"css_classes": "mr-2"
-			},
-			{
-				"name": "REGION_MARGIN_RIGHT_3",
-				"display_name": "3",
-				"display_sequence": 3,
-				"css_classes": "mr-3"
-			},
-			{
-				"name": "REGION_MARGIN_RIGHT_4",
-				"display_name": "4",
-				"display_sequence": 4,
-				"css_classes": "mr-4"
-			},
-			{
-				"name": "REGION_MARGIN_RIGHT_5",
-				"display_name": "5",
-				"display_sequence": 5,
-				"css_classes": "mr-5"
-			}
-		]
-	},
-	{
-		"name": "REGION_VISIBILITY",
-		"display_name": "Visibility",
-		"display_sequence": 999,
-		"is_advanced": "Y",
-		"null_text": "Visible on all screen sizes",
-		"template_options": [
-			{
-				"name": "REGION_VISIBILITY_HIDDEN",
-				"display_name": "Hidden on all screen sizes",
-				"display_sequence": 1,
-				"css_classes": "d-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_XS",
-				"display_name": "Visible only on xs",
-				"display_sequence": 2,
-				"css_classes": "d-sm-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_SM",
-				"display_name": "Visible only on sm",
-				"display_sequence": 3,
-				"css_classes": "d-none d-sm-block d-md-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_MD",
-				"display_name": "Visible only on md",
-				"display_sequence": 4,
-				"css_classes": "d-none d-md-block d-lg-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_LG",
-				"display_name": "Visible only on lg",
-				"display_sequence": 5,
-				"css_classes": "d-none d-lg-block d-xl-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_XL",
-				"display_name": "Visible only on xl",
-				"display_sequence": 6,
-				"css_classes": "d-none d-xl-block"
-			},
-			{
-				"name": "REGION_VISIBILITY_XS-SM",
-				"display_name": "Visible only on xs-sm",
-				"display_sequence": 7,
-				"css_classes": "d-md-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_XS-SM-MD",
-				"display_name": "Visible only on xs-sm-md",
-				"display_sequence": 8,
-				"css_classes": "d-lg-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_XS-SM-MD-LG",
-				"display_name": "Visible only on xs-sm-md-lg",
-				"display_sequence": 9,
-				"css_classes": "d-xl-none"
-			},
-			{
-				"name": "REGION_VISIBILITY_LG-XL",
-				"display_name": "Visible only on lg-xl",
-				"display_sequence": 10,
-				"css_classes": "d-none d-lg-block"
-			},
-			{
-				"name": "REGION_VISIBILITY_MD-LG-XL",
-				"display_name": "Visible only on md-lg-xl",
-				"display_sequence": 11,
-				"css_classes": "d-none d-md-block"
-			},
-			{
-				"name": "REGION_VISIBILITY_SM-MD-LG-XL",
-				"display_name": "Visible only on sm-md-lg-xl",
-				"display_sequence": 12,
-				"css_classes": "d-none d-sm-block"
-			}
-		]
-	}
+  {
+    "NAME": "REGION_TITLE_SIZE",
+    "DISPLAY_NAME": "Title Size",
+    "DISPLAY_SEQUENCE": 100,
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_TITLE_SIZE_HIDDEN",
+        "DISPLAY_NAME": "Hidden",
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "ft-region-title-size-hidden"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_D1",
+        "DISPLAY_NAME": "Display Heading 1",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-region-title-size-display-1"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_D2",
+        "DISPLAY_NAME": "Display Heading 2",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-region-title-size-display-2"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_D3",
+        "DISPLAY_NAME": "Display Heading 3",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-region-title-size-display-3"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_D4",
+        "DISPLAY_NAME": "Display Heading 4",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "ft-region-title-size-display-4"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_H1",
+        "DISPLAY_NAME": "Heading 1",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "ft-region-title-size-h1"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_H2",
+        "DISPLAY_NAME": "Heading 2",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "ft-region-title-size-h2"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_H3",
+        "DISPLAY_NAME": "Heading 3",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "ft-region-title-size-h3"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_H4",
+        "DISPLAY_NAME": "Heading 4",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "ft-region-title-size-h4"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_H5",
+        "DISPLAY_NAME": "Heading 5",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "ft-region-title-size-h5"
+      },
+      {
+        "NAME": "REGION_TITLE_SIZE_H6",
+        "DISPLAY_NAME": "Heading 6",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ft-region-title-size-h6"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_TEXT_ALIGN",
+    "DISPLAY_NAME": "Text Alignment",
+    "DISPLAY_SEQUENCE": 110,
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_TEXT_ALIGN_LEFT",
+        "DISPLAY_NAME": "Left",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "text-left"
+      },
+      {
+        "NAME": "REGION_TEXT_ALIGN_CENTER",
+        "DISPLAY_NAME": "Center",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "text-center"
+      },
+      {
+        "NAME": "REGION_TEXT_ALIGN_RIGHT",
+        "DISPLAY_NAME": "Right",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "text-right"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_TEXT_COLOR",
+    "DISPLAY_NAME": "Text Color",
+    "DISPLAY_SEQUENCE": 800,
+    "HELP_TEXT": "Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_TEXT_COLOR_PRIMARY",
+        "DISPLAY_NAME": "Primary",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "text-primary"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_SECONDARY",
+        "DISPLAY_NAME": "Secondary",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "text-secondary"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_SUCCESS",
+        "DISPLAY_NAME": "Success",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "text-success"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_DANGER",
+        "DISPLAY_NAME": "Danger",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "text-danger"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "text-warning"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_INFO",
+        "DISPLAY_NAME": "Info",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "text-info"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_LIGHT",
+        "DISPLAY_NAME": "Light",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "text-light"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_DARK",
+        "DISPLAY_NAME": "Dark",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "text-dark"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_MUTED",
+        "DISPLAY_NAME": "Muted",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "text-muted"
+      },
+      {
+        "NAME": "REGION_TEXT_COLOR_WHITE",
+        "DISPLAY_NAME": "White",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "text-white"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_BG_COLOR",
+    "DISPLAY_NAME": "Background Color",
+    "DISPLAY_SEQUENCE": 810,
+    "HELP_TEXT": "Easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities do not set color.",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_BG_COLOR_PRIMARY",
+        "DISPLAY_NAME": "Primary",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "bg-primary"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_SECONDARY",
+        "DISPLAY_NAME": "Secondary",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "bg-secondary"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_SUCCESS",
+        "DISPLAY_NAME": "Success",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "bg-success"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_DANGER",
+        "DISPLAY_NAME": "Danger",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "bg-danger"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "bg-warning"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_INFO",
+        "DISPLAY_NAME": "Info",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "bg-info"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_LIGHT",
+        "DISPLAY_NAME": "Light",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "bg-light"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_DARK",
+        "DISPLAY_NAME": "Dark",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "bg-dark"
+      },
+      {
+        "NAME": "REGION_BG_COLOR_WHITE",
+        "DISPLAY_NAME": "White",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "bg-white"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_PRIMARY",
+        "DISPLAY_NAME": "Primary Gradient",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "bg-gradient-primary"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_SECONDARY",
+        "DISPLAY_NAME": "Secondary Gradient",
+        "DISPLAY_SEQUENCE": 11,
+        "CSS_CLASSES": "bg-gradient-secondary"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_SUCCESS",
+        "DISPLAY_NAME": "Success Gradient",
+        "DISPLAY_SEQUENCE": 12,
+        "CSS_CLASSES": "bg-gradient-success"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_DANGER",
+        "DISPLAY_NAME": "Danger Gradient",
+        "DISPLAY_SEQUENCE": 13,
+        "CSS_CLASSES": "bg-gradient-danger"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_WARNING",
+        "DISPLAY_NAME": "Warning Gradient",
+        "DISPLAY_SEQUENCE": 14,
+        "CSS_CLASSES": "bg-gradient-warning"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_INFO",
+        "DISPLAY_NAME": "Info Gradient",
+        "DISPLAY_SEQUENCE": 15,
+        "CSS_CLASSES": "bg-gradient-info"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_LIGHT",
+        "DISPLAY_NAME": "Light Gradient",
+        "DISPLAY_SEQUENCE": 16,
+        "CSS_CLASSES": "bg-gradient-light"
+      },
+      {
+        "NAME": "REGION_BG_G_COLOR_DARK",
+        "DISPLAY_NAME": "Dark Gradient",
+        "DISPLAY_SEQUENCE": 17,
+        "CSS_CLASSES": "bg-gradient-dark"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_MARGIN_TOP",
+    "DISPLAY_NAME": "Margin Top",
+    "DISPLAY_SEQUENCE": 900,
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_MARGIN_TOP_0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "mt-0"
+      },
+      {
+        "NAME": "REGION_MARGIN_TOP_1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "mt-1"
+      },
+      {
+        "NAME": "REGION_MARGIN_TOP_2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "mt-2"
+      },
+      {
+        "NAME": "REGION_MARGIN_TOP_3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "mt-3"
+      },
+      {
+        "NAME": "REGION_MARGIN_TOP_4",
+        "DISPLAY_NAME": 4,
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "mt-4"
+      },
+      {
+        "NAME": "REGION_MARGIN_TOP_5",
+        "DISPLAY_NAME": 5,
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "mt-5"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_MARGIN_BOTTOM",
+    "DISPLAY_NAME": "Margin Bottom",
+    "DISPLAY_SEQUENCE": 901,
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_MARGIN_BOTTOM_0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "mb-0"
+      },
+      {
+        "NAME": "REGION_MARGIN_BOTTOM_1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "mb-1"
+      },
+      {
+        "NAME": "REGION_MARGIN_BOTTOM_2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "mb-2"
+      },
+      {
+        "NAME": "REGION_MARGIN_BOTTOM_3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "mb-3"
+      },
+      {
+        "NAME": "REGION_MARGIN_BOTTOM_4",
+        "DISPLAY_NAME": 4,
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "mb-4"
+      },
+      {
+        "NAME": "REGION_MARGIN_BOTTOM_5",
+        "DISPLAY_NAME": 5,
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "mb-5"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_MARGIN_LEFT",
+    "DISPLAY_NAME": "Margin Left",
+    "DISPLAY_SEQUENCE": 902,
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_MARGIN_LEFT_0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "ml-0"
+      },
+      {
+        "NAME": "REGION_MARGIN_LEFT_1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ml-1"
+      },
+      {
+        "NAME": "REGION_MARGIN_LEFT_2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ml-2"
+      },
+      {
+        "NAME": "REGION_MARGIN_LEFT_3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ml-3"
+      },
+      {
+        "NAME": "REGION_MARGIN_LEFT_4",
+        "DISPLAY_NAME": 4,
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "ml-4"
+      },
+      {
+        "NAME": "REGION_MARGIN_LEFT_5",
+        "DISPLAY_NAME": 5,
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "ml-5"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_MARGIN_RIGHT",
+    "DISPLAY_NAME": "Margin Right",
+    "DISPLAY_SEQUENCE": 903,
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_MARGIN_RIGHT_0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "mr-0"
+      },
+      {
+        "NAME": "REGION_MARGIN_RIGHT_1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "mr-1"
+      },
+      {
+        "NAME": "REGION_MARGIN_RIGHT_2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "mr-2"
+      },
+      {
+        "NAME": "REGION_MARGIN_RIGHT_3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "mr-3"
+      },
+      {
+        "NAME": "REGION_MARGIN_RIGHT_4",
+        "DISPLAY_NAME": 4,
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "mr-4"
+      },
+      {
+        "NAME": "REGION_MARGIN_RIGHT_5",
+        "DISPLAY_NAME": 5,
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "mr-5"
+      }
+    ]
+  },
+  {
+    "NAME": "REGION_VISIBILITY",
+    "DISPLAY_NAME": "Visibility",
+    "DISPLAY_SEQUENCE": 999,
+    "NULL_TEXT": "Visible on all screen sizes",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_VISIBILITY_HIDDEN",
+        "DISPLAY_NAME": "Hidden on all screen sizes",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "d-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_XS",
+        "DISPLAY_NAME": "Visible only on xs",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "d-sm-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_SM",
+        "DISPLAY_NAME": "Visible only on sm",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "d-none d-sm-block d-md-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_MD",
+        "DISPLAY_NAME": "Visible only on md",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "d-none d-md-block d-lg-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_LG",
+        "DISPLAY_NAME": "Visible only on lg",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "d-none d-lg-block d-xl-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_XL",
+        "DISPLAY_NAME": "Visible only on xl",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "d-none d-xl-block"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_XS-SM",
+        "DISPLAY_NAME": "Visible only on xs-sm",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "d-md-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_XS-SM-MD",
+        "DISPLAY_NAME": "Visible only on xs-sm-md",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "d-lg-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_XS-SM-MD-LG",
+        "DISPLAY_NAME": "Visible only on xs-sm-md-lg",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "d-xl-none"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_LG-XL",
+        "DISPLAY_NAME": "Visible only on lg-xl",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "d-none d-lg-block"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_MD-LG-XL",
+        "DISPLAY_NAME": "Visible only on md-lg-xl",
+        "DISPLAY_SEQUENCE": 11,
+        "CSS_CLASSES": "d-none d-md-block"
+      },
+      {
+        "NAME": "REGION_VISIBILITY_SM-MD-LG-XL",
+        "DISPLAY_NAME": "Visible only on sm-md-lg-xl",
+        "DISPLAY_SEQUENCE": 12,
+        "CSS_CLASSES": "d-none d-sm-block"
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}

@@ -1,8 +1,10 @@
-{{#inline_css}}
+{{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
+{{#JAVASCRIPT_CODE}}{{/JAVASCRIPT_CODE}}
+{{#JAVASCRIPT_CODE_ONLOAD}}{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
+{{#INLINE_CSS}}{{/INLINE_CSS}}
 
-{{/inline_css}}
-
-{{#header_template}}
+{{#HEADER_TEMPLATE}}
 <!doctype html>
 <html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
 	<head>
@@ -20,8 +22,8 @@
 		#PAGE_CSS#
 	</head>
 	<body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
-{{/header_template}}
-{{#box}}
+{{/HEADER_TEMPLATE}}
+{{#BOX}}
 #FORM_OPEN#
 
 <!-- <input type="hidden" data-bind="init, value: homeLink" value="#HOME_LINK#"/>
@@ -65,9 +67,8 @@
 </footer>
 
 #FORM_CLOSE#
-{{/box}}
-
-{{#footer_template}}
+{{/BOX}}
+{{#FOOTER_TEMPLATE}}
 #DEVELOPER_TOOLBAR#
 #APEX_JAVASCRIPT#
 #GENERATED_CSS#
@@ -78,140 +79,135 @@
 #GENERATED_JAVASCRIPT#
 </body>
 </html>
-{{/footer_template}}
+{{/FOOTER_TEMPLATE}}
 
-{{#success_message}}
+{{#SUCCESS_MESSAGE}}
 TODO
 SUCCESS_MESSAGE
 CLOSE_NOTIFICATION
-{{/success_message}}
-{{#message}}
+{{/SUCCESS_MESSAGE}}
+{{#MESSAGE}}
 TODO
 MESSAGE
 CLOSE_NOTIFICATION
-{{/message}}
+{{/MESSAGE}}
 
-{{#grid_template}}
+{{#GRID_TEMPLATE}}
 <div class="ft-container">#ROWS#</div>
-{{/grid_template}}
-{{#grid_row_template}}
+{{/GRID_TEMPLATE}}
+{{#GRID_ROW_TEMPLATE}}
 <div class="row">#COLUMNS#</div>
-{{/grid_row_template}}
-{{#grid_column_template}}
+{{/GRID_ROW_TEMPLATE}}
+{{#GRID_COLUMN_TEMPLATE}}
 <div class="col-12 col-md-#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
-{{/grid_column_template}}
+{{/GRID_COLUMN_TEMPLATE}}
 
-{{#dialog_browser_frame}}
+{{#DIALOG_BROWSER_FRAME}}
 MODAL
-{{/dialog_browser_frame}}
-{{#dialog_css_classes}}
-
-{{/dialog_css_classes}}
-{{#dialog_height}}
-
-{{/dialog_height}}
-{{#dialog_js_cancel_code}}
+{{/DIALOG_BROWSER_FRAME}}
+{{#DIALOG_CSS_CLASSES}}{{/DIALOG_CSS_CLASSES}}
+{{#DIALOG_HEIGHT}}{{/DIALOG_HEIGHT}}
+{{#DIALOG_JS_CANCEL_CODE}}
 apex.navigation.dialog.cancel(#IS_MODAL#);
-{{/dialog_js_cancel_code}}
-{{#dialog_js_close_code}}
+{{/DIALOG_JS_CANCEL_CODE}}
+{{#DIALOG_JS_CLOSE_CODE}}
 apex.navigation.dialog.close(#IS_MODAL#,#TARGET#);
-{{/dialog_js_close_code}}
-{{#dialog_js_init_code}}
+{{/DIALOG_JS_CLOSE_CODE}}
+{{#DIALOG_JS_INIT_CODE}}
 apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#DIALOG_WIDTH#,maxWidth:#DIALOG_MAX_WIDTH#,modal:#IS_MODAL#,dialog:#DIALOG#,#DIALOG_ATTRIBUTES#},#DIALOG_CSS_CLASSES#,#TRIGGERING_ELEMENT#);
-{{/dialog_js_init_code}}
-{{#dialog_max_width}}
+{{/DIALOG_JS_INIT_CODE}}
+{{#DIALOG_MAX_WIDTH}}{{/DIALOG_MAX_WIDTH}}
+{{#DIALOG_WIDTH}}{{/DIALOG_WIDTH}}
 
-{{/dialog_max_width}}
-{{#dialog_width}}
-
-{{/dialog_width}}
-
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
   {
-    "name": "NAVBAR_PLACEMENT",
-    "display_name": "Navigation Bar Placement",
-    "display_sequence": 2,
-    "null_text": "Default",
-    "is_advanced": "N",
-    "template_options": [
+    "NAME": "PAGE_BODY_CONTAINER",
+    "DISPLAY_NAME": "Page Container",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "Containers provide a means to center and horizontally pad your site’s contents",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
       {
-        "name": "NAVBAR_PLACEMENT_STICKY",
-        "display_name": "Sticky",
-        "display_sequence": 0,
-        "css_classes": "ft-navbar-sticky-top"
+        "NAME": "PAGE_BODY_CONTAINER_DEFAULT",
+        "DISPLAY_NAME": "Default",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-page-body-container"
       },
       {
-        "name": "NAVBAR_PLACEMENT_FIXED_TOP",
-        "display_name": "Fixed Top",
-        "display_sequence": 1,
-        "css_classes": "ft-navbar-fixed-top"
+        "NAME": "PAGE_BODY_CONTAINER_FLUID",
+        "DISPLAY_NAME": "Full Width",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-page-body-container-fluid"
       },
       {
-        "name": "NAVBAR_PLACEMENT_FIXED_BOTTOM",
-        "display_name": "Fixed Bottom",
-        "display_sequence": 1,
-        "css_classes": "ft-navbar-fixed-bottom"
+        "NAME": "PAGE_BODY_CONTAINER_NONE",
+        "DISPLAY_NAME": "No Container",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-page-body-container-none"
       }
     ]
   },
   {
-    "name": "PAGE_BODY_CONTAINER",
-    "display_name": "Page Container",
-    "display_sequence": 1,
-    "help_text": "Containers provide a means to center and horizontally pad your site’s contents",
-    "is_advanced": "N",
-    "template_options": [
+    "NAME": "PAGE_FOOTER_CONTAINER",
+    "DISPLAY_NAME": "Footer Container",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "Containers provide a means to center and horizontally pad your site’s contents",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
       {
-        "name": "PAGE_BODY_CONTAINER_DEFAULT",
-        "display_name": "Default",
-        "display_sequence": 1,
-        "css_classes": "ft-page-body-container"
+        "NAME": "PAGE_FOOTER_CONTAINER_DEFAULT",
+        "DISPLAY_NAME": "Default",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-page-footer-container"
       },
       {
-        "name": "PAGE_BODY_CONTAINER_FLUID",
-        "display_name": "Full Width",
-        "display_sequence": 2,
-        "css_classes": "ft-page-body-container-fluid"
+        "NAME": "PAGE_FOOTER_CONTAINER_FLUID",
+        "DISPLAY_NAME": "Full Width",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-page-footer-container-fluid"
       },
       {
-        "name": "PAGE_BODY_CONTAINER_NONE",
-        "display_name": "No Container",
-        "display_sequence": 3,
-        "css_classes": "ft-page-body-container-none"
+        "NAME": "PAGE_FOOTER_CONTAINER_NONE",
+        "DISPLAY_NAME": "No Container",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-page-footer-container-none"
       }
     ]
   },
   {
-    "name": "PAGE_FOOTER_CONTAINER",
-    "display_name": "Footer Container",
-    "display_sequence": 1,
-    "help_text": "Containers provide a means to center and horizontally pad your site’s contents",
-    "is_advanced": "Y",
-    "template_options": [
+    "NAME": "NAVBAR_PLACEMENT",
+    "DISPLAY_NAME": "Navigation Bar Placement",
+    "DISPLAY_SEQUENCE": 2,
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
       {
-        "name": "PAGE_FOOTER_CONTAINER_DEFAULT",
-        "display_name": "Default",
-        "display_sequence": 1,
-        "css_classes": "ft-page-footer-container"
+        "NAME": "NAVBAR_PLACEMENT_STICKY",
+        "DISPLAY_NAME": "Sticky",
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "ft-navbar-sticky-top"
       },
       {
-        "name": "PAGE_FOOTER_CONTAINER_FLUID",
-        "display_name": "Full Width",
-        "display_sequence": 2,
-        "css_classes": "ft-page-footer-container-fluid"
+        "NAME": "NAVBAR_PLACEMENT_FIXED_BOTTOM",
+        "DISPLAY_NAME": "Fixed Bottom",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-navbar-fixed-bottom"
       },
       {
-        "name": "PAGE_FOOTER_CONTAINER_NONE",
-        "display_name": "No Container",
-        "display_sequence": 3,
-        "css_classes": "ft-page-footer-container-none"
+        "NAME": "NAVBAR_PLACEMENT_FIXED_TOP",
+        "DISPLAY_NAME": "Fixed Top",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-navbar-fixed-top"
       }
     ]
   }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 []
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ab-page-body-container:ab-page-footer-container-fluid
+{{/PRESET_TEMPLATE_OPTIONS}}
