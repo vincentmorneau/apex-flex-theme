@@ -1,5 +1,31 @@
 {{#TEMPLATE}}
-<div id="#REGION_STATIC_ID#" class="ab-region alert #REGION_CSS_CLASSES#" role="alert" #REGION_ATTRIBUTES#> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>#TITLE#</strong> #BODY# #SUB_REGIONS#<div class="btn-toolbar" role="toolbar" aria-label="Toolbar"><div class="ab-btn-group" role="group" aria-label="Button Group">#EDIT#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#EXPAND#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CREATE2#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#NEXT#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#PREVIOUS#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CLOSE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#COPY#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#DELETE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#CHANGE#</div><div class="ab-btn-group" role="group" aria-label="Button Group">#HELP#</div></div></div>
+<div id="#REGION_STATIC_ID#" class="ft-region d-flex flex-row justify-content-between #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+	<div class="ft-region-left align-self-center mr-2">#PREVIOUS#</div>
+
+	<div class="ft-region-center w-100">
+		<div class="ft-region-header d-flex flex-row">
+			<div class="ft-region-left w-100">
+				<div class="ft-region-title"><i class="#ICON_CSS_CLASSES#"></i>#TITLE#</div>
+			</div>
+			<div class="ft-region-right">#EDIT#</div>
+		</div>
+
+		<div class="ft-region-buttons d-flex flex-row justify-content-between">
+			<div class="ft-region-left">#COPY#</div>
+			<div class="ft-region-right">#EXPAND#</div>
+		</div>
+
+		<div class="ft-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+
+		<div class="ft-region-buttons d-flex flex-row justify-content-between">
+			<div class="ft-region-left">#CLOSE##HELP#</div>
+			<div class="ft-region-center">#CHANGE#</div>
+			<div class="ft-region-right">#DELETE##CREATE##CREATE2#</div>
+		</div>
+	</div>
+
+	<div class="ft-region-right align-self-center ml-2">#NEXT#</div>
+</div>
 {{/TEMPLATE}}
 {{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
 {{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
@@ -53,9 +79,5 @@
   }
 ]
 {{/TEMPLATE_OPTIONS}}
-{{#DEFAULT_TEMPLATE_OPTIONS}}
-alert-dismissible fade in
-{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}
-ab-h3:alert-success
-{{/PRESET_TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
