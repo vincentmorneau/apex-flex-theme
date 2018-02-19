@@ -83,7 +83,7 @@ apexBootstrap.theme = {
 		// });
 
 		// Collapsible
-		// $(".ab-region.collapse").attr({
+		// $(".ft-region.collapse").attr({
 		// 	"role": "tablist",
 		// 	"aria-multiselectable": "true"
 		// });
@@ -100,7 +100,7 @@ apexBootstrap.theme = {
 		// });
 
 		// Tooltips
-		// $(".ab-field-tooltip [data-help][data-help!=''], .ab-button-tooltip[data-help][data-help!='']").each(function() {
+		// $(".ft-field-tooltip [data-help][data-help!=''], .ft-button-tooltip[data-help][data-help!='']").each(function() {
 		// 	$(this).attr({
 		// 		"data-toggle": "tooltip",
 		// 		"title": $(this).data("help")
@@ -108,7 +108,7 @@ apexBootstrap.theme = {
 		// });
 
 		// Popovers
-		// $(".ab-field-popover [data-help][data-help!='']").each(function() {
+		// $(".ft-field-popover [data-help][data-help!='']").each(function() {
 		// 	$(this).attr({
 		// 		"data-toggle": "popover",
 		// 		"data-content": $(this).data("help"),
@@ -116,7 +116,7 @@ apexBootstrap.theme = {
 		// 	});
 		// });
 
-		// $(".ab-button-popover[data-help][data-help!='']").each(function() {
+		// $(".ft-button-popover[data-help][data-help!='']").each(function() {
 		// 	$(this).attr({
 		// 		"data-toggle": "popover",
 		// 		"data-content": $(this).data("help")
@@ -124,7 +124,7 @@ apexBootstrap.theme = {
 		// });
 
 		// Single Button Dropdowns
-		// $(".ab-single-button-dropdown").each(function() {
+		// $(".ft-single-button-dropdown").each(function() {
 		// 	$(this)
 		// 		.removeAttr("onclick")
 		// 		.addClass("dropdown-toggle")
@@ -133,11 +133,11 @@ apexBootstrap.theme = {
 		// 			"aria-haspopup": "true",
 		// 			"aria-expanded": "false",
 		// 		})
-		// 		.prependTo($(this).closest(".ab-region").find(".ab-btn-dropdown"));
+		// 		.prependTo($(this).closest(".ft-region").find(".ft-btn-dropdown"));
 		// });
 
 		// Split Button Dropdowns
-		// $(".ab-split-button-dropdown").each(function() {
+		// $(".ft-split-button-dropdown").each(function() {
 		// 	var classes = ["btn-primary", "btn-secondary", "btn-success", "btn-info", "btn-warning", "btn-danger", "btn-primary-outline", "btn-secondary-outline", "btn-success-outline", "btn-info-outline", "btn-warning-outline", "btn-danger-outline"];
 		//
 		// 	var elementClasses = $(this).attr("class").split(" ");
@@ -151,7 +151,7 @@ apexBootstrap.theme = {
 		//
 		// 	var toggle = '<button type="button" class="btn ' + $thisClass + ' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>';
 		//
-		// 	$(this).prependTo($(this).closest(".ab-region").find(".ab-btn-dropdown").prepend(toggle));
+		// 	$(this).prependTo($(this).closest(".ft-region").find(".ft-btn-dropdown").prepend(toggle));
 		// });
 
 		// Label
@@ -163,40 +163,40 @@ apexBootstrap.theme = {
 		// $(".form-group").not(":only-child").each(function() {
 		// 	$(this)
 		// 		.prevAll(".input-group-addon, .input-group-btn")
-		// 		.prependTo($(this).find(".ab-input-group"));
+		// 		.prependTo($(this).find(".ft-input-group"));
 		//
 		// 	$(this)
-		// 		.closest(".ab-region")
-		// 		.find(".ab-btn-dropdown").children()
-		// 		.prependTo($(this).find(".ab-input-group .input-group-btn"));
+		// 		.closest(".ft-region")
+		// 		.find(".ft-btn-dropdown").children()
+		// 		.prependTo($(this).find(".ft-input-group .input-group-btn"));
 		//
 		// 	$(this)
 		// 		.nextAll(".input-group-addon, .input-group-btn")
-		// 		.appendTo($(this).find(".ab-input-group"));
+		// 		.appendTo($(this).find(".ft-input-group"));
 		//
 		// 	$(this)
-		// 		.closest(".ab-region")
-		// 		.find(".ab-btn-dropdown").children()
-		// 		.appendTo($(this).find(".ab-input-group .input-group-btn"));
+		// 		.closest(".ft-region")
+		// 		.find(".ft-btn-dropdown").children()
+		// 		.appendTo($(this).find(".ft-input-group .input-group-btn"));
 		// });
 
-		// $(".input-group-addon, .input-group-btn").closest(".ab-input-group").addClass("input-group");
+		// $(".input-group-addon, .input-group-btn").closest(".ft-input-group").addClass("input-group");
 
 		// Region Cards
-		// $(".card.ab-card-img-top, .card.ab-card-img-overlay").each(function() {
+		// $(".card.ft-card-img-top, .card.ft-card-img-overlay").each(function() {
 		// 	$(this).prepend($(this).find("img"));
 		// });
 		//
-		// $(".card.ab-card-img-bottom").each(function() {
+		// $(".card.ft-card-img-bottom").each(function() {
 		// 	$(this).append($(this).find("img"));
 		// });
 		//
 		// // Report Cards
-		// $(".ab-card-img-top .card, .ab-card-img-overlay .card").each(function() {
+		// $(".ft-card-img-top .card, .ft-card-img-overlay .card").each(function() {
 		// 	$(this).prepend($(this).find("img"));
 		// });
 		//
-		// $(".ab-card-img-bottom .card").each(function() {
+		// $(".ft-card-img-bottom .card").each(function() {
 		// 	$(this).append($(this).find("img"));
 		// });
 	}
