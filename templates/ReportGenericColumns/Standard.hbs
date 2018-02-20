@@ -1,0 +1,187 @@
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
+<div id="#REGION_STATIC_ID#-report" class="table-responsive" #REPORT_ATTRIBUTES#>
+<table class="report-pagination report-pagination-top" role="presentation">#TOP_PAGINATION#</table>
+<table class="table #COMPONENT_CSS_CLASSES#">
+<caption>#REGION_TITLE#</caption>
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
+
+{{#BEFORE_COLUMN_HEADING}}
+<thead>
+<tr>
+{{/BEFORE_COLUMN_HEADING}}
+{{#COLUMN_HEADING_TEMPLATE}}
+<th id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
+{{/COLUMN_HEADING_TEMPLATE}}
+{{#AFTER_COLUMN_HEADING}}
+</tr>
+</thead>
+<tbody>
+{{/AFTER_COLUMN_HEADING}}
+
+{{#ROW_TEMPLATE_BEFORE_FIRST}}
+<tr>
+{{/ROW_TEMPLATE_BEFORE_FIRST}}
+
+{{#ROW_TEMPLATE1}}
+<td headers="#COLUMN_HEADER_NAME#">#COLUMN_VALUE#</td>
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
+
+{{#ROW_TEMPLATE_AFTER_LAST}}
+</tr>
+{{/ROW_TEMPLATE_AFTER_LAST}}
+
+{{#ROW_TEMPLATE_AFTER_ROWS}}
+</tbody>
+<tfoot>
+<div class="report-links">#EXTERNAL_LINK##CSV_LINK#</div>
+</tfoot>
+</table>
+<nav><ul class="pagination">#PAGINATION#</ul></nav>
+</div>
+{{/ROW_TEMPLATE_AFTER_ROWS}}
+
+{{#PAGINATION_TEMPLATE}}
+<li class="page-item">#TEXT#</li>
+{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}
+<li class="page-item">
+	<a class="page-link" href="#LINK#" aria-label="Next">
+		<span aria-hidden="true">&raquo;</span>
+		<span class="sr-only">Next</span>
+	</a>
+</li>
+{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}
+<li class="page-item">
+	<a class="page-link" href="#LINK#" aria-label="Previous">
+		<span aria-hidden="true">&laquo;</span>
+		<span class="sr-only">Previous</span>
+	</a>
+</li>
+{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}
+<li class="page-item">
+	<a class="page-link" href="#LINK#" aria-label="Next">#PAGINATION_NEXT_SET#</a>
+</li>
+{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}
+<li class="page-item">
+	<a class="page-link" href="#LINK#" aria-label="Next">#PAGINATION_PREVIOUS_SET#</a>
+</li>
+{{/PREVIOUS_SET_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[
+  {
+    "NAME": "TABLE_STYLE",
+    "DISPLAY_NAME": "Table Style",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Light",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "TABLE_STYLE_DARK",
+        "DISPLAY_NAME": "Dark",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "table-dark",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "THEAD_STYLE",
+    "DISPLAY_NAME": "Table Header Style",
+    "DISPLAY_SEQUENCE": 2,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "THEAD_STYLE_LIGHT",
+        "DISPLAY_NAME": "Light",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-thead-light",
+        "HELP_TEXT": ""
+	  },
+      {
+        "NAME": "THEAD_STYLE_DARK",
+        "DISPLAY_NAME": "Dark",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-thead-dark",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "TABLE_SIZE",
+    "DISPLAY_NAME": "Table Size",
+    "DISPLAY_SEQUENCE": 3,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "TABLE_SIZE_SMALL",
+        "DISPLAY_NAME": "Small",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "table-sm",
+        "HELP_TEXT": ""
+	  }
+    ]
+  }
+]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[
+  {
+    "NAME": "TABLE_STRIPED",
+    "DISPLAY_NAME": "Table Striped",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "table-striped",
+    "HELP_TEXT": ""
+  },
+  {
+    "NAME": "TABLE_BORDERED",
+    "DISPLAY_NAME": "Table Bordered",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "table-bordered",
+    "HELP_TEXT": ""
+  },
+  {
+    "NAME": "TABLE_HOVER",
+    "DISPLAY_NAME": "Table Hover",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "table-hover",
+    "HELP_TEXT": ""
+  },
+  {
+    "NAME": "TABLE_CAPTION",
+    "DISPLAY_NAME": "Show Region Title as Caption",
+    "DISPLAY_SEQUENCE": 4,
+    "CSS_CLASSES": "ft-table-caption",
+    "HELP_TEXT": ""
+  }
+]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

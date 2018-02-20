@@ -1,23 +1,15 @@
-// .report-pagination {
-//     td, th {
-//         border-top: 0;
-//         padding: 0;
-//         padding-left: 0.2rem;
-//     }
-// }
-//
-// .ft-table-bordered .table {
-//     @extend .table-bordered;
-// }
-//
-// .ft-table-hover .table {
-//     @extend .table-hover;
-// }
-//
-// .ft-table-sm .table {
-//     @extend .table-sm;
-// }
-//
-// .ft-table-striped .table {
-//     @extend .table-striped;
-// }
+.report-pagination {
+	td, th {
+		border-top: 0;
+		padding: 0;
+		padding-left: 0.2rem;
+	}
+}
+
+.table caption {
+	display: none;
+}
+
+.table.ft-table-caption caption {
+	display: table-caption;
+}
