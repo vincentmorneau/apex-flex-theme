@@ -1,7 +1,6 @@
 // jumbotron fluid
 .jumbotron.jumbotron-fluid > .ft-region-center {
 	@include make-container();
-	@include make-container-max-widths();
 }
 
 // jumbotron master

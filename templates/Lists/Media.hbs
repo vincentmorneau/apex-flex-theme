@@ -4,130 +4,144 @@
 {{#INLINE_CSS}}{{/INLINE_CSS}}
 
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
-<div id="#LIST_ID#" class="media-list #COMPONENT_CSS_CLASSES#">
+<ul id="#LIST_ID#" class="list-unstyled #COMPONENT_CSS_CLASSES#">
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
-<div class="media">
-        <div class="media-left">
-            <a href="#LINK#">
-                <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">#TEXT#</h4>
-            #A01#
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
     </div>
+</div>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}
-<div class="media">
-        <div class="media-left">
-            <a href="#LINK#">
-                <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">#TEXT#</h4>
-            #A01#
-            <li class="hidden-bullet"></li>
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
     </div>
+</div>
 {{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
-<div class="media">
-        <div class="media-left">
-            <a href="#LINK#">
-                <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">#TEXT#</h4>
-            #A01#
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
     </div>
+</div>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
-<div class="media">
-        <div class="media-left">
-            <a href="#LINK#">
-                <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">#TEXT#</h4>
-            #A01#
-            <li class="hidden-bullet"></li>
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
     </div>
+</div>
 {{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
-{{#BEFORE_SUB_LIST}}{{/BEFORE_SUB_LIST}}
+{{#BEFORE_SUB_LIST}}
+<ul class="list-unstyled">
+{{/BEFORE_SUB_LIST}}
 {{#SUB_LIST_ITEM_CURRENT}}
-<div class="media">
-            <div class="media-left">
-                <a href="#LINK#">
-                    <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-                </a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">#TEXT#</h4>
-                #A01#
-            </div>
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
 {{/SUB_LIST_ITEM_CURRENT}}
 {{#SUB_LIST_ITEM_NONCURRENT}}
-<div class="media">
-            <div class="media-left">
-                <a href="#LINK#">
-                    <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-                </a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">#TEXT#</h4>
-                #A01#
-            </div>
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
 {{/SUB_LIST_ITEM_NONCURRENT}}
 {{#SUB_TEMPLATE_CURR_W_CHILD}}
-<div class="media">
-            <div class="media-left">
-                <a href="#LINK#">
-                    <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-                </a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">#TEXT#</h4>
-                #A01#
-            </div>
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
 {{/SUB_TEMPLATE_CURR_W_CHILD}}
 {{#SUB_TEMPLATE_NONCURR_W_CHILD}}
-<div class="media">
-            <div class="media-left">
-                <a href="#LINK#">
-                    <i class="media-object fa-2x fa-fw #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
-                </a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">#TEXT#</h4>
-                #A01#
-            </div>
-        </div>
+<div class="media mt-3">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
 {{/SUB_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
-{{#AFTER_SUB_LIST}}{{/AFTER_SUB_LIST}}
+{{#AFTER_SUB_LIST}}
+</ul>
+{{/AFTER_SUB_LIST}}
 
-{{#FIRST_LIST_TEMPLATE_NONCURRENT}}{{/FIRST_LIST_TEMPLATE_NONCURRENT}}
-{{#FIRST_LIST_TEMPLATE_CURRENT}}{{/FIRST_LIST_TEMPLATE_CURRENT}}
-{{#F_ITEM_TEMPLATE_CURR_W_CHILD}}{{/F_ITEM_TEMPLATE_CURR_W_CHILD}}
-{{#FITEM_TEMPLATE_NONCURR_W_CHILD}}{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
-{{#LIST_TEMPLATE_AFTER_ROWS}}
+{{#FIRST_LIST_TEMPLATE_NONCURRENT}}
+<div class="media">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
 </div>
+{{/FIRST_LIST_TEMPLATE_NONCURRENT}}
+{{#FIRST_LIST_TEMPLATE_CURRENT}}
+<div class="media">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
+{{/FIRST_LIST_TEMPLATE_CURRENT}}
+{{#F_ITEM_TEMPLATE_CURR_W_CHILD}}
+<div class="media">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
+{{/F_ITEM_TEMPLATE_CURR_W_CHILD}}
+{{#FITEM_TEMPLATE_NONCURR_W_CHILD}}
+<div class="media">
+    <i class="fa-3x mr-3 #ICON_CSS_CLASSES#" alt="#LIST_LABEL#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TEXT#</h5>
+        <div class="media-text">#A01#</div>
+        <li></li>
+    </div>
+</div>
+{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
+{{#LIST_TEMPLATE_AFTER_ROWS}}
+</ul>
 {{/LIST_TEMPLATE_AFTER_ROWS}}
 
 {{#A01_LABEL}}
-Description
+Text Content
 {{/A01_LABEL}}
 {{#A02_LABEL}}{{/A02_LABEL}}
 {{#A03_LABEL}}{{/A03_LABEL}}
@@ -150,10 +164,44 @@ Description
 {{#A20_LABEL}}{{/A20_LABEL}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
+[
+  {
+    "NAME": "MEDIA_ICON_ALIGN",
+    "DISPLAY_NAME": "Icon Alignment",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "MEDIA_ICON_ALIGN_TOP",
+        "DISPLAY_NAME": "Top",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-media-icon-align-self-start",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "MEDIA_ICON_ALIGN_MIDDLE",
+        "DISPLAY_NAME": "Middle",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-media-icon-align-self-center",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "MEDIA_ICON_ALIGN_BOTTOM",
+        "DISPLAY_NAME": "Bottom",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-media-icon-align-self-end",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
+]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
 []
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ft-media-icon-align-self-start
+{{/PRESET_TEMPLATE_OPTIONS}}

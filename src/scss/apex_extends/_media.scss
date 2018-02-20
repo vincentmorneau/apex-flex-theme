@@ -1,0 +1,11 @@
+.ft-media-icon-align-self-start .media i {
+	@extend .align-self-start;
+}
+
+.ft-media-icon-align-self-center .media i {
+	@extend .align-self-center;
+}
+
+.ft-media-icon-align-self-end .media i {
+	@extend .align-self-end;
+}
