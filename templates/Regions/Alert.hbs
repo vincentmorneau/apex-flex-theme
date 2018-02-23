@@ -1,30 +1,34 @@
 {{#TEMPLATE}}
-<div id="#REGION_STATIC_ID#" class="ft-region d-flex flex-row justify-content-between #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-	<div class="ft-region-left align-self-center mr-2">#PREVIOUS#</div>
+<div id="#REGION_STATIC_ID#" class="ft-region alert d-flex flex-row justify-content-between #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES# role="alert">
+    <div class="ft-region-left align-self-center mr-2">#PREVIOUS#</div>
 
-	<div class="ft-region-center w-100">
-		<div class="ft-region-header d-flex flex-row">
-			<div class="ft-region-left w-100">
-				<div class="ft-region-title"><i class="#ICON_CSS_CLASSES#"></i>#TITLE#</div>
-			</div>
-			<div class="ft-region-right">#EDIT#</div>
-		</div>
+    <div class="ft-region-center w-100">
+        <div class="ft-region-header d-flex flex-row">
+            <div class="ft-region-left w-100">
+                <div class="ft-region-title alert-heading"><i class="#ICON_CSS_CLASSES#"></i>#TITLE#</div>
+            </div>
+            <div class="ft-region-right">#EDIT#</div>
+        </div>
 
-		<div class="ft-region-buttons d-flex flex-row justify-content-between">
-			<div class="ft-region-left">#COPY#</div>
-			<div class="ft-region-right">#EXPAND#</div>
-		</div>
+        <div class="ft-region-buttons d-flex flex-row justify-content-between">
+            <div class="ft-region-left">#COPY#</div>
+            <div class="ft-region-right">#EXPAND#</div>
+        </div>
 
-		<div class="ft-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+        <div class="ft-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
 
-		<div class="ft-region-buttons d-flex flex-row justify-content-between">
-			<div class="ft-region-left">#CLOSE##HELP#</div>
-			<div class="ft-region-center">#CHANGE#</div>
-			<div class="ft-region-right">#DELETE##CREATE##CREATE2#</div>
-		</div>
-	</div>
+        <div class="ft-region-buttons d-flex flex-row justify-content-between">
+            <div class="ft-region-left">#CLOSE##HELP#</div>
+            <div class="ft-region-center">#CHANGE#</div>
+            <div class="ft-region-right">#DELETE##CREATE##CREATE2#</div>
+        </div>
+    </div>
 
-	<div class="ft-region-right align-self-center ml-2">#NEXT#</div>
+    <div class="ft-region-right align-self-center ml-2">#NEXT#</div>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
 </div>
 {{/TEMPLATE}}
 {{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
@@ -41,28 +45,52 @@
     "IS_ADVANCED": "N",
     "TEMPLATE_OPTIONS": [
       {
+        "NAME": "ALERT_PRIMARY",
+        "DISPLAY_NAME": "Primary",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "alert-primary"
+      },
+      {
+        "NAME": "ALERT_SECONDARY",
+        "DISPLAY_NAME": "Secondary",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "alert-secondary"
+      },
+      {
         "NAME": "ALERT_SUCCESS",
         "DISPLAY_NAME": "Success",
-        "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "alert-success"
-      },
-      {
-        "NAME": "ALERT_INFO",
-        "DISPLAY_NAME": "Info",
-        "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "alert-info"
-      },
-      {
-        "NAME": "ALERT_WARNING",
-        "DISPLAY_NAME": "Warning",
         "DISPLAY_SEQUENCE": 3,
-        "CSS_CLASSES": "alert-warning"
+        "CSS_CLASSES": "alert-success"
       },
       {
         "NAME": "ALERT_DANGER",
         "DISPLAY_NAME": "Danger",
         "DISPLAY_SEQUENCE": 4,
         "CSS_CLASSES": "alert-danger"
+      },
+      {
+        "NAME": "ALERT_WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "alert-warning"
+      },
+      {
+        "NAME": "ALERT_INFO",
+        "DISPLAY_NAME": "Info",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "alert-info"
+      },
+      {
+        "NAME": "ALERT_LIGHT",
+        "DISPLAY_NAME": "Light",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "alert-light"
+      },
+      {
+        "NAME": "ALERT_DARK",
+        "DISPLAY_NAME": "Dark",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "alert-dark"
       }
     ]
   }
@@ -74,10 +102,14 @@
     "NAME": "ALERT_DISMISSIBLE",
     "DISPLAY_NAME": "Dismissible",
     "DISPLAY_SEQUENCE": 10,
-    "CSS_CLASSES": "alert-dismissible fade in",
-    "HELP_TEXT": "It’s possible to dismiss any alert inline"
+    "CSS_CLASSES": "alert-dismissible fade show",
+    "HELP_TEXT": "Dismiss any alert inline"
   }
 ]
 {{/TEMPLATE_OPTIONS}}
-{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+alert-dismissible fade show:alert-primary
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+alert-primary:ft-region-title-size-h4:text-left
+{{/PRESET_TEMPLATE_OPTIONS}}

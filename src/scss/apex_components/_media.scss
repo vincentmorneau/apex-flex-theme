@@ -1,0 +1,19 @@
+.ft-media-icon-placement-left .media {
+	& > .media-icon { order: 1; }
+	& > .media-body { order: 2; }
+}
+
+.ft-media-icon-placement-right .media {
+	& > .media-icon { order: 2; }
+	& > .media-body { order: 1; }
+}
+
+.ft-media-icon-placement-alternate .media:nth-child(odd) {
+	& > .media-icon { order: 1; }
+	& > .media-body { order: 2; }
+}
+
+.ft-media-icon-placement-alternate .media:nth-child(even) {
+	& > .media-icon { order: 2; }
+	& > .media-body { order: 1; }
+}

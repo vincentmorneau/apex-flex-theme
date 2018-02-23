@@ -1,5 +1,5 @@
 {{#ROW_TEMPLATE_BEFORE_ROWS}}
-<ul class="media-list">
+<div id="#REGION_STATIC_ID#_cards" class="list-unstyled #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
 {{/ROW_TEMPLATE_BEFORE_ROWS}}
 
 {{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
@@ -11,15 +11,13 @@
 {{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
 {{#ROW_TEMPLATE1}}
-<li class="media #COMPONENT_CSS_CLASSES#">
-            <a class="media-left" href="#MEDIA_LINK#">
-                <img class="media-object" src="#MEDIA_IMG_SOURCE#">
-            </a>
-            <div class="media-body">
-                <h4 class="media-heading">#MEDIA_TITLE#</h4>
-                #MEDIA_DESCRIPTION#
-            </div>
-        </li>
+<div class="media mt-3">
+    <i class="media-icon fa-3x mr-3 #ICON_CSS_CLASSES#"></i>
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">#TITLE#</h5>
+        <div class="media-text">#DESCRIPTION#</div>
+    </div>
+</div>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
 {{#ROW_TEMPLATE_DISPLAY_COND1}}
@@ -44,7 +42,7 @@
 {{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
 {{#ROW_TEMPLATE_AFTER_ROWS}}
-</ul>
+</div>
 {{/ROW_TEMPLATE_AFTER_ROWS}}
 
 {{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
@@ -54,10 +52,75 @@
 {{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
+[
+  {
+    "NAME": "MEDIA_ICON_ALIGN",
+    "DISPLAY_NAME": "Icon Alignment",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "MEDIA_ICON_ALIGN_TOP",
+        "DISPLAY_NAME": "Top",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-media-icon-align-self-start",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "MEDIA_ICON_ALIGN_MIDDLE",
+        "DISPLAY_NAME": "Middle",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-media-icon-align-self-center",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "MEDIA_ICON_ALIGN_BOTTOM",
+        "DISPLAY_NAME": "Bottom",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-media-icon-align-self-end",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "MEDIA_ICON_PLACEMENT",
+    "DISPLAY_NAME": "Icon Placement",
+    "DISPLAY_SEQUENCE": 2,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "MEDIA_ICON_PLACEMENT_LEFT",
+        "DISPLAY_NAME": "Left",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-media-icon-placement-left",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "MEDIA_ICON_PLACEMENT_RIGHT",
+        "DISPLAY_NAME": "Right",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-media-icon-placement-right",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "MEDIA_ICON_PLACEMENT_ALTERNATE",
+        "DISPLAY_NAME": "Alternate",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-media-icon-placement-alternate",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
+]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
 []
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ft-media-icon-align-self-start:ft-media-icon-placement-left
+{{/PRESET_TEMPLATE_OPTIONS}}
