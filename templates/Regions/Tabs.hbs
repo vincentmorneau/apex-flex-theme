@@ -1,0 +1,54 @@
+{{#TEMPLATE}}
+<div id="#REGION_STATIC_ID#" class="ft-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+  <div id="#REGION_STATIC_ID#-tabs" class="ft-region-header t-Region-body">#SUB_REGION_HEADERS#</div>
+  <div id="#REGION_STATIC_ID#-body" class="ft-region-body t-Region-body tab-content">#BODY#</div>
+  <div id="#REGION_STATIC_ID#-content" class="ft-sub-region-body t-Region-body tab-content">#SUB_REGIONS#</div>
+</div>
+{{/TEMPLATE}}
+{{#SUB_PLUG_HEADER_TEMPLATE}}
+<ul id="#REGION_STATIC_ID#-tabs" class="nav mb-3" role="tablist">#ENTRIES#</ul>
+{{/SUB_PLUG_HEADER_TEMPLATE}}
+{{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+<li class="nav-item">
+  <a id="ft-tab-link-#SUB_REGION_ID#" href="#ft-tab-#SUB_REGION_ID#" class="nav-link active" data-toggle="tab" role="tab" aria-controls="ft-tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a>
+</li>
+{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+{{#SUB_PLUG_TEMPLATE}}
+<div id="ft-tab-#SUB_REGION_ID#" class="tab-pane fade" role="tabpanel" aria-labelledby="ft-tab-link-#SUB_REGION_ID#">#SUB_REGION#</div>
+{{/SUB_PLUG_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[
+  {
+    "NAME": "NAV_STYLE",
+    "DISPLAY_NAME": "Navigation Style",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+        {
+          "NAME": "NAV_TABS",
+          "DISPLAY_NAME": "Tabs",
+          "DISPLAY_SEQUENCE": 2,
+          "CSS_CLASSES": "ft-nav-tabs",
+          "HELP_TEXT": ""
+        },
+        {
+          "NAME": "NAV_PILLS",
+          "DISPLAY_NAME": "Pills",
+          "DISPLAY_SEQUENCE": 2,
+          "CSS_CLASSES": "ft-nav-pills",
+          "HELP_TEXT": ""
+        }
+    ]
+  }
+]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ft-nav-tabs
+{{/PRESET_TEMPLATE_OPTIONS}}

@@ -5,39 +5,39 @@
 
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
 <nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES# navbar-expand flex-row d-flex ml-md-auto order-3 order-lg-2">
-	<ul class="navbar-nav">
+<ul class="navbar-nav">
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
 <li class="nav-item active">
-		<a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
-		</a>
-	</li>
+    <a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
+        <i class="#ICON_CSS_CLASSES#"></i>
+        <span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
+    </a>
+</li>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}
 <li class="nav-item active dropdown">
-		<a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
-		</a>
-	</li>
+    <a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="#ICON_CSS_CLASSES#"></i>
+        <span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
+    </a>
+</li>
 {{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
 <li class="nav-item">
-		<a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
-	</li>
+    <a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
+        <i class="#ICON_CSS_CLASSES#"></i>
+        <span class="nav-item-text">#TEXT#</span>
+    </a>
+</li>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
 <li class="nav-item dropdown">
-		<a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
-	</li>
+    <a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="#ICON_CSS_CLASSES#"></i>
+        <span class="nav-item-text">#TEXT#</span>
+    </a>
+</li>
 {{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
@@ -46,27 +46,27 @@
 {{/BEFORE_SUB_LIST}}
 {{#SUB_LIST_ITEM_CURRENT}}
 <a class="dropdown-item active" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_LIST_ITEM_CURRENT}}
 {{#SUB_LIST_ITEM_NONCURRENT}}
 <a class="dropdown-item" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_LIST_ITEM_NONCURRENT}}
 {{#SUB_TEMPLATE_CURR_W_CHILD}}
 <a class="dropdown-item active" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_TEMPLATE_CURR_W_CHILD}}
 {{#SUB_TEMPLATE_NONCURR_W_CHILD}}
 <a class="dropdown-item" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
 {{#AFTER_SUB_LIST}}
@@ -79,7 +79,6 @@
 {{#FITEM_TEMPLATE_NONCURR_W_CHILD}}{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#LIST_TEMPLATE_AFTER_ROWS}}
 </ul>
-</div>
 </nav>
 {{/LIST_TEMPLATE_AFTER_ROWS}}
 

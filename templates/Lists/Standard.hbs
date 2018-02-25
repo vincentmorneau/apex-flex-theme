@@ -4,34 +4,46 @@
 {{#INLINE_CSS}}{{/INLINE_CSS}}
 
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
-<nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES#"><ul class="nav">
+<ul id="#LIST_ID#" class="nav #COMPONENT_CSS_CLASSES#">
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
-<li class="nav-item active"><a href="#LINK#" class="active nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
+<li class="nav-item active">
+    <a href="#LINK#" class="active nav-link"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>
+</li>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}
-<li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="#ICON_CSS_CLASSES#"></i> #TEXT#</a><div class="dropdown-menu">
+<li class="nav-item active">
+    <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>#TEXT#</a>
+</li>
 {{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
-<li class="nav-item"><a href="#LINK#" class="nav-link #A01#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a></li>
+<li class="nav-item">
+    <a href="#LINK#" class="nav-link"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>
+</li>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
-<li class="nav-item dropdown"><a href="#LINK#" class="nav-link #A01# dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="#ICON_CSS_CLASSES#"></i> #TEXT#</a><div class="dropdown-menu">
+<li class="nav-item">
+    <a href="#LINK#" class="nav-link"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>
+</li>
 {{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
-{{#BEFORE_SUB_LIST}}{{/BEFORE_SUB_LIST}}
+{{#BEFORE_SUB_LIST}}
+<div class="dropdown-menu">
+{{/BEFORE_SUB_LIST}}
 {{#SUB_LIST_ITEM_CURRENT}}
-<a href="#LINK#" class="dropdown-item #A01# active" href="#">#TEXT#</a>
+<a class="dropdown-item active" href="#LINK#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>
 {{/SUB_LIST_ITEM_CURRENT}}
 {{#SUB_LIST_ITEM_NONCURRENT}}
-<a href="#LINK#" class="dropdown-item #A01#" href="#">#TEXT#</a>
+<a class="dropdown-item" href="#LINK#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>
 {{/SUB_LIST_ITEM_NONCURRENT}}
-{{#SUB_TEMPLATE_CURR_W_CHILD}}{{/SUB_TEMPLATE_CURR_W_CHILD}}
-{{#SUB_TEMPLATE_NONCURR_W_CHILD}}{{/SUB_TEMPLATE_NONCURR_W_CHILD}}
+{{#SUB_TEMPLATE_CURR_W_CHILD}}
+{{/SUB_TEMPLATE_CURR_W_CHILD}}
+{{#SUB_TEMPLATE_NONCURR_W_CHILD}}
+{{/SUB_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
 {{#AFTER_SUB_LIST}}
-</div></li>
+</div>
 {{/AFTER_SUB_LIST}}
 
 {{#FIRST_LIST_TEMPLATE_NONCURRENT}}{{/FIRST_LIST_TEMPLATE_NONCURRENT}}
@@ -39,7 +51,7 @@
 {{#F_ITEM_TEMPLATE_CURR_W_CHILD}}{{/F_ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#FITEM_TEMPLATE_NONCURR_W_CHILD}}{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#LIST_TEMPLATE_AFTER_ROWS}}
-</ul></nav>
+</ul>
 {{/LIST_TEMPLATE_AFTER_ROWS}}
 
 {{#A01_LABEL}}{{/A01_LABEL}}
@@ -64,7 +76,84 @@
 {{#A20_LABEL}}{{/A20_LABEL}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
+[
+  {
+    "NAME": "NAV_ALIGN",
+    "DISPLAY_NAME": "Navigation Alignment",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Horizontal, Aligned Left",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "NAV_ALIGN_HORIZONTAL_CENTER",
+        "DISPLAY_NAME": "Horizontal, Aligned Center",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "justify-content-center"
+      },
+      {
+        "NAME": "NAV_ALIGN_HORIZONTAL_RIGHT",
+        "DISPLAY_NAME": "Horizontal, Aligned Right",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "justify-content-end"
+      },
+      {
+        "NAME": "NAV_ALIGN_HORIZONTAL_FILLED",
+        "DISPLAY_NAME": "Horizontal, Filled",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "nav-fill"
+      },
+      {
+        "NAME": "NAV_ALIGN_HORIZONTAL_JUSTIFIED",
+        "DISPLAY_NAME": "Horizontal, Justified",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "nav-justified"
+      },
+      {
+        "NAME": "NAV_ALIGN_VERTICAL_LEFT",
+        "DISPLAY_NAME": "Vertical, Aligned Left",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "flex-column text-left"
+      },
+      {
+        "NAME": "NAV_ALIGN_VERTICAL_CENTER",
+        "DISPLAY_NAME": "Vertical, Aligned Center",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "flex-column text-center"
+      },
+      {
+        "NAME": "NAV_ALIGN_VERTICAL_RIGHT",
+        "DISPLAY_NAME": "Vertical, Aligned Right",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "flex-column text-right"
+      }
+    ]
+  },
+  {
+    "NAME": "NAV_STYLE",
+    "DISPLAY_NAME": "Navigation Style",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+        {
+          "NAME": "NAV_TABS",
+          "DISPLAY_NAME": "Tabs",
+          "DISPLAY_SEQUENCE": 2,
+          "CSS_CLASSES": "nav-tabs",
+          "HELP_TEXT": ""
+        },
+        {
+          "NAME": "NAV_PILLS",
+          "DISPLAY_NAME": "Pills",
+          "DISPLAY_SEQUENCE": 2,
+          "CSS_CLASSES": "nav-pills",
+          "HELP_TEXT": ""
+        }
+    ]
+  }
+]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
 []
