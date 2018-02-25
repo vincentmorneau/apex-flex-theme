@@ -5,3 +5,7 @@
 .ft-nav-pills .ft-region-header .nav {
 	@extend .nav-pills;
 }
+
+.ft-tab-fade .tab-pane {
+	@extend .fade;
+}

@@ -2,7 +2,7 @@
  * Removes empty objects from the DOM based on the given selector
  * @returns {object}
  */
-$.fn.removeEmpty = function() {
+$.fn.removeEmptyElements = function() {
 	return this.filter(function() {
 		return $.trim($(this).text()) === "" && $(this).children().length === 0;
 	}).remove();
@@ -12,38 +12,21 @@ $.fn.removeEmpty = function() {
  * Removes empty objects from the DOM based on the given selector
  * @returns {object}
  */
-$.fn.removeEmptySpaces = function() {
+$.fn.removeBlankElements = function() {
 	return this.filter(function() {
 		return $.trim($(this).text()) === "";
 	}).remove();
 };
 
 /**
- * @namespace apexBootstrap
+ * @namespace aft
  **/
-var apexBootstrap = apexBootstrap || {};
-
-/**
- * @module debug
- **/
-apexBootstrap.debug = {
-	time: function(name) {
-		if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
-			console.time(name);
-		}
-	},
-
-	timeEnd: function(name) {
-		if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
-			console.timeEnd(name);
-		}
-	}
-};
+var aft = aft || {};
 
 /**
  * @module messages
  **/
-apexBootstrap.messages = {
+aft.messages = {
 	init: function() {
 		// message is missing for theme roller
 		apex.lang.addMessages({
@@ -55,7 +38,7 @@ apexBootstrap.messages = {
 /**
  * @module theme
  **/
-apexBootstrap.theme = {
+aft.theme = {
 	bindings: function() {
 		var ViewModel = function() {
 			// This substitution string is driven from page template
@@ -70,7 +53,7 @@ apexBootstrap.theme = {
 
 	init: function() {
 		// Deletes empty html tags
-		$('.nav-item-text, i:not([class]), i[class=""]').removeEmpty();
+		$('.nav-item-text, i:not([class]), i[class=""]').removeEmptyElements();
 
 		// Carousel
 		// $(".carousel").each(function() {
@@ -203,7 +186,7 @@ apexBootstrap.theme = {
 };
 
 $(function() {
-	apexBootstrap.theme.init();
-	apexBootstrap.theme.bindings();
-	apexBootstrap.messages.init();
+	aft.theme.init();
+	aft.theme.bindings();
+	aft.messages.init();
 });

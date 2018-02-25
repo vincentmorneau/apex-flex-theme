@@ -1,5 +1,5 @@
 {{#TEMPLATE}}
-<div id="#REGION_STATIC_ID#" class="ft-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+<div id="#REGION_STATIC_ID#" class="ft-region ft-region-tabs #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
   <div id="#REGION_STATIC_ID#-tabs" class="ft-region-header t-Region-body">#SUB_REGION_HEADERS#</div>
   <div id="#REGION_STATIC_ID#-body" class="ft-region-body t-Region-body tab-content">#BODY#</div>
   <div id="#REGION_STATIC_ID#-content" class="ft-sub-region-body t-Region-body tab-content">#SUB_REGIONS#</div>
@@ -10,11 +10,11 @@
 {{/SUB_PLUG_HEADER_TEMPLATE}}
 {{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
 <li class="nav-item">
-  <a id="ft-tab-link-#SUB_REGION_ID#" href="#ft-tab-#SUB_REGION_ID#" class="nav-link active" data-toggle="tab" role="tab" aria-controls="ft-tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a>
+  <a id="ft-tab-#SUB_REGION_ID#-link" href="#ft-tab-#SUB_REGION_ID#" class="nav-link" data-toggle="tab" role="tab" aria-controls="ft-tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a>
 </li>
 {{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
 {{#SUB_PLUG_TEMPLATE}}
-<div id="ft-tab-#SUB_REGION_ID#" class="tab-pane fade" role="tabpanel" aria-labelledby="ft-tab-link-#SUB_REGION_ID#">#SUB_REGION#</div>
+<div id="ft-tab-#SUB_REGION_ID#" class="tab-pane" role="tabpanel" aria-labelledby="ft-tab-link-#SUB_REGION_ID#">#SUB_REGION#</div>
 {{/SUB_PLUG_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
@@ -27,28 +27,46 @@
     "NULL_TEXT": "Default",
     "IS_ADVANCED": "N",
     "TEMPLATE_OPTIONS": [
-        {
-          "NAME": "NAV_TABS",
-          "DISPLAY_NAME": "Tabs",
-          "DISPLAY_SEQUENCE": 2,
-          "CSS_CLASSES": "ft-nav-tabs",
-          "HELP_TEXT": ""
-        },
-        {
-          "NAME": "NAV_PILLS",
-          "DISPLAY_NAME": "Pills",
-          "DISPLAY_SEQUENCE": 2,
-          "CSS_CLASSES": "ft-nav-pills",
-          "HELP_TEXT": ""
-        }
+      {
+        "NAME": "NAV_TABS",
+        "DISPLAY_NAME": "Tabs",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-nav-tabs",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "NAV_PILLS",
+        "DISPLAY_NAME": "Pills",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-nav-pills",
+        "HELP_TEXT": ""
+      }
     ]
   }
 ]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
-[]
+[
+  {
+    "NAME": "REMEMBER_ACTIVE_TAB",
+    "DISPLAY_NAME": "Remember Active Tab",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "js-useLocalStorage",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": "N"
+  },
+  {
+    "NAME": "TAB_FADE",
+    "DISPLAY_NAME": "Add Fade Effect",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "ft-tab-fade",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": "N"
+  }
+]
 {{/TEMPLATE_OPTIONS}}
-{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+js-useLocalStorage:ft-tab-fade:ft-nav-tabs
+{{/DEFAULT_TEMPLATE_OPTIONS}}
 {{#PRESET_TEMPLATE_OPTIONS}}
-ft-nav-tabs
 {{/PRESET_TEMPLATE_OPTIONS}}
