@@ -37,10 +37,8 @@
 {{#SUB_LIST_ITEM_NONCURRENT}}
 <a class="dropdown-item" href="#LINK#"><i class="#ICON_CSS_CLASSES#"></i>#TEXT#</a>
 {{/SUB_LIST_ITEM_NONCURRENT}}
-{{#SUB_TEMPLATE_CURR_W_CHILD}}
-{{/SUB_TEMPLATE_CURR_W_CHILD}}
-{{#SUB_TEMPLATE_NONCURR_W_CHILD}}
-{{/SUB_TEMPLATE_NONCURR_W_CHILD}}
+{{#SUB_TEMPLATE_CURR_W_CHILD}}{{/SUB_TEMPLATE_CURR_W_CHILD}}
+{{#SUB_TEMPLATE_NONCURR_W_CHILD}}{{/SUB_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
 {{#AFTER_SUB_LIST}}
 </div>
@@ -78,9 +76,33 @@
 {{#TEMPLATE_OPTION_GROUPS}}
 [
   {
+    "NAME": "NAV_STYLE",
+    "DISPLAY_NAME": "Navigation Style",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "NAV_PILLS",
+        "DISPLAY_NAME": "Pills",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "nav-pills",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "NAV_TABS",
+        "DISPLAY_NAME": "Tabs",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "nav-tabs",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
     "NAME": "NAV_ALIGN",
     "DISPLAY_NAME": "Navigation Alignment",
-    "DISPLAY_SEQUENCE": 1,
+    "DISPLAY_SEQUENCE": 2,
     "HELP_TEXT": "",
     "NULL_TEXT": "Horizontal, Aligned Left",
     "IS_ADVANCED": "N",
@@ -89,68 +111,51 @@
         "NAME": "NAV_ALIGN_HORIZONTAL_CENTER",
         "DISPLAY_NAME": "Horizontal, Aligned Center",
         "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "justify-content-center"
+        "CSS_CLASSES": "justify-content-center",
+        "HELP_TEXT": ""
       },
       {
         "NAME": "NAV_ALIGN_HORIZONTAL_RIGHT",
         "DISPLAY_NAME": "Horizontal, Aligned Right",
         "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "justify-content-end"
-      },
-      {
-        "NAME": "NAV_ALIGN_HORIZONTAL_FILLED",
-        "DISPLAY_NAME": "Horizontal, Filled",
-        "DISPLAY_SEQUENCE": 3,
-        "CSS_CLASSES": "nav-fill"
+        "CSS_CLASSES": "justify-content-end",
+        "HELP_TEXT": ""
       },
       {
         "NAME": "NAV_ALIGN_HORIZONTAL_JUSTIFIED",
         "DISPLAY_NAME": "Horizontal, Justified",
         "DISPLAY_SEQUENCE": 3,
-        "CSS_CLASSES": "nav-justified"
+        "CSS_CLASSES": "nav-justified",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "NAV_ALIGN_HORIZONTAL_FILLED",
+        "DISPLAY_NAME": "Horizontal, Filled",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "nav-fill",
+        "HELP_TEXT": ""
       },
       {
         "NAME": "NAV_ALIGN_VERTICAL_LEFT",
         "DISPLAY_NAME": "Vertical, Aligned Left",
-        "DISPLAY_SEQUENCE": 4,
-        "CSS_CLASSES": "flex-column text-left"
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "flex-column text-left",
+        "HELP_TEXT": ""
       },
       {
         "NAME": "NAV_ALIGN_VERTICAL_CENTER",
         "DISPLAY_NAME": "Vertical, Aligned Center",
-        "DISPLAY_SEQUENCE": 5,
-        "CSS_CLASSES": "flex-column text-center"
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "flex-column text-center",
+        "HELP_TEXT": ""
       },
       {
         "NAME": "NAV_ALIGN_VERTICAL_RIGHT",
         "DISPLAY_NAME": "Vertical, Aligned Right",
-        "DISPLAY_SEQUENCE": 6,
-        "CSS_CLASSES": "flex-column text-right"
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "flex-column text-right",
+        "HELP_TEXT": ""
       }
-    ]
-  },
-  {
-    "NAME": "NAV_STYLE",
-    "DISPLAY_NAME": "Navigation Style",
-    "DISPLAY_SEQUENCE": 0,
-    "HELP_TEXT": "",
-    "NULL_TEXT": "Default",
-    "IS_ADVANCED": "N",
-    "TEMPLATE_OPTIONS": [
-        {
-          "NAME": "NAV_TABS",
-          "DISPLAY_NAME": "Tabs",
-          "DISPLAY_SEQUENCE": 2,
-          "CSS_CLASSES": "nav-tabs",
-          "HELP_TEXT": ""
-        },
-        {
-          "NAME": "NAV_PILLS",
-          "DISPLAY_NAME": "Pills",
-          "DISPLAY_SEQUENCE": 2,
-          "CSS_CLASSES": "nav-pills",
-          "HELP_TEXT": ""
-        }
     ]
   }
 ]
