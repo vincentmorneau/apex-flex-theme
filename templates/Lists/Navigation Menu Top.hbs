@@ -5,43 +5,43 @@
 
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
 <button class="navbar-toggler order-0 d-lg-none mr-2" type="button" data-toggle="collapse" data-target="##LIST_ID#-content" aria-controls="#LIST_ID#-content" aria-expanded="false" aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
 </button>
 <nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES# navbar-expand-lg order-4 order-lg-1 col-12 col-lg-auto px-0">
-	<div class="collapse navbar-collapse" id="#LIST_ID#-content">
-		<ul class="navbar-nav">
+<div class="collapse navbar-collapse" id="#LIST_ID#-content">
+<ul class="navbar-nav">
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
 <li class="nav-item active">
-		<a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
-		</a>
-	</li>
+  <a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
+  </a>
+</li>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}
 <li class="nav-item active dropdown">
-		<a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
-		</a>
-	</li>
+  <a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT# <span class="sr-only">(current)</span></span>
+  </a>
+</li>
 {{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
 <li class="nav-item">
-		<a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
-	</li>
+  <a id="#LIST_ITEM_ID#" class="nav-link d-inline-block" href="#LINK#">
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT#</span>
+  </a>
+</li>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
 <li class="nav-item dropdown">
-		<a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
-	</li>
+  <a class="nav-link d-inline-block dropdown-toggle" href="#LINK#" id="#LIST_ITEM_ID#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="#ICON_CSS_CLASSES#"></i>
+    <span class="nav-item-text">#TEXT#</span>
+  </a>
+</li>
 {{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
@@ -50,27 +50,27 @@
 {{/BEFORE_SUB_LIST}}
 {{#SUB_LIST_ITEM_CURRENT}}
 <a class="dropdown-item active" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+  <i class="#ICON_CSS_CLASSES#"></i>
+  <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_LIST_ITEM_CURRENT}}
 {{#SUB_LIST_ITEM_NONCURRENT}}
 <a class="dropdown-item" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+  <i class="#ICON_CSS_CLASSES#"></i>
+  <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_LIST_ITEM_NONCURRENT}}
 {{#SUB_TEMPLATE_CURR_W_CHILD}}
 <a class="dropdown-item active" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+  <i class="#ICON_CSS_CLASSES#"></i>
+  <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_TEMPLATE_CURR_W_CHILD}}
 {{#SUB_TEMPLATE_NONCURR_W_CHILD}}
 <a class="dropdown-item" href="#LINK#">
-			<i class="#ICON_CSS_CLASSES#"></i>
-			<span class="nav-item-text">#TEXT#</span>
-		</a>
+  <i class="#ICON_CSS_CLASSES#"></i>
+  <span class="nav-item-text">#TEXT#</span>
+</a>
 {{/SUB_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
 {{#AFTER_SUB_LIST}}
