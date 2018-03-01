@@ -1,12 +1,9 @@
-// Icons
-.navbar {
+.ft-navbar {
+	background-color: $navbar-background-color;
+
 	.nav-item {
 		i + .nav-item-text {
 			margin-left: 0.5rem;
 		}
 	}
-}
-
-.ft-navbar {
-	background-color: $navbar-background-color;
 }

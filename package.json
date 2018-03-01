@@ -10,7 +10,6 @@
     "url": "git://github.com/vincentmorneau/apex-flex-theme.git"
   },
   "dependencies": {
-    "bootstrap": "4.0.0",
-    "knockout-pre-rendered": "^0.9.1"
+    "bootstrap": "4.0.0"
   }
 }

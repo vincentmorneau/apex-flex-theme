@@ -1,5 +1,27 @@
-// header {
-// 	.ft-region {
-// 		margin-bottom: 0;
-// 	}
-// }
+// Body container
+.ft-page-body-container {
+	.ft-main {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+}
+
+.ft-page-body-container-fluid {
+	.ft-main {
+		@include make-container();
+	}
+}
+
+// Footer container
+.ft-page-footer-container {
+	.ft-footer {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+}
+
+.ft-page-footer-container-fluid {
+	.ft-footer {
+		@include make-container();
+	}
+}
