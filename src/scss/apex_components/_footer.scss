@@ -1,0 +1,9 @@
+.ft-footer {
+	.ft-footer-top {
+		background-color: $footer-background-color;
+	}
+
+	.ft-footer-bottom {
+		background-color: darken($footer-background-color, 5%);
+	}
+}
