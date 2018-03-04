@@ -1,3 +1,14 @@
+// Sticky Footer
+body > form {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+	main {
+		flex: 1 0 auto;
+	}
+}
+
 // Body container
 .ft-page-body-container {
 	.ft-main {
@@ -14,14 +25,14 @@
 
 // Footer container
 .ft-page-footer-container {
-	.ft-footer {
+	.ft-footer-top, .ft-footer-bottom {
 		@include make-container();
 		@include make-container-max-widths();
 	}
 }
 
 .ft-page-footer-container-fluid {
-	.ft-footer {
+	.ft-footer-top, .ft-footer-bottom {
 		@include make-container();
 	}
 }
