@@ -162,6 +162,14 @@ $sizes: ();
 //
 // Settings for the `<body>` element.
 
+/*
+{
+  "var" : "$body-background-color",
+  "name" : "Body Background Color",
+  "type" : "color",
+  "group": "Body"
+}
+*/
 $body-bg:                   $white;
 $body-color:                $gray-900;
 
