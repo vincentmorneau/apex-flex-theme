@@ -1,0 +1,17 @@
+// Bootstrap required files
+@import "functions";
+@import "variables";
+@import "mixins";
+
+// APEX required files
+@import "aft_variables";
+@import "aft_mixins";
+
+// Bootstrap Sass
+@import "bootstrap";
+
+// Extends from Bootstrap code for APEX
+@import "aft_extends";
+
+// APEX Sass
+@import "aft_components";
