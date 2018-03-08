@@ -1,9 +1,19 @@
 /*
 {
-  "var" : "@footer-background-color",
-  "name" : "Footer Background Color",
+  "var" : "$footer-top-background-color",
+  "name" : "Footer Top Background Color",
   "type" : "color",
   "group": "Footer"
 }
 */
-$footer-background-color: $navbar-background-color;
+$footer-top-background-color: $body-bg;
+
+/*
+{
+  "var" : "$footer-bottom-background-color",
+  "name" : "Footer Bottom Background Color",
+  "type" : "color",
+  "group": "Footer"
+}
+*/
+$footer-bottom-background-color: $navbar-background-color;

@@ -1,9 +1,15 @@
 .ft-footer {
 	.ft-footer-top {
-		background-color: $footer-background-color;
+		background-color: $footer-top-background-color;
 	}
 
 	.ft-footer-bottom {
-		background-color: darken($footer-background-color, 5%);
+		background-color: $footer-bottom-background-color;
+
+		.version, .customize, .screenreader {
+			&:not(:empty) {
+				margin-right: 1rem;
+			}
+		}
 	}
 }
