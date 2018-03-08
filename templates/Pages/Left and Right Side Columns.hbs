@@ -1,63 +1,73 @@
 {{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
 {{#JAVASCRIPT_CODE}}{{/JAVASCRIPT_CODE}}
-{{#JAVASCRIPT_CODE_ONLOAD}}{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#JAVASCRIPT_CODE_ONLOAD}}
+aft.theme.ready();
+{{/JAVASCRIPT_CODE_ONLOAD}}
 {{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
 {{#INLINE_CSS}}{{/INLINE_CSS}}
 
 {{#HEADER_TEMPLATE}}
 <!doctype html>
 <html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
-	<head>
-		<title>#TITLE#</title>
-		#FAVICONS#
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <title>#TITLE#</title>
+    #FAVICONS#
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		#HEAD#
-		#APEX_CSS#
-		#THEME_CSS#
-		#THEME_STYLE_CSS#
-		#TEMPLATE_CSS#
-		#APPLICATION_CSS#
-		#PAGE_CSS#
-	</head>
-	<body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
+    #HEAD#
+    #APEX_CSS#
+    #THEME_CSS#
+    #THEME_STYLE_CSS#
+    #TEMPLATE_CSS#
+    #APPLICATION_CSS#
+    #PAGE_CSS#
+  </head>
+  <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
 {{/HEADER_TEMPLATE}}
 {{#BOX}}
 #FORM_OPEN#
 
 <header class="ft-header">
-	<nav class="ft-navbar navbar d-flex flex-column flex-md-row">
-		#TOP_GLOBAL_NAVIGATION_LIST#
-		<a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
-		#NAVIGATION_BAR#
-	</nav>
-	<!-- Under Navigation Bar -->
-	#REGION_POSITION_02#
+  <nav class="ft-navbar navbar d-flex flex-column flex-md-row">
+    #TOP_GLOBAL_NAVIGATION_LIST#
+    <a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
+    #NAVIGATION_BAR#
+  </nav>
 </header>
 
 <main class="ft-main">
-	<div class="row">
-	  <div class="ft-breadcrumb col-12">#REGION_POSITION_04#</div>
-		<div class="ft-main-left col-12 col-sm-3">#SIDE_GLOBAL_NAVIGATION_LIST##REGION_POSITION_03#</div>
+  <div class="ft-main-header">#REGION_POSITION_02#</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="ft-main-left border-right py-3 col-12 col-sm-3 col-lg-2">#SIDE_GLOBAL_NAVIGATION_LIST##REGION_POSITION_03#</div>
 
-		<div class="ft-main-center col">
-			<div class="ft-messages">#GLOBAL_NOTIFICATION##SUCCESS_MESSAGE##NOTIFICATION_MESSAGE#</div>
-			<div class="ft-body">#BODY#</div>
-		</div>
+      <div class="ft-main-center ft-main-container col">
+        <div class="ft-breadcrumb">#REGION_POSITION_04#</div>
+        <div class="ft-body py-3">
+          <div class="ft-messages">#GLOBAL_NOTIFICATION##SUCCESS_MESSAGE##NOTIFICATION_MESSAGE#</div>
+          #BODY#
+        </div>
+      </div>
 
-		<div class="ft-main-right col-12 col-sm-3">#REGION_POSITION_05#</div>
-	</div>
+      <div class="ft-main-right border-left py-3 col-12 col-sm-3 col-lg-2">#REGION_POSITION_05#</div>
+    </div>
+  </div>
 </main>
 
-<footer class="ft-footer">
-	<div class="ft-footer-top">#REGION_POSITION_08#</div>
+<footer class="ft-footer border-top">
+  <div class="ft-footer-top py-5">
+    <div class="ft-footer-container">#REGION_POSITION_08#</div>
+  </div>
 
-	<div class="ft-footer-bottom d-flex flex-row justify-content-between">
-		<div class="version">#APP_VERSION#</div>
-		<div class="customize right">#CUSTOMIZE#</div>
-		<div class="screenreader right">#SCREEN_READER_TOGGLE#</div>
-	</div>
+  <div class="ft-footer-bottom py-2">
+    <div class="ft-footer-container d-flex">
+      <span class="version align-self-center">#APP_VERSION#</span>
+      <span class="customize align-self-center">#CUSTOMIZE#</span>
+      <span class="screenreader align-self-center">#SCREEN_READER_TOGGLE#</span>
+      <a href="#" class="btn btn-sm btn-outline-secondary ml-auto" id="t_Footer_topButton"><span class="a-Icon icon-up-chevron"></span></a>
+    </div>
+  </div>
 </footer>
 
 #FORM_CLOSE#
@@ -186,13 +196,6 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
     "IS_ADVANCED": "N",
     "TEMPLATE_OPTIONS": [
       {
-        "NAME": "NAVBAR_PLACEMENT_STICKY",
-        "DISPLAY_NAME": "Sticky",
-        "DISPLAY_SEQUENCE": 0,
-        "CSS_CLASSES": "ft-navbar-sticky-top",
-        "HELP_TEXT": ""
-      },
-      {
         "NAME": "NAVBAR_PLACEMENT_FIXED_BOTTOM",
         "DISPLAY_NAME": "Fixed Bottom",
         "DISPLAY_SEQUENCE": 1,
@@ -202,7 +205,7 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
       {
         "NAME": "NAVBAR_PLACEMENT_FIXED_TOP",
         "DISPLAY_NAME": "Fixed Top",
-        "DISPLAY_SEQUENCE": 1,
+        "DISPLAY_SEQUENCE": 2,
         "CSS_CLASSES": "ft-navbar-fixed-top",
         "HELP_TEXT": ""
       }
@@ -215,5 +218,5 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
 {{#PRESET_TEMPLATE_OPTIONS}}
-ft-page-body-container-fluid:ft-page-footer-container-fluid
+ft-page-body-container-fluid:ft-page-footer-container
 {{/PRESET_TEMPLATE_OPTIONS}}
