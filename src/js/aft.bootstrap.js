@@ -1,9 +1,4 @@
 /**
- * @namespace aft
- **/
-var aft = aft || {};
-
-/**
  * @module bootstrap
  **/
 aft.bootstrap = {
@@ -39,7 +34,3 @@ aft.bootstrap = {
 		});
 	}
 };
-
-$(function() {
-	aft.bootstrap.init();
-});
