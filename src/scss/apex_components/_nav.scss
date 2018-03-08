@@ -1,4 +1,7 @@
-.ft-nav > .nav-item:hover > .nav-link
-, .ft-nav > .active > .nav-link {
-  font-weight: 500;
+.ft-nav > .nav-item:hover > .nav-link {
+  text-decoration: underline;
+}
+
+.ft-color .nav-link {
+	color: inherit;
 }

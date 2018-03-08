@@ -1,3 +1,10 @@
+html {
+	// !important is required to overwrite what APEX already does
+	// Will be set to visible when the page has finished loading
+	// using JavaScript
+	visibility: hidden!important;
+}
+
 // Sticky Footer
 body > form {
 	display: flex;
@@ -11,14 +18,14 @@ body > form {
 
 // Body container
 .ft-page-body-container {
-	.ft-main {
+	.ft-main-container {
 		@include make-container();
 		@include make-container-max-widths();
 	}
 }
 
 .ft-page-body-container-fluid {
-	.ft-main {
+	.ft-main-container {
 		@include make-container();
 	}
 }
@@ -26,13 +33,23 @@ body > form {
 // Footer container
 .ft-page-footer-container {
 	.ft-footer-top, .ft-footer-bottom {
-		@include make-container();
-		@include make-container-max-widths();
+		.ft-footer-container {
+			@include make-container();
+			@include make-container-max-widths();
+		}
 	}
 }
 
 .ft-page-footer-container-fluid {
 	.ft-footer-top, .ft-footer-bottom {
-		@include make-container();
+		.ft-footer-container {
+			@include make-container();
+		}
+	}
+}
+
+.ft-region-left, .ft-region-right {
+	&:empty {
+		margin: 0!important;
 	}
 }

@@ -1,3 +1,4 @@
+// region sizes
 .ft-region-title-size-hidden > .ft-region-center > .ft-region-header .ft-region-title {
 	@extend .d-none;
 }
@@ -30,4 +31,36 @@
 }
 .ft-region-title-size-h6 > .ft-region-center > .ft-region-header .ft-region-title {
 	@extend .h6;
+}
+
+// region title color
+.ft-color-title-primary > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-primary;
+}
+.ft-color-title-secondary > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-secondary;
+}
+.ft-color-title-success > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-success;
+}
+.ft-color-title-danger > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-danger;
+}
+.ft-color-title-warning > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-warning;
+}
+.ft-color-title-info > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-info;
+}
+.ft-color-title-light > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-light;
+}
+.ft-color-title-dark > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-dark;
+}
+.ft-color-title-muted > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-muted;
+}
+.ft-color-title-white > .ft-region-center > .ft-region-header .ft-region-title {
+	@extend .text-white;
 }

@@ -9,9 +9,6 @@ if $navbar-text-style == navbar-dark {
 	}
 }
 
-.ft-navbar-sticky-top .ft-navbar {
-	@extend .sticky-top;
-}
 .ft-navbar-fixed-top .ft-navbar {
 	@extend .fixed-top;
 }
