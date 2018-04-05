@@ -1,15 +1,15 @@
 /**
- * @namespace aft
+ * @namespace ft
  **/
-var aft = aft || {};
+var ft = ft || {};
 
 /**
  * @module theme
  **/
-aft.theme = {
+ft.theme = {
 	ready: function() {
 		// Initialize Bootstrap components
-		aft.bootstrap.init();
+		ft.bootstrap.init();
 
 		// making the page visible again
 		// !important is required to overwrite what APEX already does

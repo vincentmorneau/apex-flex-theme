@@ -1,7 +1,7 @@
 /**
  * @module bootstrap
  **/
-aft.bootstrap = {
+ft.bootstrap = {
 	init: function() {
 		// Tabs
 		$('.ft-region-tabs').each(function() {

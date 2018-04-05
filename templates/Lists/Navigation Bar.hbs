@@ -4,8 +4,7 @@
 {{#INLINE_CSS}}{{/INLINE_CSS}}
 
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
-<nav id="#LIST_ID#" class="#COMPONENT_CSS_CLASSES# navbar-expand flex-row d-flex ml-md-auto order-3 order-lg-2">
-<ul class="navbar-nav">
+<ul id="#LIST_ID#" class="navbar-nav">
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
 <li class="nav-item active">
@@ -42,7 +41,7 @@
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
 {{#BEFORE_SUB_LIST}}
-<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 {{/BEFORE_SUB_LIST}}
 {{#SUB_LIST_ITEM_CURRENT}}
 <a class="dropdown-item active" href="#LINK#">
@@ -79,7 +78,6 @@
 {{#FITEM_TEMPLATE_NONCURR_W_CHILD}}{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#LIST_TEMPLATE_AFTER_ROWS}}
 </ul>
-</nav>
 {{/LIST_TEMPLATE_AFTER_ROWS}}
 
 {{#A01_LABEL}}{{/A01_LABEL}}

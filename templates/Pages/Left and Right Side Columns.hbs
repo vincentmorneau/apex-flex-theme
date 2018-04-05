@@ -1,7 +1,7 @@
 {{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
 {{#JAVASCRIPT_CODE}}{{/JAVASCRIPT_CODE}}
 {{#JAVASCRIPT_CODE_ONLOAD}}
-aft.theme.ready();
+ft.theme.ready();
 {{/JAVASCRIPT_CODE_ONLOAD}}
 {{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
 {{#INLINE_CSS}}{{/INLINE_CSS}}
@@ -23,52 +23,62 @@ aft.theme.ready();
     #APPLICATION_CSS#
     #PAGE_CSS#
   </head>
-  <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
+  <body id="#PAGE_STATIC_ID#" class="ft-left-right-template #PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
 {{/HEADER_TEMPLATE}}
 {{#BOX}}
 #FORM_OPEN#
 
 <header class="ft-header">
-  <nav class="ft-navbar navbar d-flex flex-column flex-md-row">
+  <nav class="ft-navbar navbar d-flex flex-column flex-md-row border-bottom">
+    <button type="button" class="ft-main-left-toggle btn btn-light rounded-0 order-0">
+      <span class="fa fa-layout-nav-left" aria-hidden="true"></span>
+    </button>
     #TOP_GLOBAL_NAVIGATION_LIST#
-    <a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
-    #NAVIGATION_BAR#
+		<a class="navbar-brand order-1 order-lg-0" href="#HOME_LINK#">#LOGO#</a>
+    <nav class="navbar-expand flex-row d-flex ml-md-auto order-3 order-lg-2">
+      #NAVIGATION_BAR#
+	    <button type="button" class="ft-main-right-toggle btn btn-light rounded-0 order-4">
+	      <span class="fa fa-layout-nav-right" aria-hidden="true"></span>
+	    </button>
+    </nav>
   </nav>
 </header>
 
 <main class="ft-main">
   <div class="ft-main-header">#REGION_POSITION_02#</div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="ft-main-left border-right py-3 col-12 col-sm-3 col-lg-2">#SIDE_GLOBAL_NAVIGATION_LIST##REGION_POSITION_03#</div>
 
-      <div class="ft-main-center ft-main-container col">
-        <div class="ft-breadcrumb">#REGION_POSITION_04#</div>
-        <div class="ft-body py-3">
-          <div class="ft-messages">#GLOBAL_NOTIFICATION##SUCCESS_MESSAGE##NOTIFICATION_MESSAGE#</div>
-          #BODY#
-        </div>
+  <div class="ft-main-left border-right py-3 col-12 col-sm-3 col-lg-2">
+    <div class="ft-main-left-container">#SIDE_GLOBAL_NAVIGATION_LIST##REGION_POSITION_03#</div>
+  </div>
+
+  <div class="ft-main-center">
+    <div class="ft-breadcrumb">#REGION_POSITION_04#</div>
+    <div class="ft-main-center-container">
+      <div class="ft-body py-3">
+        <div class="ft-messages">#GLOBAL_NOTIFICATION##SUCCESS_MESSAGE##NOTIFICATION_MESSAGE#</div>
+        #BODY#
+      </div>
+    </div>
+
+    <footer class="ft-footer border-top">
+      <div class="ft-footer-top py-5">
+        <div class="ft-footer-container">#REGION_POSITION_08#</div>
       </div>
 
-      <div class="ft-main-right border-left py-3 col-12 col-sm-3 col-lg-2">#REGION_POSITION_05#</div>
-    </div>
+      <div class="ft-footer-bottom py-2">
+        <div class="ft-footer-container d-flex">
+          <span class="version align-self-center">#APP_VERSION#</span>
+          <span class="customize align-self-center">#CUSTOMIZE#</span>
+          <span class="screenreader align-self-center">#SCREEN_READER_TOGGLE#</span>
+          <a href="#" class="btn btn-sm btn-outline-secondary ml-auto" id="t_Footer_topButton"><span class="a-Icon icon-up-chevron"></span></a>
+        </div>
+      </div>
+    </footer>
   </div>
+
+  <div class="ft-main-right border-left py-3 col-12 col-sm-3 col-lg-2">
+    <div class="ft-main-right-container">#REGION_POSITION_05#</div>
 </main>
-
-<footer class="ft-footer border-top">
-  <div class="ft-footer-top py-5">
-    <div class="ft-footer-container">#REGION_POSITION_08#</div>
-  </div>
-
-  <div class="ft-footer-bottom py-2">
-    <div class="ft-footer-container d-flex">
-      <span class="version align-self-center">#APP_VERSION#</span>
-      <span class="customize align-self-center">#CUSTOMIZE#</span>
-      <span class="screenreader align-self-center">#SCREEN_READER_TOGGLE#</span>
-      <a href="#" class="btn btn-sm btn-outline-secondary ml-auto" id="t_Footer_topButton"><span class="a-Icon icon-up-chevron"></span></a>
-    </div>
-  </div>
-</footer>
 
 #FORM_CLOSE#
 {{/BOX}}

@@ -4,14 +4,14 @@
 @import "mixins";
 
 // APEX required files
-@import "aft_variables";
-@import "aft_mixins";
+@import "ft_variables";
+@import "ft_mixins";
 
 // Bootstrap Sass
 @import "bootstrap";
 
 // Extends from Bootstrap code for APEX
-@import "aft_extends";
+@import "ft_extends";
 
 // APEX Sass
-@import "aft_components";
+@import "ft_components";

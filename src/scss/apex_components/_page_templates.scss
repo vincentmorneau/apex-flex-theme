@@ -1,0 +1,50 @@
+.ft-left-right-template {
+	.ft-main-center {
+		@include media-breakpoint-up(sm) {
+			@include make-col-offset(3);
+			@include make-col(6);
+		}
+		@include media-breakpoint-up(lg) {
+			@include make-col-offset(2);
+			@include make-col(8);
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.ft-main-right-toggle {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin: 0.5rem;
+	}
+
+	.ft-main-left-toggle {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0.5rem;
+	}
+}
+
+.ft-main-left,
+.ft-main-right {
+	position: fixed;
+	z-index: 1029;
+}
+
+.ft-main-left-container,
+.ft-main-right-container {
+	overflow-y: auto;
+}
+
+.ft-main-right {
+	right: 0;
+
+	.ft-main-right-toggle {
+		transform: translateX(-43px);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

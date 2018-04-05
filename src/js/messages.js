@@ -1,7 +1,7 @@
 /**
  * @module messages
  **/
-aft.messages = {
+ft.messages = {
 	init: function() {
 		// message is missing for theme roller
 		apex.lang.addMessages({
@@ -11,5 +11,5 @@ aft.messages = {
 };
 
 $(function() {
-	aft.messages.init();
+	ft.messages.init();
 });

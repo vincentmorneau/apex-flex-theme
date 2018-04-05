@@ -6,10 +6,17 @@
 	.ft-footer-bottom {
 		background-color: $footer-bottom-background-color;
 
-		.version, .customize, .screenreader {
+		.customize,
+		.screenreader,
+		.version {
 			&:not(:empty) {
 				margin-right: 1rem;
 			}
 		}
+	}
+
+	.nav-link {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

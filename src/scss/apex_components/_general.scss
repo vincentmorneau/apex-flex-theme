@@ -4,7 +4,6 @@ html {
 	// using JavaScript
 	visibility: hidden!important;
 }
-
 // Sticky Footer
 body > form {
 	display: flex;
@@ -18,21 +17,21 @@ body > form {
 
 // Body container
 .ft-page-body-container {
-	.ft-main-container {
+	.ft-main-center-container {
 		@include make-container();
 		@include make-container-max-widths();
 	}
 }
 
 .ft-page-body-container-fluid {
-	.ft-main-container {
+	.ft-main-center-container {
 		@include make-container();
 	}
 }
-
 // Footer container
 .ft-page-footer-container {
-	.ft-footer-top, .ft-footer-bottom {
+	.ft-footer-bottom,
+	.ft-footer-top {
 		.ft-footer-container {
 			@include make-container();
 			@include make-container-max-widths();
@@ -41,14 +40,16 @@ body > form {
 }
 
 .ft-page-footer-container-fluid {
-	.ft-footer-top, .ft-footer-bottom {
+	.ft-footer-bottom,
+	.ft-footer-top {
 		.ft-footer-container {
 			@include make-container();
 		}
 	}
 }
 
-.ft-region-left, .ft-region-right {
+.ft-region-left,
+.ft-region-right {
 	&:empty {
 		margin: 0!important;
 	}

@@ -1,16 +1,18 @@
 {{#BEFORE_FIRST}}
-[]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
 {{/BEFORE_FIRST}}
 {{#CURRENT_PAGE_OPTION}}
-<li class="active">#NAME#</li>
+<li class="breadcrumb-item active" aria-current="page">#NAME#</li>
 {{/CURRENT_PAGE_OPTION}}
 {{#NON_CURRENT_PAGE_OPTION}}
-<li><a href="#LINK#">#NAME#</a></li>
+<li class="breadcrumb-item"><a href="#LINK#">#NAME#</a></li>
 {{/NON_CURRENT_PAGE_OPTION}}
 {{#MENU_LINK_ATTRIBUTES}}{{/MENU_LINK_ATTRIBUTES}}
 {{#BETWEEN_LEVELS}}{{/BETWEEN_LEVELS}}
 {{#AFTER_LAST}}
 </ol>
+</nav>
 {{/AFTER_LAST}}
 
 {{#MAX_LEVELS}}{{/MAX_LEVELS}}
