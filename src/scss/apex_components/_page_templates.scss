@@ -16,44 +16,90 @@
 
 .ft-left-right-template {
 	.ft-main-center {
-		@include media-breakpoint-up(sm) {
-			@include make-col-offset(3);
-			@include make-col(6);
+		@include make-col(12);
+		transition: max-width 0.3s, margin-left 0.3s;
+
+		&.ft-main-left-open {
+			@include media-breakpoint-up(sm) {
+				@include make-col-offset(3);
+				@include make-col(9);
+			}
+			@include media-breakpoint-up(lg) {
+				@include make-col-offset(2);
+				@include make-col(10);
+			}
 		}
-		@include media-breakpoint-up(lg) {
-			@include make-col-offset(2);
-			@include make-col(8);
+
+		&.ft-main-right-open {
+			@include media-breakpoint-up(sm) {
+				@include make-col(9);
+			}
+			@include media-breakpoint-up(lg) {
+				@include make-col(10);
+			}
+		}
+
+		&.ft-main-left-open.ft-main-right-open {
+			@include media-breakpoint-up(sm) {
+				@include make-col(6);
+			}
+			@include media-breakpoint-up(lg) {
+				@include make-col(8);
+			}
 		}
 	}
 }
+// @include media-breakpoint-down(xs) {
+// 	.ft-main-right-toggle {
+// 		@include hide;
+// 	}
+//
+// 	.ft-main-left-toggle {
+// 		@include hide;
+// 	}
+//
+// 	.ft-main-left,
+// 	.ft-main-right {
+// 		top: auto!important;
+// 		height: auto!important;
+// 	}
+// }
+// @include media-breakpoint-up(sm) {
 
 .ft-main-left,
 .ft-main-right {
+	@include make-col(6);
+
+	@include media-breakpoint-up(sm) {
+		@include make-col(3);
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(2);
+	}
+
 	position: fixed;
 	z-index: 1029;
+	transition: transform 0.3s ease-in-out;
+	background-color: $body-bg;
+
+	&.open {
+		transform: translateX(0);
+	}
+}
+
+.ft-main-left {
+	left: 0;
+	transform: translateX(-100%);
+}
+
+.ft-main-right {
+	right: 0;
+	transform: translateX(100%);
 }
 
 .ft-main-left-container,
 .ft-main-right-container {
 	overflow-y: auto;
 }
-
-.ft-main-left {
-	left: 0;
-	transition: transform 0.3s ease-in-out;
-	transform: translateX(-100%);
-
-	&.open {
-		transform: translateX(0);
-	}
-}
-
-.ft-main-right {
-	right: 0;
-	transition: transform 0.3s ease-in-out;
-	transform: translateX(100%);
-
-	&.open {
-		transform: translateX(0);
-	}
-}
+// }
