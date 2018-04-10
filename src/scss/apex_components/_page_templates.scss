@@ -1,16 +1,3 @@
-.ft-left-right-template {
-	.ft-main-center {
-		@include media-breakpoint-up(sm) {
-			@include make-col-offset(3);
-			@include make-col(6);
-		}
-		@include media-breakpoint-up(lg) {
-			@include make-col-offset(2);
-			@include make-col(8);
-		}
-	}
-}
-
 @include media-breakpoint-down(sm) {
 	.ft-main-right-toggle {
 		position: absolute;
@@ -27,6 +14,19 @@
 	}
 }
 
+.ft-left-right-template {
+	.ft-main-center {
+		@include media-breakpoint-up(sm) {
+			@include make-col-offset(3);
+			@include make-col(6);
+		}
+		@include media-breakpoint-up(lg) {
+			@include make-col-offset(2);
+			@include make-col(8);
+		}
+	}
+}
+
 .ft-main-left,
 .ft-main-right {
 	position: fixed;
@@ -38,13 +38,22 @@
 	overflow-y: auto;
 }
 
+.ft-main-left {
+	left: 0;
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(-100%);
+
+	&.open {
+		transform: translateX(0);
+	}
+}
+
 .ft-main-right {
 	right: 0;
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(100%);
 
-	.ft-main-right-toggle {
-		transform: translateX(-43px);
-		position: absolute;
-		top: 0;
-		left: 0;
+	&.open {
+		transform: translateX(0);
 	}
 }
