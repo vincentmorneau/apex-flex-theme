@@ -3,15 +3,15 @@ module.exports = {
 		// Initialize Bootstrap components
 		ft.bootstrap.init();
 
-		// making the page visible again
+		// Making the page visible again
 		// !important is required to overwrite what APEX already does
-		$("html").attr('style', 'visibility: visible!important');
+		$('html').attr('style', 'visibility: visible!important');
 
-		$('[data-toggle="ft-main-left"]').on('click', function() {
+		$('[data-toggle="ft-main-left"]').on('click', () => {
 			$('.ft-main-left').toggleClass('open');
 		});
 
-		$('[data-toggle="ft-main-right"]').on('click', function() {
+		$('[data-toggle="ft-main-right"]').on('click', () => {
 			$('.ft-main-right').toggleClass('open');
 		});
 	}

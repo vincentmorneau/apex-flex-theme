@@ -1,15 +1,32 @@
 {
-  "name": "apex-flex-theme",
-  "author": "Vincent Morneau",
-  "version": "0.0.2",
-  "description": "Bootstrap 4 Theme for Oracle APEX",
-  "link": "https://apex.oracle.com/pls/apex/f?p=73792",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vincentmorneau/apex-flex-theme.git"
-  },
-  "dependencies": {
-    "bootstrap": "4.1.0"
-  }
+	"name": "apex-flex-theme",
+	"author": "Vincent Morneau",
+	"version": "0.0.2",
+	"description": "Bootstrap 4 Theme for Oracle APEX",
+	"link": "https://apex.oracle.com/pls/apex/f?p=73792",
+	"license": "MIT",
+	"scripts": {
+		"test": "xo"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/vincentmorneau/apex-flex-theme.git"
+	},
+	"dependencies": {
+		"bootstrap": "4.1.0"
+	},
+	"devDependencies": {
+		"xo": "^0.20.3"
+	},
+	"xo": {
+		"env": "browser",
+		"globals": [
+			"$",
+			"apex",
+			"ft"
+		],
+		"ignores": [
+			"src/lib/**/*.js"
+		]
+	}
 }
