@@ -1,0 +1,46 @@
+{
+	"mode": "advanced",
+	"appURL": "CHANGE_ME_URL/f?p=73792:1",
+	"srcFolder": "/CHANGE_ME_PATH/apex-flex-theme/src",
+	"distFolder": "/CHANGE_ME_PATH/apex-flex-theme/dist",
+	"js": {
+		"processor": "webpack",
+		"concat": true,
+		"concatFilename": "ft",
+		"entries": ["/CHANGE_ME_PATH/apex-flex-theme/src/js/ft.js"],
+		"bundleFilename": "ft",
+		"library": true,
+		"libraryName": "ft",
+		"tsConcat": false
+	},
+	"css": {
+		"language": "sass",
+		"concat": false,
+		"sassIncludePath": "/CHANGE_ME_PATH/apex-flex-theme/node_modules/bootstrap/scss"
+	},
+	"browsersync": {
+		"notify": true,
+		"ghostMode": false
+	},
+	"header": {
+		"enabled": true,
+		"packageJsonPath": "/CHANGE_ME_PATH/apex-flex-theme/package.json"
+	},
+	"apex": {
+		"openBuilder": false
+	},
+	"publish": {
+		"destination": "theme",
+		"path": "sql",
+		"connectionType": "basic",
+		"username": "CHANGE_ME_PATH",
+		"password": "CHANGE_ME_PATH",
+		"host": "localhost",
+		"port": "CHANGE_ME_PATH",
+		"basicType": "sid",
+		"sid": "CHANGE_ME_PATH"
+	},
+	"themeroller": {
+		"files": ["/CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_groups.scss", "/CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_bootstrap.scss", "/CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_navbar.scss", "/CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_variables/_footer.scss", "/CHANGE_ME_PATH/apex-flex-theme/src/less/variables.less", "/CHANGE_ME_PATH/apex-flex-theme/src/less/navbar.less", "/CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_components/_footer.scss", "/CHANGE_ME_PATH/apex-flex-theme/src/scss/apex_components/_navbar.scss"]
+	}
+}

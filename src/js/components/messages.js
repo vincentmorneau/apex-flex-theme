@@ -1,9 +1,5 @@
-// TODO DELETE
-/**
- * @module messages
- **/
-ft.messages = {
-	init: function() {
+module.exports = {
+	init() {
 		// message is missing for theme roller
 		apex.lang.addMessages({
 			"PE.SELECT": "- Select -"

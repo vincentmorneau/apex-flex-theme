@@ -1,9 +1,5 @@
-// TODO DELETE
-/**
- * @module bootstrap
- **/
-ft.bootstrap = {
-	init: function() {
+module.exports = {
+	init() {
 		// Tabs
 		$('.ft-region-tabs').each(function() {
 			var $tabContainer = $(this);

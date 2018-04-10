@@ -1,9 +1,5 @@
-// TODO DELETE
-/**
- * @module theme
- **/
-ft.theme = {
-	ready: function() {
+module.exports = {
+	ready() {
 		// Initialize Bootstrap components
 		ft.bootstrap.init();
 
