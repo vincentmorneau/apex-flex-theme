@@ -10,6 +10,6 @@
     "url": "git://github.com/vincentmorneau/apex-flex-theme.git"
   },
   "dependencies": {
-    "bootstrap": "4.0.0"
+    "bootstrap": "4.1.0"
   }
 }
