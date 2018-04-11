@@ -1,6 +1,6 @@
 # APEX Flex Theme
 
-[![npm](https://img.shields.io/npm/v/apex-flex-theme.svg)](https://www.npmjs.com/package/apex-flex-theme) [![Build Status](https://travis-ci.org/vincentmorneau/apex-flex-theme.svg?branch=master)](https://travis-ci.org/vincentmorneau/apex-flex-theme) [![Dependency Status](https://david-dm.org/vincentmorneau/apex-flex-theme.svg)](https://david-dm.org/vincentmorneau/apex-flex-theme) [![APEX Theme](https://cdn.rawgit.com/Dani3lSun/apex-github-badges/b7e95341/badges/apex-theme-badge.svg)](https://cdn.rawgit.com/Dani3lSun/apex-github-badges)
+[![npm](https://img.shields.io/npm/v/apex-flex-theme.svg)](https://www.npmjs.com/package/apex-flex-theme) [![Build Status](https://travis-ci.org/vincentmorneau/apex-flex-theme.svg?branch=master)](https://travis-ci.org/vincentmorneau/apex-flex-theme) [![Dependency Status](https://david-dm.org/vincentmorneau/apex-flex-theme.svg)](https://david-dm.org/vincentmorneau/apex-flex-theme) [![APEX Theme](https://cdn.rawgit.com/Dani3lSun/apex-github-badges/b7e95341/badges/apex-theme-badge.svg)](https://cdn.rawgit.com/Dani3lSun/apex-github-badges) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 ## This is work in progress. v1.0.0 coming soon.
 
