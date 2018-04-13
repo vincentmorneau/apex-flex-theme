@@ -79,7 +79,7 @@
 	}
 
 	position: fixed;
-	z-index: 1029;
+	z-index: $zindex-fixed;
 	transition: transform 0.3s ease-in-out;
 	background-color: $body-bg;
 

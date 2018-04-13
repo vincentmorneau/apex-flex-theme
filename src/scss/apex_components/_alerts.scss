@@ -1,0 +1,17 @@
+.alert {
+	.ft-region-header .ft-region-title {
+		margin-bottom: 0!important;
+	}
+
+	.ft-region-body {
+		margin-top: $headings-margin-bottom;
+
+		&:empty {
+			margin-top: 0;
+		}
+	}
+
+	&:not(.alert-dismissible) button.close {
+		@include hide;
+	}
+}
