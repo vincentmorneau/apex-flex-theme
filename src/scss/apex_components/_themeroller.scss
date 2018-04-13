@@ -1,5 +1,6 @@
-// toolbar modals
-.utr {
+body .utr {
+	z-index: $zindex-modal!important;
+
 	// region display selector
 	.apex-rds {
 		padding-top: 0;
