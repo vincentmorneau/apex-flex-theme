@@ -49,22 +49,6 @@
 		}
 	}
 }
-// @include media-breakpoint-down(xs) {
-// 	.ft-main-right-toggle {
-// 		@include hide;
-// 	}
-//
-// 	.ft-main-left-toggle {
-// 		@include hide;
-// 	}
-//
-// 	.ft-main-left,
-// 	.ft-main-right {
-// 		top: auto!important;
-// 		height: auto!important;
-// 	}
-// }
-// @include media-breakpoint-up(sm) {
 
 .ft-main-left,
 .ft-main-right {
@@ -79,6 +63,7 @@
 	}
 
 	position: fixed;
+	overflow-y: auto;
 	z-index: $zindex-sticky;
 	transition: transform 0.3s ease-in-out;
 	background-color: $body-bg;
@@ -98,8 +83,7 @@
 	transform: translateX(100%);
 }
 
-.ft-main-left-container,
-.ft-main-right-container {
-	overflow-y: auto;
-}
+// .ft-main-left-container,
+// .ft-main-right-container {
+// 	overflow-y: auto;
 // }
