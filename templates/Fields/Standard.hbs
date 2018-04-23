@@ -1,23 +1,29 @@
 {{#BEFORE_ITEM}}
-<div class="ft-field-container #ITEM_CSS_CLASSES#" id="#CURRENT_ITEM_CONTAINER_ID#">
+<div class="ft-field-container row #ITEM_CSS_CLASSES#" id="#CURRENT_ITEM_CONTAINER_ID#">
 {{/BEFORE_ITEM}}
 {{#TEMPLATE_BODY1}}
-<label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" data-help="#HELP_TEMPLATE#">
+<div class="ft-field-label-container col-12 col-md-#LABEL_COLUMN_SPAN_NUMBER#">
+<label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" class="ft-field-label">
 {{/TEMPLATE_BODY1}}
 {{#TEMPLATE_BODY2}}
 </label>
+</div>
 {{/TEMPLATE_BODY2}}
-{{#ITEM_PRE_TEXT}}{{/ITEM_PRE_TEXT}}
+{{#ITEM_PRE_TEXT}}
+<span class="ft-field-text ft-field-text-pre">#CURRENT_ITEM_PRE_TEXT#</span>
+{{/ITEM_PRE_TEXT}}
 {{#BEFORE_ELEMENT}}
-<div class="">
+<div class="ft-field-element-container col-12 col-md-#ITEM_COLUMN_SPAN_NUMBER#">
+<div class="ft-field-element">#ITEM_PRE_TEXT#
 {{/BEFORE_ELEMENT}}
 {{#AFTER_ELEMENT}}
-</div>
+#ITEM_POST_TEXT##HELP_TEMPLATE#</div>#INLINE_HELP_TEMPLATE##ERROR_TEMPLATE#</div>
 {{/AFTER_ELEMENT}}
-{{#ITEM_POST_TEXT}}{{/ITEM_POST_TEXT}}
+{{#ITEM_POST_TEXT}}
+<span class="ft-field-text ft-field-text-post">#CURRENT_ITEM_POST_TEXT#</span>
+{{/ITEM_POST_TEXT}}
 {{#AFTER_ITEM}}
 </div>
-
 {{/AFTER_ITEM}}
 
 {{#ON_ERROR_BEFORE_LABEL}}{{/ON_ERROR_BEFORE_LABEL}}
@@ -26,9 +32,11 @@
 <span class="ft-field-error">#ERROR_MESSAGE#</span>
 {{/ERROR_TEMPLATE}}
 {{#HELP_LINK}}
-#CURRENT_ITEM_HELP_TEXT#
+<button class="t-Button t-Button--noUI t-Button--helpButton js-itemHelp" data-itemhelp="#CURRENT_ITEM_ID#" title="#CURRENT_ITEM_HELP_LABEL#" aria-label="#CURRENT_ITEM_HELP_LABEL#" tabindex="-1" type="button"><span class="a-Icon icon-help" aria-hidden="true"></span></button>
 {{/HELP_LINK}}
-{{#INLINE_HELP_TEXT}}{{/INLINE_HELP_TEXT}}
+{{#INLINE_HELP_TEXT}}
+<span class="t-Form-inlineHelp">#CURRENT_ITEM_INLINE_HELP_TEXT#</span>
+{{/INLINE_HELP_TEXT}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
 []
@@ -40,7 +48,7 @@
     "DISPLAY_NAME": "Stand out",
     "DISPLAY_SEQUENCE": 10,
     "CSS_CLASSES": "lead",
-    "HELP_TEXT": "Make a field stand out.",
+    "HELP_TEXT": "Make the item text stand out.",
     "IS_ADVANCED": "N"
   }
 ]

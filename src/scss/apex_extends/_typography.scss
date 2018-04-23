@@ -1,35 +1,46 @@
 // region sizes
-.ft-region-title-size-hidden > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-hidden > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-hidden > .ft-field-label-container {
 	@extend .d-none;
 }
-.ft-region-title-size-display-1 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-display-1 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-display-1 > .ft-field-label-container {
 	@extend .display-1;
 }
-.ft-region-title-size-display-2 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-display-2 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-display-2 > .ft-field-label-container {
 	@extend .display-2;
 }
-.ft-region-title-size-display-3 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-display-3 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-display-3 > .ft-field-label-container {
 	@extend .display-3;
 }
-.ft-region-title-size-display-4 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-display-4 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-display-4 > .ft-field-label-container {
 	@extend .display-4;
 }
-.ft-region-title-size-h1 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-h1 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-h1 > .ft-field-label-container {
 	@extend .h1;
 }
-.ft-region-title-size-h2 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-h2 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-h2 > .ft-field-label-container {
 	@extend .h2;
 }
-.ft-region-title-size-h3 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-h3 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-h3 > .ft-field-label-container {
 	@extend .h3;
 }
-.ft-region-title-size-h4 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-h4 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-h4 > .ft-field-label-container {
 	@extend .h4;
 }
-.ft-region-title-size-h5 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-h5 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-h5 > .ft-field-label-container {
 	@extend .h5;
 }
-.ft-region-title-size-h6 > .ft-region-center > .ft-region-header .ft-region-title {
+.ft-region-title-size-h6 > .ft-region-center > .ft-region-header .ft-region-title,
+.ft-field-title-size-h6 > .ft-field-label-container {
 	@extend .h6;
 }
 
