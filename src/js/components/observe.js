@@ -5,3 +5,7 @@ module.exports = {
 		});
 	}
 };
+
+$(() => {
+	ft.observe.navbar();
+});
