@@ -1,4 +1,5 @@
 import util from './util/jquery';
+import overrides from './util/overrides';
 import apex from './components/apex';
 import bootstrap from './components/bootstrap';
 import messages from './components/messages';

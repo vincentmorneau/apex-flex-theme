@@ -11,20 +11,17 @@ module.exports = {
 	},
 
 	navbar() {
-		// Calculates the height of the navbar
-		const navbarHeight = $('.ft-navbar').outerHeight();
-
 		// Adjusts the main offset
 		$('.ft-navbar-fixed-top .ft-main').css({
-			'margin-top': navbarHeight
+			'margin-top': apex.theme.defaultStickyTop()
 		});
 
 		$('.ft-navbar-fixed-top .ft-main-left, .ft-navbar-fixed-top .ft-main-right').css({
-			top: navbarHeight
+			top: apex.theme.defaultStickyTop()
 		});
 
 		$('.ft-main-left, .ft-main-right').css({
-			height: 'calc(100vh - ' + navbarHeight + 'px)'
+			height: 'calc(100vh - ' + apex.theme.defaultStickyTop() + 'px)'
 		});
 	}
 };
