@@ -17,11 +17,11 @@ module.exports = {
 		});
 
 		$('.ft-navbar-fixed-top .ft-main-left, .ft-navbar-fixed-top .ft-main-right').css({
-			'top': apex.theme.defaultStickyTop()
+			top: apex.theme.defaultStickyTop()
 		});
 
 		$('.ft-main-left, .ft-main-right').css({
-			'height': 'calc(100vh - ' + apex.theme.defaultStickyTop() + 'px)'
+			height: 'calc(100vh - ' + apex.theme.defaultStickyTop() + 'px)'
 		});
 	}
 };

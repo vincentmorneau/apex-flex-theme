@@ -8,6 +8,7 @@ import theme from './components/theme';
 
 export {
 	util,
+	overrides,
 	apex,
 	bootstrap,
 	messages,
