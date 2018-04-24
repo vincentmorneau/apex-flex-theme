@@ -9,24 +9,15 @@
 .ft-tab-fade .tab-pane {
 	@extend .fade;
 }
+// Left menu
+.ft-main-left .ft-nav .nav-item:not(.active) {
+	a {
+		@extend .text-muted;
+	}
+}
 
-// RDS
-.apex-rds {
-	&.apex-rds-container--jumpNav {
-		@extend .nav;
-		@extend .flex-column;
-
-		.apex-rds-item {
-			@extend .nav-item;
-
-			a {
-				@extend .nav-link;
-				@extend .text-muted;
-			}
-
-			&.apex-rds-selected a {
-				@extend .text-primary;
-			}
-		}
+.ft-main-left .ft-nav:not(.nav-pills) {
+	a.active {
+		@extend .text-primary;
 	}
 }

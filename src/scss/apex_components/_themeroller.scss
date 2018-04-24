@@ -1,25 +1,35 @@
-body .utr {
-	z-index: $zindex-modal!important;
-
-	// region display selector
-	.apex-rds {
-		padding-top: 0;
-		margin-top: 0;
-		margin-bottom: 0;
-
-		li {
-			display: inline-block;
-			padding: 0.5rem;
-		}
+body {
+	.ui-front {
+		z-index: $zindex-modal-backdrop;
 	}
 
-	.ui-dialog-titlebar-close {
-		top: auto!important;
+	.utr {
+		z-index: $zindex-modal!important;
 
-		&:before {
-			content: "\e0a2";
-			font-size: 16px;
-			font-family: apex-5-icon-font!important;
+		.apex-rds-container {
+			// height: auto!important;
+
+			.apex-rds {
+				padding-top: 0;
+				margin-top: 0;
+				margin-bottom: 0;
+				overflow: hidden;
+
+				li {
+					display: inline-block;
+					padding: 0.5rem;
+				}
+			}
+		}
+
+		.ui-dialog-titlebar-close {
+			top: auto!important;
+
+			&:before {
+				content: "\e0a2";
+				font-size: 16px;
+				font-family: apex-5-icon-font!important;
+			}
 		}
 	}
 }

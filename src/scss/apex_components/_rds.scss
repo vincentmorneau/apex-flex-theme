@@ -1,0 +1,8 @@
+.apex-rds-vertical {
+	.apex-rds-container--jumpNav {
+		white-space: normal!important;
+	}
+	.apex-rds-slider {
+		@include hide;
+	}
+}

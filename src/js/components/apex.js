@@ -23,6 +23,10 @@ module.exports = {
 		$('.ft-main-left, .ft-main-right').css({
 			height: 'calc(100vh - ' + apex.theme.defaultStickyTop() + 'px)'
 		});
+	},
+
+	rds() {
+		$('.apex-rds-container--jumpNav').closest('.apex-rds-container').addClass('apex-rds-vertical');
 	}
 };
 

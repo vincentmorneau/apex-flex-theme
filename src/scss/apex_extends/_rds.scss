@@ -1,0 +1,19 @@
+.apex-rds {
+	&.apex-rds-container--jumpNav {
+		@extend .nav;
+		@extend .flex-column;
+
+		.apex-rds-item {
+			@extend .nav-item;
+
+			a {
+				@extend .nav-link;
+				@extend .text-muted;
+			}
+
+			&.apex-rds-selected a {
+				@extend .text-primary;
+			}
+		}
+	}
+}
