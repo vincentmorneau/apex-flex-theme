@@ -23,28 +23,46 @@
 			@include media-breakpoint-up(sm) {
 				@include make-col-offset(3);
 				@include make-col(9);
+				.ft-breadcrumb {
+					width: (9/12*100) + %;
+				}
 			}
 			@include media-breakpoint-up(lg) {
 				@include make-col-offset(2);
 				@include make-col(10);
+				.ft-breadcrumb {
+					width: (10/12*100) + %;
+				}
 			}
 		}
 
 		&.ft-main-right-open {
 			@include media-breakpoint-up(sm) {
 				@include make-col(9);
+				.ft-breadcrumb {
+					width: (9/12*100) + %;
+				}
 			}
 			@include media-breakpoint-up(lg) {
 				@include make-col(10);
+				.ft-breadcrumb {
+					width: (10/12*100) + %;
+				}
 			}
 		}
 
 		&.ft-main-left-open.ft-main-right-open {
 			@include media-breakpoint-up(sm) {
 				@include make-col(6);
+				.ft-breadcrumb {
+					width: (6/12*100) + %;
+				}
 			}
 			@include media-breakpoint-up(lg) {
 				@include make-col(8);
+				.ft-breadcrumb {
+					width: (8/12*100) + %;
+				}
 			}
 		}
 	}

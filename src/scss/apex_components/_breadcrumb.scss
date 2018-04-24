@@ -1,3 +1,9 @@
+.ft-breadcrumb {
+	position: fixed;
+	z-index: $zindex-fixed;
+	transition: width 0.3s;
+}
+
 .breadcrumb {
 	margin-bottom: 0;
 

@@ -11,17 +11,16 @@ module.exports = {
 	},
 
 	navbar() {
-		// Adjusts the main offset
 		$('.ft-navbar-fixed-top .ft-main').css({
-			'margin-top': apex.theme.defaultStickyTop()
+			'margin-top': ft.theme.defaultStickyTop()
 		});
 
-		$('.ft-navbar-fixed-top .ft-main-left, .ft-navbar-fixed-top .ft-main-right').css({
-			top: apex.theme.defaultStickyTop()
+		$('.ft-navbar-fixed-top .ft-main-left, .ft-navbar-fixed-top .ft-main-right, .ft-breadcrumb').css({
+			top: ft.theme.headerHeight()
 		});
 
 		$('.ft-main-left, .ft-main-right').css({
-			height: 'calc(100vh - ' + apex.theme.defaultStickyTop() + 'px)'
+			height: 'calc(100vh - ' + ft.theme.headerHeight() + 'px)'
 		});
 	},
 

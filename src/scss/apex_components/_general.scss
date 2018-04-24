@@ -16,6 +16,11 @@ body > form {
 }
 
 // Body container
+// .ft-main-center-container {
+// 	padding-top: 15px;
+// 	padding-bottom: 15px;
+// }
+
 .ft-page-body-container {
 	.ft-main-center-container {
 		@include make-container();
@@ -49,8 +54,12 @@ body > form {
 }
 
 .ft-main-center .ft-body .ft-region {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+
+	// .ft-region-body > .ft-subregions:not(:empty) {
+	// 	margin-top: 0.5rem;
+	// }
 }
 
 .ft-region-left,

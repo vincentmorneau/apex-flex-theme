@@ -1,4 +1,15 @@
 module.exports = {
+	headerHeight() {
+		return $('.ft-navbar').outerHeight();
+	},
+
+	defaultStickyTop() {
+		let navbarHeight = $('.ft-navbar').outerHeight();
+		let breadcrumbHeight = $('.ft-breadcrumb').outerHeight();
+
+		return navbarHeight + breadcrumbHeight;
+	},
+
 	getCurrentViewport() {
 		let getBreakpoint = function(breakpoint) {
 			return Number(ft.style.getPropertyValue(breakpoint).replace(/\D+/g, ''));
@@ -119,6 +130,14 @@ module.exports = {
 		ft.apex.rds();
 		ft.bootstrap.init();
 		ft.theme.menuHandlers();
+
+		// Fixes the RDS offset
+		$.apex.aTabs.prototype._getScrollOffset = function() {
+			// for some reason the default offset in UT breaks our RDS
+			// so here we are adjusting it
+			var lookMargin = -60;
+			return this.tabs$.offset().top + this.tabs$.outerHeight() + lookMargin;
+		}
 
 		// Making the page visible again
 		// !important is required to overwrite what APEX already does
