@@ -2,6 +2,10 @@
 	position: fixed;
 	z-index: $zindex-fixed;
 	transition: width 0.3s;
+
+	&:empty {
+		border-bottom: none!important;
+	}
 }
 
 .breadcrumb {

@@ -14,10 +14,20 @@
 	}
 }
 
+@include media-breakpoint-up(lg) {
+	.ft-main-left-toggle {
+		margin-right: 0.5rem;
+	}
+}
+
 .ft-left-right-template {
 	.ft-main-center {
 		@include make-col(12);
 		transition: max-width 0.3s, margin-left 0.3s;
+
+		.ft-breadcrumb {
+			width: 100%;
+		}
 
 		&.ft-main-left-open {
 			@include media-breakpoint-up(sm) {

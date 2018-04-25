@@ -60,14 +60,14 @@ module.exports = {
 		}
 
 		let activateQuickMode = function() {
-			$('.ft-main-left, .ft-main-center, .ft-main-right').css({
+			$('.ft-main-left, .ft-main-center, .ft-main-right, .ft-breadcrumb').css({
 				'transition': 'none'
 			});
 		}
 
 		let deactivateQuickMode = function() {
 			setTimeout(function(){
-				$('.ft-main-left, .ft-main-center, .ft-main-right').css({
+				$('.ft-main-left, .ft-main-center, .ft-main-right, .ft-breadcrumb').css({
 					'transition': ''
 				});
 			}, 1000);
@@ -130,14 +130,7 @@ module.exports = {
 		ft.apex.rds();
 		ft.bootstrap.init();
 		ft.theme.menuHandlers();
-
-		// Fixes the RDS offset
-		$.apex.aTabs.prototype._getScrollOffset = function() {
-			// for some reason the default offset in UT breaks our RDS
-			// so here we are adjusting it
-			var lookMargin = -60;
-			return this.tabs$.offset().top + this.tabs$.outerHeight() + lookMargin;
-		}
+		ft.overrides.scrollOffset();
 
 		// Making the page visible again
 		// !important is required to overwrite what APEX already does
