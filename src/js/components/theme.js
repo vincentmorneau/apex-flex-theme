@@ -4,18 +4,18 @@ module.exports = {
 	},
 
 	defaultStickyTop() {
-		let navbarHeight = $('.ft-navbar').outerHeight();
-		let breadcrumbHeight = $('.ft-breadcrumb').outerHeight();
+		const navbarHeight = $('.ft-navbar').outerHeight();
+		const breadcrumbHeight = $('.ft-breadcrumb').outerHeight();
 
 		return navbarHeight + breadcrumbHeight;
 	},
 
 	getCurrentViewport() {
-		let getBreakpoint = function(breakpoint) {
+		const getBreakpoint = function (breakpoint) {
 			return Number(ft.style.getPropertyValue(breakpoint).replace(/\D+/g, ''));
-		}
+		};
 
-		let bodyWidth = $('body').width();
+		const bodyWidth = $('body').width();
 
 		if (bodyWidth >= getBreakpoint('--breakpoint-lg')) {
 			return 'lg';
@@ -39,39 +39,39 @@ module.exports = {
 	},
 
 	menuHandlers() {
-		let openLeft = function() {
+		const openLeft = function () {
 			$('.ft-main-left').addClass('open');
 			$('.ft-main-center').addClass('ft-main-left-open');
-		}
+		};
 
-		let closeLeft = function() {
+		const closeLeft = function () {
 			$('.ft-main-left').removeClass('open');
 			$('.ft-main-center').removeClass('ft-main-left-open');
-		}
+		};
 
-		let openRight = function() {
+		const openRight = function () {
 			$('.ft-main-right').addClass('open');
 			$('.ft-main-center').addClass('ft-main-right-open');
-		}
+		};
 
-		let closeRight = function() {
+		const closeRight = function () {
 			$('.ft-main-right').removeClass('open');
 			$('.ft-main-center').removeClass('ft-main-right-open');
-		}
+		};
 
-		let activateQuickMode = function() {
+		const activateQuickMode = function () {
 			$('.ft-main-left, .ft-main-center, .ft-main-right, .ft-breadcrumb').css({
-				'transition': 'none'
+				transition: 'none'
 			});
-		}
+		};
 
-		let deactivateQuickMode = function() {
-			setTimeout(function(){
+		const deactivateQuickMode = function () {
+			setTimeout(() => {
 				$('.ft-main-left, .ft-main-center, .ft-main-right, .ft-breadcrumb').css({
-					'transition': ''
+					transition: ''
 				});
 			}, 1000);
-		}
+		};
 
 		// Handles the left side menu toggle
 		$('[data-toggle="ft-main-left"]').on('click', () => {
@@ -91,7 +91,7 @@ module.exports = {
 			}
 		});
 
-		let autoClose = function() {
+		const autoClose = function () {
 			switch (ft.theme.getCurrentViewport()) {
 				case 'xs':
 					closeLeft();
@@ -115,9 +115,9 @@ module.exports = {
 					break;
 				default:
 			}
-		}
+		};
 
-		apex.jQuery(window).on('apexwindowresized', function() {
+		apex.jQuery(window).on('apexwindowresized', () => {
 			autoClose();
 		});
 

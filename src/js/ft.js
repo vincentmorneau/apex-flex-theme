@@ -6,7 +6,7 @@ import messages from './components/messages';
 import observe from './components/observe';
 import theme from './components/theme';
 
-let style = window.getComputedStyle(document.documentElement);
+const style = window.getComputedStyle(document.documentElement);
 
 export {
 	util,
