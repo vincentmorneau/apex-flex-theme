@@ -5,16 +5,22 @@ html {
 	visibility: hidden!important;
 }
 // Sticky Footer
-body > form {
+
+.ft-main {
 	display: flex;
-	min-height: 100vh;
+	min-height: 95vh;
 	flex-direction: column;
 
-	main {
-		flex: 1 0 auto;
+	.ft-main-center {
+		flex: 1!important;
+		flex-direction: column!important;
+		display: flex!important;
+
+		.ft-main-center-container {
+			flex: 1 0 auto;
+		}
 	}
 }
-
 // Body container
 // .ft-main-center-container {
 // 	padding-top: 15px;
@@ -34,6 +40,7 @@ body > form {
 	}
 }
 // Footer container
+
 .ft-page-footer-container {
 	.ft-footer-bottom,
 	.ft-footer-top {
@@ -56,10 +63,6 @@ body > form {
 .ft-main-center .ft-body .ft-region {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
-
-	// .ft-region-body > .ft-subregions:not(:empty) {
-	// 	margin-top: 0.5rem;
-	// }
 }
 
 .ft-region-left,

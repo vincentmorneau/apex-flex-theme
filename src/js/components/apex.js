@@ -20,7 +20,8 @@ module.exports = {
 		});
 
 		$('.ft-main-left, .ft-main-right').css({
-			height: 'calc(100vh - ' + ft.theme.headerHeight() + 'px)'
+			height: 'calc(100vh - ' + ft.theme.headerHeight() + 'px)',
+			top: ft.theme.headerHeight()
 		});
 	},
 
