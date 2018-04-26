@@ -8,10 +8,3 @@ if $navbar-text-style == navbar-dark {
 		@extend .navbar-dark;
 	}
 }
-
-.ft-navbar-fixed-top .ft-navbar {
-	@extend .fixed-top;
-}
-.ft-navbar-fixed-bottom .ft-navbar {
-	@extend .fixed-bottom;
-}
