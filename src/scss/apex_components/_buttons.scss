@@ -1,0 +1,42 @@
+.ft-button-icon-left {
+	// left icon
+	i:first-child {
+		margin-right: 0.5rem;
+	}
+	// right icon
+	.ft-button-label + i {
+		@include hide;
+	}
+}
+
+.ft-button-icon-right {
+	// left icon
+	i:first-child {
+		@include hide;
+	}
+	// right icon
+	.ft-button-label + i {
+		margin-left: 0.5rem;
+	}
+}
+/* Hot Simple Button
+   ========================================================================== */
+.ft-button.ft-button-hot {
+	&,
+	.t-Icon {
+		color: $button-hot-text-color;
+	}
+	background-color: $button-hot-background-color;
+	border-color: $button-hot-background-color;
+
+	&.is-active,
+	&:focus,
+	&:hover {
+		background-color: $button-hot-background-color;
+		color: $button-hot-text-color;
+		// box-shadow: 0 0 0 1px @l_Button-Hot-BG inset;
+		.t-Icon {
+			color: $button-hot-text-color;
+		}
+	}
+}
