@@ -1,0 +1,39 @@
+/* Button Badge Style
+  ========================================================================== */
+.ft-badge-primary .badge {
+  @extend .badge-primary;
+}
+
+.ft-badge-secondary .badge {
+  @extend .badge-secondary;
+}
+
+.ft-badge-success .badge {
+  @extend .badge-success;
+}
+
+.ft-badge-danger .badge {
+  @extend .badge-danger;
+}
+
+.ft-badge-warning .badge {
+  @extend .badge-warning;
+}
+
+.ft-badge-info .badge {
+  @extend .badge-info;
+}
+
+.ft-badge-light .badge {
+  @extend .badge-light;
+}
+
+.ft-badge-dark .badge {
+  @extend .badge-dark;
+}
+
+/* Button Badge Pill
+  ========================================================================== */
+.ft-button-badge-pill .badge {
+  @extend .badge-pill;
+}

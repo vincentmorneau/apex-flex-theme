@@ -1,0 +1,135 @@
+{{#TEMPLATE}}
+<button id="#BUTTON_ID#" type="button" class="ft-button btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
+  <span class="badge">#ICON_CSS_CLASSES#</span>
+  <span class="ft-button-label">#LABEL#</span>
+  <span class="badge">#ICON_CSS_CLASSES#</span>
+</button>
+
+{{/TEMPLATE}}
+{{#HOT_TEMPLATE}}
+<button id="#BUTTON_ID#" type="button" class="ft-button ft-button-hot btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
+  <span class="badge">#ICON_CSS_CLASSES#</span>
+  <span class="ft-button-label">#LABEL#</span>
+  <span class="badge">#ICON_CSS_CLASSES#</span>
+</button>
+
+{{/HOT_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[
+  {
+    "NAME": "BUTTON_BADGE_POSITION",
+    "DISPLAY_NAME": "Badge Position",
+    "DISPLAY_SEQUENCE": 10,
+    "HELP_TEXT": "Sets the position of the badge relative to the label.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_BADGE_POSITION_LEFT",
+        "DISPLAY_NAME": "Left",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-button-badge-left",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_POSITION_RIGHT",
+        "DISPLAY_NAME": "Right",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-button-badge-right",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_BADGE_STYLE",
+    "DISPLAY_NAME": "Badge Style",
+    "DISPLAY_SEQUENCE": 15,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_BADGE_STYLE_PILL",
+        "DISPLAY_NAME": "Pill",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-button-badge-pill",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_BADGE_COLOR",
+    "DISPLAY_NAME": "Badge Color",
+    "DISPLAY_SEQUENCE": 20,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_BADGE_COLOR_PRIMARY",
+        "DISPLAY_NAME": "Primary",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ft-badge-primary",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_SECONDARY",
+        "DISPLAY_NAME": "Secondary",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ft-badge-secondary",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_SUCCESS",
+        "DISPLAY_NAME": "Success",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ft-badge-success",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_DANGER",
+        "DISPLAY_NAME": "Danger",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "ft-badge-danger",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_WARNING",
+        "DISPLAY_NAME": "Warning",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "ft-badge-warning",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_INFO",
+        "DISPLAY_NAME": "Info",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "ft-badge-info",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_LIGHT",
+        "DISPLAY_NAME": "Light",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "ft-badge-light",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_BADGE_COLOR_DARK",
+        "DISPLAY_NAME": "Dark",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "ft-badge-dark",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
+]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+btn-primary:ft-button-badge-right:ft-badge-light
+{{/PRESET_TEMPLATE_OPTIONS}}

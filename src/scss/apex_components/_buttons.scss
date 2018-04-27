@@ -1,26 +1,19 @@
-.ft-button-icon-left {
-	// left icon
-	i:first-child {
-		margin-right: 0.5rem;
-	}
-	// right icon
-	.ft-button-label + i {
+/* Icon and Badge Positions
+  ========================================================================== */
+.ft-button-icon-left, .ft-button-badge-left {
+	.ft-button-label + i, .ft-button-label + .badge {
 		@include hide;
 	}
 }
 
-.ft-button-icon-right {
-	// left icon
-	i:first-child {
+.ft-button-icon-right, .ft-button-badge-right {
+	i:first-child, .badge:first-child {
 		@include hide;
 	}
-	// right icon
-	.ft-button-label + i {
-		margin-left: 0.5rem;
-	}
 }
-/* Hot Simple Button
-   ========================================================================== */
+
+/* Hot Button
+  ========================================================================== */
 .ft-button.ft-button-hot {
 	&,
 	.t-Icon {
