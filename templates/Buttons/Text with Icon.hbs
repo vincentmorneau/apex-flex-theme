@@ -1,18 +1,16 @@
 {{#TEMPLATE}}
-<button id="#BUTTON_ID#" type="button" class="ft-button btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
+<button id="#BUTTON_ID#" type="button" class="ft-btn btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
   <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
-  <span class="ft-button-label">#LABEL#</span>
+  <span class="ft-btn-label">#LABEL#</span>
   <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
 </button>
-
 {{/TEMPLATE}}
 {{#HOT_TEMPLATE}}
-<button id="#BUTTON_ID#" type="button" class="ft-button ft-button-hot btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
+<button id="#BUTTON_ID#" type="button" class="ft-btn ft-btn-hot btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
   <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
-  <span class="ft-button-label">#LABEL#</span>
+  <span class="ft-btn-label">#LABEL#</span>
   <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
 </button>
-
 {{/HOT_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
@@ -29,14 +27,14 @@
         "NAME": "BUTTON_ICON_POSITION_LEFT",
         "DISPLAY_NAME": "Left",
         "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "ft-button-icon-left",
+        "CSS_CLASSES": "ft-btn-icon-left",
         "HELP_TEXT": ""
       },
       {
         "NAME": "BUTTON_ICON_POSITION_RIGHT",
         "DISPLAY_NAME": "Right",
         "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "ft-button-icon-right",
+        "CSS_CLASSES": "ft-btn-icon-right",
         "HELP_TEXT": ""
       }
     ]
@@ -48,5 +46,5 @@
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
 {{#PRESET_TEMPLATE_OPTIONS}}
-btn-outline-secondary:ft-button-icon-right
+btn-outline-secondary:ft-btn-icon-right
 {{/PRESET_TEMPLATE_OPTIONS}}

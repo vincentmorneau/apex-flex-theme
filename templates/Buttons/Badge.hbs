@@ -1,18 +1,16 @@
 {{#TEMPLATE}}
-<button id="#BUTTON_ID#" type="button" class="ft-button btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
+<button id="#BUTTON_ID#" type="button" class="ft-btn btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
   <span class="badge">#ICON_CSS_CLASSES#</span>
-  <span class="ft-button-label">#LABEL#</span>
+  <span class="ft-btn-label">#LABEL#</span>
   <span class="badge">#ICON_CSS_CLASSES#</span>
 </button>
-
 {{/TEMPLATE}}
 {{#HOT_TEMPLATE}}
-<button id="#BUTTON_ID#" type="button" class="ft-button ft-button-hot btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
+<button id="#BUTTON_ID#" type="button" class="ft-btn ft-btn-hot btn #BUTTON_CSS_CLASSES#" onclick="#JAVASCRIPT#" #BUTTON_ATTRIBUTES#>
   <span class="badge">#ICON_CSS_CLASSES#</span>
-  <span class="ft-button-label">#LABEL#</span>
+  <span class="ft-btn-label">#LABEL#</span>
   <span class="badge">#ICON_CSS_CLASSES#</span>
 </button>
-
 {{/HOT_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
@@ -29,14 +27,14 @@
         "NAME": "BUTTON_BADGE_POSITION_LEFT",
         "DISPLAY_NAME": "Left",
         "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "ft-button-badge-left",
+        "CSS_CLASSES": "ft-btn-badge-left",
         "HELP_TEXT": ""
       },
       {
         "NAME": "BUTTON_BADGE_POSITION_RIGHT",
         "DISPLAY_NAME": "Right",
         "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "ft-button-badge-right",
+        "CSS_CLASSES": "ft-btn-badge-right",
         "HELP_TEXT": ""
       }
     ]
@@ -53,7 +51,7 @@
         "NAME": "BUTTON_BADGE_STYLE_PILL",
         "DISPLAY_NAME": "Pill",
         "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "ft-button-badge-pill",
+        "CSS_CLASSES": "ft-btn-badge-pill",
         "HELP_TEXT": ""
       }
     ]
@@ -131,5 +129,5 @@
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
 {{#PRESET_TEMPLATE_OPTIONS}}
-btn-primary:ft-button-badge-right:ft-badge-light
+btn-primary:ft-btn-badge-right:ft-badge-light
 {{/PRESET_TEMPLATE_OPTIONS}}

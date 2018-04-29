@@ -1,35 +1,65 @@
 /* Icon and Badge Positions
   ========================================================================== */
-.ft-button-icon-left, .ft-button-badge-left {
-	.ft-button-label + i, .ft-button-label + .badge {
+.ft-btn-badge-left,
+.ft-btn-icon-left {
+	.ft-btn-label + .badge,
+	.ft-btn-label + i {
 		@include hide;
 	}
 }
 
-.ft-button-icon-right, .ft-button-badge-right {
-	i:first-child, .badge:first-child {
+.ft-btn-badge-right,
+.ft-btn-icon-right {
+	.badge:first-child,
+	i:first-child {
 		@include hide;
 	}
 }
-
 /* Hot Button
   ========================================================================== */
-.ft-button.ft-button-hot {
-	&,
-	.t-Icon {
-		color: $button-hot-text-color;
+.ft-btn.ft-btn-hot {
+	@include button-variant($button-hot-background-color, $button-hot-background-color);
+}
+/* Button Groups
+========================================================================== */
+.ft-btn-group {
+	&.ft-btn-group-first,
+	&.ft-btn-group-inner {
+		@include border-right-radius(0);
 	}
-	background-color: $button-hot-background-color;
-	border-color: $button-hot-background-color;
 
-	&.is-active,
-	&:focus,
-	&:hover {
-		background-color: $button-hot-background-color;
-		color: $button-hot-text-color;
-		// box-shadow: 0 0 0 1px @l_Button-Hot-BG inset;
-		.t-Icon {
-			color: $button-hot-text-color;
-		}
+	&.ft-btn-group-inner,
+	&.ft-btn-group-last {
+		@include border-left-radius(0);
 	}
+}
+
+/* Spacing between buttons
+========================================================================== */
+.ft-btn + .ft-btn {
+	margin-left: $border-radius-lg;
+}
+
+.u-RTL .ft-btn + .ft-btn {
+	margin-right: $border-radius-lg;
+	margin-left: 0;
+}
+
+.ft-btn + .ft-btn.ft-btn-group-inner,
+.ft-btn + .ft-btn.ft-btn-group-last {
+	margin-left: -$btn-border-width!important;
+}
+
+.u-RTL .ft-btn + .ft-btn.ft-btn-group-inner,
+.u-RTL .ft-btn + .ft-btn.ft-btn-group-last {
+	margin-right: -$btn-border-width!important;
+	margin-left: 0 !important;
+}
+
+.ft-btn + .ft-btn.btn-block {
+	margin-left: 0 !important;
+}
+
+.u-RTL .ft-btn + .ft-btn.btn-block {
+	margin-right: 0 !important;
 }
