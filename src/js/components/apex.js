@@ -7,7 +7,7 @@ module.exports = {
 		$('.ft-remove-if-empty-nodes, .nav-item-text, i:not([class]), i[class=""]').removeIfEmptyNodes();
 
 		// Deletes empty html text
-		$('.ft-remove-empty-text').removeIfEmptyText();
+		$('.ft-remove-empty-text, .carousel-caption h5, .carousel-caption p').removeIfEmptyText();
 	},
 
 	navbar() {

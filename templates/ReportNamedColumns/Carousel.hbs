@@ -1,0 +1,134 @@
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
+<div id="#REGION_STATIC_ID#-carousel" class="carousel slide #COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
+<div class="carousel-inner">
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
+
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
+
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
+
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
+
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
+
+{{#ROW_TEMPLATE1}}
+<div class="carousel-item">
+  <img class="d-block w-100" src="#IMG_SRC#" alt="#IMG_ALT#">
+	<div class="carousel-caption">
+    <h5>#CAPTION_TITLE#</h5>
+    <p>#CAPTION_SUBTITLE#</p>
+  </div>
+</div>
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
+
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
+
+{{#ROW_TEMPLATE_AFTER_ROWS}}
+</div>
+</div>
+<table class="t-Report-pagination" role="presentation">#PAGINATION#</table>
+{{/ROW_TEMPLATE_AFTER_ROWS}}
+
+{{#PAGINATION_TEMPLATE}}
+<span class="t-Report-paginationText">#TEXT#</span>
+{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}
+<a href="#LINK#" class="t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next">
+  #PAGINATION_NEXT#<span class="a-Icon icon-right-arrow"></span>
+</a>
+{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}
+<a href="#LINK#" class="t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev">
+  <span class="a-Icon icon-left-arrow"></span>#PAGINATION_PREVIOUS#
+</a>
+{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}
+<a href="#LINK#" class="t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next">
+  #PAGINATION_NEXT_SET#<span class="a-Icon icon-right-arrow"></span>
+</a>
+{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}
+<a href="#LINK#" class="t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev">
+  <span class="a-Icon icon-left-arrow"></span>#PAGINATION_PREVIOUS_SET#
+</a>
+{{/PREVIOUS_SET_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[
+  {
+    "NAME": "REPORT_CAROUSEL_ANIMATE",
+    "DISPLAY_NAME": "Carousel Animation",
+    "DISPLAY_SEQUENCE": 10,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Slide (default)",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REPORT_CAROUSEL_ANIMATE_FADE",
+        "DISPLAY_NAME": "Fade",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "carousel-fade",
+        "HELP_TEXT": "Add this to your carousel to animate slides with a fade transition instead of a slide."
+      }
+    ]
+  },
+  {
+    "NAME": "REPORT_CAROUSEL_CONTROLS",
+    "DISPLAY_NAME": "Carousel Controls",
+    "DISPLAY_SEQUENCE": 20,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "No (default)",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REPORT_CAROUSEL_CONTROLS_Y",
+        "DISPLAY_NAME": "Yes",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ft-carousel-controls",
+        "HELP_TEXT": "Adding in the previous and next controls."
+      }
+    ]
+  },
+  {
+    "NAME": "REPORT_CAROUSEL_INDICATORS",
+    "DISPLAY_NAME": "Carousel Indicators",
+    "DISPLAY_SEQUENCE": 30,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "No (default)",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REPORT_CAROUSEL_INDICATOR_Y",
+        "DISPLAY_NAME": "Yes",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ft-carousel-indicators",
+        "HELP_TEXT": "You can also add the indicators to the carousel, alongside the controls, too."
+      }
+    ]
+  }
+]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
