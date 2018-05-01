@@ -42,21 +42,25 @@ module.exports = {
 		const openLeft = function () {
 			$('.ft-main-left').addClass('open');
 			$('.ft-main-center').addClass('ft-main-left-open');
+			$('.ft-main-left-toggle span').addClass('fam-arrow-left').removeClass('fam-arrow-right');
 		};
 
 		const closeLeft = function () {
 			$('.ft-main-left').removeClass('open');
 			$('.ft-main-center').removeClass('ft-main-left-open');
+			$('.ft-main-left-toggle span').addClass('fam-arrow-right').removeClass('fam-arrow-left');
 		};
 
 		const openRight = function () {
 			$('.ft-main-right').addClass('open');
 			$('.ft-main-center').addClass('ft-main-right-open');
+			$('.ft-main-right-toggle span').addClass('fam-arrow-right').removeClass('fam-arrow-left');
 		};
 
 		const closeRight = function () {
 			$('.ft-main-right').removeClass('open');
 			$('.ft-main-center').removeClass('ft-main-right-open');
+			$('.ft-main-right-toggle span').addClass('fam-arrow-left').removeClass('fam-arrow-right');
 		};
 
 		const activateQuickMode = function () {

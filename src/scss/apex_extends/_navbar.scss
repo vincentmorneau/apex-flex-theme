@@ -2,9 +2,33 @@
 	.ft-navbar {
 		@extend .navbar-light;
 	}
+
+	.ft-main-left-toggle, .ft-main-right-toggle {
+      color: $navbar-light-color;
+
+      @include hover-focus {
+        color: $navbar-light-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+	}
 } @else
 if $navbar-text-style == navbar-dark {
 	.ft-navbar {
 		@extend .navbar-dark;
+	}
+
+	.ft-main-left-toggle, .ft-main-right-toggle {
+      color: $navbar-dark-color;
+
+      @include hover-focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
 	}
 }
